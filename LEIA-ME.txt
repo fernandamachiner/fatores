@@ -44,7 +44,7 @@ no mesmo espírito, não um traçado pixel a pixel do arquivo original.
 
 COMO USAR EM QUALQUER COMPUTADOR
 ---------------------------------
-1. Copie esta pasta inteira ("vigiante-6eixos") para o computador desejado
+1. Copie esta pasta inteira ("6-eixos-estrategicos") para o computador desejado
    (pendrive, e-mail zipado, rede local etc.) — não precisa instalar nada.
 2. Windows: dê duplo clique em "ABRIR.bat" (ou abra "index.html" direto
    com o navegador, clicando duas vezes nele).
