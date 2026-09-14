@@ -42,9 +42,6 @@ referência; os ícones de cada eixo (mala, triângulo de alerta, balão de
 fala, árvore, prédios, dois balões de conversa) são desenhos simplificados
 no mesmo espírito, não um traçado pixel a pixel do arquivo original.
 
-Esta é uma aplicação ISOLADA, separada do Vigiante. A integração ao Vigiante
-fica para uma etapa futura, conforme combinado.
-
 COMO USAR EM QUALQUER COMPUTADOR
 ---------------------------------
 1. Copie esta pasta inteira ("vigiante-6eixos") para o computador desejado
