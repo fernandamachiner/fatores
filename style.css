@@ -1,0 +1,616 @@
+:root {
+  --cor-texto: #23303d;
+  --cor-fundo: #f4f6f8;
+  --cor-cartao: #ffffff;
+  --sombra: 0 6px 18px rgba(20, 30, 40, 0.10);
+  --sombra-forte: 0 14px 34px rgba(20, 30, 40, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  color: var(--cor-texto);
+  font-family: "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  /* Plano de fundo em camadas, do mais sutil (grade) ao mais temático
+     (marca d'água), sempre abaixo do conteúdo em opacidade e contraste
+     bem baixos - a informação (cartões, textos, ícones) continua sendo
+     sempre o elemento de maior hierarquia visual da tela.
+     1) grade fina de coordenadas, tipo carta territorial;
+     2) trilhas de circuito eletrônico + dígitos binários, tema de
+        monitoramento/tecnologia - assets/marca-dagua-fundo.svg;
+     3) silhueta do mapa-múndi real (recortada pixel a pixel do mapa
+        enviado, não é um desenho estilizado), ajustada para preencher
+        a tela inteira - assets/mapa-mundi-silhueta.png. */
+  background-color: var(--cor-fundo);
+  background-image:
+    linear-gradient(rgba(35, 48, 61, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 48, 61, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(35, 48, 61, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 48, 61, 0.09) 1px, transparent 1px),
+    url("assets/marca-dagua-fundo.svg"),
+    url("assets/mapa-mundi-silhueta.png");
+  background-size:
+    42px 42px, 42px 42px, 210px 210px, 210px 210px,
+    cover, cover;
+  background-position:
+    0 0, 0 0, 0 0, 0 0,
+    center center, center center;
+  background-repeat:
+    repeat, repeat, repeat, repeat,
+    no-repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+.topo {
+  padding: 22px 20px 14px;
+  text-align: center;
+}
+
+.topo-marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.topo-titulo-linha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.topo-logo-picaps {
+  height: clamp(86.7px, 12.75vw, 122.4px);
+  width: auto;
+  display: block;
+}
+
+.topo-titulo {
+  font-size: clamp(14.7px, 2.3vw, 21.4px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.topo-subtitulo {
+  font-size: clamp(12px, 1.6vw, 15px);
+  color: #5b6b78;
+}
+
+#app {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 10px 16px 60px;
+}
+
+.tela { display: none; }
+.tela-ativa { display: block; animation: aparecer 0.25s ease; }
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Layout de uma tela só: roda + fatores lado a lado ---------- */
+
+.layout-eixos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px 28px;
+}
+
+.coluna-roda {
+  flex: 1 1 640px;
+  max-width: 640px;
+  min-width: 300px;
+  transition: max-width 0.35s ease, flex-basis 0.35s ease;
+}
+
+.layout-eixos.tem-selecao .coluna-roda {
+  flex: 0 1 360px;
+  max-width: 360px;
+}
+
+.coluna-fatores {
+  flex: 0 1 0%;
+  min-width: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-width 0.35s ease, opacity 0.25s ease;
+}
+
+.layout-eixos.tem-selecao .coluna-fatores {
+  flex: 1 1 480px;
+  max-width: 720px;
+  min-width: 300px;
+  opacity: 1;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+/* em telas estreitas, empilha (roda em cima, fatores embaixo) em vez de
+   tentar manter as duas colunas lado a lado */
+@media (max-width: 760px) {
+  .layout-eixos.tem-selecao .coluna-roda {
+    flex-basis: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .layout-eixos.tem-selecao .coluna-fatores {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ---------- Nível 1: roda dos eixos ---------- */
+
+.roda-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 6px;
+}
+
+.roda {
+  position: relative;
+  width: min(82vmin, 640px);
+  height: min(82vmin, 640px);
+  max-width: 100%;
+}
+
+.roda-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+}
+
+/* botão de eixo: overlay transparente e clicável posicionado exatamente
+   sobre o círculo correspondente na arte SVG (ver coordenadas em app.js).
+   Ele mesmo não tem nenhum efeito visual de hover/foco/seleção (sem anel,
+   sem sombra, sem scale) - o destaque visual inteiro acontece na própria
+   imagem do eixo dentro do SVG (.eixo-grafico / classe "ativo", ver
+   app.js), tanto ao passar o mouse quanto ao clicar. O botão só precisa
+   ficar por cima (z-index) pra continuar capturando o clique/hover. */
+.eixo-botao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28%;
+  height: 28%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.eixo-botao.selecionado {
+  z-index: 6;
+}
+
+.eixo-grafico {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.eixo-grafico.ativo {
+  transform: scale(1.16);
+}
+
+.eixo-grafico.ativo .eixo-grafico-sombra {
+  filter: url(#sombra-eixo-ativo);
+}
+
+.guia-instrucoes {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 480px;
+  margin: 6px auto 0;
+  padding: 12px 16px;
+  border: 1px dashed #c3ccd4;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.65);
+  text-align: left;
+}
+
+.guia-instrucoes-icone {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+}
+
+.guia-instrucoes-icone svg { width: 100%; height: 100%; display: block; }
+
+.guia-instrucoes strong {
+  display: block;
+  font-size: 12.5px;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+
+.guia-instrucoes p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #5b6b78;
+  line-height: 1.45;
+}
+
+/* ---------- Nível 2: fatores de um eixo ---------- */
+
+.btn-voltar {
+  border: none;
+  background: none;
+  color: #2f6fb0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 0 14px;
+  font-weight: 600;
+}
+.btn-voltar:hover { text-decoration: underline; }
+
+.eixo-cabecalho {
+  border-radius: 16px;
+  padding: 20px 24px;
+  color: #fff;
+  margin-bottom: 22px;
+  box-shadow: var(--sombra);
+}
+
+.eixo-cabecalho .eixo-tag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+.eixo-cabecalho h2 {
+  margin: 4px 0 6px;
+  font-size: clamp(20px, 3vw, 28px);
+}
+
+.eixo-cabecalho p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.92;
+  max-width: 640px;
+}
+
+.grade-fatores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.fator-botao {
+  background: var(--cor-cartao);
+  border: 1px solid #e3e8ec;
+  border-radius: 14px;
+  padding: 14px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.fator-botao:hover,
+.fator-botao:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+  border-color: transparent;
+}
+
+.fator-icone-badge {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fator-icone-badge img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* sombra elíptica sob o ícone (que já é desenhado como um pino de mapa),
+   reforçando a leitura de "marcador cravado no território" */
+.fator-icone-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 42%;
+  height: 7px;
+  transform: translateX(-50%);
+  background: rgba(20, 30, 40, 0.16);
+  border-radius: 50%;
+  filter: blur(1.5px);
+}
+
+.fator-nome {
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cor-texto);
+}
+
+.fator-ods-selo {
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+/* ---------- Nível 3: popup ---------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 22, 30, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.overlay[hidden] { display: none; }
+
+.popup {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 26px 26px;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--sombra-forte);
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.popup-fechar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  color: #8a97a3;
+}
+.popup-fechar:hover { color: #23303d; }
+
+.popup-icones-trio {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.popup-icone-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.popup-icone-mini {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.popup-icone-legenda {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 10px;
+  letter-spacing: 0.2px;
+}
+
+.popup-legenda-verde   { background: #4C9F38; }
+.popup-legenda-amarela { background: #E8B71B; color: #3a2c00; }
+.popup-legenda-vermelha{ background: #D8291C; }
+
+.popup-ods {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.popup h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.popup p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3c4a56;
+}
+
+/* ---------- Rodapé de conceitos (borda inferior da imagem de referência) ---------- */
+
+.rodape-conceitos {
+  display: grid;
+  grid-template-columns: 1.15fr 1.4fr 1fr;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.rodape-cartao {
+  background: var(--cor-cartao);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rodape-cartao strong {
+  display: block;
+  font-size: 13.5px;
+  letter-spacing: 0.2px;
+  margin-bottom: 3px;
+}
+
+.rodape-conectados p {
+  margin: 0;
+  font-size: 12px;
+  color: #5b6b78;
+  line-height: 1.4;
+}
+
+.rodape-icone {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.rodape-icone svg { width: 100%; height: 100%; display: block; }
+
+.rodape-principios {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.rodape-principio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.rodape-principio .rodape-icone {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+}
+
+.rodape-principio strong {
+  font-size: 11.5px;
+  margin: 0;
+}
+
+.rodape-principio span {
+  font-size: 10.5px;
+  color: #5b6b78;
+  line-height: 1.3;
+}
+
+.rodape-ods-agenda {
+  background: #17222c;
+  color: #fff;
+}
+
+.rodape-ods-agenda strong { color: #fff; }
+
+.rodape-ods-agenda p {
+  margin: 0;
+  font-size: 11.5px;
+  color: #c3ccd4;
+  line-height: 1.4;
+}
+
+.rodape-selo-ods {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+}
+
+.rodape-selo-ods svg { width: 100%; height: 100%; display: block; }
+
+@media (max-width: 900px) {
+  .rodape-conceitos {
+    grid-template-columns: 1fr;
+  }
+  .rodape-principios {
+    flex-wrap: wrap;
+  }
+  .rodape-principio {
+    flex: 1 1 40%;
+  }
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 560px) {
+  .roda { width: 92vmin; height: 92vmin; }
+  .eixo-botao { font-size: 11px; }
+}
+
+/* Ajustes finos para celulares (telas bem estreitas): reduz respiros,
+   evita rolagem horizontal e deixa cartões/popup confortáveis de tocar. */
+@media (max-width: 480px) {
+  .topo { padding: 16px 12px 10px; }
+  .topo-titulo { font-size: clamp(12.7px, 4vw, 16px); }
+  .topo-logo-picaps { height: clamp(78px, 27.2vw, 102px); }
+  .topo-subtitulo { font-size: 11.5px; padding: 0 6px; }
+
+  #app { padding: 8px 10px 40px; }
+
+  .layout-eixos { gap: 18px; }
+
+  .guia-instrucoes { padding: 10px 12px; max-width: 100%; }
+
+  .eixo-cabecalho { padding: 16px 18px; }
+
+  .grade-fatores {
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+    gap: 12px;
+  }
+
+  .fator-icone-badge { width: 56px; height: 56px; }
+
+  .popup { padding: 22px 16px 18px; border-radius: 14px; }
+  .popup-icone-mini { width: 60px; height: 60px; }
+  .popup-icones-trio { gap: 10px; }
+
+  .rodape-cartao { padding: 14px; flex-direction: column; text-align: center; }
+  .rodape-principio { flex: 1 1 45%; }
+}
+
+/* background-attachment: fixed é pesado/instável em navegadores móveis
+   (rolagem "engasgada" no iOS Safari); em telas de toque a marca d'água
+   passa a rolar junto com a página normalmente. */
+@media (max-width: 760px), (hover: none) and (pointer: coarse) {
+  html, body { background-attachment: scroll; }
+}

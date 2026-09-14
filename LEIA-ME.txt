@@ -1,0 +1,90 @@
+6 EIXOS ESTRATÉGICOS — aplicação offline (protótipo independente do Vigiante)
+================================================================================
+
+O QUE É
+-------
+Uma aplicação que roda inteiramente no navegador, sem precisar de internet,
+instalador, servidor ou banco de dados. Tudo acontece em uma única tela:
+mostra os 6 Eixos Estratégicos como uma roda clicável (arte vetorial em
+SVG, nítida em qualquer resolução/zoom); ao clicar em um eixo, a roda
+encolhe e desloca para a esquerda e a lista de fatores e ODS daquele eixo
+aparece do lado direito, sem trocar de página. Ao clicar em um fator, abre
+uma janela com a descrição em linguagem simples daquele fator e os 3
+ícones de classificação de risco relacionados — verde (Resiliência),
+amarelo (Vulnerabilidade) e vermelho (Ameaça) — sem sair da tela e sem
+redirecionar para lugar nenhum. O link "← Ver todos os eixos" fecha a
+lista e devolve a roda ao tamanho normal. Passar o mouse (ou navegar por
+teclado) sobre um eixo já dá uma prévia do mesmo efeito de zoom usado ao
+selecioná-lo.
+
+A aplicação também tem alguns elementos visuais que reforçam seu uso como
+guia de apoio à Cartografia Social: um selo "Guia de Cartografia Social"
+com ícone de bússola no cabeçalho, um quadro "Como usar este guia" perto
+da roda (no estilo de legenda de mapa, com borda tracejada), uma leve
+grade de coordenadas ao fundo da página (lembrando a malha de uma carta
+territorial) e uma sombra elíptica sob cada ícone de fator, reforçando a
+leitura de "marcador cravado no território" (os próprios ícones já são
+desenhados como pinos de mapa, do pacote oficial de iconografia dos ODS).
+O fundo da página também tem uma ilustração em marca d'água: a silhueta
+de um mapa-múndi real (recortada pixel a pixel do próprio mapa enviado,
+não é um desenho estilizado) preenchendo a tela inteira, combinada com
+trilhas de circuito eletrônico e dígitos binários espalhados por todo o
+fundo. Tudo em opacidade bem baixa e nas mesmas cores do restante da
+aplicação, apenas para reforçar visualmente os temas de cartografia e
+monitoramento — sem disputar atenção com os textos, ícones e cartões,
+que continuam sendo sempre o elemento mais visível da tela.
+
+A roda dos 6 eixos é uma recriação vetorial (não é o arquivo de imagem
+original) feita com base na referência visual enviada, já que o arquivo de
+imagem em si não chegou a ficar acessível para eu abrir/vetorizar
+diretamente nesta conversa. As cores, textos e o layout geral seguem a
+referência; os ícones de cada eixo (mala, triângulo de alerta, balão de
+fala, árvore, prédios, dois balões de conversa) são desenhos simplificados
+no mesmo espírito, não um traçado pixel a pixel do arquivo original.
+
+Esta é uma aplicação ISOLADA, separada do Vigiante. A integração ao Vigiante
+fica para uma etapa futura, conforme combinado.
+
+COMO USAR EM QUALQUER COMPUTADOR
+---------------------------------
+1. Copie esta pasta inteira ("vigiante-6eixos") para o computador desejado
+   (pendrive, e-mail zipado, rede local etc.) — não precisa instalar nada.
+2. Windows: dê duplo clique em "ABRIR.bat" (ou abra "index.html" direto
+   com o navegador, clicando duas vezes nele).
+   macOS/Linux: dê duplo clique em "ABRIR.command" (no Mac, na primeira vez
+   pode ser preciso permitir em Preferências > Segurança) ou abra o
+   "index.html" direto no navegador.
+3. Funciona 100% offline: todos os textos e os 157 ícones usados já estão
+   dentro da pasta "assets/icons".
+
+IMPORTANTE: mantenha a estrutura de pastas
+-------------------------------------------
+Não separe o "index.html" dos arquivos "style.css", "app.js", "data.js"
+e da pasta "assets" — todos precisam ficar juntos, na mesma pasta, para a
+aplicação funcionar.
+
+CONTEÚDO
+--------
+- index.html   → a página principal (abra este arquivo)
+- style.css    → aparência/visual
+- app.js       → toda a lógica de clique/navegação interna
+- data.js      → os 6 eixos, 159 fatores, ODS e descrições (vem da planilha
+                 "Fatores_organização_Fernanda.xlsx")
+- assets/icons → os 157 ícones de fatores usados (recortados do pacote
+                 oficial "ICONOGRAFIA_2026", variante em contorno)
+- ABRIR.bat / ABRIR.command → atalhos para abrir sem precisar procurar o
+  index.html
+
+ATUALIZANDO OS TEXTOS/FATORES DEPOIS
+--------------------------------------
+Todo o conteúdo (eixos, fatores, definições e ODS) está em "data.js", em um
+formato de lista simples de ler. Para atualizar uma descrição, um nome de
+fator ou adicionar um novo item, basta editar esse arquivo com um editor de
+texto comum (Bloco de Notas, Notepad++, VS Code etc.) e salvar — não precisa
+de nenhuma ferramenta especial.
+
+COMPATIBILIDADE
+----------------
+Testado para funcionar com qualquer navegador moderno (Edge, Chrome,
+Firefox) já instalado no Windows/macOS/Linux — não requer conexão à
+internet em nenhum momento após copiada a pasta.
