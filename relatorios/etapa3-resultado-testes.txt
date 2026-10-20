@@ -49,6 +49,11 @@ Diagnósticos conferidos literalmente contra o .docx: 150 de 150 no arquivo
 Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
 Conteúdos do documento não representados no arquivo: 0
 
-== Controle: contradição central do Eixo 3 apagada numa cópia
-ERRO  E3-F05: texto difere do documento
-ERRO  E3-F07: texto difere do documento
+== Controle: cópia do estado atual com a contradição central do Eixo 3 apagada e um número alterado no diagnóstico de E2-F07
+Documento: 494 blocos com conteúdo (333 parágrafos e 161 tabelas)
+Diagnósticos conferidos literalmente contra o .docx: 149 de 150 no arquivo
+Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
+Conteúdos do documento não representados no arquivo: 1
+  bloco 221: Eixo 3, Contradição central: A cor da pele e o gênero determinam quem sofre mais violênci
+ERRO  E2-F07: texto difere do documento
+exit 1
