@@ -806,3 +806,8 @@ html, body {
   .territorio-seletor { min-width: 0; width: 100%; }
   .territorio-barra { width: 100%; padding: 0 12px; box-sizing: border-box; }
 }
+
+/* texto apenas para leitores de tela */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* sem avisos visíveis, a faixa abaixo do seletor não ocupa espaço */
+.territorio-status.territorio-pronto:not(:has(.territorio-selo, .territorio-alerta)) { margin-top: 0; }

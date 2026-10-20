@@ -41,7 +41,7 @@ Execute no computador: python3 testes/verificar_territorio.py <id>. Ou confira a
 
 Abra o painel com ?territorio=<id> no endereço, localmente ou no site publicado.
 
-- [ ] O seletor mostra o território com o rótulo correto e o território aparece como ativo no cabeçalho.
+- [ ] O seletor mostra o território com o rótulo correto e, ao passar o mouse sobre ele, o aviso do território.
 - [ ] Os 6 eixos abrem e mostram todos os fatores.
 - [ ] Pelo menos um fator de cada eixo exibe o diagnóstico completo, lido até o fim.
 - [ ] Um fator sem diagnóstico exibe o aviso de ausência, com o motivo quando informado.

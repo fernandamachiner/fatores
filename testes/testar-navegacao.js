@@ -35,7 +35,7 @@ const { chromium } = require("playwright");
   await page.goto(url);
   const registro = { url, eixos: [], falhas: [] };
   // aguarda o carregamento do território ativo (pronto ou erro)
-  await page.waitForSelector(".territorio-pronto, .territorio-erro", { timeout: 20000 });
+  await page.waitForSelector(".territorio-pronto, .territorio-erro", { timeout: 20000, state: "attached" });
   registro.territorio = await page.evaluate(() => ({
     status: document.getElementById("territorio-status").className,
     texto: document.getElementById("territorio-status").textContent,
