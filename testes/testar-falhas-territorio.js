@@ -95,7 +95,7 @@ async function cenarios(browser, base) {
     const erros = [];
     page.on("pageerror", (e) => erros.push(String(e)));
     await page.goto(base + q);
-    await page.waitForSelector(".territorio-pronto, .territorio-erro", { timeout: 20000 });
+    await page.waitForSelector(".territorio-pronto, .territorio-erro", { timeout: 20000, state: "attached" });
     return { page, erros };
   };
 

@@ -96,9 +96,10 @@ O seletor Território, no cabeçalho, lista as localidades do cadastro
 territorios/indice.js, com os nomes registrados ali. Ao escolher uma
 localidade, o painel carrega o arquivo de dados dela e passa a mostrar os
 seus diagnósticos; os eixos e os fatores não mudam, porque vêm da
-metodologia, que é a mesma para todos os territórios. Abaixo do seletor
-aparecem o nome do território ativo e, quando for o caso, os selos
-território de exemplo ou sem diagnóstico cadastrado.
+metodologia, que é a mesma para todos os territórios. O território ativo é
+o que aparece no seletor; ao passar o mouse sobre ele, aparece o aviso do
+território. Abaixo do seletor só aparecem avisos quando necessário: sem
+diagnóstico cadastrado, falha de carregamento ou versão de matriz diferente.
 
 O painel abre no território "padrao" do cadastro. Também é possível abrir
 um território diretamente pelo endereço, o que permite compartilhar o link

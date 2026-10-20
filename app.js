@@ -161,6 +161,7 @@
     territorioStatus.className = "territorio-status territorio-" + territorio.estado;
     territorioStatus.innerHTML = "";
     territorioStatus.removeAttribute("title");
+    seletorTerritorio.removeAttribute("title");
     document.body.setAttribute("data-territorio", territorio.id || "");
     document.body.setAttribute("data-territorio-estado", territorio.estado);
 
@@ -172,9 +173,11 @@
       territorioStatus.textContent = territorio.mensagem;
       return;
     }
-    var rotulo = document.createElement("strong");
-    rotulo.className = "territorio-nome";
-    rotulo.textContent = "Território: " + territorio.rotulo;
+    // o nome do território já aparece no seletor; a frase fica só para
+    // leitores de tela, que anunciam a troca de território
+    var rotulo = document.createElement("span");
+    rotulo.className = "territorio-nome sr-only";
+    rotulo.textContent = "Território: " + territorio.rotulo + ".";
     territorioStatus.appendChild(rotulo);
 
     if (territorio.estado === "sem-dados") {
@@ -190,13 +193,8 @@
       si.className = "territorio-selo territorio-selo-simulado";
       si.textContent = "dados simulados, não é diagnóstico real";
       territorioStatus.appendChild(si);
-    } else if (sit.territorio_de_exemplo) {
-      var ex = document.createElement("span");
-      ex.className = "territorio-selo";
-      ex.textContent = "território de exemplo";
-      territorioStatus.appendChild(ex);
     }
-    if (sit.aviso) territorioStatus.title = sit.aviso;
+    if (sit.aviso) seletorTerritorio.title = sit.aviso;
     var versaoT = territorio.dados.metodologia && territorio.dados.metodologia.versao;
     if (versaoT && versaoT !== METODOLOGIA.versao) {
       var av = document.createElement("span");
