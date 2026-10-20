@@ -58,4 +58,4 @@ Decisão registrada no cadastro: a partir da versão 1.0.2, metodologia/metodolo
 ## Pendências técnicas, fora do escopo metodológico
 
 - Corrigido em 19/10/2026: em telas de até 480 px, o cartão dos três princípios do rodapé provocava rolagem horizontal (página com 502 px em tela de 390 px). A regra de celular que empilha os cartões em coluna também afetava esse cartão, cuja quebra de linha passava a operar como segunda coluna. O cartão passou a ficar em linha com quebra (dois princípios em cima e um embaixo), e a página não tem rolagem horizontal entre 320 px e 1280 px.
-- O zip aninhado aplicacao-6-eixos-standalone.zip (versão anterior, 18,6 MB) e os sete SVGs avulsos em assets continuam no projeto e só serão removidos com sua confirmação.
+- Removidos em 19/10/2026, por autorização: o zip aninhado aplicacao-6-eixos-standalone.zip (versão anterior, 18,6 MB) e os sete SVGs avulsos em assets (roda-eixos, selo-ods-2030, icone-bussola, icone-interdependencia, icone-pessoas, icone-rede e icone-sistemica), que não eram usados pelo painel. O teste de navegação completo foi repetido após a remoção, sem falhas.
