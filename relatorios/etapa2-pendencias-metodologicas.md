@@ -1,6 +1,6 @@
 # Etapa 2. Pendências metodológicas
 
-Situação em 19/10/2026, versão 1.0.2 do cadastro. P1 e P2 foram decididas, P3, P6 e P6a foram corrigidas e P7 foi encerrada por autorização da coordenação metodológica. P4 e P5 permanecem em aberto por decisão da coordenação. As decisões e a alteração estão registradas nos campos decisoes e alteracoes de metodologia/metodologia.js. Os demais itens seguem sem alteração e dependem de decisão. Os identificadores citados seguem o formato estável E<eixo>-F<posição>, definido nesta etapa.
+Situação em 19/10/2026, versão 1.0.2 do cadastro. P1 e P2 foram decididas, P3, P6 e P6a foram corrigidas e P7 foi encerrada por autorização da coordenação metodológica. P4 e P5 permanecem em aberto por decisão da coordenação. As decisões e as alterações estão registradas nos campos decisoes e alteracoes de metodologia/metodologia.js. Os identificadores citados seguem o formato estável E<eixo>-F<posição>, definido nesta etapa.
 
 ## P1. Matriz de referência (decidida)
 
