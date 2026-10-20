@@ -276,7 +276,6 @@ html, body {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
-  opacity: 0.85;
   text-transform: uppercase;
 }
 
@@ -288,7 +287,6 @@ html, body {
 .eixo-cabecalho p {
   margin: 0;
   font-size: 14px;
-  opacity: 0.92;
   max-width: 640px;
 }
 
