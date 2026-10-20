@@ -116,18 +116,28 @@ confere(/<script src="metodologia\/metodologia\.js"><\/script>\s*<script src="ap
 if (caminhoOriginal) {
   const original = new Function(fs.readFileSync(caminhoOriginal, "utf8") + ";return EIXOS_DATA;")();
   // Alterações autorizadas, registradas no próprio cadastro (campo "alteracoes").
-  // Uma diferença só é aceita se id, campo, valor anterior e valor novo
-  // coincidirem exatamente com o registro.
+  // Para cada campo, as alterações são reaplicadas sobre o valor original na
+  // ordem do histórico. Cada uma precisa partir exatamente do valor deixado
+  // pela anterior, e o resultado final precisa ser igual ao valor do cadastro.
   const alteracoes = M.alteracoes || [];
-  const usadas = new Set();
-  let campos = 0, divergencias = 0, autorizadas = 0;
+  let campos = 0, divergencias = 0, alterados = 0, registrosAplicados = 0;
+  const porCampo = new Map();
+  alteracoes.forEach((x) => {
+    const k = x.id + "." + x.campo;
+    porCampo.set(k, (porCampo.get(k) || []).concat(x));
+  });
+  const verificados = new Set();
   const cmp = (a, b, onde) => {
     campos++;
-    if (a === b) return;
-    const [id, campo] = onde.split(".");
-    const k = alteracoes.findIndex((x) => x.id === id && x.campo === campo && x.anterior === b && x.novo === a);
-    if (k >= 0) { autorizadas++; usadas.add(k); ok.push(`alteração autorizada aplicada: ${onde} (versão ${alteracoes[k].versao}, ${alteracoes[k].autorizacao})`); return; }
-    divergencias++; erro(`divergência não registrada em ${onde}: "${b}" (original) / "${a}" (cadastro)`);
+    const cadeia = porCampo.get(onde) || [];
+    if (cadeia.length) verificados.add(onde);
+    let valor = b;
+    for (const x of cadeia) {
+      if (x.anterior !== valor) { divergencias++; return erro(`histórico inconsistente em ${onde}: alteração da versão ${x.versao} não parte do valor vigente ("${valor}")`); }
+      valor = x.novo;
+    }
+    if (valor !== a) { divergencias++; return erro(`divergência não registrada em ${onde}: "${valor}" (esperado pelo histórico) / "${a}" (cadastro)`); }
+    if (cadeia.length) { alterados++; registrosAplicados += cadeia.length; }
   };
   if (original.length !== eixos.length) erro("número de eixos difere do original");
   original.forEach((eo, i) => {
@@ -142,10 +152,13 @@ if (caminhoOriginal) {
       Object.keys(fo).forEach((c) => { if (!(c in f)) erro(`${f.id}: campo original "${c}" perdido`); });
     });
   });
-  alteracoes.forEach((x, k) => { if (!usadas.has(k)) erro(`alteração registrada mas não encontrada no cadastro: ${x.id}.${x.campo}`); });
+  porCampo.forEach((_, k) => { if (!verificados.has(k)) erro(`alteração registrada para campo inexistente: ${k}`); });
   confere(divergencias === 0,
-    `comparação com o original: ${campos - autorizadas} campos idênticos, ${autorizadas} alteração(ões) autorizada(s), mesma ordem`,
-    `comparação com o original: ${divergencias} divergências não registradas`);
+    `comparação com o original: ${campos - alterados} campos idênticos, ${alterados} campos alterados por ${registrosAplicados} registros autorizados, mesma ordem`,
+    `comparação com o original: ${divergencias} divergências não registradas ou histórico inconsistente`);
+  const versoes = {};
+  alteracoes.forEach((x) => { versoes[x.versao] = (versoes[x.versao] || 0) + 1; });
+  Object.keys(versoes).forEach((v) => ok.push(`histórico: ${versoes[v]} alteração(ões) autorizada(s) na versão ${v}`));
 }
 
 // Resumo

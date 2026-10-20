@@ -28,7 +28,7 @@
  */
 window.METODOLOGIA = {
   "nome": "Matriz de Fatores Territoriais - 6 Eixos Estratégicos",
-  "versao": "1.0.1",
+  "versao": "1.0.2",
   "origem": "data.js do painel publicado (eixo-fatores-diagnostico-main), derivado da planilha Fatores_organização_Fernanda.xlsx",
   "formato_id_fator": "E<ordem do eixo>-F<posição do fator no eixo, dois dígitos>",
   "decisoes": [
@@ -39,6 +39,14 @@ window.METODOLOGIA = {
     {
       "data": "2026-10-19",
       "decisao": "Os códigos de ícone compartilhados (03.09 em E2-F11 e E5-F02; 03.11 em E2-F13 e E2-F14) permanecem até a conclusão dos novos ícones pela equipe de design da Fiocruz."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "O termo ensino primário em E5-F04 permanece, apesar da adoção de ensino fundamental pela LDB de 1996."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "Nomes de fatores usam maiúscula só na primeira palavra, em siglas, em nomes institucionais (Estado) e nos pares separados por barra (Tornado/Vendaval, Seca/Estiagem, Queimada/Incêndio). Separador interno dos nomes: travessão curto."
     }
   ],
   "alteracoes": [
@@ -51,6 +59,316 @@ window.METODOLOGIA = {
       "novo": "Sinais sonoros ou visuais para avisar que há um perigo iminente por perto e que você precisa se proteger rápido.",
       "autorizacao": "Fernanda Machiner, coordenação metodológica",
       "motivo": "A descrição anterior tratava de vias de circulação e não correspondia ao fator."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F17",
+      "campo": "definicao",
+      "anterior": "Valorizarização política e comunitária das manifestações culturais como música, arte e tradição.",
+      "novo": "Valorização política e comunitária das manifestações culturais como música, arte e tradição.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Erro de digitação."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F27",
+      "campo": "definicao",
+      "anterior": "Acesso à livros e com eles conseguir acesso à leitura, cultura e conhecimento. Contribui para a educação e inclusão cultural.",
+      "novo": "Acesso a livros e, por meio deles, à leitura, à cultura e ao conhecimento. Contribui para a educação e inclusão cultural.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Crase indevida antes de palavra masculina e ajuste de redação."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E2-F06",
+      "campo": "definicao",
+      "anterior": "Doenças causadas pela poluição, como problemas respiratórios, diarréias, vermes e outras intoxicações.",
+      "novo": "Doenças causadas pela poluição, como problemas respiratórios, diarreias, vermes e outras intoxicações.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Grafia conforme o Acordo Ortográfico vigente."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E3-F06",
+      "campo": "definicao",
+      "anterior": "Quando o governo cria e faz cumprir políticas que fazem as mulheres tenham as mesmas chances que os homens tem na vida, no trabalho, na comunidade e na política",
+      "novo": "Quando o governo cria e faz cumprir políticas que fazem com que as mulheres tenham as mesmas chances que os homens têm na vida, no trabalho, na comunidade e na política.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Concordância, acento de têm e ponto final."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E4-F16",
+      "campo": "definicao",
+      "anterior": "É a remoção da vegetação nativa e da perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos.",
+      "novo": "É a remoção da vegetação nativa e a perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Paralelismo da enumeração."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E4-F21",
+      "campo": "definicao",
+      "anterior": "Animais ou plantas introduzidas em novos ambientes que se proliferam descontroladamente.",
+      "novo": "Animais ou plantas introduzidos em novos ambientes que se proliferam descontroladamente.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Concordância com sujeito de gêneros diferentes."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F04",
+      "campo": "definicao",
+      "anterior": "É o caminho de estudo que vai desde o aprendizado de ler, escrever, fazer contas e compreender o mundo.",
+      "novo": "É o caminho de estudo que começa com o aprendizado de ler, escrever e fazer contas e ajuda a compreender o mundo.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Construção desde sem complemento."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F14",
+      "campo": "definicao",
+      "anterior": "É quando obrigam as crianças para trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
+      "novo": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Regência do verbo obrigar."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F14",
+      "campo": "definicao",
+      "anterior": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
+      "novo": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo-as na pobreza.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Pronome oblíquo."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F28",
+      "campo": "definicao",
+      "anterior": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13°, FGTS e INSS",
+      "novo": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13º, FGTS e INSS.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Indicador ordinal no lugar do símbolo de grau e ponto final."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F02",
+      "campo": "definicao",
+      "anterior": "Ter comida que não faz mal à saúde e em quantidade que mate a fome  todos os dias.",
+      "novo": "Ter comida que não faz mal à saúde e em quantidade que mate a fome todos os dias.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Espaço duplo."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E2-F02",
+      "campo": "definicao",
+      "anterior": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes que o corpo precisa para crescer e se manter saudável.",
+      "novo": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes de que o corpo precisa para crescer e se manter saudável.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Regência do verbo precisar."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E4-F01",
+      "campo": "definicao",
+      "anterior": "Dinheiro de governos e empresas para ajudar a cuidar e proteger a natureza e a variedade de vida que existe nela.",
+      "novo": "Dinheiro de governos e empresas para ajudar a cuidar da natureza e da variedade de vida que existe nela e protegê-las.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Regência do verbo cuidar."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F11",
+      "campo": "definicao",
+      "anterior": "São formas de trabalho em grupo na produção de alimentos, onde as pessoas se ajudam, produzem juntas e dividem os lucros de forma justa.",
+      "novo": "Formas de trabalho e produção em que as pessoas se unem para gerar renda de maneira coletiva, justa e igualitária.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "A descrição anterior restringia a economia solidária à produção de alimentos."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E2-F38",
+      "campo": "fator",
+      "anterior": "Queimada/ Incêndio",
+      "novo": "Queimada/Incêndio",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Espaço após a barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E6-F08",
+      "campo": "fator",
+      "anterior": "Corrupção e o suborno (em todos os níveis)",
+      "novo": "Corrupção e suborno (em todos os níveis)",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Artigo usado só no segundo termo."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F04",
+      "campo": "fator",
+      "anterior": "Produção de alimentos - hortas, hortos, quintais e outros que produzem alimentos",
+      "novo": "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização do separador (travessão curto)."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E6-F11",
+      "campo": "fator",
+      "anterior": "Comunicação comunitária - grupos de mensagens",
+      "novo": "Comunicação comunitária – grupos de mensagens",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização do separador (travessão curto)."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F03",
+      "campo": "fator",
+      "anterior": "Agricultura Familiar",
+      "novo": "Agricultura familiar",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F05",
+      "campo": "fator",
+      "anterior": "Produção Orgânica",
+      "novo": "Produção orgânica",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E1-F11",
+      "campo": "fator",
+      "anterior": "Iniciativas de Economia Solidária",
+      "novo": "Iniciativas de economia solidária",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E2-F08",
+      "campo": "fator",
+      "anterior": "Doenças Transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
+      "novo": "Doenças transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E2-F19",
+      "campo": "fator",
+      "anterior": "Saúde do Idoso",
+      "novo": "Saúde do idoso",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E3-F17",
+      "campo": "fator",
+      "anterior": "Racismo Ambiental",
+      "novo": "Racismo ambiental",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E4-F05",
+      "campo": "fator",
+      "anterior": "Tecnologias Sociais",
+      "novo": "Tecnologias sociais",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F05",
+      "campo": "fator",
+      "anterior": "Educação Técnica e profissional",
+      "novo": "Educação técnica e profissional",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F06",
+      "campo": "fator",
+      "anterior": "Educação Superior",
+      "novo": "Educação superior",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F10",
+      "campo": "fator",
+      "anterior": "Formação em Tecnologias Sociais",
+      "novo": "Formação em tecnologias sociais",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F13",
+      "campo": "fator",
+      "anterior": "Acesso aos serviços de Energia",
+      "novo": "Acesso aos serviços de energia",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F14",
+      "campo": "fator",
+      "anterior": "Serviços de Energia modernos e sustentáveis",
+      "novo": "Serviços de energia modernos e sustentáveis",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+    },
+    {
+      "versao": "1.0.2",
+      "data": "2026-10-19",
+      "id": "E5-F30",
+      "campo": "fator",
+      "anterior": "Acesso a Iluminação pública",
+      "novo": "Acesso a iluminação pública",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
     }
   ],
   "eixos": [
@@ -78,12 +396,12 @@ window.METODOLOGIA = {
           "icone": "02.01",
           "ods": 2,
           "nome_ods": "ODS 02 – FOME ZERO E AGRICULTURA SUSTENTÁVEL",
-          "definicao": "Ter comida que não faz mal à saúde e em quantidade que mate a fome  todos os dias."
+          "definicao": "Ter comida que não faz mal à saúde e em quantidade que mate a fome todos os dias."
         },
         {
           "id": "E1-F03",
           "ordem": 3,
-          "fator": "Agricultura Familiar",
+          "fator": "Agricultura familiar",
           "icone": "02.03",
           "ods": 2,
           "nome_ods": "ODS 02 – FOME ZERO E AGRICULTURA SUSTENTÁVEL",
@@ -92,7 +410,7 @@ window.METODOLOGIA = {
         {
           "id": "E1-F04",
           "ordem": 4,
-          "fator": "Produção de alimentos - hortas, hortos, quintais e outros que produzem alimentos",
+          "fator": "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos",
           "icone": "02.04",
           "ods": 2,
           "nome_ods": "ODS 02 – FOME ZERO E AGRICULTURA SUSTENTÁVEL",
@@ -101,7 +419,7 @@ window.METODOLOGIA = {
         {
           "id": "E1-F05",
           "ordem": 5,
-          "fator": "Produção Orgânica",
+          "fator": "Produção orgânica",
           "icone": "02.08",
           "ods": 2,
           "nome_ods": "ODS 02 – FOME ZERO E AGRICULTURA SUSTENTÁVEL",
@@ -155,11 +473,11 @@ window.METODOLOGIA = {
         {
           "id": "E1-F11",
           "ordem": 11,
-          "fator": "Iniciativas de Economia Solidária",
+          "fator": "Iniciativas de economia solidária",
           "icone": "08.06",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "São formas de trabalho em grupo na produção de alimentos, onde as pessoas se ajudam, produzem juntas e dividem os lucros de forma justa."
+          "definicao": "Formas de trabalho e produção em que as pessoas se unem para gerar renda de maneira coletiva, justa e igualitária."
         },
         {
           "id": "E1-F12",
@@ -186,7 +504,7 @@ window.METODOLOGIA = {
           "icone": "08.11",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "É quando obrigam as crianças para trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza."
+          "definicao": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo-as na pobreza."
         },
         {
           "id": "E1-F15",
@@ -312,7 +630,7 @@ window.METODOLOGIA = {
           "icone": "16.05",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13°, FGTS e INSS"
+          "definicao": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13º, FGTS e INSS."
         },
         {
           "id": "E1-F29",
@@ -349,7 +667,7 @@ window.METODOLOGIA = {
           "icone": "02.02",
           "ods": 2,
           "nome_ods": "ODS 02 – FOME ZERO E AGRICULTURA SUSTENTÁVEL",
-          "definicao": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes que o corpo precisa para crescer e se manter saudável."
+          "definicao": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes de que o corpo precisa para crescer e se manter saudável."
         },
         {
           "id": "E2-F03",
@@ -385,7 +703,7 @@ window.METODOLOGIA = {
           "icone": "03.04",
           "ods": 3,
           "nome_ods": "ODS 03 – SAÚDE E BEM ESTAR",
-          "definicao": "Doenças causadas pela poluição, como problemas respiratórios, diarréias, vermes e outras intoxicações."
+          "definicao": "Doenças causadas pela poluição, como problemas respiratórios, diarreias, vermes e outras intoxicações."
         },
         {
           "id": "E2-F07",
@@ -399,7 +717,7 @@ window.METODOLOGIA = {
         {
           "id": "E2-F08",
           "ordem": 8,
-          "fator": "Doenças Transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
+          "fator": "Doenças transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
           "icone": "03.06",
           "ods": 3,
           "nome_ods": "ODS 03 – SAÚDE E BEM ESTAR",
@@ -498,7 +816,7 @@ window.METODOLOGIA = {
         {
           "id": "E2-F19",
           "ordem": 19,
-          "fator": "Saúde do Idoso",
+          "fator": "Saúde do idoso",
           "icone": "03.20",
           "ods": 3,
           "nome_ods": "ODS 03 – SAÚDE E BEM ESTAR",
@@ -669,7 +987,7 @@ window.METODOLOGIA = {
         {
           "id": "E2-F38",
           "ordem": 38,
-          "fator": "Queimada/ Incêndio",
+          "fator": "Queimada/Incêndio",
           "icone": "16.13",
           "ods": 13,
           "nome_ods": "ODS 13 – AÇÃO CONTRA A MUDANÇA GLOBAL DO CLIMA",
@@ -746,7 +1064,7 @@ window.METODOLOGIA = {
           "icone": "05.12",
           "ods": 5,
           "nome_ods": "ODS 05 – IGUALDADE DE GÊNERO",
-          "definicao": "Quando o governo cria e faz cumprir políticas que fazem as mulheres tenham as mesmas chances que os homens tem na vida, no trabalho, na comunidade e na política"
+          "definicao": "Quando o governo cria e faz cumprir políticas que fazem com que as mulheres tenham as mesmas chances que os homens têm na vida, no trabalho, na comunidade e na política."
         },
         {
           "id": "E3-F07",
@@ -841,7 +1159,7 @@ window.METODOLOGIA = {
         {
           "id": "E3-F17",
           "ordem": 17,
-          "fator": "Racismo Ambiental",
+          "fator": "Racismo ambiental",
           "icone": "18.06",
           "ods": 18,
           "nome_ods": "ODS 18 – IGUALDADE ÉTNICO-RACIAL",
@@ -882,7 +1200,7 @@ window.METODOLOGIA = {
           "icone": "01.02",
           "ods": 1,
           "nome_ods": "ODS 01 – ERRADICAÇÃO DA POBREZA",
-          "definicao": "Dinheiro de governos e empresas para ajudar a cuidar e proteger a natureza e a variedade de vida que existe nela."
+          "definicao": "Dinheiro de governos e empresas para ajudar a cuidar da natureza e da variedade de vida que existe nela e protegê-las."
         },
         {
           "id": "E4-F02",
@@ -914,7 +1232,7 @@ window.METODOLOGIA = {
         {
           "id": "E4-F05",
           "ordem": 5,
-          "fator": "Tecnologias Sociais",
+          "fator": "Tecnologias sociais",
           "icone": "07.02",
           "ods": 11,
           "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
@@ -1017,7 +1335,7 @@ window.METODOLOGIA = {
           "icone": "15.03",
           "ods": 15,
           "nome_ods": "ODS 15 – VIDA TERRESTRE",
-          "definicao": "É a remoção da vegetação nativa e da perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos."
+          "definicao": "É a remoção da vegetação nativa e a perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos."
         },
         {
           "id": "E4-F17",
@@ -1062,7 +1380,7 @@ window.METODOLOGIA = {
           "icone": "15.11",
           "ods": 15,
           "nome_ods": "ODS 15 – VIDA TERRESTRE",
-          "definicao": "Animais ou plantas introduzidas em novos ambientes que se proliferam descontroladamente."
+          "definicao": "Animais ou plantas introduzidos em novos ambientes que se proliferam descontroladamente."
         },
         {
           "id": "E4-F22",
@@ -1144,12 +1462,12 @@ window.METODOLOGIA = {
           "icone": "04.01",
           "ods": 4,
           "nome_ods": "ODS 04 – EDUCAÇÃO DE QUALIDADE",
-          "definicao": "É o caminho de estudo que vai desde o aprendizado de ler, escrever, fazer contas e compreender o mundo."
+          "definicao": "É o caminho de estudo que começa com o aprendizado de ler, escrever e fazer contas e ajuda a compreender o mundo."
         },
         {
           "id": "E5-F05",
           "ordem": 5,
-          "fator": "Educação Técnica e profissional",
+          "fator": "Educação técnica e profissional",
           "icone": "04.04",
           "ods": 4,
           "nome_ods": "ODS 04 – EDUCAÇÃO DE QUALIDADE",
@@ -1158,7 +1476,7 @@ window.METODOLOGIA = {
         {
           "id": "E5-F06",
           "ordem": 6,
-          "fator": "Educação Superior",
+          "fator": "Educação superior",
           "icone": "04.05",
           "ods": 4,
           "nome_ods": "ODS 04 – EDUCAÇÃO DE QUALIDADE",
@@ -1194,7 +1512,7 @@ window.METODOLOGIA = {
         {
           "id": "E5-F10",
           "ordem": 10,
-          "fator": "Formação em Tecnologias Sociais",
+          "fator": "Formação em tecnologias sociais",
           "icone": "04.09",
           "ods": 4,
           "nome_ods": "ODS 04 – EDUCAÇÃO DE QUALIDADE",
@@ -1221,7 +1539,7 @@ window.METODOLOGIA = {
         {
           "id": "E5-F13",
           "ordem": 13,
-          "fator": "Acesso aos serviços de Energia",
+          "fator": "Acesso aos serviços de energia",
           "icone": "07.01",
           "ods": 7,
           "nome_ods": "ODS 07 – ENERGIA LIMPA E ACESSÍVEL",
@@ -1230,7 +1548,7 @@ window.METODOLOGIA = {
         {
           "id": "E5-F14",
           "ordem": 14,
-          "fator": "Serviços de Energia modernos e sustentáveis",
+          "fator": "Serviços de energia modernos e sustentáveis",
           "icone": "07.03",
           "ods": 7,
           "nome_ods": "ODS 07 – ENERGIA LIMPA E ACESSÍVEL",
@@ -1261,7 +1579,7 @@ window.METODOLOGIA = {
           "icone": "08.19",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "Valorizarização política e comunitária das manifestações culturais como música, arte e tradição."
+          "definicao": "Valorização política e comunitária das manifestações culturais como música, arte e tradição."
         },
         {
           "id": "E5-F18",
@@ -1351,7 +1669,7 @@ window.METODOLOGIA = {
           "icone": "11.11",
           "ods": 11,
           "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
-          "definicao": "Acesso à livros e com eles conseguir acesso à leitura, cultura e conhecimento. Contribui para a educação e inclusão cultural."
+          "definicao": "Acesso a livros e, por meio deles, à leitura, à cultura e ao conhecimento. Contribui para a educação e inclusão cultural."
         },
         {
           "id": "E5-F28",
@@ -1374,7 +1692,7 @@ window.METODOLOGIA = {
         {
           "id": "E5-F30",
           "ordem": 30,
-          "fator": "Acesso a Iluminação pública",
+          "fator": "Acesso a iluminação pública",
           "icone": "12.13",
           "ods": 11,
           "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
@@ -1465,7 +1783,7 @@ window.METODOLOGIA = {
         {
           "id": "E6-F08",
           "ordem": 8,
-          "fator": "Corrupção e o suborno (em todos os níveis)",
+          "fator": "Corrupção e suborno (em todos os níveis)",
           "icone": "16.06",
           "ods": 16,
           "nome_ods": "ODS 16 – PAZ, JUSTIÇA E INSTITUIÇÕES EFICAZES",
@@ -1492,7 +1810,7 @@ window.METODOLOGIA = {
         {
           "id": "E6-F11",
           "ordem": 11,
-          "fator": "Comunicação comunitária - grupos de mensagens",
+          "fator": "Comunicação comunitária – grupos de mensagens",
           "icone": "16.10",
           "ods": 11,
           "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",

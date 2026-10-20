@@ -6,9 +6,9 @@ A etapa partiu do relatório da Etapa 1 (relatorios/etapa1-auditoria-tecnica.md)
 
 ## Decisões da coordenação metodológica
 
-Em 19/10/2026 foram decididos três pontos, registrados no próprio cadastro. A matriz de 159 fatores do painel é a estrutura oficial, e o diagnóstico de Campo Grande/MS, organizado em 126 fatores, será vinculado a ela por tabela de correspondência na Etapa 3. Os ícones compartilhados permanecem até a entrega dos novos ícones pela equipe de design da Fiocruz. A descrição de E2-F37 Sirenes e alertas de emergências foi substituída, o que levou o cadastro à versão 1.0.1.
+Em 19/10/2026 foram decididos os pontos a seguir, registrados no próprio cadastro. A matriz de 159 fatores do painel é a estrutura oficial, e o diagnóstico de Campo Grande/MS, organizado em 126 fatores, será vinculado a ela por tabela de correspondência na Etapa 3. Os ícones compartilhados permanecem até a entrega dos novos ícones pela equipe de design da Fiocruz. A descrição de E2-F37 Sirenes e alertas de emergências foi substituída, o que levou o cadastro à versão 1.0.1. Na versão 1.0.2 foram corrigidos os erros de redação apontados na revisão, com exceção do termo ensino primário, mantido por decisão da coordenação, e a descrição de E1-F11 Iniciativas de economia solidária foi substituída. Ao todo, 31 campos de 30 fatores foram alterados por 32 registros autorizados, já que a descrição de E1-F14 recebeu duas correções sucessivas. A rolagem horizontal do rodapé em celulares também foi corrigida no style.css.
 
-O cadastro passou a ter dois campos de governança. O campo decisoes guarda deliberações que não alteram valores. O campo alteracoes guarda cada mudança de valor com o identificador do fator, o campo alterado, o valor anterior, o valor novo, a data e a autorização. O validador só aceita diferenças em relação ao data.js original que constem desse histórico com correspondência exata. Qualquer outra diferença é tratada como erro, e um registro sem aplicação correspondente também.
+O cadastro passou a ter dois campos de governança. O campo decisoes guarda deliberações que não alteram valores. O campo alteracoes guarda cada mudança de valor com o identificador do fator, o campo alterado, o valor anterior, o valor novo, a data e a autorização. O validador reaplica o histórico sobre o data.js original, campo a campo e na ordem registrada. Cada alteração precisa partir exatamente do valor deixado pela anterior, e o resultado precisa coincidir com o cadastro. Qualquer diferença sem registro, histórico fora de sequência ou registro para campo inexistente é tratado como erro.
 
 ## Estrutura criada
 
@@ -29,11 +29,12 @@ O cadastro contém apenas campos metodológicos. O validador rejeita qualquer ca
 | app.js | Passa a ler window.METODOLOGIA.eixos. A posição de cada eixo na roda passou a ser obtida pela ordem metodológica do eixo, e não pela posição na lista. Os botões de eixo recebem data-eixo-id e os cards de fator recebem data-fator-id, ponto de ligação com os diagnósticos da Etapa 4 |
 | data.js | Removido. O conteúdo integral está em metodologia.js, e a versão original permanece no histórico do git |
 | LEIA-ME.txt | Seções de conteúdo e de atualização ajustadas ao novo arquivo, com as regras de identificadores |
+| style.css | Correção da rolagem horizontal do rodapé em telas de até 480 px (versão 1.0.2) |
 | testes/validar-metodologia.js | Novo. Validação de integridade e comparação com o original |
 | testes/testar-navegacao.js | Novo. Teste de navegação em navegador real |
 | relatorios/ | Relatórios das Etapas 1 e 2, tabela de correspondência e resultado dos testes |
 
-style.css, assets e os atalhos ABRIR.bat e ABRIR.command não foram alterados.
+As imagens em assets e os atalhos ABRIR.bat e ABRIR.command não foram alterados. O style.css recebeu apenas a correção do rodapé em celulares, na versão 1.0.2.
 
 ## Correspondência com a estrutura original
 
@@ -71,4 +72,4 @@ Na pasta do painel, com Node.js instalado:
 
 ## Pendências
 
-As pendências metodológicas estão em relatorios/etapa2-pendencias-metodologicas.md. P1, P2 e P3 foram resolvidas ou decididas. Os erros de redação (P6) aguardam autorização para correção.
+As pendências metodológicas estão em relatorios/etapa2-pendencias-metodologicas.md. P1 e P2 foram decididas, e P3, P6 e P6a foram corrigidas. Seguem abertas P4 (fatores com possível sobreposição, a tratar na tabela de correspondência da Etapa 3), P5 (classificação ODS de 27 fatores) e P7 (planilha de origem).

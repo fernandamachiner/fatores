@@ -605,6 +605,9 @@ html, body {
   .popup-icones-trio { gap: 10px; }
 
   .rodape-cartao { padding: 14px; flex-direction: column; text-align: center; }
+  /* o cartão dos princípios continua em linha, com quebra (2 em cima, 1
+     embaixo); em coluna, a quebra jogava o 3º princípio para fora da tela */
+  .rodape-principios { flex-direction: row; justify-content: center; row-gap: 14px; }
   .rodape-principio { flex: 1 1 45%; }
 }
 

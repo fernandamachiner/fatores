@@ -80,3 +80,33 @@ ERROS (2)
 
 Navegação versão 1.0.1 (file://): 6 eixos, 159 fatores, 159 popups, 0 falhas, 0 erros de console, 0 falhas de rede
 Diferenças na interface em relação ao original: 1 (descrição de Sirenes e alertas de emergências)
+
+== Versão 1.0.2 do cadastro (19/10/2026)
+VERIFICAÇÕES APROVADAS (12)
+  OK     window.METODOLOGIA carregado
+  OK     6 eixos cadastrados
+  OK     ordem dos eixos 1 a 6
+  OK     159 fatores com id único
+  OK     nomes de fatores sem repetição
+  OK     todas as 4 variantes de ícone presentes para cada fator
+  OK     rótulos ODS coerentes com o número do ODS
+  OK     cores e títulos dos eixos conferidos contra a roda SVG
+  OK     index.html carrega metodologia.js antes de app.js
+  OK     comparação com o original: 794 campos idênticos, 31 campos alterados por 32 registros autorizados, mesma ordem
+  OK     histórico: 1 alteração(ões) autorizada(s) na versão 1.0.1
+  OK     histórico: 31 alteração(ões) autorizada(s) na versão 1.0.2
+
+AVISOS (2)
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+
+ERROS (0)
+
+Controle: alteração não registrada (E3-F01 Pobreza extrema) rejeitada:
+ERROS (2)
+  ERRO   divergência não registrada em E3-F01.fator: "Pobreza" (esperado pelo histórico) / "Pobreza extrema" (cadastro)
+  ERRO   comparação com o original: 1 divergências não registradas ou histórico inconsistente
+
+Navegação versão 1.0.2: file:// e http com 6 eixos, 159 fatores, 159 popups, 0 falhas, 0 erros de console, 0 falhas de rede, sem aviso de rolagem horizontal
+Comparação com o original: 31 campos alterados no histórico, 31 confirmados na interface, 0 diferenças inesperadas; file:// e http idênticos
+Largura da página sem rolagem horizontal em 320, 360, 390, 414, 480, 560, 768, 1024 e 1280 px
