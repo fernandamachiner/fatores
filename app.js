@@ -1,8 +1,10 @@
 (function () {
   "use strict";
 
-  // EIXOS_DATA vem de data.js (carregado antes deste script)
-  var dados = window.EIXOS_DATA || [];
+  // Eixos e fatores vêm do cadastro metodológico central
+  // (metodologia/metodologia.js, carregado antes deste script).
+  var METODOLOGIA = window.METODOLOGIA || { eixos: [] };
+  var dados = METODOLOGIA.eixos;
 
   var layoutEixos = document.getElementById("layout-eixos");
   var roda = document.getElementById("roda");
@@ -73,12 +75,15 @@
   }
 
   function montarRoda() {
-    dados.forEach(function (eixo, i) {
-      var pos = POSICOES_EIXO[i] || { x: 50, y: 50 };
+    dados.forEach(function (eixo) {
+      // a posição na roda segue a ordem metodológica do eixo (1 a 6),
+      // e não a posição do eixo na lista
+      var pos = POSICOES_EIXO[eixo.ordem - 1] || { x: 50, y: 50 };
 
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "eixo-botao";
+      btn.setAttribute("data-eixo-id", eixo.id);
       btn.style.left = pos.x + "%";
       btn.style.top = pos.y + "%";
       btn.setAttribute(
@@ -143,6 +148,9 @@
       var card = document.createElement("button");
       card.type = "button";
       card.className = "fator-botao";
+      // identificador estável do fator, usado para ligar o diagnóstico
+      // territorial nas próximas etapas
+      card.setAttribute("data-fator-id", fator.id);
 
       var badge = document.createElement("div");
       badge.className = "fator-icone-badge";

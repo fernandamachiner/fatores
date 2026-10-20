@@ -56,17 +56,22 @@ COMO USAR EM QUALQUER COMPUTADOR
 
 IMPORTANTE: mantenha a estrutura de pastas
 -------------------------------------------
-Não separe o "index.html" dos arquivos "style.css", "app.js", "data.js"
-e da pasta "assets" — todos precisam ficar juntos, na mesma pasta, para a
-aplicação funcionar.
+Não separe o "index.html" dos arquivos "style.css", "app.js" e das pastas
+"metodologia" e "assets" — todos precisam ficar juntos, na mesma pasta, para
+a aplicação funcionar.
 
 CONTEÚDO
 --------
 - index.html   → a página principal (abra este arquivo)
 - style.css    → aparência/visual
 - app.js       → toda a lógica de clique/navegação interna
-- data.js      → os 6 eixos, 159 fatores, ODS e descrições (vem da planilha
-                 "Fatores_organização_Fernanda.xlsx")
+- metodologia/metodologia.js → cadastro central dos 6 eixos e 159 fatores,
+                 com identificador estável de cada fator, ícone, ODS e
+                 descrição em linguagem simples (vem da planilha
+                 "Fatores_organização_Fernanda.xlsx"; substitui o antigo
+                 data.js). É compartilhado por todos os territórios.
+- testes/      → verificações automáticas da metodologia e da navegação
+- relatorios/  → relatórios das etapas de adaptação do painel
 - assets/icons → os 157 ícones de fatores usados (recortados do pacote
                  oficial "ICONOGRAFIA_2026", variante em contorno)
 - ABRIR.bat / ABRIR.command → atalhos para abrir sem precisar procurar o
@@ -74,11 +79,17 @@ CONTEÚDO
 
 ATUALIZANDO OS TEXTOS/FATORES DEPOIS
 --------------------------------------
-Todo o conteúdo (eixos, fatores, definições e ODS) está em "data.js", em um
-formato de lista simples de ler. Para atualizar uma descrição, um nome de
-fator ou adicionar um novo item, basta editar esse arquivo com um editor de
-texto comum (Bloco de Notas, Notepad++, VS Code etc.) e salvar — não precisa
-de nenhuma ferramenta especial.
+Todo o conteúdo metodológico (eixos, fatores, definições e ODS) está em
+"metodologia/metodologia.js". Para atualizar uma descrição ou um nome de
+fator, basta editar esse arquivo com um editor de texto comum (Bloco de
+Notas, Notepad++, VS Code etc.) e salvar. Regras:
+- nunca altere o campo "id" de um fator: é ele que liga o fator aos
+  diagnósticos dos territórios;
+- um fator novo recebe o próximo número livre do seu eixo (por exemplo,
+  depois de E1-F29 vem E1-F30), mesmo que fique em outra posição na lista;
+- títulos e cores dos eixos também estão desenhados na roda dentro do
+  "index.html"; se mudar um, mude o outro.
+Depois de editar, rode "node testes/validar-metodologia.js" para conferir.
 
 COMPATIBILIDADE
 ----------------

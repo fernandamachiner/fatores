@@ -1,0 +1,54 @@
+== node testes/validar-metodologia.js --original data.js(original)
+CADASTRO: 6 eixos, 159 fatores
+  E1  29 fatores  O Suor que não nos Sustenta
+  E2  39 fatores  A Vida em Risco
+  E3  19 fatores  Nossos Corpos Silenciados
+  E4  25 fatores  A Terra de Quem?
+  E5  31 fatores  A Cidade Negada
+  E6  16 fatores  A Voz na Mesa
+
+VERIFICAÇÕES APROVADAS (10)
+  OK     window.METODOLOGIA carregado
+  OK     6 eixos cadastrados
+  OK     ordem dos eixos 1 a 6
+  OK     159 fatores com id único
+  OK     nomes de fatores sem repetição
+  OK     todas as 4 variantes de ícone presentes para cada fator
+  OK     rótulos ODS coerentes com o número do ODS
+  OK     cores e títulos dos eixos conferidos contra a roda SVG
+  OK     index.html carrega metodologia.js antes de app.js
+  OK     comparação com o original: 825 campos idênticos, mesma ordem
+
+AVISOS (2)
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+
+ERROS (0)
+
+== Teste negativo (cópia com 4 erros introduzidos)
+ERROS (12)
+  ERRO   id repetido E1-F01: Cuidado com crianças e grupos vulneráveis / Alimentos
+  ERRO   há ids repetidos ou ausentes
+  ERRO   ícone ausente: 99.99.png (E1-F08)
+  ERRO   ícone ausente: 99.99_verde.png (E1-F08)
+  ERRO   ícone ausente: 99.99_amarelo.png (E1-F08)
+  ERRO   ícone ausente: 99.99_vermelho.png (E1-F08)
+  ERRO   ícones ausentes
+  ERRO   SVG: cor do eixo E2 difere (#E2211C no SVG, #E2211D no cadastro)
+  ERRO   divergência em E1-F08.icone: "08.02" (original) / "99.99" (cadastro)
+  ERRO   divergência em eixo 2.cor: "#E2211C" (original) / "#E2211D" (cadastro)
+  ERRO   divergência em E2-F07.fator: "Dengue" (original) / "Dengue urbana" (cadastro)
+  ERRO   comparação com o original: 3 divergências
+
+== Navegação (Playwright/Chromium)
+VERSAO ORIGINAL (file://)
+  eixos 6 | fatores 159 | popups 159 | falhas 0 | erros console 0 | falhas rede 0
+  AVISO layout de celular: rolagem horizontal (502px em tela de 390px), elementos: rodape-principio, rodape-icone, svg, g, circle, path, strong, span
+VERSAO NOVA (file://)
+  eixos 6 | fatores 159 | popups 159 | falhas 0 | erros console 0 | falhas rede 0
+  AVISO layout de celular: rolagem horizontal (502px em tela de 390px), elementos: rodape-principio, rodape-icone, svg, g, circle, path, strong, span
+VERSAO NOVA (servidor http local)
+  eixos 6 | fatores 159 | popups 159 | falhas 0 | erros console 0 | falhas rede 0
+  AVISO layout de celular: rolagem horizontal (502px em tela de 390px), elementos: rodape-principio, rodape-icone, svg, g, circle, path, strong, span
+nav-novo-file.json IDENTICO ao original (interface exibida)
+nav-novo-http.json IDENTICO ao original (interface exibida)
