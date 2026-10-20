@@ -1,0 +1,24 @@
+{
+  "_instrucoes": "Copie este arquivo para territorios/correspondencias/<id>.meta.json, troque <id> pelo identificador do território (minúsculas, números e hífens) e preencha os campos. Apague esta linha de instruções.",
+  "territorio": {
+    "id": "<id>",
+    "nome": "<nome da localidade>",
+    "uf": "<UF>",
+    "tipo": "<município, comunidade, distrito...>",
+    "rotulo": "<nome exibido no seletor, igual ao do cadastro em territorios/indice.js>"
+  },
+  "situacao": {
+    "status": "diagnóstico situacional",
+    "territorio_de_exemplo": false,
+    "aviso": "<frase exibida ao passar o mouse sobre o nome do território, por exemplo: Os textos referem-se exclusivamente a <localidade>.>"
+  },
+  "documento_fonte": {
+    "arquivo": "territorios/fontes/<arquivo do diagnóstico>.docx",
+    "titulo": "<título do documento>",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
+  },
+  "campos_excluidos_da_abertura_dos_eixos": [
+    "ODS mobilizados"
+  ],
+  "decisoes": []
+}

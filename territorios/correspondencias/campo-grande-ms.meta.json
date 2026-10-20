@@ -1,0 +1,28 @@
+{
+  "territorio": {
+    "id": "campo-grande-ms",
+    "nome": "Campo Grande",
+    "uf": "MS",
+    "tipo": "município",
+    "rotulo": "Campo Grande/MS"
+  },
+  "situacao": {
+    "status": "diagnóstico situacional",
+    "territorio_de_exemplo": true,
+    "aviso": "Campo Grande/MS é o território de exemplo da plataforma. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
+  },
+  "documento_fonte": {
+    "arquivo": "territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx",
+    "titulo": "Diagnóstico Situacional - Campo Grande, Mato Grosso do Sul",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
+  },
+  "campos_excluidos_da_abertura_dos_eixos": [
+    "ODS mobilizados"
+  ],
+  "decisoes": [
+    {
+      "data": "2026-10-20",
+      "decisao": "A linha ODS mobilizados da abertura dos eixos, ausente no Eixo 1 do documento, é excluída dos dados de todos os eixos por decisão da coordenação. O documento-fonte não foi alterado."
+    }
+  ]
+}

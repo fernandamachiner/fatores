@@ -1,0 +1,81 @@
+{
+  "_sobre": "Informações de governança da metodologia que não ficam na planilha: decisões vigentes e identificadores desativados. Um identificador desativado nunca é reaproveitado. Este arquivo é lido por metodologia/ferramentas/gerar_metodologia.py.",
+  "nome": "Matriz de Fatores",
+  "versao": "1.0.2",
+  "data_versao": "2026-10-19",
+  "decisoes": [
+    {
+      "data": "2026-10-19",
+      "decisao": "A planilha metodologia/planilha/Fatores_organizacao.xlsx é a fonte oficial da metodologia. O cadastro metodologia/metodologia.js é gerado a partir dela e não deve ser editado à mão. A Matriz de Fatores v1.0.2, com 150 fatores, é a versão final definida pela coordenação após a revisão das semelhanças entre fatores; as versões anteriores foram eliminadas."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "Os códigos de ícone compartilhados (03.09 em E2-F11 e E5-F02; 03.11 em E2-F13 e E2-F14) permanecem até a conclusão dos novos ícones pela equipe de design da Fiocruz."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "O termo ensino primário em E5-F04 permanece, apesar da adoção de ensino fundamental pela LDB de 1996."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "Nomes de fatores usam maiúscula só na primeira palavra, em siglas, em nomes institucionais (Estado) e nos pares separados por barra (Tornado/Vendaval, Seca/Estiagem, Queimada/Incêndio). Separador interno dos nomes: travessão curto."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "A classificação ODS dos fatores cujo código de ícone tem numeração diferente do ODS permanece como está, sem definição por ora."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "A versão vigente da matriz é identificada como Matriz de Fatores v1.0.2, mesma nomenclatura dos documentos institucionais (planilha Fatores_organizacao_v1.0.2.xlsx e diagnósticos territoriais). As versões intermediárias do cadastro do painel, de 159 fatores, foram eliminadas e não são mais referência."
+    }
+  ],
+  "desativados": [
+    {
+      "id": "E2-F24",
+      "fator": "Gestão de riscos e emergências",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E3-F15",
+      "fator": "Acesso a direitos fundamentais",
+      "versao": "1.0.2",
+      "observacao": "A definição deste fator passou a ser a definição de E3-F08 Direitos fundamentais."
+    },
+    {
+      "id": "E4-F23",
+      "fator": "Recursos financeiros para conservação sustentável da biodiversidade",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E5-F07",
+      "fator": "Tecnologias de informação e comunicação",
+      "versao": "1.0.2",
+      "observacao": "O nome, o ícone e a definição deste fator passaram para E5-F21."
+    },
+    {
+      "id": "E5-F31",
+      "fator": "Acesso a comunicação (internet e telefonia)",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E6-F10",
+      "fator": "Tomada de decisão responsiva, inclusiva e participativa (participação social)",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E6-F12",
+      "fator": "Parcerias multissetoriais",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E6-F13",
+      "fator": "Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas)",
+      "versao": "1.0.2"
+    },
+    {
+      "id": "E6-F14",
+      "fator": "Estratégias de mobilização (redes e grupos organizados)",
+      "versao": "1.0.2"
+    }
+  ]
+}

@@ -15,6 +15,11 @@
       <span class="topo-titulo">6 Eixos Estratégicos</span>
     </div>
     <span class="topo-subtitulo">Conectados aos Objetivos de Desenvolvimento Sustentável</span>
+    <div class="territorio-barra">
+      <label class="territorio-seletor-rotulo" for="seletor-territorio">Território</label>
+      <select class="territorio-seletor" id="seletor-territorio" aria-describedby="territorio-status"></select>
+    </div>
+    <div class="territorio-status" id="territorio-status" role="status" aria-live="polite">Carregando dados do território…</div>
   </div>
 </header>
 
@@ -128,7 +133,7 @@
         </div>
         <div>
           <strong>Como usar este guia</strong>
-          <p>Clique em um eixo estratégico para explorar os fatores e ODS relacionados a ele. Depois, clique em um fator pra ver sua descrição.</p>
+          <p>Clique em um eixo estratégico para explorar os fatores e ODS relacionados a ele. Depois, clique em um fator para ver o diagnóstico situacional do território.</p>
         </div>
       </div>
     </div>
@@ -246,11 +251,21 @@
     </div>
     <span class="popup-ods" id="popup-ods"></span>
     <h3 id="popup-titulo"></h3>
-    <p id="popup-descricao"></p>
+    <p class="popup-definicao" id="popup-definicao"></p>
+    <!-- diagnóstico situacional do território ativo, preenchido via JS a
+         partir de territorios/<id>.js (nunca a partir de texto fixo) -->
+    <section class="popup-diagnostico" id="popup-diagnostico" aria-labelledby="popup-territorio">
+      <p class="popup-territorio" id="popup-territorio"></p>
+      <div class="popup-texto" id="popup-texto"></div>
+      <div class="popup-referencias" id="popup-referencias"></div>
+      <div class="popup-relacionados" id="popup-relacionados"></div>
+    </section>
+    <button type="button" class="popup-voltar" id="popup-voltar" hidden></button>
   </div>
 </div>
 
-<script src="data.js"></script>
+<script src="metodologia/metodologia.js"></script>
+<script src="territorios/indice.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

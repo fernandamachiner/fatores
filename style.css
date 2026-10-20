@@ -384,7 +384,8 @@ html, body {
 .popup {
   background: #fff;
   border-radius: 18px;
-  max-width: 420px;
+  /* largura ampliada para leitura confortável dos diagnósticos */
+  max-width: 680px;
   width: 100%;
   padding: 30px 26px 26px;
   position: relative;
@@ -461,6 +462,186 @@ html, body {
   font-size: 15px;
   line-height: 1.55;
   color: #3c4a56;
+}
+
+/* definição de referência (dado metodológico, comum a todos os territórios) */
+.popup .popup-definicao {
+  font-size: 13px;
+  font-style: italic;
+  color: #5b6b78;
+  max-width: 560px;
+  margin: 0 auto 4px;
+}
+
+/* diagnóstico situacional do território ativo */
+.popup-diagnostico {
+  text-align: left;
+  margin-top: 18px;
+  border-top: 1px solid #e3e8ec;
+  padding-top: 14px;
+}
+
+.popup .popup-territorio {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #5b6b78;
+  margin-bottom: 8px;
+}
+
+.popup-texto p + p { margin-top: 10px; }
+
+.popup-aviso {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #f4f6f8;
+  color: #3c4a56;
+  border: 1px dashed #c3ccd4;
+}
+.popup-aviso.aviso-erro { background: #fdecea; border-color: #e8a29b; color: #7a1d14; }
+
+.popup-referencias { margin-top: 14px; }
+.popup-ref-bloco + .popup-ref-bloco { margin-top: 10px; }
+
+.popup h4 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #23303d;
+}
+
+.popup-ref-bloco ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #5b6b78;
+}
+
+.popup-relacionados { margin-top: 14px; }
+
+.popup-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.popup-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid #c3ccd4;
+  background: #fff;
+  border-radius: 20px;
+  padding: 3px 10px 3px 3px;
+  font-size: 12px;
+  color: #23303d;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+.popup-chip:hover,
+.popup-chip:focus-visible { background: #f4f6f8; }
+
+.popup-chip-id {
+  color: #fff;
+  font-weight: 800;
+  font-size: 10.5px;
+  border-radius: 20px;
+  padding: 2px 7px;
+}
+
+.popup-voltar {
+  display: block;
+  margin: 16px 0 0;
+  border: none;
+  background: none;
+  color: #2f6fb0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
+}
+.popup-voltar[hidden] { display: none; }
+.popup-voltar:hover { text-decoration: underline; }
+
+/* seletor de território, no cabeçalho */
+.territorio-barra {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px 10px;
+  max-width: 100%;
+}
+.territorio-seletor-rotulo {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #3c4a56;
+}
+.territorio-seletor {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #23303d;
+  background: #fff;
+  border: 1px solid #b8c3cc;
+  border-radius: 10px;
+  padding: 7px 12px;
+  min-width: 220px;
+  max-width: 100%;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+}
+.territorio-seletor:focus-visible { outline: 3px solid #2f6fb0; outline-offset: 2px; }
+.territorio-seletor:disabled { cursor: not-allowed; opacity: 0.6; }
+
+/* faixa de identificação do território ativo, no cabeçalho */
+.territorio-status {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #3c4a56;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px 8px;
+}
+.territorio-status.territorio-erro {
+  color: #7a1d14;
+  background: #fdecea;
+  border: 1px solid #e8a29b;
+  border-radius: 10px;
+  padding: 6px 12px;
+  max-width: 640px;
+}
+.territorio-selo {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: #23303d;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+.territorio-selo-simulado { background: #8a4b00; }
+.territorio-selo-sem-dados { background: #5b6b78; }
+.territorio-alerta {
+  font-size: 12px;
+  color: #7a4b00;
+  background: #fff4dc;
+  border-radius: 8px;
+  padding: 2px 8px;
 }
 
 /* ---------- Rodapé de conceitos (borda inferior da imagem de referência) ---------- */
@@ -605,6 +786,9 @@ html, body {
   .popup-icones-trio { gap: 10px; }
 
   .rodape-cartao { padding: 14px; flex-direction: column; text-align: center; }
+  /* o cartão dos princípios continua em linha, com quebra (2 em cima, 1
+     embaixo); em coluna, a quebra jogava o 3º princípio para fora da tela */
+  .rodape-principios { flex-direction: row; justify-content: center; row-gap: 14px; }
   .rodape-principio { flex: 1 1 45%; }
 }
 
@@ -613,4 +797,14 @@ html, body {
    passa a rolar junto com a página normalmente. */
 @media (max-width: 760px), (hover: none) and (pointer: coarse) {
   html, body { background-attachment: scroll; }
+}
+
+/* Popup com diagnóstico territorial: sem ícones e sem selo ODS no topo */
+.popup.popup-modo-territorio .popup-icones-trio,
+.popup.popup-modo-territorio .popup-ods { display: none; }
+.popup.popup-modo-territorio h3 { margin: 6px 0 12px; padding: 0 32px; }
+
+@media (max-width: 480px) {
+  .territorio-seletor { min-width: 0; width: 100%; }
+  .territorio-barra { width: 100%; padding: 0 12px; box-sizing: border-box; }
 }

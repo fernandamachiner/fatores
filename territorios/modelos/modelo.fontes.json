@@ -1,0 +1,6 @@
+{
+  "_instrucoes": "Copie este arquivo para territorios/correspondencias/<id>.fontes.json. Pode começar vazio. Depois da primeira geração, registre por ID de fator as fontes citadas no texto e as referências normativas, sempre como trechos literais do texto (critério em campo-grande-ms.fontes.json). Apague esta linha de instruções.",
+  "parenteses_que_sao_fonte": [],
+  "fontes_no_texto": {},
+  "referencias_normativas": {}
+}
