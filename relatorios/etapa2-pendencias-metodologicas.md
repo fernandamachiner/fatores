@@ -45,9 +45,11 @@ Nos nomes, foram corrigidos Queimada/Incêndio (E2-F38) e Corrupção e suborno 
 
 A descrição de E1-F11 Iniciativas de economia solidária, que restringia as iniciativas à produção de alimentos, passou a ser: Formas de trabalho e produção em que as pessoas se unem para gerar renda de maneira coletiva, justa e igualitária.
 
-## P7. Fonte metodológica primária
+## P7. Fonte metodológica primária (encerrada)
 
-O LEIA-ME original indica que o conteúdo vem da planilha Fatores_organização_Fernanda.xlsx, que não estava disponível. A validação desta etapa usa o data.js publicado como referência. Se a planilha divergir do data.js, a planilha deve ser comparada ao cadastro antes da Etapa 3.
+A planilha Fatores_organização_Fernanda.xlsx foi recebida em 19/10/2026 e comparada fator a fator com o data.js publicado. A aba Consolidado tem os mesmos 159 fatores, distribuídos da mesma forma entre os eixos, com nomes, códigos de ícone, ODS, rótulos ODS e descrições idênticos. As diferenças são apenas de forma: 14 nomes e 2 descrições com espaço sobrando no final, o ODS de Alimentos gravado como texto, a ordem das linhas (a planilha tem dois blocos por eixo, e o data.js ordena pelo código do ícone) e os nomes dos Eixos 3 a 6 com minúsculas (Nossos corpos silenciados, A Terra de quem?, A Cidade negada, A Voz na mesa), diferentes do painel e da roda. A planilha também traz os erros de redação corrigidos na versão 1.0.2. Na aba Resumo, as contagens dos Eixos 5 e 6 estavam desatualizadas (26 e 21, em vez de 31 e 16), embora o total de 159 estivesse correto. O cabeçalho da coluna de descrições na aba Consolidado é y.
+
+Decisão registrada no cadastro: a partir da versão 1.0.2, metodologia/metodologia.js é a fonte oficial da metodologia, e a planilha passa a ser uma cópia derivada. A versão atualizada, Fatores_organizacao_v1.0.2.xlsx, foi gerada a partir do cadastro e mantém as abas, as colunas, a ordem das linhas e a formatação da original. Ela traz as 31 correções, os nomes de eixo do painel, as contagens corretas no Resumo, a coluna ID e a aba Alterações com o histórico completo. A planilha recebida foi arquivada sem alterações como Fatores_organização_Fernanda_original.xlsx. O cabeçalho y foi mantido.
 
 ## Pendências técnicas, fora do escopo metodológico
 

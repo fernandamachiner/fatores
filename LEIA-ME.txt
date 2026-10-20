@@ -70,6 +70,9 @@ CONTEÚDO
                  descrição em linguagem simples (vem da planilha
                  "Fatores_organização_Fernanda.xlsx"; substitui o antigo
                  data.js). É compartilhado por todos os territórios.
+- metodologia/planilha/ → planilha da metodologia gerada a partir do
+                 cadastro (versão atualizada, com ID e histórico de alterações)
+                 e a planilha original recebida, arquivada sem alterações
 - testes/      → verificações automáticas da metodologia e da navegação
 - relatorios/  → relatórios das etapas de adaptação do painel
 - assets/icons → os 157 ícones de fatores usados (recortados do pacote

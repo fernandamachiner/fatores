@@ -47,6 +47,10 @@ window.METODOLOGIA = {
     {
       "data": "2026-10-19",
       "decisao": "Nomes de fatores usam maiúscula só na primeira palavra, em siglas, em nomes institucionais (Estado) e nos pares separados por barra (Tornado/Vendaval, Seca/Estiagem, Queimada/Incêndio). Separador interno dos nomes: travessão curto."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "A planilha Fatores_organização_Fernanda.xlsx foi conferida contra o data.js publicado: mesmos 159 fatores, com nomes, ícones, ODS e descrições idênticos, salvo espaços sobrando e ordem das linhas. A partir da versão 1.0.2, este cadastro é a fonte oficial da metodologia. A planilha passa a ser uma cópia derivada, regenerada a partir do cadastro (metodologia/planilha/)."
     }
   ],
   "alteracoes": [
