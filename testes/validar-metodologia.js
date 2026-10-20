@@ -115,8 +115,20 @@ confere(/<script src="metodologia\/metodologia\.js"><\/script>\s*<script src="ap
 // 8. Comparação com o data.js original
 if (caminhoOriginal) {
   const original = new Function(fs.readFileSync(caminhoOriginal, "utf8") + ";return EIXOS_DATA;")();
-  let campos = 0, divergencias = 0;
-  const cmp = (a, b, onde) => { campos++; if (a !== b) { divergencias++; erro(`divergência em ${onde}: "${b}" (original) / "${a}" (cadastro)`); } };
+  // Alterações autorizadas, registradas no próprio cadastro (campo "alteracoes").
+  // Uma diferença só é aceita se id, campo, valor anterior e valor novo
+  // coincidirem exatamente com o registro.
+  const alteracoes = M.alteracoes || [];
+  const usadas = new Set();
+  let campos = 0, divergencias = 0, autorizadas = 0;
+  const cmp = (a, b, onde) => {
+    campos++;
+    if (a === b) return;
+    const [id, campo] = onde.split(".");
+    const k = alteracoes.findIndex((x) => x.id === id && x.campo === campo && x.anterior === b && x.novo === a);
+    if (k >= 0) { autorizadas++; usadas.add(k); ok.push(`alteração autorizada aplicada: ${onde} (versão ${alteracoes[k].versao}, ${alteracoes[k].autorizacao})`); return; }
+    divergencias++; erro(`divergência não registrada em ${onde}: "${b}" (original) / "${a}" (cadastro)`);
+  };
   if (original.length !== eixos.length) erro("número de eixos difere do original");
   original.forEach((eo, i) => {
     const e = eixos[i];
@@ -130,7 +142,10 @@ if (caminhoOriginal) {
       Object.keys(fo).forEach((c) => { if (!(c in f)) erro(`${f.id}: campo original "${c}" perdido`); });
     });
   });
-  confere(divergencias === 0, `comparação com o original: ${campos} campos idênticos, mesma ordem`, `comparação com o original: ${divergencias} divergências`);
+  alteracoes.forEach((x, k) => { if (!usadas.has(k)) erro(`alteração registrada mas não encontrada no cadastro: ${x.id}.${x.campo}`); });
+  confere(divergencias === 0,
+    `comparação com o original: ${campos - autorizadas} campos idênticos, ${autorizadas} alteração(ões) autorizada(s), mesma ordem`,
+    `comparação com o original: ${divergencias} divergências não registradas`);
 }
 
 // Resumo

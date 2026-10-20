@@ -52,3 +52,31 @@ VERSAO NOVA (servidor http local)
   AVISO layout de celular: rolagem horizontal (502px em tela de 390px), elementos: rodape-principio, rodape-icone, svg, g, circle, path, strong, span
 nav-novo-file.json IDENTICO ao original (interface exibida)
 nav-novo-http.json IDENTICO ao original (interface exibida)
+
+== Versão 1.0.1 do cadastro (19/10/2026)
+VERIFICAÇÕES APROVADAS (11)
+  OK     window.METODOLOGIA carregado
+  OK     6 eixos cadastrados
+  OK     ordem dos eixos 1 a 6
+  OK     159 fatores com id único
+  OK     nomes de fatores sem repetição
+  OK     todas as 4 variantes de ícone presentes para cada fator
+  OK     rótulos ODS coerentes com o número do ODS
+  OK     cores e títulos dos eixos conferidos contra a roda SVG
+  OK     index.html carrega metodologia.js antes de app.js
+  OK     alteração autorizada aplicada: E2-F37.definicao (versão 1.0.1, Fernanda Machiner, coordenação metodológica)
+  OK     comparação com o original: 824 campos idênticos, 1 alteração(ões) autorizada(s), mesma ordem
+
+AVISOS (2)
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+
+ERROS (0)
+
+Controle: correção não registrada (E5-F17) rejeitada:
+ERROS (2)
+  ERRO   divergência não registrada em E5-F17.definicao: "Valorizarização política e comunitária das manifestações culturais como música, arte e tradição." (original) / "Valorização política e comunitária das manifestações culturais como música, arte e tradição." (cadastro)
+  ERRO   comparação com o original: 1 divergências não registradas
+
+Navegação versão 1.0.1 (file://): 6 eixos, 159 fatores, 159 popups, 0 falhas, 0 erros de console, 0 falhas de rede
+Diferenças na interface em relação ao original: 1 (descrição de Sirenes e alertas de emergências)

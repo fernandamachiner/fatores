@@ -1,18 +1,18 @@
 # Etapa 2. Pendências metodológicas
 
-Nenhuma das pendências abaixo foi corrigida. O cadastro em metodologia/metodologia.js reproduz o data.js original sem alteração de nomes, códigos, ordem, rótulos ODS ou descrições. Cada item depende de decisão da coordenação metodológica. Os identificadores citados seguem o formato estável E<eixo>-F<posição>, definido nesta etapa.
+Situação em 19/10/2026, versão 1.0.1 do cadastro. P1 e P2 foram decididas e P3 foi corrigida por autorização da coordenação metodológica. As decisões e a alteração estão registradas nos campos decisoes e alteracoes de metodologia/metodologia.js. Os demais itens seguem sem alteração e dependem de decisão. Os identificadores citados seguem o formato estável E<eixo>-F<posição>, definido nesta etapa.
 
-## P1. Divergência entre a matriz do painel e a matriz do documento de diagnóstico
+## P1. Matriz de referência (decidida)
 
-O painel contém 159 fatores (29, 39, 19, 25, 31 e 16 por eixo). O Diagnóstico Situacional de Campo Grande/MS declara 126 fatores (21, 26, 19, 25, 21 e 14) e cita códigos do tipo E1-20, E3-13 e E4-22, que pertencem a outra numeração. Esses códigos não equivalem aos identificadores E1-F20, E3-F13 e E4-F22 do cadastro, que designam outros fatores. Nesta etapa a matriz de 159 fatores foi mantida como estrutura oficial, por ser a que está publicada e por vedação de inventar ou eliminar fatores. A Etapa 3 depende de decisão sobre a matriz de referência e, caso mantida a de 159, de uma tabela de correspondência revisada.
+Decisão de 19/10/2026: a matriz de 159 fatores do painel é a estrutura metodológica oficial. O Diagnóstico Situacional de Campo Grande/MS, organizado em 126 fatores com códigos do tipo E1-20, será vinculado a essa estrutura na Etapa 3 por meio de tabela de correspondência revisada. Esses códigos não equivalem aos identificadores E1-F20, E3-F13 e E4-F22 do cadastro.
 
-## P2. Códigos de ícone compartilhados
+## P2. Códigos de ícone compartilhados (decidida, aguardando novos ícones)
 
-O ícone 03.09 é usado por E2-F11 Acidentes em estradas e por E5-F02 Vias obstruídas e danificadas, vias municipais, estaduais e federais. O ícone 03.11 é usado por E2-F13 Acesso a medicamentos e por E2-F14 Cobertura vacinal. Não há prejuízo técnico, porque o vínculo com os diagnósticos passou a ser feito pelo identificador do fator, mas os pares ficam visualmente indistinguíveis na grade e no popup. Confirmar se o compartilhamento é intencional ou se falta ícone próprio.
+Decisão de 19/10/2026: os ícones 03.09 (E2-F11 Acidentes em estradas e E5-F02 Vias obstruídas e danificadas) e 03.11 (E2-F13 Acesso a medicamentos e E2-F14 Cobertura vacinal) permanecem compartilhados até que a equipe de design da Fiocruz conclua os novos ícones. A substituição exigirá apenas trocar o campo icone dos fatores afetados e incluir as quatro variantes do arquivo em assets/icons. O validador continua emitindo aviso para esses dois casos, como lembrete.
 
-## P3. Descrição incompatível com o fator
+## P3. Descrição incompatível com o fator (corrigida)
 
-A descrição de E2-F37 Sirenes e alertas de emergências é O bom estado das ruas, calçadas e estradas para que as pessoas e carros possam circular com facilidade. O texto descreve vias de circulação, não sistemas de alerta, e aparenta ter sido deslocado de outro fator. É necessário fornecer a descrição correta.
+A descrição de E2-F37 Sirenes e alertas de emergências tratava de vias de circulação. Por autorização de 19/10/2026, passou a ser: Sinais sonoros ou visuais para avisar que há um perigo iminente por perto e que você precisa se proteger rápido. A inicial maiúscula e o ponto final seguem o padrão das demais descrições. A alteração consta do histórico do cadastro com o valor anterior.
 
 ## P4. Fatores com possível sobreposição conceitual
 
@@ -33,16 +33,45 @@ Os grupos abaixo têm nomes muito próximos e podem gerar dúvida na atribuiçã
 
 Em 27 fatores os dois primeiros dígitos do código do ícone não coincidem com o ODS atribuído. O caso mais frequente são fatores de desastres classificados no ODS 13 com ícones de outras séries (E2-F01, E2-F17, E2-F26, E2-F30, E2-F34, E2-F36, E2-F37, E2-F38, E2-F39, E5-F01, E1-F29) e fatores comunitários classificados no ODS 11 ou 17 (E6-F01, E6-F02, E6-F03, E6-F05, E6-F11, E6-F15, E6-F16, E4-F05, E5-F30, E5-F31). Os demais são E1-F28, E2-F31, E2-F35, E3-F09, E3-F14 e E4-F25. Isso não configura erro, porque o código pertence ao catálogo ICONOGRAFIA_2026 e não à classificação ODS, mas a classificação ODS desses fatores merece confirmação, já que é exibida no card e no popup. A lista completa está em etapa2-correspondencia-fatores.csv.
 
-## P6. Ajustes textuais
+## P6. Erros de redação (aguardando autorização)
 
-Os itens a seguir são de redação e não alteram o conteúdo metodológico. Não foram corrigidos por exigirem autorização.
+A revisão integral dos 159 nomes e descrições identificou os erros abaixo. Os itens do grupo A são erros objetivos de ortografia, gramática ou digitação e aparecem hoje no popup. Os do grupo B são escolhas de redação que podem ser mantidas no registro de linguagem simples. Os do grupo C afetam nomes oficiais de fatores e exigem decisão específica.
 
-- E5-F17 Promoção de cultura: a descrição começa com Valorizarização.
-- E3-F06 Ação do Estado na coordenação e coerência de políticas para igualdade de gênero: a descrição tem problema de concordância (políticas que fazem as mulheres tenham), usa tem em vez de têm e não tem ponto final.
-- E1-F28 Trabalho informal: a descrição não tem ponto final.
-- E1-F02 Alimentos: a descrição tem espaço duplo.
-- E2-F38 Queimada/ Incêndio: o nome tem espaço após a barra, diferente de Tornado/Vendaval e Seca/Estiagem.
-- O uso de maiúsculas nos nomes é irregular (por exemplo, Educação Técnica e profissional, Saúde do Idoso, Racismo Ambiental, Acesso a Iluminação pública).
+Grupo A. Correções objetivas nas descrições
+
+| Fator | Trecho atual | Correção proposta |
+|---|---|---|
+| E5-F17 Promoção de cultura | Valorizarização política | Valorização política |
+| E5-F27 Biblioteca | Acesso à livros | Acesso a livros |
+| E2-F06 Doenças decorrentes de contaminação | diarréias | diarreias |
+| E3-F06 Ação do Estado na coordenação e coerência de políticas para igualdade de gênero | políticas que fazem as mulheres tenham as mesmas chances que os homens tem na vida, no trabalho, na comunidade e na política | políticas que fazem com que as mulheres tenham as mesmas chances que os homens têm na vida, no trabalho, na comunidade e na política. |
+| E4-F16 Desmatamento e solos degradados | É a remoção da vegetação nativa e da perda de qualidade dos solos. | É a remoção da vegetação nativa e a perda de qualidade dos solos. |
+| E4-F21 Espécies exóticas invasoras | Animais ou plantas introduzidas | Animais ou plantas introduzidos |
+| E5-F04 Educação – ensino primário | É o caminho de estudo que vai desde o aprendizado de ler, escrever, fazer contas e compreender o mundo. | É o caminho de estudo que começa com o aprendizado de ler, escrever e fazer contas e ajuda a compreender o mundo. (a frase atual usa desde sem o complemento até) |
+| E1-F14 Trabalho infantil | obrigam as crianças para trabalhar | obrigam as crianças a trabalhar |
+| E1-F28 Trabalho informal | 13°, FGTS e INSS (sem ponto final) | 13º, FGTS e INSS. (o símbolo usado é o de grau, não o ordinal) |
+| E1-F02 Alimentos | mate a fome  todos os dias (espaço duplo) | mate a fome todos os dias |
+
+Grupo B. Ajustes opcionais de regência ou estilo
+
+| Fator | Trecho atual | Alternativa |
+|---|---|---|
+| E2-F02 Insegurança alimentar | os nutrientes que o corpo precisa | os nutrientes de que o corpo precisa |
+| E1-F14 Trabalho infantil | mantendo elas na pobreza | mantendo-as na pobreza |
+| E4-F01 Acesso a recursos financeiros para gestão, conservação sustentável da biodiversidade | ajudar a cuidar e proteger a natureza | ajudar a cuidar da natureza e a protegê-la |
+| E5-F27 Biblioteca | Acesso a livros e com eles conseguir acesso à leitura | Acesso a livros e, por meio deles, à leitura |
+
+Grupo C. Nomes oficiais de fatores
+
+- E2-F38 Queimada/ Incêndio tem espaço após a barra, ao contrário de Tornado/Vendaval e Seca/Estiagem. Proposta: Queimada/Incêndio.
+- E6-F08 Corrupção e o suborno (em todos os níveis) usa artigo só no segundo termo. Proposta: Corrupção e suborno (em todos os níveis).
+- E5-F04 Educação – ensino primário usa terminologia anterior à LDB de 1996, que adota ensino fundamental. A mudança é de nomenclatura e depende de decisão metodológica.
+- Os separadores são irregulares: E1-F04 e E6-F11 usam hífen, enquanto E5-F02, E5-F04, E5-F09 e E5-F19 usam travessão curto.
+- O uso de maiúsculas é irregular (Agricultura Familiar, Produção Orgânica, Doenças Transmissíveis, Saúde do Idoso, Racismo Ambiental, Tecnologias Sociais, Educação Técnica e profissional, Educação Superior, Acesso aos serviços de Energia, Serviços de Energia modernos e sustentáveis, Acesso a Iluminação pública). Padronizar exige decidir se termos como Economia Solidária e Tecnologias Sociais devem manter maiúsculas como conceitos.
+
+## P6a. Descrição com escopo mais restrito que o fator
+
+A descrição de E1-F11 Iniciativas de Economia Solidária limita as iniciativas à produção de alimentos. A economia solidária abrange também artesanato, reciclagem, serviços, finanças solidárias e outras atividades, inclusive as que o próprio diagnóstico de Campo Grande/MS menciona (cooperativas de catadores e bancos comunitários). Recomenda-se ampliar a descrição, com texto a ser definido pela coordenação.
 
 ## P7. Fonte metodológica primária
 

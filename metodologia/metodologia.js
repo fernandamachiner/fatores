@@ -18,15 +18,41 @@
  * Se um fator mudar de nome, o id permanece. O código do ícone NÃO serve
  * como identificador, porque há ícones compartilhados por dois fatores.
  *
+ * Toda alteração de nome, código, ODS ou descrição deve ser registrada em
+ * "alteracoes" (valor anterior, valor novo, data e autorização). Decisões
+ * metodológicas que não alteram valores ficam em "decisoes".
+ *
  * Atenção: títulos e cores dos eixos também estão desenhados na roda SVG
  * do index.html. Alterações aqui devem ser replicadas lá (o teste
  * testes/validar-metodologia.js acusa divergências).
  */
 window.METODOLOGIA = {
   "nome": "Matriz de Fatores Territoriais - 6 Eixos Estratégicos",
-  "versao": "1.0.0",
+  "versao": "1.0.1",
   "origem": "data.js do painel publicado (eixo-fatores-diagnostico-main), derivado da planilha Fatores_organização_Fernanda.xlsx",
   "formato_id_fator": "E<ordem do eixo>-F<posição do fator no eixo, dois dígitos>",
+  "decisoes": [
+    {
+      "data": "2026-10-19",
+      "decisao": "A matriz de 159 fatores do painel é a estrutura metodológica oficial. A matriz de 126 fatores do documento de diagnóstico de Campo Grande/MS não substitui esta estrutura."
+    },
+    {
+      "data": "2026-10-19",
+      "decisao": "Os códigos de ícone compartilhados (03.09 em E2-F11 e E5-F02; 03.11 em E2-F13 e E2-F14) permanecem até a conclusão dos novos ícones pela equipe de design da Fiocruz."
+    }
+  ],
+  "alteracoes": [
+    {
+      "versao": "1.0.1",
+      "data": "2026-10-19",
+      "id": "E2-F37",
+      "campo": "definicao",
+      "anterior": "O bom estado das ruas, calçadas e estradas para que as pessoas e carros possam circular com facilidade.",
+      "novo": "Sinais sonoros ou visuais para avisar que há um perigo iminente por perto e que você precisa se proteger rápido.",
+      "autorizacao": "Fernanda Machiner, coordenação metodológica",
+      "motivo": "A descrição anterior tratava de vias de circulação e não correspondia ao fator."
+    }
+  ],
   "eixos": [
     {
       "id": "E1",
@@ -638,7 +664,7 @@ window.METODOLOGIA = {
           "icone": "16.11",
           "ods": 13,
           "nome_ods": "ODS 13 – AÇÃO CONTRA A MUDANÇA GLOBAL DO CLIMA",
-          "definicao": "O bom estado das ruas, calçadas e estradas para que as pessoas e carros possam circular com facilidade."
+          "definicao": "Sinais sonoros ou visuais para avisar que há um perigo iminente por perto e que você precisa se proteger rápido."
         },
         {
           "id": "E2-F38",

@@ -4,9 +4,11 @@
 
 A etapa partiu do relatório da Etapa 1 (relatorios/etapa1-auditoria-tecnica.md), do código-fonte de eixo-fatores-diagnostico-main.zip, versão confirmada como idêntica à publicada, e do data.js como referência metodológica. A planilha Fatores_organização_Fernanda.xlsx, citada no LEIA-ME original como fonte do data.js, não estava disponível (pendência P7). O estado original foi registrado em um repositório git local antes de qualquer alteração, o que garante a rastreabilidade de cada mudança.
 
-## Decisão sobre a matriz de referência
+## Decisões da coordenação metodológica
 
-A matriz de 159 fatores do painel foi mantida como estrutura oficial. A matriz de 126 fatores do documento de diagnóstico não foi incorporada, porque isso exigiria eliminar e criar fatores, o que as regras desta etapa vedam. A divergência está registrada como pendência P1 e precisa ser resolvida antes da Etapa 3.
+Em 19/10/2026 foram decididos três pontos, registrados no próprio cadastro. A matriz de 159 fatores do painel é a estrutura oficial, e o diagnóstico de Campo Grande/MS, organizado em 126 fatores, será vinculado a ela por tabela de correspondência na Etapa 3. Os ícones compartilhados permanecem até a entrega dos novos ícones pela equipe de design da Fiocruz. A descrição de E2-F37 Sirenes e alertas de emergências foi substituída, o que levou o cadastro à versão 1.0.1.
+
+O cadastro passou a ter dois campos de governança. O campo decisoes guarda deliberações que não alteram valores. O campo alteracoes guarda cada mudança de valor com o identificador do fator, o campo alterado, o valor anterior, o valor novo, a data e a autorização. O validador só aceita diferenças em relação ao data.js original que constem desse histórico com correspondência exata. Qualquer outra diferença é tratada como erro, e um registro sem aplicação correspondente também.
 
 ## Estrutura criada
 
@@ -49,11 +51,11 @@ A correspondência fator a fator, com identificador, eixo original, posição or
 
 ## Testes executados
 
-A validação do cadastro (testes/validar-metodologia.js) aprovou as dez verificações. Confirmou 6 eixos na ordem 1 a 6 e 159 fatores com identificador único e no formato previsto, sem nomes repetidos. Também confirmou as quatro variantes de ícone para todos os fatores, a coerência entre número e rótulo ODS, a coincidência de cores e títulos dos eixos com a roda SVG do index.html e o carregamento do cadastro antes do app.js. Na comparação com o data.js original, os 825 campos (5 por eixo e 5 por fator) estão idênticos e na mesma ordem. Os dois avisos emitidos referem-se aos ícones compartilhados (pendência P2).
+A validação do cadastro (testes/validar-metodologia.js) aprovou as dez verificações. Confirmou 6 eixos na ordem 1 a 6 e 159 fatores com identificador único e no formato previsto, sem nomes repetidos. Também confirmou as quatro variantes de ícone para todos os fatores, a coerência entre número e rótulo ODS, a coincidência de cores e títulos dos eixos com a roda SVG do index.html e o carregamento do cadastro antes do app.js. Na comparação com o data.js original, 824 dos 825 campos (5 por eixo e 5 por fator) estão idênticos e na mesma ordem, e o único campo diferente é a descrição de E2-F37, aceita por constar do histórico de alterações autorizadas. Um teste de controle com uma correção não registrada (Valorizarização) foi rejeitado pelo validador. Os dois avisos emitidos referem-se aos ícones compartilhados (pendência P2).
 
 Para verificar que o validador de fato detecta falhas, foi executado um teste negativo em uma cópia do projeto com quatro erros introduzidos de propósito: identificador repetido, código de ícone inexistente, cor de eixo alterada e nome de fator alterado. O validador acusou os quatro erros e encerrou com código de falha.
 
-O teste de navegação (testes/testar-navegacao.js, Playwright com Chromium) foi executado na versão original e na nova. Em cada execução, o teste aplica o hover nos seis eixos, abre cada eixo, percorre os 159 cards e abre e fecha os 159 popups, alternando as três formas de fechamento. Também usa o botão de retorno e confere o empilhamento das colunas em tela de celular. Não houve falha, erro de console ou recurso não carregado em nenhuma das três execuções: versão original por file://, versão nova por file:// e versão nova por servidor http. O registro completo do que a interface exibiu inclui aria-label dos eixos, cabeçalho e cor de cada eixo, nome, selo ODS e ícone de cada card, título, rótulo ODS, descrição, três ícones e textos alternativos de cada popup. Esse registro da versão nova é idêntico ao da versão original nas duas formas de abertura. A navegação original foi preservada integralmente.
+O teste de navegação (testes/testar-navegacao.js, Playwright com Chromium) foi executado na versão original e na nova. Em cada execução, o teste aplica o hover nos seis eixos, abre cada eixo, percorre os 159 cards e abre e fecha os 159 popups, alternando as três formas de fechamento. Também usa o botão de retorno e confere o empilhamento das colunas em tela de celular. Não houve falha, erro de console ou recurso não carregado em nenhuma das três execuções: versão original por file://, versão nova por file:// e versão nova por servidor http. O registro completo do que a interface exibiu inclui aria-label dos eixos, cabeçalho e cor de cada eixo, nome, selo ODS e ícone de cada card, título, rótulo ODS, descrição, três ícones e textos alternativos de cada popup. Na versão 1.0.0, esse registro foi idêntico ao da versão original nas duas formas de abertura. Na versão 1.0.1, a única diferença registrada na interface é a nova descrição exibida no popup de Sirenes e alertas de emergências. A navegação original foi preservada integralmente.
 
 O teste também registrou um defeito preexistente, presente na versão publicada: em tela de 390 px, o cartão de princípios do rodapé provoca rolagem horizontal. O defeito não foi corrigido nesta etapa e está listado entre as pendências técnicas.
 
@@ -69,4 +71,4 @@ Na pasta do painel, com Node.js instalado:
 
 ## Pendências
 
-As pendências metodológicas estão em relatorios/etapa2-pendencias-metodologicas.md. A pendência P1 (matriz de referência) bloqueia a Etapa 3. A P3 (descrição incompatível de Sirenes e alertas de emergências) é a única que afeta o conteúdo exibido hoje.
+As pendências metodológicas estão em relatorios/etapa2-pendencias-metodologicas.md. P1, P2 e P3 foram resolvidas ou decididas. Os erros de redação (P6) aguardam autorização para correção.
