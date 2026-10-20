@@ -27,7 +27,7 @@ ERROS (0)
 
 Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
 
-== Território Campo Grande/MS (documento ajustado em 20/10/2026)
+== Território Campo Grande/MS (documento ajustado em 20/10/2026, 01h11)
 TERRITÓRIO Campo Grande/MS: 150 validados, 0 pendentes, 0 fatores sem diagnóstico
 
 VERIFICAÇÕES APROVADAS (7)
@@ -44,11 +44,11 @@ AVISOS (1)
 
 ERROS (0)
 
-Documento: 496 blocos com conteúdo (335 parágrafos e 161 tabelas)
+Documento: 494 blocos com conteúdo (333 parágrafos e 161 tabelas)
 Diagnósticos conferidos literalmente contra o .docx: 150 de 150 no arquivo
 Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
 Conteúdos do documento não representados no arquivo: 0
 
 == Controle: contradição central do Eixo 3 apagada numa cópia
-Conteúdos do documento não representados no arquivo: 1
-  bloco 221: Eixo 3, Contradição central: A cor da pele e o gênero determinam quem sofre mais violênci
+ERRO  E3-F05: texto difere do documento
+ERRO  E3-F07: texto difere do documento

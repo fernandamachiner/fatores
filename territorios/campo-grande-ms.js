@@ -318,14 +318,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       ]
     },
     {
-      "titulo": "Principais lacunas de informação",
-      "conteudo": [
-        {
-          "paragrafo": "Constituem lacunas por consulta direta às bases: séries municipais do SIM, SINASC e SINAN para mortalidade materna, neonatal e por causas externas e para agravos transmissíveis; estrutura etária, pessoas com deficiência, características do entorno dos domicílios e acesso à internet do Censo 2022 por setor censitário; famílias no CadÚnico e no Bolsa Família por território (VIS Data/MDS); cobertura e uso da terra e focos de calor no município (MapBiomas, PRODES, Programa Queimadas); registros de desastres no S2iD; inventário de barragens no SNISB; indicadores do VIGITEL para a capital; matrículas e indicadores docentes do Censo Escolar por escola; execução orçamentária por função (SIOPS e portal de transparência); e inventário comunitário de organizações, rádios, grupos de mensagens, hortas e pontos de risco, a ser produzido pela cartografia social."
-        }
-      ]
-    },
-    {
       "titulo": "Fontes utilizadas",
       "conteudo": [
         {
@@ -395,7 +387,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F02": {
-      "texto": "O acesso a alimento adequado em Campo Grande é mediado sobretudo pela renda, dado que a agropecuária responde por apenas 2,8% do valor adicionado municipal e a cidade depende do abastecimento externo concentrado na CEASA e nas grandes redes atacadistas. O PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), inferior à média estadual de R$ 66,8 mil no mesmo ano (Semadesc), e a concentração da massa salarial nas faixas mais altas indicam que o preço dos alimentos pesa desproporcionalmente sobre as famílias inscritas no CadÚnico. O fator relaciona-se a E1-F06 e E1-F24 e tem como desfecho sanitário E2-F02, devendo o plano popular priorizar a produção de dados intraurbanos por meio do SISVAN e do Cadastro Único.",
+      "texto": "O acesso a alimento adequado em Campo Grande é mediado sobretudo pela renda, dado que a agropecuária responde por apenas 2,8% do valor adicionado municipal e a cidade depende do abastecimento externo concentrado na CEASA e nas grandes redes atacadistas. O PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), inferior à média estadual de R$ 66,8 mil no mesmo ano (Semadesc), e a concentração da massa salarial nas faixas mais altas indicam que o preço dos alimentos pesa desproporcionalmente sobre as famílias inscritas no CadÚnico. O fator relaciona-se a E1-F06 e E1-F24 e tem como desfecho sanitário E2-F02.",
       "fontes_citadas": [
         "IBGE, escala municipal",
         "Semadesc"
@@ -1759,7 +1751,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E2-F26": {
-      "texto": "Rotas de fuga para evacuação em caso de enchente, ventos extremos ou rompimento de barragem não estão definidas nem sinalizadas nos bairros de Campo Grande, segundo a informação pública disponível, o que configura lacuna de preparação a ser confirmada junto à Defesa Civil municipal. A relevância do fator é concreta para as populações a jusante de barragens urbanas classificadas como de risco: o barramento do antigo Clube Atlântico possui classificação de risco alto e dano potencial associado alto no Relatório de Segurança de Barragens 2024-2025 da ANA, com cerca de 100 moradores a jusante, e o Lago do Amor e o Lageado constam de relatório do Imasul sobre barragens urbanas. O fator articula-se a E2-F33, E2-F39 e E5-F02, e a cartografia social é o instrumento adequado para traçar rotas com os moradores, considerando idosos, pessoas com deficiência e crianças (E3-F09, E3-F11).",
+      "texto": "Rotas de fuga para evacuação em caso de enchente, ventos extremos ou rompimento de barragem não estão definidas nem sinalizadas nos bairros de Campo Grande, segundo a informação pública disponível.A relevância do fator é concreta para as populações a jusante de barragens urbanas classificadas como de risco: o barramento do antigo Clube Atlântico possui classificação de risco alto e dano potencial associado alto no Relatório de Segurança de Barragens 2024-2025 da ANA, com cerca de 100 moradores a jusante, e o Lago do Amor e o Lageado constam de relatório do Imasul sobre barragens urbanas. O fator articula-se a E2-F33, E2-F39 e E5-F02, e a cartografia social é o instrumento adequado para traçar rotas com os moradores, considerando idosos, pessoas com deficiência e crianças (E3-F09, E3-F11).",
       "fontes_citadas": [
         "relatório do Imasul sobre barragens urbanas",
         "Relatório de Segurança de Barragens 2024-2025 da ANA"
@@ -2237,7 +2229,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E3-F05": {
-      "texto": "A propriedade e o controle da terra pelas mulheres em Campo Grande devem ser analisados em duas escalas. Na zona rural e nos assentamentos de reforma agrária, a titulação conjunta ou preferencial às mulheres, prevista na legislação agrária, deve ser verificada nos registros do INCRA. Na zona urbana, a regularização fundiária de núcleos informais e os programas habitacionais podem priorizar a titulação em nome das mulheres, conforme a Lei nº 13.465/2017 e as regras dos programas federais de habitação de interesse social. A ausência de dados municipais desagregados por sexo sobre titularidade de imóveis regularizados constitui lacuna. A titularidade feminina reduz a vulnerabilidade em situações de violência doméstica (E3-F02) e separação, e amplia o acesso a crédito (E1-F22). O fator articula-se a E5-F22 e E3-F19, e o plano popular deve incluir a perspectiva de gênero nos processos de regularização fundiária.",
+      "texto": "A propriedade e o controle da terra pelas mulheres em Campo Grande devem ser analisados em duas escalas. Na zona rural e nos assentamentos de reforma agrária, a titulação conjunta ou preferencial às mulheres, prevista na legislação agrária, deve ser verificada nos registros do INCRA. Na zona urbana, a regularização fundiária de núcleos informais e os programas habitacionais podem priorizar a titulação em nome das mulheres, conforme a Lei nº 13.465/2017 e as regras dos programas federais de habitação de interesse social. A titularidade feminina reduz a vulnerabilidade em situações de violência doméstica (E3-F02) e separação, e amplia o acesso a crédito (E1-F22). O fator articula-se a E5-F22 e E3-F19, e o plano popular deve incluir a perspectiva de gênero nos processos de regularização fundiária.",
       "fontes_citadas": [],
       "referencias_normativas": [
         "Lei nº 13.465/2017"
@@ -2284,7 +2276,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E3-F07": {
-      "texto": "O tráfico de pessoas tem relevância regional para Campo Grande em razão da posição do estado na fronteira com Paraguai e Bolívia e da circulação de migrantes, trabalhadores sazonais e populações indígenas. As modalidades de maior risco são a exploração sexual, o trabalho em condições análogas às de escravidão (E1-F15) e o aliciamento de adolescentes. O Núcleo de Enfrentamento ao Tráfico de Pessoas do estado e a Polícia Federal concentram as investigações, mas a subnotificação é estrutural. A presença de 17,1% de estrangeiros entre as pessoas em situação de rua recenseadas em 2025 (GT-PSR) indica grupo exposto a redes de exploração. Na ausência de dados municipais sistematizados, o fator é tratado como lacuna de informação e risco provável. Articula-se a E3-F13 e E3-F14, e as equipes de APS, Consultório na Rua e assistência social devem ser capacitadas para reconhecer sinais de tráfico e acionar a rede de proteção.",
+      "texto": "O tráfico de pessoas tem relevância regional para Campo Grande em razão da posição do estado na fronteira com Paraguai e Bolívia e da circulação de migrantes, trabalhadores sazonais e populações indígenas. As modalidades de maior risco são a exploração sexual, o trabalho em condições análogas às de escravidão (E1-F15) e o aliciamento de adolescentes. O Núcleo de Enfrentamento ao Tráfico de Pessoas do estado e a Polícia Federal concentram as investigações, mas a subnotificação é estrutural. A presença de 17,1% de estrangeiros entre as pessoas em situação de rua recenseadas em 2025 (GT-PSR) indica grupo exposto a redes de exploração. Articula-se a E3-F13 e E3-F14, e as equipes de APS, Consultório na Rua e assistência social devem ser capacitadas para reconhecer sinais de tráfico e acionar a rede de proteção.",
       "fontes_citadas": [
         "GT-PSR"
       ],

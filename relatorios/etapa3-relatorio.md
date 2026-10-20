@@ -2,11 +2,11 @@
 
 ## Entradas utilizadas
 
-A etapa utilizou o cadastro metodológico vigente, a Matriz de Fatores v1.0.2 (metodologia/metodologia.js, 6 eixos e 150 fatores, gerado da planilha oficial metodologia/planilha/Fatores_organizacao.xlsx), e o documento Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx, elaborado segundo a organização final dos fatores. O documento recebido em 20/10/2026 às 00h28 foi substituído, no mesmo dia, pela versão ajustada pela coordenação. Nessa versão, 28 diagnósticos foram revistos com consulta direta às fontes, retirando declarações de lacuna de informação. O diagnóstico anterior, organizado em 126 fatores (DOC-20261008-WA0072.docx), foi retirado do projeto com a correspondência e os pendentes que dele decorriam. O documento vigente foi copiado sem alteração para territorios/fontes/.
+A etapa utilizou o cadastro metodológico vigente, a Matriz de Fatores v1.0.2 (metodologia/metodologia.js, 6 eixos e 150 fatores, gerado da planilha oficial metodologia/planilha/Fatores_organizacao.xlsx), e o documento Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx, elaborado segundo a organização final dos fatores. O documento recebido em 20/10/2026 às 00h28 foi substituído, no mesmo dia, por duas versões ajustadas pela coordenação (01h01 e 01h11). Os ajustes revisaram 31 diagnósticos com consulta direta às fontes, retirando declarações de lacuna de informação, e retiraram das notas metodológicas a seção Principais lacunas de informação. O diagnóstico anterior, organizado em 126 fatores (DOC-20261008-WA0072.docx), foi retirado do projeto com a correspondência e os pendentes que dele decorriam. O documento vigente foi copiado sem alteração para territorios/fontes/.
 
 ## Leitura do documento
 
-O documento traz capa institucional (PICAPS, CoLaboratório CTIS, Fiocruz Brasília) com ficha do município, resumo executivo com quadro dos eixos, seis capítulos de eixo, síntese estratégica e notas metodológicas e fontes. Cada capítulo de eixo abre com uma tabela de contradição central e foco pedagógico e com um parágrafo introdutório. Cada fator é identificado por uma tabela com o identificador do cadastro, o nome e o ODS, seguida da definição de referência e de um parágrafo de diagnóstico. A síntese estratégica reúne nós críticos, potencialidades e matriz de prioridades para o ciclo PICAPS. As notas registram os fatores de baixa aplicabilidade territorial, as principais lacunas de informação e as fontes utilizadas por eixo, com ano de referência e escala. No total, são 496 blocos com conteúdo: 335 parágrafos e 161 tabelas.
+O documento traz capa institucional (PICAPS, CoLaboratório CTIS, Fiocruz Brasília) com ficha do município, resumo executivo com quadro dos eixos, seis capítulos de eixo, síntese estratégica e notas metodológicas e fontes. Cada capítulo de eixo abre com uma tabela de contradição central e foco pedagógico e com um parágrafo introdutório. Cada fator é identificado por uma tabela com o identificador do cadastro, o nome e o ODS, seguida da definição de referência e de um parágrafo de diagnóstico. A síntese estratégica reúne nós críticos, potencialidades e matriz de prioridades para o ciclo PICAPS. As notas registram os fatores de baixa aplicabilidade territorial e as fontes utilizadas por eixo, com ano de referência e escala. No total, são 494 blocos com conteúdo: 333 parágrafos e 161 tabelas.
 
 As tabelas de abertura dos Eixos 2 a 6 trazem também uma linha ODS mobilizados, ausente no Eixo 1. Por decisão de 20/10/2026, essa linha foi excluída dos dados de todos os eixos. A decisão está registrada em territorios/correspondencias/campo-grande-ms.meta.json e no arquivo do território, e o documento-fonte não foi alterado.
 
@@ -38,7 +38,7 @@ Cada diagnóstico tem:
 - origem: identificação no documento;
 - correspondencia: forma de associação.
 
-O critério de fontes exclui o que o documento indica como fonte a consultar, extrair ou incorporar, as instituições citadas só como atores ou prestadoras de serviço e a expressão informação pública disponível. A seleção foi feita em duas varreduras, a segunda pelo nome das fontes. A lista está em territorios/correspondencias/campo-grande-ms.fontes.json, e cada trecho precisa aparecer literalmente no texto. A revisão de 20/10/2026 só retirou ou encurtou frases, sem introduzir dado ou fonte nova, e todas as fontes registradas continuam presentes nos textos.
+O critério de fontes exclui o que o documento indica como fonte a consultar, extrair ou incorporar, as instituições citadas só como atores ou prestadoras de serviço e a expressão informação pública disponível. A seleção foi feita em duas varreduras, a segunda pelo nome das fontes. A lista está em territorios/correspondencias/campo-grande-ms.fontes.json, e cada trecho precisa aparecer literalmente no texto. As revisões de 20/10/2026 só retiraram ou encurtaram frases, sem introduzir dado ou fonte nova, e todas as fontes registradas continuam presentes nos textos.
 
 O arquivo é gerado por territorios/ferramentas/gerar_territorio.py, que lê o .docx no formato padrão descrito acima. Esse formato passa a ser o modelo para os documentos de novos territórios.
 
@@ -56,11 +56,11 @@ O arquivo é gerado por territorios/ferramentas/gerar_territorio.py, que lê o .
 
 Dos 150 diagnósticos, 77 citam ao menos uma fonte e 16 citam referência normativa. Todos remetem a outros fatores.
 
-A revisão da coordenação reduziu de 89 para 65 os diagnósticos que declaram lacuna de informação. As lacunas remanescentes indicam dados a extrair (SIM, SINASC, SINAN, CNES, Censo Escolar, ANEEL e outros) ou a produzir pela cartografia social, e estão marcadas na tabela de conferência.
+A revisão da coordenação reduziu de 89 para 63 os diagnósticos que declaram lacuna de informação. As lacunas remanescentes indicam dados a extrair (SIM, SINASC, SINAN, CNES, Censo Escolar, ANEEL e outros) ou a produzir pela cartografia social, e estão marcadas na tabela de conferência.
 
 Cinco textos apresentam dado quantitativo sem fonte citada no próprio parágrafo: E1-F11 Iniciativas de economia solidária, E1-F16 Ambientes de trabalho seguros, E1-F21 Industrialização inclusiva e sustentável, E2-F31 Acesso a serviços essenciais de energia, abastecimento de água, coleta de lixo etc., E3-F09 Monitoramento dos vulneráveis (idosos, PCDs e crianças). Foram mantidos como estão.
 
-No texto revisto de E2-F01 Área inundada, a frase final ficou deve ser suprida pela Defesa Civil, pelo Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018), sem conjunção entre os dois termos. O texto foi reproduzido como está no documento.
+No texto revisto de E2-F01 Área inundada, a frase final ficou deve ser suprida pela Defesa Civil, pelo Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018), sem conjunção entre os dois termos. O texto foi reproduzido como está no documento. No texto revisto de E2-F26 Rota de fuga, falta o espaço depois do ponto em disponível.A relevância, também reproduzido como está.
 
 ## Validação
 
@@ -69,7 +69,7 @@ O validador estrutural (testes/validar-territorio.js) aprovou as sete verificaç
 A conferência de fidelidade (testes/conferir_fidelidade_territorio.py) lê o .docx diretamente do XML do Word, sem usar o gerador. Ela confirmou que:
 - os 150 diagnósticos são idênticos ao documento;
 - nome, ODS e definição de referência de cada fator coincidem com o cadastro;
-- os 496 blocos de conteúdo estão representados no arquivo, com exceção das cinco linhas ODS mobilizados excluídas por decisão registrada.
+- os 494 blocos de conteúdo estão representados no arquivo, com exceção das cinco linhas ODS mobilizados excluídas por decisão registrada.
 
 A contradição central e o foco pedagógico são conferidos contra o campo do próprio eixo, e não contra qualquer ponto do arquivo. Com isso, a coincidência com o quadro do resumo executivo não mascara uma eventual perda.
 
@@ -85,7 +85,7 @@ O painel ainda não carrega o arquivo do território. Essa ligação é o objeto
 
 ## Tabela de conferência
 
-A tabela completa, com fatores relacionados e indicação dos textos ajustados em 20/10/2026, está em relatorios/etapa3-conferencia-fatores.csv.
+A tabela completa, com fatores relacionados e indicação dos 31 textos ajustados em 20/10/2026, está em relatorios/etapa3-conferencia-fatores.csv.
 
 | Eixo | ID | Fator | Fonte documental | Ajustado em 20/10 | Pendências |
 |---|---|---|---|---|---|
@@ -142,7 +142,7 @@ A tabela completa, com fatores relacionados e indicação dos textos ajustados e
 | E2 | E2-F22 | Participação das comunidades locais na gestão da água e saneamento | nenhuma fonte citada no texto | não |  |
 | E2 | E2-F23 | Gestão da água e saneamento | SNIS 2021; Plano Municipal de Saneamento Básico | não |  |
 | E2 | E2-F25 | Qualidade do ar | MapBiomas, Monitor do Fogo; projeto QualiAr | não |  |
-| E2 | E2-F26 | Rota de fuga | relatório do Imasul sobre barragens urbanas; Relatório de Segurança de Barragens 2024-2025 da ANA | não | O texto registra lacuna de informação. |
+| E2 | E2-F26 | Rota de fuga | relatório do Imasul sobre barragens urbanas; Relatório de Segurança de Barragens 2024-2025 da ANA | sim |  |
 | E2 | E2-F27 | Segurança | nenhuma fonte citada no texto | não | O texto registra lacuna de informação. |
 | E2 | E2-F28 | Violência | Agência Brasil, 2024; Instituto Cidades Sustentáveis; monitor estadual da Sejusp-MS e do Tribunal de Justiça; Anuário Brasileiro de Segurança Pública | não |  |
 | E2 | E2-F29 | Comunicação e gestão pós-desastre | Energisa | não |  |
@@ -160,9 +160,9 @@ A tabela completa, com fatores relacionados e indicação dos textos ajustados e
 | E3 | E3-F02 | Discriminação e violência contra mulheres e meninas | Anuário Brasileiro de Segurança Pública | não |  |
 | E3 | E3-F03 | Casamentos prematuros, forçados e de crianças | dados divulgados pela imprensa com base no SINASC | não | O texto registra lacuna de informação. |
 | E3 | E3-F04 | Igualdade de oportunidades para promover o empoderamento das mulheres | nenhuma fonte citada no texto | não |  |
-| E3 | E3-F05 | Propriedade e controle sobre a terra para as mulheres | Lei nº 13.465/2017 | não | O texto registra lacuna de informação. |
+| E3 | E3-F05 | Propriedade e controle sobre a terra para as mulheres | Lei nº 13.465/2017 | sim | O texto registra lacuna de informação. |
 | E3 | E3-F06 | Ação do Estado na coordenação e coerência de políticas para igualdade de gênero | nenhuma fonte citada no texto | não | O texto registra lacuna de informação. |
-| E3 | E3-F07 | Tráfico de pessoas | GT-PSR | não | O texto registra lacuna de informação. |
+| E3 | E3-F07 | Tráfico de pessoas | GT-PSR | sim |  |
 | E3 | E3-F08 | Direitos fundamentais | Censo 2022 | não |  |
 | E3 | E3-F09 | Monitoramento dos vulneráveis (idosos, PCDs e crianças) | LGPD | não | Dado quantitativo sem fonte citada no texto. |
 | E3 | E3-F10 | Empoderamento e inclusão social, econômica e política | Lei nº 7.227/2024 | não |  |
