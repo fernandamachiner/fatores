@@ -7,13 +7,13 @@
     "rotulo": "Campo Grande/MS"
   },
   "situacao": {
-    "status": "proposta de estrutura",
+    "status": "diagnóstico situacional",
     "territorio_de_exemplo": true,
-    "aviso": "Diagnóstico apresentado no documento-fonte como proposta de estrutura, com Campo Grande/MS como território de exemplo. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
+    "aviso": "Campo Grande/MS é o território de exemplo da plataforma. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
   },
   "documento_fonte": {
-    "arquivo": "territorios/fontes/DOC-20261008-WA0072.docx",
-    "titulo": "Diagnóstico Situacional",
-    "observacao_matriz": "O documento organiza o diagnóstico em 126 fatores (21, 26, 19, 25, 21 e 14 por eixo), numerados no texto como E<eixo>-<posição>. A estrutura oficial do painel é a matriz de 159 fatores (metodologia/metodologia.js). A correspondência entre as duas está em territorios/correspondencias/campo-grande-ms.csv."
+    "arquivo": "territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx",
+    "titulo": "Diagnóstico Situacional - Campo Grande, Mato Grosso do Sul",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
   }
 }

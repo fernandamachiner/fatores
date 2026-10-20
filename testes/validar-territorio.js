@@ -45,7 +45,8 @@ const verificaBloco = (b, rotulo) => {
     b[c].forEach((x) => { if (!b.texto.includes(x)) erro(rotulo + `: "${x}" (${c}) não aparece literalmente no texto`); });
   });
   const o = b.origem || {};
-  if (!o.codigo_documento || o.paragrafo_docx === undefined || !o.nome_no_documento) erro(rotulo + ": origem incompleta");
+  if (!o.codigo_documento || !o.nome_no_documento || !o.eixo_documento) erro(rotulo + ": origem incompleta");
+  (b.fatores_relacionados || []).forEach((r) => { if (!fatores.has(r)) erro(rotulo + ": fator relacionado inexistente no cadastro (" + r + ")"); });
   if (codigos.has(o.codigo_documento)) erro(rotulo + ": código do documento usado duas vezes (" + o.codigo_documento + ")");
   codigos.set(o.codigo_documento, rotulo);
 };
@@ -55,7 +56,8 @@ Object.keys(D).forEach((id) => {
   if (!fatores.has(id)) { semId++; return erro("diagnóstico ligado a id inexistente no cadastro: " + id); }
   verificaBloco(D[id], id);
   const c = D[id].correspondencia || {};
-  if (c.situacao !== "validada" || !["nome_identico", "variacao_nominal"].includes(c.tipo)) erro(id + ": correspondência sem situação/tipo válidos");
+  if (c.situacao !== "validada" || !["identificador_no_documento", "nome_identico", "variacao_nominal"].includes(c.tipo)) erro(id + ": correspondência sem situação/tipo válidos");
+  if (c.tipo === "identificador_no_documento" && D[id].origem.codigo_documento !== id) erro(id + ": identificador no documento difere da chave do diagnóstico");
   if (c.tipo === "variacao_nominal" && !c.observacao) erro(id + ": variação nominal sem justificativa");
   if (fatores.get(id).e.ordem !== D[id].origem.eixo_documento) erro(id + ": diagnóstico de outro eixo do documento");
 });
@@ -74,7 +76,7 @@ P.forEach((b, i) => {
 ok.push(`${P.length} diagnósticos pendentes de validação, com motivo registrado e sem ligação a fator`);
 
 // 4. Cobertura do documento
-const declarados = (T.eixos_documento || []).reduce((s, e) => s + e.fatores_declarados_no_documento, 0);
+const declarados = (T.eixos_documento || []).reduce((s, e) => s + (e.fatores_no_documento || 0), 0);
 confere(codigos.size === declarados, `todos os ${declarados} fatores do documento estão no arquivo (validados ou pendentes), sem repetição`,
   `fatores do documento: ${declarados}; no arquivo: ${codigos.size}`);
 

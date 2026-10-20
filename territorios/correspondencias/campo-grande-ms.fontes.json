@@ -1,45 +1,262 @@
 {
-  "_criterio": "Fontes citadas: trechos literais do texto de cada fator que atribuem um dado, uma constatação ou um parâmetro a um sistema de informação, base de dados, pesquisa, indicador, plano, relatório, publicação ou processo de levantamento (inclusive a cartografia social). Não incluem instituições citadas apenas como atores, sistemas citados apenas como ferramenta de gestão ou documentos citados como inexistentes. Referências normativas: leis, planos diretores, estatutos e políticas citados no texto. Todo trecho deve aparecer literalmente no texto do fator.",
-  "fontes": {
-    "RESUMO": ["Censo 2022"],
-    "E1-1": ["Perfil Socioeconômico de Campo Grande (PLANURB, 2023)"],
-    "E1-5": ["Ministério do Trabalho e Emprego"],
-    "E1-14": ["IVS do IPEA"],
-    "E1-15": ["SISVAN", "cartografia social PICAPS"],
-    "E1-16": ["cartografia social PICAPS"],
-    "E1-21": ["SISVAN"],
-    "E2-1": ["PRMS Campo Grande (2018–2021)"],
-    "E2-2": ["SES-MS, 2023", "Plano Municipal de Saúde 2022-2025"],
-    "E2-4": ["SCNES"],
-    "E2-8": ["PRMS Campo Grande (2018–2021)"],
-    "E2-9": ["Informe Técnico em Saúde Única da SES-MS (2025)"],
-    "E2-11": ["cartografia social", "Plano Municipal de Saúde 2022-2025"],
-    "E2-12": ["SISVAN", "CadÚnico"],
-    "E2-13": ["SNIS/Trata Brasil 2023"],
-    "E2-14": ["SNIS 2022", "Ranking Trata Brasil", "PLANSAB"],
-    "E2-17": ["SINAN"],
-    "E2-24": ["INFOSIGA", "DATASUS"],
-    "E2-25": ["cartografia social", "Índice de Vulnerabilidade Social do IPEA"],
-    "E2-26": ["Agência Brasil (2024)", "SINAN-Violências"],
-    "E3-1": ["SINAN", "boletins estaduais de 2023"],
-    "E3-2": ["Censo 2022"],
-    "E3-4": ["IDEB"],
-    "E3-12": ["ACS"],
-    "E3-17": ["Plano Municipal de Saúde"],
-    "E3-18": ["IVS do IPEA"],
-    "E3-19": ["FERNANDES & OLIVEIRA, 2024"],
-    "E4-1": ["PRODES/INPE", "MapBiomas"],
-    "E4-18": ["IPCC"],
-    "E5-2": ["Censo 2022"],
-    "E5-9": ["IDEB"],
-    "E5-18": ["VIGITEL"],
-    "E5-20": ["diagnóstico de agosto de 2025"]
+  "_criterio": "Fontes citadas: trechos literais do texto de cada fator que apresentam a origem de um dado ou de uma constatação (sistema de informação, base de dados, pesquisa, indicador, plano, relatório, boletim, publicação, instituição ou imprensa citada como origem da informação). Não incluem fontes que o documento indica como a consultar, extrair ou incorporar (lacunas declaradas), instituições citadas apenas como atores ou prestadoras de serviço, nem a expressão informação pública disponível. Parênteses com nome de fonte são registrados com o conteúdo integral. Referências normativas: leis, plano diretor, estatutos e políticas nacionais citados. Todo trecho deve aparecer literalmente no texto do fator.",
+  "parenteses_que_sao_fonte": [
+    "IBGE, escala municipal",
+    "IBGE",
+    "IBGE, 2026",
+    "e-Gestor",
+    "Instituto Água e Saneamento",
+    "Instituto Água e Saneamento, base SNIS",
+    "Agência Brasil, 2024",
+    "Semadesc",
+    "Semadesc, 2023",
+    "Semadesc, 2025",
+    "Semadesc, Monitor de Secas",
+    "CAGED",
+    "RAIS",
+    "Prefeitura Municipal",
+    "Prefeitura Municipal, 2023",
+    "Prefeitura, escala municipal",
+    "Prefeitura com base no INEP",
+    "Prefeitura com base no e-Gestor, escala municipal",
+    "GT-PSR",
+    "GT-PSR, 2025",
+    "SES-MS",
+    "SES-MS, 2023",
+    "SES-MS, 2024",
+    "Sesau",
+    "PNAD Contínua, módulo de segurança alimentar",
+    "Instituto Trata Brasil, 2025",
+    "Instituto Trata Brasil, Ranking 2025, base SINISA",
+    "Boletim do Comitê Estadual de Prevenção da Mortalidade, 2025",
+    "MapBiomas",
+    "MapBiomas, Monitor do Fogo",
+    "Atlas do Desenvolvimento Humano, base Censo 2010",
+    "Fernandes e Oliveira, Interações, 2024",
+    "QualiAr/UFMS",
+    "G1, 2025",
+    "G1, 2025, escala das capitais"
+  ],
+  "fontes_no_texto": {
+    "E1-F01": [
+      "Censo da População em Situação de Rua"
+    ],
+    "E1-F13": [
+      "levantamento municipal divulgado pela imprensa"
+    ],
+    "E1-F15": [
+      "Censos de 2010 e 2022"
+    ],
+    "E1-F20": [
+      "Censo 2022"
+    ],
+    "E1-F23": [
+      "MapBiomas"
+    ],
+    "E1-F25": [
+      "Ranking do Saneamento do Instituto Trata Brasil"
+    ],
+    "E1-F26": [
+      "Monitor do Fogo do MapBiomas"
+    ],
+    "E2-F01": [
+      "CEMADEN"
+    ],
+    "E2-F02": [
+      "Censo do GT-PSR de 2025"
+    ],
+    "E2-F05": [
+      "IBGE Cidades",
+      "DATASUS"
+    ],
+    "E2-F06": [
+      "projeto QualiAr da UFMS"
+    ],
+    "E2-F07": [
+      "boletim municipal"
+    ],
+    "E2-F08": [
+      "Informe Técnico em Saúde Única da SES-MS (2025)"
+    ],
+    "E2-F09": [
+      "Plano Regional da Macrorregião de Saúde de Campo Grande"
+    ],
+    "E2-F10": [
+      "Censo do GT-PSR de 2025"
+    ],
+    "E2-F12": [
+      "Plano Estadual de Saúde 2024-2027"
+    ],
+    "E2-F14": [
+      "OPAS"
+    ],
+    "E2-F17": [
+      "INMET"
+    ],
+    "E2-F19": [
+      "Censos de 2010 e 2022"
+    ],
+    "E2-F20": [
+      "Censo 2022"
+    ],
+    "E2-F23": [
+      "SNIS 2021"
+    ],
+    "E2-F25": [
+      "projeto QualiAr"
+    ],
+    "E2-F26": [
+      "relatório do Imasul sobre barragens urbanas",
+      "Relatório de Segurança de Barragens 2024-2025 da ANA"
+    ],
+    "E2-F28": [
+      "Instituto Cidades Sustentáveis",
+      "monitor estadual da Sejusp-MS e do Tribunal de Justiça",
+      "Anuário Brasileiro de Segurança Pública"
+    ],
+    "E2-F29": [
+      "Energisa"
+    ],
+    "E2-F33": [
+      "relatório da ANA"
+    ],
+    "E2-F34": [
+      "CEMADEN"
+    ],
+    "E2-F35": [
+      "dados divulgados pela imprensa local com base na Secretaria Municipal de Saúde"
+    ],
+    "E2-F37": [
+      "INMET"
+    ],
+    "E2-F38": [
+      "projeto QualiAr da UFMS"
+    ],
+    "E3-F01": [
+      "levantamento municipal"
+    ],
+    "E3-F02": [
+      "Anuário Brasileiro de Segurança Pública"
+    ],
+    "E3-F03": [
+      "dados divulgados pela imprensa com base no SINASC"
+    ],
+    "E3-F08": [
+      "Censo 2022"
+    ],
+    "E3-F11": [
+      "Censo 2022"
+    ],
+    "E3-F13": [
+      "Censo do GT-PSR de 2025"
+    ],
+    "E3-F14": [
+      "Censo da População em Situação de Rua"
+    ],
+    "E3-F19": [
+      "Censo 2022"
+    ],
+    "E4-F19": [
+      "Informe Técnico da SES-MS (2025)"
+    ],
+    "E4-F20": [
+      "registros de apreensões da Polícia Militar Ambiental e do IBAMA"
+    ],
+    "E5-F01": [
+      "Prefeitura",
+      "GT-PSR"
+    ],
+    "E5-F02": [
+      "CEMADEN"
+    ],
+    "E5-F04": [
+      "IBGE Cidades"
+    ],
+    "E5-F09": [
+      "Censo 2022"
+    ],
+    "E5-F13": [
+      "concessionária"
+    ],
+    "E5-F15": [
+      "Relatório de Segurança de Barragens 2024-2025 da ANA"
+    ],
+    "E5-F18": [
+      "pesquisa do Ministério da Cultura divulgada em agosto de 2025"
+    ],
+    "E5-F22": [
+      "Censo 2022"
+    ],
+    "E5-F24": [
+      "Censo 2022"
+    ],
+    "E5-F27": [
+      "pesquisa do Ministério da Cultura de 2025"
+    ],
+    "E6-F03": [
+      "IBGE"
+    ],
+    "E6-F05": [
+      "dados municipais divulgados pela imprensa"
+    ],
+    "E6-F06": [
+      "Anuário Brasileiro de Segurança Pública"
+    ],
+    "E6-F09": [
+      "IBGE Cidades"
+    ]
   },
   "referencias_normativas": {
-    "E3-3": ["Política Nacional de Saúde Integral da População Negra (PNSIPN)"],
-    "E3-9": ["Estatuto da Cidade"],
-    "E3-10": ["Lei nº 7.227/2024"],
-    "E4-18": ["Plano Diretor municipal (LC nº 74/2006 e revisões)"],
-    "E5-2": ["Plano Diretor (LC nº 74/2006 e revisões)"]
+    "E2-F01": [
+      "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+    ],
+    "E2-F23": [
+      "Plano Municipal de Saneamento Básico"
+    ],
+    "E3-F05": [
+      "Lei nº 13.465/2017"
+    ],
+    "E3-F09": [
+      "LGPD"
+    ],
+    "E3-F10": [
+      "Lei nº 7.227/2024"
+    ],
+    "E3-F16": [
+      "Política Nacional de Saúde Integral da População Negra"
+    ],
+    "E3-F18": [
+      "Estatuto da Igualdade Racial",
+      "Política Nacional de Saúde Integral da População Negra",
+      "Leis nº 10.639/2003 e nº 11.645/2008"
+    ],
+    "E3-F19": [
+      "Lei nº 7.227/2024"
+    ],
+    "E4-F03": [
+      "Política Nacional de Práticas Integrativas e Complementares",
+      "Política Nacional de Plantas Medicinais e Fitoterápicos"
+    ],
+    "E4-F07": [
+      "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+    ],
+    "E4-F11": [
+      "Política Nacional de Educação Ambiental"
+    ],
+    "E4-F12": [
+      "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+    ],
+    "E4-F17": [
+      "Plano Diretor"
+    ],
+    "E5-F03": [
+      "Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais"
+    ],
+    "E5-F24": [
+      "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+    ],
+    "E6-F07": [
+      "Lei nº 7.227/2024"
+    ]
   }
 }

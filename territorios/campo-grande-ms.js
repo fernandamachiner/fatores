@@ -1,18 +1,18 @@
 /*
  * DIAGNÓSTICO SITUACIONAL TERRITORIAL - Campo Grande/MS
  *
- * Arquivo gerado por territorios/ferramentas/gerar_territorio.py. Não edite à
- * mão: altere o documento-fonte ou os arquivos em territorios/correspondencias/
- * e gere novamente.
+ * Arquivo gerado por territorios/ferramentas/gerar_territorio.py a partir de
+ * territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx.
+ * Não edite à mão: altere o documento-fonte ou os arquivos em
+ * territorios/correspondencias/ e gere novamente.
  *
  * Contém apenas dados deste território. Eixos e fatores ficam no cadastro
  * metodológico (metodologia/metodologia.js); cada diagnóstico se liga ao
- * fator pelo id. Diagnósticos cuja correspondência não foi confirmada ficam
- * em pendentes_validacao e não são associados a nenhum fator.
+ * fator pelo id.
  */
 window.TERRITORIOS = window.TERRITORIOS || {};
 window.TERRITORIOS["campo-grande-ms"] = {
-  "formato": "diagnostico-territorial/1",
+  "formato": "diagnostico-territorial/2",
   "territorio": {
     "id": "campo-grande-ms",
     "nome": "Campo Grande",
@@ -21,1074 +21,843 @@ window.TERRITORIOS["campo-grande-ms"] = {
     "rotulo": "Campo Grande/MS"
   },
   "situacao": {
-    "status": "proposta de estrutura",
+    "status": "diagnóstico situacional",
     "territorio_de_exemplo": true,
-    "aviso": "Diagnóstico apresentado no documento-fonte como proposta de estrutura, com Campo Grande/MS como território de exemplo. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
+    "aviso": "Campo Grande/MS é o território de exemplo da plataforma. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
   },
   "metodologia": {
     "arquivo": "metodologia/metodologia.js",
     "versao": "2.0.0"
   },
   "documento_fonte": {
-    "arquivo": "territorios/fontes/DOC-20261008-WA0072.docx",
-    "titulo": "Diagnóstico Situacional",
-    "observacao_matriz": "O documento organiza o diagnóstico em 126 fatores (21, 26, 19, 25, 21 e 14 por eixo), numerados no texto como E<eixo>-<posição>. A estrutura oficial do painel é a matriz de 159 fatores (metodologia/metodologia.js). A correspondência entre as duas está em territorios/correspondencias/campo-grande-ms.csv.",
-    "identificacao_no_documento": [
-      "PROPOSTA DE ESTRUTURA",
+    "arquivo": "territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx",
+    "titulo": "Diagnóstico Situacional - Campo Grande, Mato Grosso do Sul",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores",
+    "capa": [
+      "PLATAFORMA DE INTELIGÊNCIA COOPERATIVA COM A ATENÇÃO PRIMÁRIA À SAÚDE",
+      "CoLaboratório de Ciência, Tecnologia, Inovação e Sociedade, CTIS | Fiocruz Brasília",
       "DIAGNÓSTICO SITUACIONAL",
-      "TERRITÓRIO DE EXEMPLO: CAMPO GRANDE/MS"
+      "CAMPO GRANDE",
+      "Mato Grosso do Sul",
+      "Capital estadual | 898.100 habitantes (Censo 2022) | 970.843 habitantes estimados (IBGE, 2026) | 8.082,33 km² | 111,11 hab./km²",
+      "Organizado pelos seis Temas Geradores da Pedagogia da Práxis no Território e pelos 150 fatores da Matriz de Fatores v1.0.2"
     ]
   },
   "resumo_executivo": {
-    "texto": "Campo Grande, capital de Mato Grosso do Sul, concentra 897.938 habitantes (Censo 2022), representa 32,6% da população estadual e gera PIB estimado em R$ 40 bilhões (2023). A contradição estrutural que atravessa todos os seis eixos é a coexistência de um dos maiores produtos econômicos do Centro-Oeste com vulnerabilidades sociais, territoriais e ambientais persistentes: PIB per capita de R$ 37,9 mil abaixo da média estadual de R$ 50,1 mil, seis aldeias indígenas Terena em precariedade habitacional, dengue endêmica com 19.473 casos prováveis no estado em 2024, 18,3 bilhões de litros anuais de esgoto lançados sem tratamento, periferias Sul e Leste negadas de infraestrutura, cultura e mobilidade, e instâncias de participação social com poder efetivo de influência ainda a ser consolidado. Este diagnóstico organiza as evidências territoriais de Campo Grande segundo os 126 fatores distribuídos nos seis Temas Geradores da Pedagogia da Práxis no Território, estrutura que garante coerência entre o que a cartografia social produz nos Círculos de Cultura e o que o planejamento estratégico situacional utiliza para identificar nós críticos e propor intervenções.",
-    "fontes_citadas": [
-      "Censo 2022"
+    "quadro_eixos": [
+      [
+        "Eixo",
+        "Tema gerador",
+        "Fatores",
+        "Contradição central"
+      ],
+      [
+        "Eixo 1",
+        "O Suor que não nos Sustenta",
+        "29",
+        "Nosso território produz riqueza, mas vivemos na precarização e no desemprego."
+      ],
+      [
+        "Eixo 2",
+        "A Vida em Risco",
+        "38",
+        "A mortalidade, a insalubridade e o adoecimento expressam a negligência estatal."
+      ],
+      [
+        "Eixo 3",
+        "Nossos Corpos Silenciados",
+        "18",
+        "A cor da pele e o gênero determinam quem sofre mais violência, exclusão e invisibilidade."
+      ],
+      [
+        "Eixo 4",
+        "A Terra de Quem?",
+        "24",
+        "A natureza é tratada como mercadoria, expropriando comunidades tradicionais e destruindo ecossistemas."
+      ],
+      [
+        "Eixo 5",
+        "A Cidade Negada",
+        "29",
+        "Habitação, mobilidade, educação e cultura são direitos sistematicamente sonegados."
+      ],
+      [
+        "Eixo 6",
+        "A Voz na Mesa",
+        "12",
+        "A comunidade transita de beneficiária a sujeito da história quando assume o protagonismo."
+      ]
     ],
-    "periodos_citados": [
-      "2022",
-      "2023",
-      "2024"
-    ]
+    "texto": "Campo Grande reúne 898.100 habitantes segundo o Censo 2022, com população estimada de 970.843 em 2026 (IBGE), e é a maior economia de Mato Grosso do Sul. A contradição estruturante do território, que atravessa os seis eixos deste diagnóstico, é a coexistência de capacidade econômica, institucional e científica elevada com a distribuição desigual de seus benefícios no espaço urbano e entre grupos raciais e étnicos. O PIB per capita de R$ 47.065,77 em 2023 (IBGE) é inferior à média estadual de R$ 66,8 mil (Semadesc), a renda formal concentra-se nas faixas superiores, e as regiões urbanas periféricas, as aldeias indígenas urbanas, as comunidades quilombolas e a população em situação de rua acumulam os piores indicadores de renda, moradia, saneamento, violência e acesso a serviços.\n\nNo campo sanitário, a expansão da Estratégia Saúde da Família, que mais que dobrou o número de equipes entre 2017 e 2023 com cobertura de 76,28% (e-Gestor), é o ativo mais importante do período e resulta em parte da parceria entre a Secretaria Municipal de Saúde e a Fiocruz. Persistem, contudo, a transmissão sazonal de arboviroses, a endemia de leishmaniose visceral, a cobertura de 78,53% para a tríplice viral em 2026 (Sesau), abaixo da meta de 95%, e a queda do município do 17º para o 37º lugar no Ranking do Saneamento entre 2024 e 2025 (Instituto Trata Brasil).\n\nEm 2024, a fumaça das queimadas levou a capital à primeira classificação péssima de qualidade do ar (QualiAr/UFMS); em abril de 2025, 88 mm de chuva em um dia produziram enxurradas e alagamentos (CEMADEN); em 10 de setembro de 2026, um vendaval com rajadas de 83,8 km/h deixou mais de 300 mil pessoas sem energia, destelhou 26 escolas e motivou decreto de situação de emergência por 180 dias. O município não dispõe de plano de adaptação climática, de sistema comunitário de alerta, de rotas de fuga nem de pontos de encontro definidos, e há barragens urbanas classificadas como de risco alto pela ANA.\n\nO diagnóstico identifica como potencialidades a rede de APS e de serviços especializados, a capacidade científica instalada, a organização crescente das populações indígenas e quilombolas, com a reestruturação do Conselho Municipal dos Direitos e Defesa dos Povos Indígenas em 2024, a densidade de organizações comunitárias e religiosas com atuação em emergências e a experiência acumulada da PICAPS na formação de pesquisadores populares e brigadas comunitárias. Os nós críticos e as prioridades estão sistematizados na síntese estratégica, com referência aos códigos dos fatores da Matriz."
   },
   "eixos_documento": [
     {
       "numero": 1,
-      "titulo_no_documento": "O SUOR QUE NÃO NOS SUSTENTA",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 21 fatores do Eixo 1 (O Suor que não nos Sustenta). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários e indicadores dos sistemas de informação em saúde.",
-      "fatores_declarados_no_documento": 21
+      "titulo_no_documento": "O Suor que não nos Sustenta",
+      "contradicao_central": "Nosso território produz riqueza, mas vivemos na precarização e no desemprego.",
+      "foco_pedagogico": "Trabalho, renda, economia solidária e agricultura familiar",
+      "ods_mobilizados": "",
+      "outros_itens_da_abertura": [],
+      "introducao": "O eixo examina a contradição entre a condição de Campo Grande como maior economia de Mato Grosso do Sul e a precariedade do trabalho e da renda de parte expressiva de sua população. O município gerou PIB de R$ 34,7 bilhões em 2021 e PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), valor inferior à média estadual de R$ 66,8 mil (Semadesc, 2023), com estrutura produtiva dominada por serviços e administração pública e baixa participação da produção local de alimentos. Os 29 fatores do eixo descrevem como a riqueza circula sem se distribuir: informalidade, sobrecarga de cuidado não remunerado sobre as mulheres, dependência alimentar de cadeias externas e fragilidade das iniciativas de economia solidária. Os eventos climáticos de 2025 e 2026 acrescentaram ao eixo a dimensão da recuperação econômica após desastres, ainda sem instrumentos municipais de crédito e proteção para os trabalhadores e pequenos negócios atingidos.",
+      "fatores_no_documento": 29
     },
     {
       "numero": 2,
-      "titulo_no_documento": "A VIDA EM RISCO",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 26 fatores do Eixo 2 (A Vida em Risco). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários, indicadores dos sistemas de informação em saúde e inscrições da cartografia social.",
-      "fatores_declarados_no_documento": 26
+      "titulo_no_documento": "A Vida em Risco",
+      "contradicao_central": "A mortalidade, a insalubridade e o adoecimento expressam a negligência estatal.",
+      "foco_pedagogico": "Saúde, corpo político, saneamento e adoecimento social",
+      "ods_mobilizados": "2, 3, 6, 11, 13  |  38 fatores da Matriz v1.0.2",
+      "outros_itens_da_abertura": [
+        "EIXO 2  |  A Vida em Risco"
+      ],
+      "introducao": "O eixo reúne 38 fatores que descrevem a vida exposta ao risco em Campo Grande, do perfil epidemiológico à cadeia completa de ameaças climáticas. A expansão da cobertura de Saúde da Família de 33,27% em 2017 para 76,28% em 2023 (e-Gestor, escala municipal) é o principal avanço institucional do período, mas convive com transmissão sazonal de dengue e chikungunya, endemia de leishmaniose visceral, cobertura vacinal infantil abaixo da meta, 2.041 acidentes com escorpiões em 2025 e piora recente nos indicadores de saneamento. A novidade estrutural do eixo é a materialização do risco climático no território: qualidade do ar péssima durante as queimadas de 2024, alagamentos com 88 mm em um dia em abril de 2025 e o vendaval de setembro de 2026, que levou à decretação de situação de emergência por 180 dias. A preparação comunitária, com alertas, rotas, pontos de encontro e brigadas, é a lacuna mais evidente.",
+      "fatores_no_documento": 38
     },
     {
       "numero": 3,
-      "titulo_no_documento": "NOSSOS CORPOS SILENCIADOS",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 19 fatores do Eixo 3 (Nossos Corpos Silenciados). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários, indicadores dos sistemas de informação em saúde e inscrições da cartografia social.",
-      "fatores_declarados_no_documento": 19
+      "titulo_no_documento": "Nossos Corpos Silenciados",
+      "contradicao_central": "A cor da pele e o gênero determinam quem sofre mais violência, exclusão e invisibilidade.",
+      "foco_pedagogico": "Gênero, raça, direitos fundamentais e empoderamento",
+      "ods_mobilizados": "1, 5, 8, 10, 18  |  18 fatores da Matriz v1.0.2",
+      "outros_itens_da_abertura": [
+        "EIXO 3  |  Nossos Corpos Silenciados"
+      ],
+      "introducao": "O eixo analisa como raça, etnia, gênero, idade e deficiência organizam a distribuição desigual de violência, pobreza e acesso a direitos em Campo Grande. A capital abriga 18.439 indígenas, o maior contingente municipal do estado (IBGE, Censo 2022), comunidades quilombolas urbanas como Tia Eva, Chácara Buriti e São João Batista, e 1.476 pessoas em situação de rua recenseadas em 2025, das quais mais de 77% se declararam pardas ou pretas e 17,1% eram estrangeiras (GT-PSR). A sobremortalidade de jovens negros e indígenas por homicídio, o perfil racial da mortalidade materna e a concentração das exposições ambientais nos territórios de maior proporção de população negra e indígena configuram o racismo estrutural e ambiental que os 18 fatores do eixo permitem nomear. A rede de proteção existe, mas opera com capacidade inferior à demanda e com fraca integração entre saúde, assistência social e justiça.",
+      "fatores_no_documento": 18
     },
     {
       "numero": 4,
-      "titulo_no_documento": "A TERRA DE QUEM?",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 25 fatores do Eixo 4 (A Terra de Quem?). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários, indicadores dos sistemas de informação em saúde e inscrições da cartografia social.",
-      "fatores_declarados_no_documento": 25
+      "titulo_no_documento": "A Terra de Quem?",
+      "contradicao_central": "A natureza é tratada como mercadoria, expropriando comunidades tradicionais e destruindo ecossistemas.",
+      "foco_pedagogico": "Soberania territorial, meio ambiente, biodiversidade e clima",
+      "ods_mobilizados": "1, 2, 3, 6, 9, 11, 12, 13, 14, 15, 17  |  24 fatores da Matriz v1.0.2",
+      "outros_itens_da_abertura": [
+        "EIXO 4  |  A Terra de Quem?"
+      ],
+      "introducao": "O eixo trata da relação entre o modelo de ocupação do território e a degradação dos ecossistemas do Cerrado e dos córregos urbanos de Campo Grande, em contexto regional de conversão acelerada de vegetação nativa e de incêndios de grande escala, como os que consumiram cerca de 1,5 milhão de hectares do Pantanal entre janeiro e setembro de 2024 (MapBiomas, escala do bioma). Os 24 fatores abrangem financiamento ambiental, restauração de ecossistemas hídricos, saberes tradicionais, pesquisa, tecnologias sociais e planejamento climático. O município dispõe de capacidade científica expressiva, com universidades, Embrapa e Fiocruz, e de instrumentos urbanísticos no Plano Diretor de Desenvolvimento Urbano Ambiental, mas carece de plano de adaptação climática, de metas de restauração por microbacia e de programa de reconstrução resiliente após o vendaval de 2026. Dois fatores marinhos são tratados pela interface da bacia hidrográfica, conforme as notas metodológicas.",
+      "fatores_no_documento": 24
     },
     {
       "numero": 5,
-      "titulo_no_documento": "A CIDADE NEGADA",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 21 fatores do Eixo 5 (A Cidade Negada). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários e indicadores dos sistemas de informação em saúde",
-      "fatores_declarados_no_documento": 21
+      "titulo_no_documento": "A Cidade Negada",
+      "contradicao_central": "Habitação, mobilidade, educação e cultura são direitos sistematicamente sonegados.",
+      "foco_pedagogico": "Infraestrutura, educação, cultura e território urbano-rural",
+      "ods_mobilizados": "3, 4, 7, 8, 9, 11, 12, 13  |  29 fatores da Matriz v1.0.2",
+      "outros_itens_da_abertura": [
+        "EIXO 5  |  A Cidade Negada"
+      ],
+      "introducao": "O eixo descreve a cidade negada às populações periféricas de Campo Grande: uma capital horizontal, com 898.100 habitantes no Censo 2022 em 8.082,33 km² (IBGE, escala municipal), cuja região central perdeu moradores entre 2010 e 2022 enquanto as periferias cresceram com menor infraestrutura. Os 29 fatores abrangem habitação, mobilidade, energia, educação, cultura, lazer e a vulnerabilidade das infraestruturas a eventos extremos. Dois achados se destacam: o pior índice cultural entre as capitais brasileiras em pesquisa do Ministério da Cultura de 2025, e a fragilidade das infraestruturas críticas no vendaval de setembro de 2026, que deixou mais de 300 mil pessoas sem energia e destelhou 26 escolas municipais. A melhora do IDEB nos anos iniciais da rede municipal mostra, em contrapartida, que investimentos continuados produzem resultados mensuráveis.",
+      "fatores_no_documento": 29
     },
     {
       "numero": 6,
-      "titulo_no_documento": "A VOZ NA MESA",
-      "introducao": "Este capítulo apresenta a leitura territorial de Campo Grande pelos 14 fatores do Eixo 6 (A Voz na Mesa). Cada fator é analisado em sua expressão concreta no território campo-grandense, articulando dados secundários e indicadores dos sistemas de informação em saúde.",
-      "fatores_declarados_no_documento": 14
+      "titulo_no_documento": "A Voz na Mesa",
+      "contradicao_central": "A comunidade transita de beneficiária a sujeito da história quando assume o protagonismo.",
+      "foco_pedagogico": "Participação social, governança, transparência e parcerias sociotécnicas",
+      "ods_mobilizados": "11, 16, 17  |  12 fatores da Matriz v1.0.2",
+      "outros_itens_da_abertura": [
+        "EIXO 6  |  A Voz na Mesa"
+      ],
+      "introducao": "O eixo examina as condições para que a comunidade passe de beneficiária a sujeito do planejamento em Campo Grande. Os 12 fatores abrangem organização comunitária, comunicação local, parcerias, participação institucional, transparência e as formas de apoio mútuo que se ativam em emergências. A capital possui instâncias de controle social formalizadas e uma parceria sociotécnica consolidada entre a Secretaria Municipal de Saúde e a Fiocruz, mas a participação das regiões periféricas, das populações indígenas e negras e das mulheres é proporcionalmente menor, e a informação pública é dispersa. Os eventos extremos recentes mostraram que igrejas, associações e grupos de mensagens respondem antes e mais perto das pessoas que os canais oficiais, sem estarem integrados aos planos de contingência. A situação de emergência decretada em 2026, com contratações diretas autorizadas por até um ano, torna a transparência e o acompanhamento social do gasto especialmente relevantes.",
+      "fatores_no_documento": 12
+    }
+  ],
+  "sintese_estrategica": [
+    {
+      "titulo": null,
+      "conteudo": [
+        {
+          "paragrafo": "A síntese cruza a análise dos 150 fatores para identificar nós críticos, entendidos como problemas cuja transformação produz efeitos em cadeia sobre outros fatores, e potencialidades que podem sustentar a ação. Na ausência da cartografia social, a seleção baseia-se nos dados secundários."
+        }
+      ]
+    },
+    {
+      "titulo": "Nós críticos",
+      "conteudo": [
+        {
+          "tabela": [
+            [
+              "Nó crítico",
+              "Expressão no território",
+              "Fatores"
+            ],
+            [
+              "1. Ausência de preparação comunitária para eventos extremos",
+              "Vendaval de 2026 com emergência decretada, alagamentos de 2025, fumaça de 2024 e barragens de risco alto sem alerta, rotas, pontos de encontro e brigadas comunitárias",
+              "E2-F17, E2-F32, E2-F37, E2-F26, E2-F39, E5-F15, E4-F12"
+            ],
+            [
+              "2. Desigualdade intraurbana de infraestrutura e serviços",
+              "Periferias com menor drenagem, iluminação, transporte, cultura e lazer; centro esvaziado; pior índice cultural entre capitais",
+              "E5-F24, E5-F22, E5-F23, E5-F18, E5-F30, E3-F17"
+            ],
+            [
+              "3. Racismo estrutural e ambiental",
+              "Sobremortalidade de jovens negros e indígenas, perfil racial da mortalidade materna e da população em situação de rua, exposição ambiental concentrada",
+              "E3-F16, E3-F17, E2-F28, E2-F03, E3-F19"
+            ],
+            [
+              "4. Doenças transmissíveis e imunização insuficiente",
+              "Arboviroses sazonais, leishmaniose endêmica, 2.041 acidentes com escorpiões em 2025, tríplice viral em 78,53%",
+              "E2-F07, E2-F08, E2-F35, E2-F14, E1-F27"
+            ],
+            [
+              "5. Saneamento em regressão relativa",
+              "Queda no Ranking do Saneamento, esgoto não tratado nos córregos, pressão sobre mananciais",
+              "E2-F20, E2-F21, E2-F23, E4-F04"
+            ],
+            [
+              "6. Exclusão de populações em situação de rua, indígenas e migrantes",
+              "1.476 pessoas em situação de rua, triplicação desde 2018, baixa documentação indígena, 17,1% de estrangeiros na rua",
+              "E3-F14, E3-F08, E3-F13, E3-F19, E2-F10"
+            ],
+            [
+              "7. Riqueza sem redistribuição",
+              "PIB per capita abaixo da média estadual, informalidade, sobrecarga de cuidado feminino, insegurança alimentar sem medição local",
+              "E1-F28, E1-F07, E1-F02, E2-F02, E3-F01"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Potencialidades",
+      "conteudo": [
+        {
+          "paragrafo": "Campo Grande dispõe de rede ampliada de APS, com 197 equipes de Saúde da Família, 147 de Saúde Bucal e 1.574 agentes comunitários de saúde em 2023 (e-Gestor), e de serviços especializados de referência estadual (E2-F15, E2-F16). A presença de universidades, Embrapa e Fiocruz, incluindo o monitoramento da qualidade do ar pela UFMS, oferece base técnica para respostas fundamentadas (E4-F06, E6-F04). As comunidades indígenas e quilombolas organizadas, a reestruturação do conselho indígena municipal e a densidade de associações, igrejas e coletivos com atuação em emergências constituem capital social mobilizável (E6-F01, E6-F16, E3-F10). A melhora do IDEB nos anos iniciais da rede municipal mostra capacidade de resposta a investimentos continuados (E5-F04). Os saberes tradicionais e as práticas de cuidado comunitário sustentam estratégias de saúde e adaptação culturalmente adequadas (E4-F18, E5-F29)."
+        }
+      ]
+    },
+    {
+      "titulo": "Matriz de prioridades para o ciclo PICAPS",
+      "conteudo": [
+        {
+          "tabela": [
+            [
+              "Prioridade",
+              "Ação estruturante",
+              "Fatores"
+            ],
+            [
+              "Brigadas populares e preparação comunitária",
+              "Inventário comunitário de riscos, rotas e pontos de encontro por região; formação de brigadas articuladas à Defesa Civil e à APS; cadeia de alerta com rádios e grupos de mensagens",
+              "E2-F32, E2-F33, E2-F26, E2-F39, E6-F03, E6-F11"
+            ],
+            [
+              "Reconstrução resiliente pós-vendaval",
+              "Critérios de resiliência nas obras emergenciais de escolas e unidades de saúde, manejo e replantio da arborização, acompanhamento social das contratações",
+              "E4-F10, E4-F07, E4-F25, E6-F08, E6-F09"
+            ],
+            [
+              "Saúde integral de populações vulnerabilizadas",
+              "Mutirões de documentação, Consultório na Rua ampliado, mediação intercultural na APS, registro territorial de vulnerabilidades",
+              "E3-F08, E3-F14, E3-F13, E3-F09, E2-F15"
+            ],
+            [
+              "Controle integrado de vetores e peçonhentos",
+              "Calendário territorial de mutirões, cadeia de reciclagem com catadores, vacinação e vigilância por microárea",
+              "E6-F05, E1-F27, E1-F11, E2-F07, E2-F35, E2-F14"
+            ],
+            [
+              "Saneamento e córregos",
+              "Acompanhamento social das metas da concessão, priorização de esgoto e drenagem nos fundos de vale, restauração de matas ciliares",
+              "E2-F22, E2-F20, E4-F04, E4-F25, E3-F17"
+            ],
+            [
+              "Plano municipal de adaptação climática",
+              "Elaboração participativa com metas para calor, fumaça, estiagem, vento e enchentes, integrando saúde, drenagem, energia e arborização",
+              "E4-F12, E4-F11, E2-F25, E2-F30, E5-F20"
+            ],
+            [
+              "Cuidado, renda e alimentação",
+              "Vagas em creche por território, apoio a hortas e economia solidária, vigilância alimentar e nutricional pela APS",
+              "E1-F01, E1-F07, E1-F04, E1-F11, E2-F02"
+            ]
+          ]
+        }
+      ]
     }
   ],
   "notas_metodologicas": [
-    "O presente Diagnóstico Situacional foi organizado segundo a Matriz de Fatores por Temas Geradores da Pedagogia da Práxis no Território, desenvolvida no âmbito da Plataforma PICAPS / CoLaboratório CTIS da Fiocruz Brasília. A estrutura em seis eixos garante coerência metodológica entre a fase de Investigação do Universo Temático (cartografia social com pesquisadores populares), a fase de análise técnica (diagnóstico situacional com dados secundários) e a fase de planejamento (Plano Popular de Territórios Saudáveis, Sustentáveis e Solidários).",
-    "As principais fontes de dados secundários utilizadas foram: IBGE Censo Demográfico 2022; DATASUS (SIM, SINAN, SIH, SI-PNI, SISAB); e-Gestor AB; SNIS/SINISA 2023; Ranking do Saneamento Trata Brasil 2025; Plano Municipal de Saúde de Campo Grande 2022-2025; PRMS Macrorregião Campo Grande 2024; Plano Estadual de Saúde MS 2024-2027; Boletins Epidemiológicos SES-MS 2024-2025; Informe Técnico em Saúde Única, Leishmaniose Visceral SES-MS 2025; Perfil Socioeconômico de Campo Grande PLANURB 2023; IVS IPEA; e literatura acadêmica recente sobre migração indígena urbana em Campo Grande.",
-    "Os fatores E4-14 e E4-15 (vida marinha e oceanos) foram analisados em sua dimensão de bacia hidrográfica, dado que Campo Grande não possui acesso direto a ambientes marinhos. A relevância indireta desses fatores decorre da contribuição do Cerrado para os ciclos hidrológicos da bacia do Rio Paraná."
-  ],
-  "fontes_gerais_do_documento": [
-    "IBGE Censo Demográfico 2022",
-    "DATASUS (SIM, SINAN, SIH, SI-PNI, SISAB)",
-    "e-Gestor AB",
-    "SNIS/SINISA 2023",
-    "Ranking do Saneamento Trata Brasil 2025",
-    "Plano Municipal de Saúde de Campo Grande 2022-2025",
-    "PRMS Macrorregião Campo Grande 2024",
-    "Plano Estadual de Saúde MS 2024-2027",
-    "Boletins Epidemiológicos SES-MS 2024-2025",
-    "Informe Técnico em Saúde Única, Leishmaniose Visceral SES-MS 2025",
-    "Perfil Socioeconômico de Campo Grande PLANURB 2023",
-    "IVS IPEA",
-    "literatura acadêmica recente sobre migração indígena urbana em Campo Grande"
+    {
+      "titulo": null,
+      "conteudo": []
+    },
+    {
+      "titulo": "Fatores de baixa aplicabilidade territorial",
+      "conteudo": [
+        {
+          "tabela": [
+            [
+              "Fator",
+              "Via adotada",
+              "Justificativa"
+            ],
+            [
+              "E4-F13 Gerenciar e proteger os oceanos, mares e recursos marinhos",
+              "Interface indireta",
+              "Município sem costa; analisado pela contribuição das águas do território à bacia do rio Paraná"
+            ],
+            [
+              "E4-F15 Pescadores artesanais",
+              "Interface indireta",
+              "Pesca de pequena escala no território; relevância regional no Pantanal"
+            ],
+            [
+              "E2-F36 Pontos de deslizamento de terra",
+              "Ausência de exposição como achado",
+              "Relevo de planalto suavemente ondulado; interface analisada pelos processos erosivos lineares"
+            ],
+            [
+              "E3-F07 Tráfico de pessoas",
+              "Lacuna de informação",
+              "Ausência de dados municipais sistematizados; risco regional associado à fronteira"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Principais lacunas de informação",
+      "conteudo": [
+        {
+          "paragrafo": "Constituem lacunas por consulta direta às bases: séries municipais do SIM, SINASC e SINAN para mortalidade materna, neonatal e por causas externas e para agravos transmissíveis; estrutura etária, pessoas com deficiência, características do entorno dos domicílios e acesso à internet do Censo 2022 por setor censitário; famílias no CadÚnico e no Bolsa Família por território (VIS Data/MDS); cobertura e uso da terra e focos de calor no município (MapBiomas, PRODES, Programa Queimadas); registros de desastres no S2iD; inventário de barragens no SNISB; indicadores do VIGITEL para a capital; matrículas e indicadores docentes do Censo Escolar por escola; execução orçamentária por função (SIOPS e portal de transparência); e inventário comunitário de organizações, rádios, grupos de mensagens, hortas e pontos de risco, a ser produzido pela cartografia social."
+        }
+      ]
+    },
+    {
+      "titulo": "Fontes utilizadas",
+      "conteudo": [
+        {
+          "tabela": [
+            [
+              "Eixo",
+              "Fontes, ano de referência e escala"
+            ],
+            [
+              "Todos",
+              "IBGE, Censo Demográfico 2022 e IBGE Cidades (população, área, densidade, estimativa 2026, PIB per capita 2023, IDHM 2010, mortalidade infantil, receitas e despesas municipais), escala municipal"
+            ],
+            [
+              "Eixo 1",
+              "IBGE, PIB dos Municípios 2021 e 2023; Semadesc-MS, PIB municipal 2023; CAGED, janeiro a setembro de 2024 e 2025; RAIS, vínculos e remuneração; Prefeitura de Campo Grande, empresas ativas 2020 a 2023; Instituto Água e Saneamento, resíduos sólidos (base SNIS)"
+            ],
+            [
+              "Eixo 2",
+              "e-Gestor AB, cobertura e equipes 2017 a 2023; SES-MS, boletins de dengue e chikungunya 2024, Plano Estadual de Saúde 2024-2027, Plano Regional da Macrorregião de Campo Grande 2024, Boletim do Comitê de Mortalidade 2023 e 2025, Informe Técnico de Leishmaniose Visceral 2025; Sesau, boletins de dengue 2026 e cobertura vacinal 2026; Instituto Trata Brasil, Rankings do Saneamento 2025 e 2026 (base SINISA 2023 e 2024); Instituto Água e Saneamento (base SNIS 2022); CEMADEN, abril de 2025; INMET, setembro de 2026; QualiAr/UFMS, 2024; Prefeitura, decreto de situação de emergência de 12 de setembro de 2026"
+            ],
+            [
+              "Eixo 3",
+              "IBGE, Censo 2022 Indígenas e Quilombolas; GT-PSR, Censo da População em Situação de Rua, setembro de 2025; Prefeitura, levantamento da população em situação de rua 2018 e 2025; Lei Municipal nº 7.227/2024; Fernandes e Oliveira, Interações, 2024; Agência Brasil, 2024, com base no Instituto Cidades Sustentáveis; Anuário Brasileiro de Segurança Pública; Sejusp-MS, monitor da violência contra a mulher"
+            ],
+            [
+              "Eixo 4",
+              "MapBiomas, Monitor do Fogo, 2024 (escala do bioma Pantanal); ANA, Relatório de Segurança de Barragens 2024-2025; Imasul e Ministério Público de MS, barragem do antigo Clube Atlântico, 2025; Lei Complementar nº 341/2018 (PDDUA); Semadesc-MS, Monitor de Secas, abril de 2024"
+            ],
+            [
+              "Eixo 5",
+              "IBGE Cidades, escolarização (referência Censo 2010); Prefeitura com base no INEP, IDEB da rede municipal 2023 e edição seguinte; Ministério da Cultura, pesquisa de índice cultural das capitais, 2025; Energisa e Prefeitura, vendaval de setembro de 2026; Corpo de Bombeiros Militar, chamados de 10 e 11 de setembro de 2026"
+            ],
+            [
+              "Eixo 6",
+              "Prefeitura de Campo Grande, Rede de Atenção Psicossocial, 2023; e-Gestor, equipes de Saúde da Família 2017 e 2023; IBGE Cidades, finanças municipais; dados municipais de acidentes escorpiônicos 2025 divulgados pela imprensa local"
+            ]
+          ]
+        }
+      ]
+    }
   ],
   "diagnosticos": {
-    "E1-F02": {
-      "texto": "A segurança alimentar e nutricional de Campo Grande apresenta distribuição territorial heterogênea. As famílias inscritas no CadÚnico nas regiões Sul e Leste apresentam insegurança alimentar documentada pelo SISVAN, com proporção relevante de crianças menores de cinco anos com déficit ponderal atendidas nas UBS dessas regiões. O Restaurante Popular municipal e as cozinhas comunitárias operadas por organizações sociais são os equipamentos de referência para o acesso à alimentação de grupos em situação de extrema vulnerabilidade, incluindo população em situação de rua e trabalhadores informais de baixa renda.",
+    "E1-F01": {
+      "texto": "O cuidado com crianças, idosos e pessoas com deficiência em Campo Grande depende de uma rede formal composta pelos CRAS e CREAS da Secretaria Municipal de Assistência Social, pelas creches da Rede Municipal de Ensino e pelas equipes de Saúde da Família, cuja articulação se dá caso a caso e não por protocolo territorial unificado. O Censo da População em Situação de Rua realizado pelo Grupo de Trabalho Intersetorial em setembro de 2025 identificou 52 crianças entre as 1.476 pessoas recenseadas, o que evidencia falhas na proteção de grupos que deveriam estar no centro da rede de cuidado. A insuficiência de vagas em educação infantil nas regiões urbanas do Anhanduizinho, da Lagoa e do Bandeira transfere às famílias, sobretudo às mulheres, a responsabilidade pelo cuidado, mecanismo descrito em E1-F07 e que reduz a inserção feminina no mercado de trabalho (E1-F12). O fator articula-se a E3-F09 e E3-F14 e exige que o planejamento estime a demanda de cuidado por território com base no CadÚnico e no Censo Escolar.",
       "fontes_citadas": [
-        "SISVAN"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-21",
-        "nome_no_documento": "Alimentos",
-        "eixo_documento": 1,
-        "paragrafo_docx": 51
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F03": {
-      "texto": "A agricultura familiar tem expressão incipiente no território campo-grandense, concentrando-se em assentamentos rurais do cinturão periurbano e em práticas de quintais produtivos em bairros periféricos. O município não dispõe de política municipal estruturada de compras institucionais da agricultura familiar que alcance o potencial do PNAE e do PAA em escala relevante. O Perfil Socioeconômico de Campo Grande (PLANURB, 2023) registra participação da agropecuária de apenas 2,8% no PIB municipal, evidenciando que a produção alimentar local cobre fração mínima do consumo da cidade. A Região Sul e as margens da zona rural próximas a assentamentos do MST e do INCRA concentram as experiências mais organizadas de produção familiar, com potencial para integração a cadeias curtas de comercialização.",
-      "fontes_citadas": [
-        "Perfil Socioeconômico de Campo Grande (PLANURB, 2023)"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2023"
-      ],
-      "origem": {
-        "codigo_documento": "E1-1",
-        "nome_no_documento": "Agricultura Familiar",
-        "eixo_documento": 1,
-        "paragrafo_docx": 11
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F04": {
-      "texto": "Hortas comunitárias e quintais produtivos existem em vários bairros periféricos de Campo Grande, geralmente associados a iniciativas de mulheres, grupos religiosos e movimentos de moradia. A SESAU apoia algumas dessas experiências por meio dos ACS como parte da estratégia de promoção da saúde e segurança alimentar nos territórios de APS. O programa de hortas escolares vinculado ao PNAE tem presença nas unidades de educação municipal, mas sem integração sistemática com a rede de saúde. A cartografia social PICAPS identificou hortas e quintais produtivos como potencialidade de alto valor nos territórios mais vulneráveis, com capacidade de integrar segurança alimentar, renda e saúde.",
-      "fontes_citadas": [
-        "cartografia social PICAPS"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-16",
-        "nome_no_documento": "Produção de alimentos, hortas, hortos, quintais",
-        "eixo_documento": 1,
-        "paragrafo_docx": 41
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e outros que produzem alimentos."
-      }
-    },
-    "E1-F05": {
-      "texto": "A produção orgânica certificada no município de Campo Grande é concentrada em poucas propriedades rurais periurbanas e em iniciativas de produtores familiares com acesso a canais alternativos de comercialização, como feiras agroecológicas e grupos de consumo. O mercado consumidor de orgânicos em Campo Grande é crescente nas classes médias, mas as famílias de baixa renda, que mais se beneficiariam da ausência de agrotóxicos, têm acesso restrito por preço e distribuição. A interface entre produção orgânica local e os programas de aquisição pública (PNAE, PAA) é o mecanismo mais eficaz para ampliar o acesso e sustentar os produtores.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-17",
-        "nome_no_documento": "Produção Orgânica",
-        "eixo_documento": 1,
-        "paragrafo_docx": 43
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F07": {
-      "texto": "O trabalho doméstico e de cuidados não remunerado recai desproporcionalmente sobre mulheres, especialmente mulheres negras e indígenas, e constitui um fator gerador de invisibilidade econômica e vulnerabilidade social documentado pelo Eixo 3 da matriz. Em Campo Grande, a ausência de creches públicas em número suficiente nas periferias Sul e Leste obriga mulheres a abandonar o mercado de trabalho ou a acumular dupla jornada sem suporte institucional. O fator E1-20 articula-se diretamente com os fatores E3-1 (violência contra mulheres) e E3-5 (empoderamento feminino), operando como mecanismo de reprodução da pobreza entre famílias chefiadas por mulheres.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-20",
-        "nome_no_documento": "Trabalho de assistência e doméstico não remunerado",
-        "eixo_documento": 1,
-        "paragrafo_docx": 49
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F08": {
-      "texto": "O PIB de Campo Grande estimado em R$ 40 bilhões para 2023 posiciona a capital como 3ª maior economia do Centro-Oeste e 35ª do Brasil, mas o PIB per capita de R$ 37,9 mil é inferior à média estadual de R$ 50,1 mil. Essa dissociação entre crescimento do produto agregado e renda per capita indica que a geração de riqueza não se traduz proporcionalmente em geração de renda distribuída. O setor de serviços responde por 70,9% do PIB municipal, a administração pública por 22,8%, a indústria por 14,8% e a agropecuária por 2,8%. As faixas de menor renda (classes D e E) participam com 31,4% da massa salarial formal, enquanto as classes mais altas controlam 33,7%, estrutura que reproduz a desigualdade no âmbito do mercado de trabalho formal.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2023"
-      ],
-      "origem": {
-        "codigo_documento": "E1-3",
-        "nome_no_documento": "Geração de emprego e renda",
-        "eixo_documento": 1,
-        "paragrafo_docx": 15
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F10": {
-      "texto": "O emprego formal em Campo Grande alcança 307.100 postos com remuneração média de R$ 4.000, superior à média estadual de R$ 3.300, mas com distribuição concentrada nas ocupações ligadas ao setor público. A formalização via MEI cresceu no pós-pandemia, o número de empresas ativas saltou de 103.129 em março de 2020 para 117.722 em janeiro de 2023 (+14,15%), mas a conversão de trabalhadores informais em MEI não necessariamente implica proteção social plena. A Economia Solidária (ECOSOL) tem presença organizada em segmentos de catadores de recicláveis e em grupos de mulheres em bairros periféricos, mas sem política municipal de fomento estruturada que integre crédito, formação e mercados.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2020",
-        "2023"
-      ],
-      "origem": {
-        "codigo_documento": "E1-4",
-        "nome_no_documento": "Formalização (CLT, MEI, ECOSOL)",
-        "eixo_documento": 1,
-        "paragrafo_docx": 17
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite de emprego; o parêntese (CLT, MEI, ECOSOL) é idêntico."
-      }
-    },
-    "E1-F11": {
-      "texto": "As iniciativas de Economia Solidária em Campo Grande incluem cooperativas de catadores, grupos de produção artesanal em bairros periféricos e experiências de banco comunitário em algumas regiões. A SESAU mantém interface com grupos de ECOSOL por meio dos Agentes Comunitários de Saúde, que identificam iniciativas nos territórios de suas microáreas. A Incubadora Tecnológica de Cooperativas Populares da UFMS é o principal ator acadêmico de apoio a empreendimentos solidários, mas a escala das iniciativas existentes é ainda desproporcional à demanda por alternativas de renda nas periferias.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-9",
-        "nome_no_documento": "Iniciativas de Economia Solidária",
-        "eixo_documento": 1,
-        "paragrafo_docx": 27
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F13": {
-      "texto": "O desemprego estrutural afeta desproporcionalmente as periferias Sul e Leste de Campo Grande, onde se concentram as famílias inscritas no CadÚnico e os beneficiários de transferência de renda. Em 2025, o saldo de emprego formal acumulado entre janeiro e setembro foi de 8.107 postos, inferior ao saldo de 8.612 do mesmo período de 2024, sinalizando moderação do mercado formal. O emprego predominante nas ocupações de base (faxineiros, assistentes administrativos, prestadores de serviços gerais) reflete a estrutura salarial achatada que não rompe com a condição de vulnerabilidade mesmo para quem tem trabalho. A informalidade, invisível nas estatísticas de emprego formal, atinge trabalhadores domésticos, da construção civil, do comércio ambulante e da reciclagem, sem proteção previdenciária ou trabalhista.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2025",
-        "2024"
-      ],
-      "origem": {
-        "codigo_documento": "E1-2",
-        "nome_no_documento": "Desemprego",
-        "eixo_documento": 1,
-        "paragrafo_docx": 13
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F14": {
-      "texto": "O trabalho infantil em Campo Grande manifesta-se principalmente nas formas mais invisíveis: trabalho doméstico intrafamiliar, catação de materiais recicláveis com adultos em situação de vulnerabilidade, e venda ambulante nos sinais de trânsito da área central. O PETI (Programa de Erradicação do Trabalho Infantil) opera por meio dos CRAS municipais, mas a cobertura é insuficiente para identificar e acompanhar todos os casos, especialmente em comunidades indígenas urbanas e em famílias em situação de rua. A articulação entre SESAU, assistência social, escola e Conselho Tutelar é o mecanismo formal de resposta, mas exige protocolos claros de identificação e encaminhamento.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-6",
-        "nome_no_documento": "Trabalho infantil",
-        "eixo_documento": 1,
-        "paragrafo_docx": 21
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F15": {
-      "texto": "Campo Grande, como capital logística do agronegócio sul-mato-grossense, é ponto de passagem e destino de trabalhadores recrutados para lavouras e frigoríficos do estado em condições que frequentemente violam normas trabalhistas. O Ministério do Trabalho e Emprego registra operações de fiscalização em propriedades rurais de Mato Grosso do Sul com resgates de trabalhadores submetidos a condições análogas à escravidão. Trabalhadores migrantes, especialmente paraguaios e bolivianos, e brasileiros do Nordeste, são os grupos de maior vulnerabilidade, com acesso precário a serviços de saúde e proteção jurídica.",
-      "fontes_citadas": [
-        "Ministério do Trabalho e Emprego"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-5",
-        "nome_no_documento": "Trabalho em condições análogas às de escravo",
-        "eixo_documento": 1,
-        "paragrafo_docx": 19
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Escravo no documento, escravidão no cadastro."
-      }
-    },
-    "E1-F16": {
-      "texto": "A vigilância em saúde do trabalhador em Campo Grande é operada pelo CEREST (Centro de Referência em Saúde do Trabalhador) estadual, com capacidade de atuação restrita frente à dimensão da força de trabalho municipal. Os acidentes de trabalho notificados concentram-se nos setores da construção civil, frigoríficos, transporte e serviços de limpeza urbana, setores com alta informalidade e baixa cobertura sindical. O Hospital Regional de Mato Grosso do Sul e as UPAs municipais são as portas de entrada para acidentes de trabalho graves, sem sempre haver o registro e a notificação adequados no SINAN-Acidentes.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-7",
-        "nome_no_documento": "Ambientes de trabalho seguros",
-        "eixo_documento": 1,
-        "paragrafo_docx": 23
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F19": {
-      "texto": "Campo Grande responde por quase 40% do PIB estadual e concentra a maior parte dos investimentos públicos e privados de Mato Grosso do Sul. A desconcentração do investimento em direção às periferias intraurbanas, identificada como necessidade estrutural pelo IVS do IPEA, exige instrumentos de discriminação positiva territorial: aplicação de recursos do FNAS, do Fundo Municipal de Saúde e de programas federais priorizando os setores censitários com piores indicadores.",
-      "fontes_citadas": [
-        "IVS do IPEA"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-14",
-        "nome_no_documento": "Promoção de políticas de investimento local",
-        "eixo_documento": 1,
-        "paragrafo_docx": 37
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F20": {
-      "texto": "O acesso a serviços bancários em Campo Grande tem cobertura relativamente alta para as capitais do Centro-Oeste, com agências, correspondentes bancários e agências dos Correios distribuídas pelo território. As populações indígenas urbanas e em situação de rua apresentam maior barreira de acesso, seja por ausência de documentação (vinculado ao fator E3-13), seja por ausência de endereço fixo exigido por algumas modalidades. O Cadastro Único e o CadÚnico habilitam o acesso a benefícios de transferência de renda via conta simplificada, mas a educação financeira para gestão desses recursos é insuficiente na maioria dos equipamentos de proteção social.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-18",
-        "nome_no_documento": "Acesso a serviços bancários",
-        "eixo_documento": 1,
-        "paragrafo_docx": 45
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F21": {
-      "texto": "A indústria de Campo Grande representa 14,8% do PIB municipal, com predominância de frigoríficos, processamento de grãos, construção civil e setor farmacêutico. A industrialização local não incorpora critérios de inclusividade social de forma sistêmica, a participação de trabalhadores negros, indígenas e de baixa escolaridade nas faixas salariais mais baixas da indústria reproduz a estratificação social do território. A zona industrial da região Leste apresenta interface com áreas de moradia popular, produzindo conflitos socioambientais por poluição atmosférica e sonora não adequadamente monitorados.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-10",
-        "nome_no_documento": "Industrialização inclusiva e sustentável",
-        "eixo_documento": 1,
-        "paragrafo_docx": 29
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F22": {
-      "texto": "O acesso ao crédito para empreendimentos de pequeno porte e cooperativas em Campo Grande é operado pelo Banco do Brasil, Caixa Econômica Federal e pelo programa municipal de microcrédito gerido pela FUNSAT (Fundação Social do Trabalho). A FUNSAT opera como principal equipamento municipal de intermediação de emprego e qualificação profissional, com interface com o sistema de microcrédito produtivo orientado. A cobertura dos instrumentos de crédito orientado às comunidades indígenas urbanas e aos grupos de economia solidária nas periferias é insuficiente, com barreiras de documentação, garantias e letramento financeiro que excluem justamente os grupos de maior necessidade.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-11",
-        "nome_no_documento": "Crédito para micro, pequenas empresas e cooperativas",
-        "eixo_documento": 1,
-        "paragrafo_docx": 31
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E1-F23": {
-      "texto": "Campo Grande não dispõe de política industrial explicitamente orientada para a sustentabilidade ambiental, embora iniciativas isoladas de empresas do setor de construção civil, tecnologia e serviços incorporem práticas de eficiência energética e redução de resíduos. O potencial de energia solar fotovoltaica, dado o clima da região com alta irradiação, é subutilizado no parque industrial municipal. A integração entre as políticas de meio ambiente (SEMADUR), desenvolvimento econômico (SIDAGRO) e saúde (SESAU) para criar incentivos a atividades econômicas sustentáveis é ainda incipiente no planejamento municipal.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-19",
-        "nome_no_documento": "Atividades econômicas sustentáveis, indústrias ecologicamente corretas",
-        "eixo_documento": 1,
-        "paragrafo_docx": 47
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta indústrias ecologicamente corretas."
-      }
-    },
-    "E1-F25": {
-      "texto": "Campo Grande concentra o poder de mercado do agronegócio sul-mato-grossense, com entidades como Famasul e cooperativas exercendo influência significativa sobre as políticas agrícolas e ambientais do estado. A regulação dos preços de alimentos na base da pirâmide social, hortifrúti, proteína animal, cereais, é variável determinante da segurança alimentar de famílias de baixa renda, mas opera fora da capacidade de intervenção direta do governo municipal. O Mercado Municipal de Campo Grande é um equipamento público de comercialização que poderia cumprir função regulatória de preços para produtos locais, mas opera com capacidade subutilizada.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-12",
-        "nome_no_documento": "Regulamentação e monitoramento dos mercados",
-        "eixo_documento": 1,
-        "paragrafo_docx": 33
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e instituições (monopólios e preço justo)."
-      }
-    },
-    "E1-F26": {
-      "texto": "O padrão de consumo alimentar em Campo Grande reflete a urbanização acelerada: predominância de alimentos ultraprocessados de baixo custo nas famílias de menor renda, com acesso restrito a frutas, verduras e proteínas in natura nas periferias. O SISVAN documenta déficits nutricionais em crianças menores de cinco anos atendidas nas UBS das regiões Sul e Leste. A ausência de mercados e feiras de alimentos frescos nessas regiões, onde o comércio é dominado por supermercados e atacarejos com oferta restrita de alimentos in natura, é uma barreira estrutural à alimentação adequada identificada na cartografia social PICAPS.",
-      "fontes_citadas": [
-        "SISVAN",
-        "cartografia social PICAPS"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-15",
-        "nome_no_documento": "Sistemas sustentáveis de produção de alimentos (consumo)",
-        "eixo_documento": 1,
-        "paragrafo_docx": 39
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta (consumo); a descrição do fator abrange produção e consumo."
-      }
-    },
-    "E1-F27": {
-      "texto": "A economia circular tem expressão incipiente em Campo Grande, concentrada nas cooperativas de catadores de recicláveis que operam em interface com o sistema de coleta seletiva municipal. A geração de 0,98 kg de resíduos por habitante/dia, com coleta de 99,23% da população, cria fluxo relevante de materiais que poderia sustentar uma cadeia organizada de reciclagem. O número de cooperativas e associações de catadores é insuficiente para absorver o volume gerado, e a ausência de política municipal de logística reversa para setores como construção civil, eletrônicos e agroquímicos limita o alcance das iniciativas existentes.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-8",
-        "nome_no_documento": "Economia circular",
-        "eixo_documento": 1,
-        "paragrafo_docx": 25
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F03": {
-      "texto": "A mortalidade materna em Mato Grosso do Sul apresenta perfil sociorracial documentado: 66% das vítimas são mulheres pardas, 61% solteiras, e a faixa etária de 30 a 39 anos concentra 48% dos casos (SES-MS, 2023). Esse perfil expressa a intersecção entre raça, renda e acesso qualificado ao pré-natal. Em Campo Grande, a rede de pré-natal de alto risco é referenciada pelo Hospital Regional de Mato Grosso do Sul e pela Santa Casa, mas a identificação e estratificação de risco na APS, etapa crítica para prevenção da morte materna, ainda apresenta lacunas documentadas no Plano Municipal de Saúde 2022-2025.",
-      "fontes_citadas": [
-        "SES-MS, 2023",
-        "Plano Municipal de Saúde 2022-2025"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2023",
-        "2022-2025"
-      ],
-      "origem": {
-        "codigo_documento": "E2-2",
-        "nome_no_documento": "Mortalidade materna",
-        "eixo_documento": 2,
-        "paragrafo_docx": 58
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F04": {
-      "texto": "A mortalidade neonatal, óbitos nas primeiras 28 horas de vida, é o componente de maior peso na mortalidade infantil em contextos com boa cobertura de APS, pois reflete a qualidade da atenção ao parto e ao recém-nascido. Em Campo Grande, os indicadores de prematuridade, peso insuficiente ao nascer e acesso ao pré-natal são os determinantes proximais mais relevantes. A integração entre APS, maternidades de referência e UTI neonatal, Linha de Cuidado da gestante e do recém-nascido, é o eixo estruturante da resposta, mas exige protocolos de regulação e contrarreferência que funcionem sem fragmentação.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-3",
-        "nome_no_documento": "Mortalidade neonatal",
-        "eixo_documento": 2,
-        "paragrafo_docx": 60
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F05": {
-      "texto": "A mortalidade infantil na macrorregião de Campo Grande apresentou melhora progressiva na série histórica, reflexo da expansão da Estratégia Saúde da Família, cuja cobertura passou de 33,27% em 2017 para 76,28% em 2023. Campo Grande, como polo de referência hospitalar do estado, atrai casos de alta complexidade de outros municípios, o que pode inflar artificialmente sua taxa quando calculada pelo local de ocorrência sem desagregação por local de residência. A análise do PRMS Campo Grande (2018–2021) aponta que os óbitos infantis evitáveis, aqueles relacionados a causas sensíveis à APS, concentram-se nos territórios com menor cobertura de equipes de saúde da família, correlacionados com as regiões de maior vulnerabilidade social.",
-      "fontes_citadas": [
-        "PRMS Campo Grande (2018–2021)"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2017",
-        "2023",
-        "2018–2021"
-      ],
-      "origem": {
-        "codigo_documento": "E2-1",
-        "nome_no_documento": "Mortalidade infantil",
-        "eixo_documento": 2,
-        "paragrafo_docx": 56
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F06": {
-      "texto": "As doenças de veiculação hídrica, leptospirose, hepatite A, diarreias infecciosas, apresentam incidência sazonal elevada no período chuvoso em Campo Grande, com concentração nos bairros periféricos onde o saneamento é deficiente e as enchentes expõem a população a água contaminada. A leptospirose, em particular, tem associação documentada com as enchentes urbanas que atingem as margens dos córregos canalizados precariamente. Intoxicações por agrotóxicos, embora subnotificadas, são registradas pelo SINAN nos períodos de colheita em municípios produtores próximos à capital.",
-      "fontes_citadas": [
-        "SINAN"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-17",
-        "nome_no_documento": "Doenças decorrentes de contaminação ambiental",
-        "eixo_documento": 2,
-        "paragrafo_docx": 88
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Contaminação ambiental no documento; contaminação e poluição do ar, da água e do solo no cadastro."
-      }
-    },
-    "E2-F07": {
-      "texto": "A dengue é o agravo de maior carga epidêmica em Campo Grande e na macrorregião. Em 2024, Mato Grosso do Sul registrou 19.473 casos prováveis, 16.229 confirmados e 32 óbitos confirmados. Campo Grande concentrou a maior proporção da transmissão estadual, favorecida pela densidade demográfica elevada, pela urbanização acelerada com infraestrutura deficitária nas periferias e pelo regime climático tropical com período chuvoso prolongado. O chikungunya atingiu recorde histórico no estado em 2024, com 2.766 casos prováveis e incidência de 100,3 por 100 mil habitantes. A emergência simultânea de dengue, chikungunya e zika, transmitidas pelo mesmo vetor, exige estratégia integrada de controle vetorial, vigilância ambiental ativa e mobilização comunitária que transcende as respostas setoriais isoladas.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2024"
-      ],
-      "origem": {
-        "codigo_documento": "E2-10",
-        "nome_no_documento": "Dengue",
-        "eixo_documento": 2,
-        "paragrafo_docx": 74
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F08": {
-      "texto": "Campo Grande mantém notificações relevantes de tuberculose, HIV/AIDS e hanseníase, com coinfecção TB-HIV como indicador crítico de vulnerabilidade social concentrada nos territórios de maior exclusão. A leishmaniose visceral humana (LVH) é endêmica no município, o Informe Técnico em Saúde Única da SES-MS (2025) documenta transmissão ativa com distribuição nos bairros periféricos com cães infectados e saneamento ambiental precário. O controle da LVH exige articulação entre saúde humana, saúde animal e ambiente (Saúde Única), com SESAU, IAGRO estadual e serviços veterinários, integração ainda não plenamente institucionalizada.",
-      "fontes_citadas": [
-        "Informe Técnico em Saúde Única da SES-MS (2025)"
+        "Censo da População em Situação de Rua"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
         "2025"
       ],
+      "fatores_relacionados": [
+        "E1-F07",
+        "E1-F12",
+        "E3-F09",
+        "E3-F14"
+      ],
       "origem": {
-        "codigo_documento": "E2-9",
-        "nome_no_documento": "Doenças Transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
-        "eixo_documento": 2,
-        "paragrafo_docx": 72
+        "codigo_documento": "E1-F01",
+        "nome_no_documento": "Cuidado com crianças e grupos vulneráveis",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F09": {
-      "texto": "As DCNTs, doenças cardiovasculares, diabetes mellitus, neoplasias e doenças respiratórias crônicas, são a principal causa de mortalidade em adultos e idosos em Campo Grande, padrão epidemiológico comum a capitais brasileiras de médio porte. O PRMS Campo Grande (2018–2021) registra doenças do aparelho circulatório como primeira causa de óbito na macrorregião. O manejo das DCNTs na APS, com estratificação de risco cardiovascular, monitoramento de hipertensos e diabéticos pelo HIPERDIA, e acesso a medicamentos de uso contínuo, é o eixo da resposta preventiva, mas a cobertura é heterogênea entre os distritos sanitários.",
+    "E1-F02": {
+      "texto": "O acesso a alimento adequado em Campo Grande é mediado sobretudo pela renda, dado que a agropecuária responde por apenas 2,8% do valor adicionado municipal e a cidade depende do abastecimento externo concentrado na CEASA e nas grandes redes atacadistas. O PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), inferior à média estadual de R$ 66,8 mil no mesmo ano (Semadesc), e a concentração da massa salarial nas faixas mais altas indicam que o preço dos alimentos pesa desproporcionalmente sobre as famílias inscritas no CadÚnico. A ausência de inquérito municipal de segurança alimentar com a Escala Brasileira de Insegurança Alimentar constitui lacuna de informação: os dados disponíveis são estaduais (PNAD Contínua, módulo de segurança alimentar) e não permitem identificar os territórios mais afetados. O fator relaciona-se a E1-F06 e E1-F24 e tem como desfecho sanitário E2-F02, devendo o plano popular priorizar a produção de dados intraurbanos por meio do SISVAN e do Cadastro Único.",
       "fontes_citadas": [
-        "PRMS Campo Grande (2018–2021)"
+        "IBGE, escala municipal",
+        "Semadesc",
+        "PNAD Contínua, módulo de segurança alimentar"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
-        "2018–2021"
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E1-F06",
+        "E1-F24",
+        "E2-F02"
       ],
       "origem": {
-        "codigo_documento": "E2-8",
-        "nome_no_documento": "Doenças não transmissíveis (crônicas)",
-        "eixo_documento": 2,
-        "paragrafo_docx": 70
+        "codigo_documento": "E1-F02",
+        "nome_no_documento": "Alimentos",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F10": {
-      "texto": "O uso problemático de álcool e outras drogas é registrado pela cartografia social como um dos fatores com maior densidade de inscrições nos territórios de vulnerabilidade de Campo Grande. O CAPS-AD e os demais equipamentos da Rede de Atenção Psicossocial (RAPS) atendem mais de 1.282 indivíduos em situação de rua com uso de substâncias, conforme Plano Municipal de Saúde 2022-2025. A sobreposição entre uso de substâncias, situação de rua, violência e falta de proteção social constitui um nó crítico de alta complexidade que demanda resposta intersetorial com protagonismo da APS territorializada, sem que haja ainda protocolo municipal consolidado para esse fluxo.",
+    "E1-F03": {
+      "texto": "A agricultura familiar no município concentra-se em assentamentos de reforma agrária e pequenas propriedades do cinturão rural, que ocupa a maior parte dos 8.082,33 km² do território (IBGE), mas tem participação marginal na estrutura econômica dominada pela pecuária extensiva e pela lavoura empresarial de grãos. O Censo Agropecuário 2017 do IBGE é a fonte disponível para dimensionar estabelecimentos familiares e deve ser confrontado com os registros do Cadastro Nacional da Agricultura Familiar. A conexão entre essa produção e o consumo urbano é frágil: as compras públicas do PNAE e do PAA, principal instrumento de mercado institucional, não têm sua execução municipal publicada de forma acessível, o que constitui lacuna a ser investigada. O fortalecimento da agricultura familiar condiciona E1-F06 e E1-F26 e reduz a dependência de cadeias longas vulneráveis a choques de preço (E1-F24) e a eventos climáticos como os registrados em 2024 e 2026 (E2-F30, E2-F17).",
       "fontes_citadas": [
-        "cartografia social",
-        "Plano Municipal de Saúde 2022-2025"
+        "IBGE"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
-        "2022-2025"
+        "2017",
+        "2024",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F06",
+        "E1-F26",
+        "E1-F24",
+        "E2-F30",
+        "E2-F17"
       ],
       "origem": {
-        "codigo_documento": "E2-11",
-        "nome_no_documento": "Uso abusivo de drogas e álcool",
-        "eixo_documento": 2,
-        "paragrafo_docx": 76
+        "codigo_documento": "E1-F03",
+        "nome_no_documento": "Agricultura familiar",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta abusivo."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F11": {
-      "texto": "Campo Grande é polo logístico do Centro-Oeste, com fluxo intenso de veículos pesados nas rodovias federais BR-163, BR-262 e BR-060 que convergem na capital. Os acidentes de trânsito nas rodovias de acesso à cidade e nas vias urbanas de alto fluxo são causa relevante de mortalidade por causas externas na faixa etária de 15 a 39 anos. O INFOSIGA e o DATASUS registram as internações e óbitos por acidentes de trânsito, mas a análise territorial intraurbana, identificando os corredores de maior risco, exige cruzamento com dados do DETRAN-MS e com as notificações de violência no SINAN.",
-      "fontes_citadas": [
-        "INFOSIGA",
-        "DATASUS"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-24",
-        "nome_no_documento": "Acidentes em estradas",
-        "eixo_documento": 2,
-        "paragrafo_docx": 102
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F12": {
-      "texto": "A saúde sexual e reprodutiva em Campo Grande é operada na APS pelas ESF, com oferta de planejamento familiar, pré-natal, prevenção de ISTs e testagem para HIV. As notificações de sífilis adquirida e sífilis congênita em Mato Grosso do Sul seguem a tendência nacional de aumento, demandando intensificação do rastreamento na atenção primária. A saúde sexual e reprodutiva de mulheres indígenas urbanas e em situação de rua apresenta lacunas específicas de acesso e de adequação cultural dos serviços, com barreiras idiomáticas e culturais que os protocolos padrão não contemplam.",
+    "E1-F04": {
+      "texto": "Hortas comunitárias, hortas escolares e quintais produtivos existem de forma dispersa nas regiões urbanas periféricas de Campo Grande, geralmente associadas a grupos de mulheres, igrejas e unidades de saúde, sem cadastro municipal que permita dimensionar sua escala. Nas aldeias urbanas indígenas, majoritariamente Terena, o cultivo em pequenos espaços preserva práticas alimentares e medicinais tradicionais (E4-F03, E4-F18) apesar da restrição de área imposta pela ocupação urbana. A inexistência de inventário dessas iniciativas é lacuna de informação que a cartografia social tem capacidade de suprir, registrando localização, produção e necessidades de água, sementes e assistência técnica. O fator articula segurança alimentar (E1-F02), renda complementar (E1-F11) e promoção da saúde, e sua expansão depende do acesso a terrenos públicos ociosos, de água a custo compatível (E2-F20) e de apoio técnico, o que o torna objeto viável de ação intersetorial de baixo custo no plano popular.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F03",
+        "E4-F18",
+        "E1-F02",
+        "E1-F11",
+        "E2-F20"
+      ],
       "origem": {
-        "codigo_documento": "E2-7",
-        "nome_no_documento": "Saúde sexual e reprodutiva",
-        "eixo_documento": 2,
-        "paragrafo_docx": 68
+        "codigo_documento": "E1-F04",
+        "nome_no_documento": "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F15": {
-      "texto": "A rede de serviços de saúde de Campo Grande é a mais robusta do Mato Grosso do Sul. No nível primário, 197 ESF, 147 Equipes de Saúde Bucal, 4 CEOs e unidades básicas de saúde distribuídas por 7 distritos sanitários. No nível secundário, policlínicas regionais e centros de especialidades. No nível terciário, Hospital Regional de Mato Grosso do Sul (HRMS), Hospital Santa Casa, Hospital Universitário da UFMS, UPAs e pronto-socorros. A rede de saúde mental inclui CAPS I, II, III, CAPS-AD e o Hospital Rachid Saldanha Derzi. A concentração de serviços especializados atrai pacientes de todo o estado, pressionando o sistema de regulação municipal e exigindo gestão eficiente do SISREG para garantir acesso preferencial à população residente.",
+    "E1-F05": {
+      "texto": "A produção orgânica certificada no município é residual e voltada a nichos de consumo de renda média e alta, comercializada em feiras específicas e pontos de venda especializados, sem presença significativa nas regiões urbanas de menor renda. O contexto produtivo regional, marcado pelo uso intensivo de agrotóxicos nas lavouras de soja e milho do entorno, amplia a relevância do fator tanto para a saúde dos consumidores quanto para a dos trabalhadores rurais expostos (E1-F16, E2-F21). O Cadastro Nacional de Produtores Orgânicos do Ministério da Agricultura é a fonte para quantificar produtores no município, dado não sistematizado nesta versão do diagnóstico e registrado como lacuna. A ampliação da oferta orgânica e agroecológica depende de crédito orientado (E1-F22), assistência técnica e compras públicas, e sua articulação com hortas comunitárias (E1-F04) permitiria levar alimentos livres de agrotóxicos a territórios hoje excluídos desse mercado.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F16",
+        "E2-F21",
+        "E1-F22",
+        "E1-F04"
+      ],
       "origem": {
-        "codigo_documento": "E2-6",
-        "nome_no_documento": "Serviços de saúde",
-        "eixo_documento": 2,
-        "paragrafo_docx": 66
+        "codigo_documento": "E1-F05",
+        "nome_no_documento": "Produção orgânica",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F16": {
-      "texto": "A expansão das 197 ESF de Campo Grande foi viabilizada pelo maior programa de residência multiprofissional em saúde da família do Centro-Oeste, parceria entre SESAU e Fiocruz. Esse modelo criou capacidade instalada, mas com vínculo precário para parte dos profissionais residentes. A transição de residentes para servidores efetivos, com carreira municipal, plano de cargos e salários e estabilidade, é o nó crítico da sustentabilidade da APS campo-grandense. O SCNES registra a composição das equipes, mas a rotatividade de profissionais nas periferias, os cargos vagos e a distribuição desigual entre distritos sanitários são variáveis que o dado agregado não captura.",
+    "E1-F06": {
+      "texto": "A disponibilidade de alimentos em Campo Grande não é limitada pelo volume ofertado, dado o papel da capital como entreposto logístico estadual, mas pela distribuição territorial dos pontos de venda de alimentos in natura e pelo preço. Nas regiões do Anhanduizinho, da Lagoa e do Imbirussu predominam mercados de bairro e atacarejos com oferta concentrada em produtos ultraprocessados, padrão que configura ambientes alimentares desfavoráveis à alimentação saudável e que deve ser verificado pela cartografia social. A ausência de mapeamento municipal de ambientes alimentares é lacuna de informação relevante para o planejamento. Eventos extremos recentes, como o vendaval de setembro de 2026, que deixou mais de 300 mil pessoas sem energia elétrica, evidenciam a vulnerabilidade da conservação domiciliar de alimentos perecíveis (E2-F31). O fator relaciona-se a E1-F02, E1-F24 e E1-F26 e orienta a localização de feiras e equipamentos públicos de abastecimento.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F31",
+        "E1-F02",
+        "E1-F24",
+        "E1-F26"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F06",
+        "nome_no_documento": "Disponibilidade de alimentos",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F07": {
+      "texto": "O trabalho doméstico e de cuidado não remunerado recai predominantemente sobre mulheres, padrão documentado em escala nacional pelo módulo de outras formas de trabalho da PNAD Contínua, sem desagregação municipal disponível para Campo Grande. No território, o fator é agravado pela insuficiência de creches nas regiões periféricas (E1-F01), pelo envelhecimento populacional que amplia a demanda por cuidado de idosos (E2-F19) e pela cobertura incompleta da Estratégia Saúde da Família, que transfere ao domicílio o acompanhamento de condições crônicas (E2-F09). A sobrecarga reduz a disponibilidade das mulheres para o trabalho remunerado (E1-F12), para a formação (E5-F05) e para a participação comunitária (E6-F07), operando como mecanismo de reprodução da pobreza em famílias chefiadas por mulheres (E3-F01, E3-F04). O plano popular deve tratar o cuidado como infraestrutura social, com metas de vagas em educação infantil e de apoio domiciliar por território.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F01",
+        "E2-F19",
+        "E2-F09",
+        "E1-F12",
+        "E5-F05",
+        "E6-F07",
+        "E3-F01",
+        "E3-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F07",
+        "nome_no_documento": "Trabalho de assistência e doméstico não remunerado",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F08": {
+      "texto": "O PIB de Campo Grande alcançou R$ 34,7 bilhões em 2021 (IBGE), com valor adicionado concentrado em serviços (59,6%) e administração pública (22,8%), seguidos de indústria (14,8%) e agropecuária (2,8%). A capital mantém posição de maior geradora absoluta de emprego formal do estado, com saldo de 8.107 vagas entre janeiro e setembro de 2025 (CAGED), inferior ao saldo de 8.612 no mesmo período de 2024. Entre 2022 e 2023, contudo, o município perdeu 1,3 ponto percentual de participação no PIB estadual, enquanto polos agroindustriais do interior cresceram (Semadesc, 2025), sinalizando deslocamento do dinamismo econômico para fora da capital. A geração de renda permanece concentrada: as classes de menor renda detêm 31,4% das remunerações formais. O fator conecta-se a E1-F12, E1-F13 e E1-F28 e indica que a política de emprego deve priorizar ocupações acessíveis à população das regiões de maior vulnerabilidade, articulada à educação profissional (E5-F05, E5-F16).",
       "fontes_citadas": [
-        "SCNES"
+        "IBGE",
+        "CAGED",
+        "Semadesc, 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2021",
+        "2025",
+        "2024",
+        "2022",
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E1-F12",
+        "E1-F13",
+        "E1-F28",
+        "E5-F05",
+        "E5-F16"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F08",
+        "nome_no_documento": "Geração de emprego e renda",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F09": {
+      "texto": "O empreendedorismo em Campo Grande cresceu de 103.129 para 117.722 empresas ativas entre março de 2020 e janeiro de 2023 (Prefeitura Municipal), expansão em parte composta por microempreendedores individuais que formalizaram atividades de subsistência após a perda de vínculos empregatícios na pandemia. Esse empreendedorismo de necessidade difere da dimensão solidária e criativa nomeada pelo fator, que pressupõe cooperação, inovação social e acesso a apoio técnico. O município dispõe de equipamentos como a Fundação Social do Trabalho e de instituições de ensino com incubadoras, mas não há registro público consolidado de empreendimentos solidários ou de inovação social em territórios periféricos, o que constitui lacuna de informação. O fator articula-se a E1-F11, E1-F22 e E5-F10, e o plano popular pode orientar o apoio a iniciativas surgidas da própria comunidade, identificadas na cartografia social, em vez de replicar programas genéricos de capacitação empresarial.",
+      "fontes_citadas": [
+        "Prefeitura Municipal"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2020",
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E1-F11",
+        "E1-F22",
+        "E5-F10"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F09",
+        "nome_no_documento": "Empreendedorismo solidário, criatividade e inovação",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F10": {
+      "texto": "Campo Grande registrava 307,1 mil vínculos formais com remuneração média de R$ 4 mil, acima da média estadual de R$ 3,3 mil, com ocupações predominantes de dirigentes do serviço público, faxineiros e assistentes administrativos (RAIS). A formalização via MEI ampliou a cobertura previdenciária de parte dos trabalhadores autônomos, mas com contribuição reduzida e acesso limitado a benefícios. A Economia Solidária carece de marco municipal de formalização que reconheça cooperativas e associações de produção como sujeitos de compras públicas e de crédito. A distância entre formalização e proteção efetiva é maior nos setores de construção civil, serviços domésticos, reciclagem e comércio ambulante, que concentram trabalhadores negros, indígenas e migrantes (E3-F13, E3-F16). O fator relaciona-se a E1-F28 e E1-F18, e o planejamento deve monitorar a formalização desagregada por raça, sexo e território.",
+      "fontes_citadas": [
+        "RAIS"
       ],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E3-F13",
+        "E3-F16",
+        "E1-F28",
+        "E1-F18"
+      ],
       "origem": {
-        "codigo_documento": "E2-4",
-        "nome_no_documento": "Profissionais de saúde",
-        "eixo_documento": 2,
-        "paragrafo_docx": 62
+        "codigo_documento": "E1-F10",
+        "nome_no_documento": "Formalização de emprego (CLT, MEI, ECOSOL)",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F20": {
-      "texto": "A cobertura de esgotamento sanitário alcança 87,64% dos domicílios para coleta, mas com tratamento de apenas 66,1% do volume gerado. Isso significa que 18.316,72 mil m³ de efluentes foram lançados anualmente nos córregos urbanos sem tratamento (SNIS 2022), com impacto direto sobre a qualidade da água dos córregos Prosa, Segredo e Anhanduí e sobre a transmissão de doenças de veiculação hídrica. A queda de 20 posições no Ranking Trata Brasil, do 17º lugar em 2024 para o 37º em 2025, com base nos dados de 2023, evidencia que o investimento de R$ 195,31 por habitante está abaixo do parâmetro ideal de R$ 231,09 estabelecido pelo PLANSAB.",
+    "E1-F11": {
+      "texto": "As iniciativas de economia solidária em Campo Grande concentram-se em cooperativas e associações de catadores de materiais recicláveis, grupos de produção artesanal e feiras de economia popular, sem cadastro municipal atualizado que permita dimensionar seu número, faturamento e trabalhadores envolvidos, lacuna que deve ser suprida pela consulta ao Cadastro Nacional de Empreendimentos Econômicos Solidários e pela cartografia social. A coleta de resíduos domiciliares atinge 99,23% da população, gerando volume de recicláveis que poderia sustentar uma cadeia solidária mais robusta (E1-F27), hoje limitada pela baixa remuneração dos catadores e pela ausência de contratos de prestação de serviço com o poder público. As aldeias urbanas indígenas mantêm produção artesanal com potencial de comercialização coletiva. O fator depende de E1-F22 e E1-F20 para acesso a capital e de E6-F04 para parcerias institucionais, e constitui eixo estratégico de geração de renda nos territórios de maior vulnerabilidade.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F27",
+        "E1-F22",
+        "E1-F20",
+        "E6-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F11",
+        "nome_no_documento": "Iniciativas de economia solidária",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F12": {
+      "texto": "A disponibilidade de vagas em Campo Grande concentra-se no setor de serviços, no comércio e na administração pública, com oferta geograficamente localizada no centro e nos eixos comerciais, distante das regiões urbanas de maior vulnerabilidade. O saldo positivo de 8.107 empregos formais entre janeiro e setembro de 2025 (CAGED) mantém a capital como principal mercado de trabalho do estado, mas o perfil das vagas criadas, com predominância de ocupações de baixa remuneração, limita seu efeito redistributivo. A distância entre moradia e emprego, combinada à frequência insuficiente do transporte coletivo operado pelo Consórcio Guaicurus nas regiões periféricas (E5-F23), funciona como barreira de acesso às vagas existentes. A atração regional de trabalhadores, incluindo migrantes estrangeiros que representam 17,1% da população em situação de rua (GT-PSR, 2025), indica que a oferta de emprego não absorve todos os que a capital atrai. O fator relaciona-se a E1-F08, E1-F13 e E5-F16.",
       "fontes_citadas": [
-        "SNIS 2022",
-        "Ranking Trata Brasil",
-        "PLANSAB"
+        "CAGED",
+        "GT-PSR, 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E5-F23",
+        "E1-F08",
+        "E1-F13",
+        "E5-F16"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F12",
+        "nome_no_documento": "Disponibilidade de emprego",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F13": {
+      "texto": "A taxa de desocupação municipal não é produzida com periodicidade anual para Campo Grande; a PNAD Contínua divulga estimativas para o conjunto dos municípios das capitais, que devem ser extraídas para a série histórica do diagnóstico. O desemprego manifesta-se de forma concentrada nas regiões urbanas do Anhanduizinho, da Lagoa e do Bandeira, onde se localiza a maior parte das famílias inscritas no CadÚnico, e atinge com maior intensidade jovens, mulheres chefes de família e pessoas negras. O crescimento da população em situação de rua, de 503 pessoas em 2018 para 1.611 em outubro de 2025 segundo levantamento municipal divulgado pela imprensa, é indicador indireto da combinação entre desemprego, custo da moradia e fragilidade das redes de proteção (E3-F14). O fator alimenta E1-F28 e E3-F01 e tem efeitos documentados sobre saúde mental (E2-F18) e uso de álcool e outras drogas (E2-F10).",
+      "fontes_citadas": [
+        "levantamento municipal divulgado pela imprensa"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2018",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E3-F14",
+        "E1-F28",
+        "E3-F01",
+        "E2-F18",
+        "E2-F10"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F13",
+        "nome_no_documento": "Desemprego",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F14": {
+      "texto": "O trabalho infantil em Campo Grande manifesta-se nas formas de menor visibilidade, como o trabalho doméstico intrafamiliar, a venda ambulante em semáforos da área central e o acompanhamento de adultos na catação de recicláveis. A identificação de 52 crianças entre as pessoas em situação de rua no Censo de setembro de 2025 (GT-PSR) é sinal de risco elevado de exploração. Os registros de denúncias ao Disque 100, as notificações do SINAN por trabalho infantil e os dados do Censo Escolar sobre abandono constituem as fontes para dimensionar o fenômeno no município, ainda não sistematizadas nesta versão. O fator articula-se a E1-F01, E3-F09 e E5-F04 e exige protocolo conjunto entre escolas, Conselhos Tutelares, CRAS e equipes de saúde, com atenção às especificidades culturais das crianças indígenas e migrantes, cuja abordagem demanda formação específica dos profissionais.",
+      "fontes_citadas": [
+        "GT-PSR"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E1-F01",
+        "E3-F09",
+        "E5-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F14",
+        "nome_no_documento": "Trabalho infantil",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F15": {
+      "texto": "Mato Grosso do Sul registra operações recorrentes de resgate de trabalhadores em condições análogas às de escravidão em atividades agropecuárias, carvoarias e frigoríficos, segundo o Painel de Informações e Estatísticas da Inspeção do Trabalho do Ministério do Trabalho e Emprego, fonte a ser consultada para o recorte municipal. Campo Grande funciona como ponto de recrutamento e trânsito de trabalhadores aliciados para o interior e, por sua posição na rota de fronteira com Paraguai e Bolívia, como espaço de circulação de migrantes em situação irregular (E3-F13). A população indígena urbana, que cresceu de 5,8 mil para 18,4 mil pessoas entre os Censos de 2010 e 2022, inclui trabalhadores sazonais expostos a intermediação ilegal de mão de obra. O fator relaciona-se a E3-F07 e E1-F18, e a APS deve ser preparada para reconhecer sinais de exploração em atendimentos a trabalhadores migrantes e indígenas.",
+      "fontes_citadas": [
+        "Censos de 2010 e 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2010",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E3-F13",
+        "E3-F07",
+        "E1-F18"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F15",
+        "nome_no_documento": "Trabalho em condições análogas às de escravidão",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F16": {
+      "texto": "A segurança nos ambientes de trabalho em Campo Grande é monitorada pelo Centro de Referência em Saúde do Trabalhador estadual e pelas notificações de acidentes de trabalho graves no SINAN, sistema sabidamente subnotificado para trabalhadores informais. Os setores de construção civil, frigoríficos, transporte de cargas e limpeza urbana concentram os riscos de maior gravidade. O vendaval de 10 de setembro de 2026, com rajadas de 83,8 km/h, expôs trabalhadores de manutenção elétrica e poda a condições de alto risco durante a recomposição da rede, com previsão de substituição de até 100 postes pela Energisa. A exposição ocupacional a agrotóxicos nas áreas rurais do município e a exposição de catadores a resíduos perigosos completam o quadro. O fator relaciona-se a E1-F18, E2-F11 e E5-F03, e o planejamento deve integrar vigilância em saúde do trabalhador às equipes de APS nos territórios com maior concentração de trabalho informal.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F18",
+        "E2-F11",
+        "E5-F03"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F16",
+        "nome_no_documento": "Ambientes de trabalho seguros",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F17": {
+      "texto": "As ações solidárias locais em Campo Grande, como doação de alimentos, cozinhas comunitárias, apoio a famílias em situação de rua e redes de vizinhança, são conduzidas por igrejas, associações de moradores, coletivos e organizações indígenas, com intensidade que aumenta em momentos de crise. Após o vendaval de setembro de 2026, a mobilização comunitária complementou a resposta municipal na remoção de árvores e no apoio a famílias atingidas, padrão observado também nos alagamentos de abril de 2025. Essas ações não são registradas em sistema público, o que impede seu reconhecimento como componente da rede de proteção e da capacidade de resposta a desastres, lacuna que a cartografia social deve preencher. O fator articula-se a E6-F01, E6-F16 e E6-F05, e sua valorização no plano popular passa por apoio logístico e financeiro sem captura da autonomia das iniciativas.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E6-F01",
+        "E6-F16",
+        "E6-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F17",
+        "nome_no_documento": "Ações solidárias locais",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F18": {
+      "texto": "As condições de trabalho em Campo Grande apresentam forte segmentação: vínculos públicos e de serviços especializados com remuneração e estabilidade elevadas coexistem com ocupações de limpeza, comércio, construção e serviços pessoais de baixa remuneração, jornadas extensas e alta rotatividade, como indica a predominância de faxineiros entre as ocupações formais mais frequentes (RAIS). Nas ocupações informais, a ausência de direitos amplia a exposição a riscos e reduz o acesso a afastamento por doença. As condições de trabalho dos profissionais de saúde, sobretudo dos vinculados por residência e contratos temporários, afetam a fixação das equipes nas regiões periféricas (E2-F16). O fator relaciona-se a E1-F10, E1-F16 e E1-F28 e tem efeitos sobre saúde mental (E2-F18) e doenças crônicas (E2-F09), devendo o plano popular incorporar indicadores de qualidade do emprego e não apenas de quantidade de vagas.",
+      "fontes_citadas": [
+        "RAIS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F16",
+        "E1-F10",
+        "E1-F16",
+        "E1-F28",
+        "E2-F18",
+        "E2-F09"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F18",
+        "nome_no_documento": "Condições de trabalho",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F19": {
+      "texto": "A política de investimento em Campo Grande tem sido orientada pela atração de empresas e pela consolidação da capital como polo logístico e de serviços, enquanto os investimentos industriais de maior porte do estado, como as plantas de celulose, se concentram em municípios do interior. A redução de 1,3 ponto percentual na participação do município no PIB estadual entre 2022 e 2023 (Semadesc) indica a necessidade de estratégia própria de desenvolvimento. O investimento público em saneamento atingiu R$ 195,31 por habitante em 2023, abaixo do parâmetro de R$ 231,09 do PLANSAB (Instituto Trata Brasil, 2025), o que ilustra a distância entre investimento e necessidade. O fator articula-se a E1-F08 e E5-F24 e demanda critérios territoriais de priorização, de modo que o investimento público se dirija às regiões com piores indicadores sociais, sanitários e de infraestrutura.",
+      "fontes_citadas": [
+        "Semadesc",
+        "Instituto Trata Brasil, 2025"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
         "2022",
-        "2024",
-        "2025",
-        "2023"
+        "2023",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E1-F08",
+        "E5-F24"
       ],
       "origem": {
-        "codigo_documento": "E2-14",
-        "nome_no_documento": "Acesso à água e saneamento",
-        "eixo_documento": 2,
-        "paragrafo_docx": 82
+        "codigo_documento": "E1-F19",
+        "nome_no_documento": "Promoção de políticas de investimento local",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E2-F21": {
-      "texto": "A contaminação ambiental em Campo Grande apresenta múltiplos vetores: lançamento de esgoto não tratado nos córregos urbanos; descarte irregular de resíduos sólidos em terrenos baldios das periferias; aplicação de agroquímicos em propriedades rurais periurbanas sem zona de amortecimento com áreas residenciais; e emissões industriais na zona industrial da região Leste. A vigilância em saúde ambiental, operada pelos sistemas VIGISOLO, VIGIAR e VIGIAGUA do Ministério da Saúde, produz dados sobre a qualidade da água e do ar que precisam ser sistematicamente integrados à análise de risco territorial da SESAU.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-16",
-        "nome_no_documento": "Contaminação e poluição do ar, da água e do solo",
-        "eixo_documento": 2,
-        "paragrafo_docx": 86
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F22": {
-      "texto": "A participação comunitária na gestão da água e saneamento em Campo Grande é exercida formalmente pelo Conselho Municipal de Saneamento e pela interface com o Conselho de Bacia do Rio Anhanduí. Na prática, as comunidades periféricas que mais sofrem com o déficit de saneamento têm menor capacidade de influenciar as decisões de investimento da concessionária Águas Guariroba, cujo contrato de concessão é regulado pela AGEREG (Agência Reguladora Municipal). A cartografia social PICAPS, ao mapear as inscrições das comunidades sobre os pontos críticos de saneamento, produz dados qualificados que deveriam alimentar o processo regulatório.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-15",
-        "nome_no_documento": "Participação das comunidades na gestão da água",
-        "eixo_documento": 2,
-        "paragrafo_docx": 84
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite locais e e saneamento."
-      }
-    },
-    "E2-F23": {
-      "texto": "O abastecimento de água em Campo Grande alcança cobertura de 97,41% da população pela rede pública da concessionária Águas Guariroba (SNIS/Trata Brasil 2023), com perdas na distribuição de 19,7%, abaixo do parâmetro de 25% considerado eficiente. A gestão de bacias hidrográficas que abastecem o município enfrenta pressão crescente por degradação do Cerrado no entorno, desmatamento que compromete a recarga dos mananciais e acelera o assoreamento dos córregos formadores do sistema hídrico urbano. As projeções climáticas de intensificação das estiagens para a região Centro-Oeste impõem necessidade de planejamento hídrico de longo prazo ainda ausente no planejamento municipal.",
-      "fontes_citadas": [
-        "SNIS/Trata Brasil 2023"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2023"
-      ],
-      "origem": {
-        "codigo_documento": "E2-13",
-        "nome_no_documento": "Gestão da água e saneamento, uso e escassez",
-        "eixo_documento": 2,
-        "paragrafo_docx": 80
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta uso e escassez; a descrição do fator trata do uso e de evitar a falta de água."
-      }
-    },
-    "E2-F25": {
-      "texto": "A qualidade do ar em Campo Grande não dispõe de rede de monitoramento municipal contínua. Os episódios de fumaça provenientes de queimadas no Cerrado e no Pantanal, que afetam o estado entre julho e setembro, no período de estiagem, produzem deterioração expressiva da qualidade do ar com impacto comprovado sobre o agravamento de doenças respiratórias, especialmente em crianças e idosos. O VIGIAR (Vigilância em Saúde Ambiental relacionada à Qualidade do Ar) é o instrumento federal de monitoramento, mas sua operacionalização local é ainda incipiente.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-18",
-        "nome_no_documento": "Qualidade do ar",
-        "eixo_documento": 2,
-        "paragrafo_docx": 90
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F27": {
-      "texto": "A segurança pública em Campo Grande é determinante de saúde documentado pela cartografia social: a insegurança e o medo restringem a mobilidade, o uso de espaços públicos e a adesão a atividades de saúde preventiva nas periferias. O Índice de Vulnerabilidade Social do IPEA identifica as regiões Sul e Leste como de maior insegurança, com correlação com indicadores de tráfico, violência doméstica e homicídios. As UBSs localizadas em áreas de risco relatam dificuldades de acesso de usuários e de equipes nos horários noturnos, comprometendo a oferta de serviços de saúde nesses territórios.",
-      "fontes_citadas": [
-        "cartografia social",
-        "Índice de Vulnerabilidade Social do IPEA"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-25",
-        "nome_no_documento": "Segurança",
-        "eixo_documento": 2,
-        "paragrafo_docx": 104
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F28": {
-      "texto": "A violência é o determinante de saúde mais diretamente letal para jovens negros e indígenas de Campo Grande. A taxa de homicídios na cidade posiciona Mato Grosso do Sul entre os estados com maior mortalidade por causas violentas no Brasil. Jovens negros e indígenas masculinos de 15 a 29 anos morrem proporcionalmente mais por homicídio do que rapazes brancos da mesma faixa etária, dado documentado pela Agência Brasil (2024) e correlato à sobredeterminação racial da violência estrutural. O SINAN-Violências registra as notificações de violência física, sexual e psicológica, com concentração nas regiões periféricas e forte associação com uso de álcool e drogas e com violência doméstica.",
-      "fontes_citadas": [
-        "Agência Brasil (2024)",
-        "SINAN-Violências"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2024"
-      ],
-      "origem": {
-        "codigo_documento": "E2-26",
-        "nome_no_documento": "Violência",
-        "eixo_documento": 2,
-        "paragrafo_docx": 106
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E2-F32": {
-      "texto": "A Defesa Civil de Campo Grande e o Corpo de Bombeiros são os atores institucionais da resposta a desastres e emergências não sanitárias. A capacidade operacional é limitada frente à extensão territorial e à diversidade de riscos do município. O modelo das Brigadas Populares de Resposta a Desastres, desenvolvido pela PICAPS em parceria com comunidades de Rio Bonito do Iguaçu (PR) após o tornado de 2024, oferece referência metodológica aplicável às periferias campo-grandenses sujeitas a enchentes e às aldeias indígenas urbanas com baixa cobertura de proteção civil.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2024"
-      ],
-      "origem": {
-        "codigo_documento": "E2-22",
-        "nome_no_documento": "Gestão de riscos, defesa civil, bombeiros e brigadas",
-        "eixo_documento": 2,
-        "paragrafo_docx": 98
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Mesmos elementos (gestão de riscos, defesa civil, bombeiros, brigadas); o cadastro acrescenta e emergências e outros coletivos."
-      }
-    },
-    "E2-F33": {
-      "texto": "O mapeamento de pontos de risco territorial em Campo Grande é um produto que os pesquisadores populares PICAPS podem gerar com precisão superior ao que os dados institucionais oferecem. Os moradores das periferias conhecem os pontos de alagamento recorrentes, as áreas de deslizamento, os locais de descarte irregular de resíduos, os pontos de conflito violento e os focos de vetores de doenças, conhecimento que não está em nenhum banco de dados oficial. A integração desse mapeamento comunitário com os dados da Defesa Civil e da Vigilância em Saúde Ambiental é uma inovação metodológica com alto valor para a gestão de riscos.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-23",
-        "nome_no_documento": "Pontos de riscos e desastres no território",
-        "eixo_documento": 2,
-        "paragrafo_docx": 100
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F01": {
-      "texto": "A pobreza em Campo Grande tem distribuição territorial concentrada nas periferias Sul e Leste, onde o IVS do IPEA identifica os maiores déficits simultâneos de renda, saneamento, habitação, educação e saúde. As famílias chefiadas por mulheres negras e as aldeias indígenas urbanas apresentam as maiores proporções de pobreza extrema. O crescimento do PIB municipal de R$ 40 bilhões não se traduz em redução proporcional da pobreza nas periferias, evidenciando que o modelo de desenvolvimento campo-grandense é extensivo em produção e restrito em justiça distributiva.",
-      "fontes_citadas": [
-        "IVS do IPEA"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-18",
-        "nome_no_documento": "Pobreza",
-        "eixo_documento": 3,
-        "paragrafo_docx": 145
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F02": {
-      "texto": "As notificações de violência doméstica no SINAN e os registros de feminicídio nos boletins estaduais de 2023 indicam concentração nas periferias Sul e Leste de Campo Grande, com forte associação com uso de álcool e drogas. Mulheres pardas e negras são desproporcionalmente afetadas, operando a intersecção entre gênero e raça como amplificadora da vulnerabilidade. A rede de proteção inclui CRAS, CREAS, DEAM, Casa da Mulher Brasileira e serviços da RAPS, mas com capacidade de acolhimento e acompanhamento longitudinal insuficiente frente à magnitude da demanda.",
-      "fontes_citadas": [
-        "SINAN",
-        "boletins estaduais de 2023"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2023"
-      ],
-      "origem": {
-        "codigo_documento": "E3-1",
-        "nome_no_documento": "Discriminação e violência contra mulheres e meninas",
-        "eixo_documento": 3,
-        "paragrafo_docx": 111
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F03": {
-      "texto": "O casamento infantil e as uniões precoces têm incidência documentada nas comunidades indígenas urbanas de Campo Grande, onde práticas culturais tradicionais interagem com condições de pobreza e ausência de alternativas econômicas para adolescentes. O Conselho Tutelar e a rede de proteção social têm responsabilidade de identificação e notificação, mas a sensibilidade cultural para abordagem em comunidades indígenas exige formação específica de profissionais que frequentemente não recebem.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-6",
-        "nome_no_documento": "Casamentos prematuros, forçados e de crianças",
-        "eixo_documento": 3,
-        "paragrafo_docx": 121
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F04": {
-      "texto": "Os programas de empoderamento de mulheres em Campo Grande operam principalmente por meio dos CRAS, com grupos de geração de renda, oficinas de qualificação e acesso ao microcrédito produtivo. As mulheres indígenas urbanas têm acesso ainda mais restrito a esses programas, por barreiras culturais e de distância física das aldeias urbanas em relação aos equipamentos de proteção social. A política de saúde da mulher na APS, com oferta de planejamento familiar, rastreamento de câncer e cuidado pré-natal, é um ponto de entrada potente para a identificação de mulheres em situação de vulnerabilidade e conexão com os programas de empoderamento.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-5",
-        "nome_no_documento": "Igualdade de oportunidades para empoderamento das mulheres",
-        "eixo_documento": 3,
-        "paragrafo_docx": 119
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite promover."
-      }
-    },
-    "E3-F05": {
-      "texto": "A regularização fundiária urbana nas periferias de Campo Grande raramente garante a titulação preferencial para mulheres, conforme prevê o Estatuto da Cidade para áreas de interesse social. As mulheres chefes de família nas regiões Sul e Leste frequentemente habitam domicílios sem documentação fundiária, o que as exclui do acesso a programas de habitação popular que exigem comprovação de posse ou propriedade.",
-      "fontes_citadas": [],
-      "referencias_normativas": [
-        "Estatuto da Cidade"
-      ],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-9",
-        "nome_no_documento": "Propriedade e controle sobre a terra para as mulheres",
-        "eixo_documento": 3,
-        "paragrafo_docx": 127
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F06": {
-      "texto": "A coordenação municipal de políticas para igualdade de gênero em Campo Grande opera de forma descentralizada entre SESAU, Secretaria de Assistência Social e Secretaria de Governo, sem uma estrutura específica de monitoramento e avaliação. A implementação do Programa Mulher Segura, da Rede de Proteção à Mulher e dos protocolos de violência doméstica na APS são pontos de entrada concretos, mas a integração entre os setores para garantir continuidade do cuidado após a notificação ainda apresenta lacunas.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-11",
-        "nome_no_documento": "Ação do Estado na coordenação de políticas para igualdade de gênero",
-        "eixo_documento": 3,
-        "paragrafo_docx": 131
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e coerência."
-      }
-    },
-    "E3-F07": {
-      "texto": "Campo Grande, como capital e polo logístico do Centro-Oeste na fronteira com Paraguai e Bolívia, está inserida em rotas documentadas de tráfico de pessoas para fins de exploração sexual e trabalho forçado. O Núcleo de Enfrentamento ao Tráfico de Pessoas do Mato Grosso do Sul opera em Campo Grande com articulação com a Polícia Federal, mas a subnotificação é expressiva. Mulheres e crianças em situação de vulnerabilidade social, incluindo indígenas e imigrantes em situação irregular, são os grupos de maior risco, exigindo capacitação das equipes de saúde para identificação de sinais de alerta.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-7",
-        "nome_no_documento": "Tráfico de pessoas",
-        "eixo_documento": 3,
-        "paragrafo_docx": 123
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F08": {
-      "texto": "A garantia dos direitos fundamentais, saúde, educação, moradia, alimentação, segurança, é a finalidade para a qual o diagnóstico situacional produz evidências. A cartografia social PICAPS nomeia as violações como fatores geradores de situações-limite, e o Plano Popular de Territórios Saudáveis é a resposta coletivamente construída. Em Campo Grande, os territórios das periferias Sul e Leste e das aldeias indígenas urbanas são os espaços onde a violação simultânea de múltiplos direitos é mais intensa e sistemática.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-14",
-        "nome_no_documento": "Direitos fundamentais",
-        "eixo_documento": 3,
-        "paragrafo_docx": 137
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F10": {
-      "texto": "O empoderamento comunitário é condição metodológica central da Pedagogia da Práxis no Território: os pesquisadores populares PICAPS são a expressão operacional desse princípio em Campo Grande. A inclusão política de mulheres, negros e indígenas nos espaços de controle social, CMS, CMAS, CMDCA, Conselho Indígena Municipal, é um indicador processual de qualidade democrática que precisa ser monitorado ao longo do ciclo de planejamento.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-8",
-        "nome_no_documento": "Empoderamento e inclusão social, econômica e política",
-        "eixo_documento": 3,
-        "paragrafo_docx": 125
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F12": {
-      "texto": "O Sistema Único de Assistência Social (SUAS) em Campo Grande opera por meio de CRAS distribuídos pelos sete distritos sanitários, com interface direta com as ESF da APS. O Cadastro Único registra as famílias em situação de pobreza e extrema pobreza, habilitando o acesso a benefícios como o Bolsa Família. A cobertura e a qualidade dos serviços de proteção social apresentam variação territorial, com os CRAS das periferias Sul e Leste operando com maior demanda e, frequentemente, com menor infraestrutura relativa.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-16",
-        "nome_no_documento": "Serviços públicos e políticas de proteção social",
-        "eixo_documento": 3,
-        "paragrafo_docx": 141
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F13": {
-      "texto": "Campo Grande recebe fluxos migratórios de múltiplas origens: migrantes nordestinos em busca de trabalho no agronegócio e construção civil; indígenas Terena e Guarani-Kaiowá das aldeias do interior em busca de oportunidades na capital (processo documentado no período 2003-2023 por FERNANDES & OLIVEIRA, 2024); imigrantes paraguaios, bolivianos e haitianos em busca de emprego na capital do estado de fronteira. Cada grupo apresenta vulnerabilidades específicas de acesso a serviços de saúde, documentação e proteção social que demandam adaptações nos protocolos padrão de atendimento.",
-      "fontes_citadas": [
-        "FERNANDES & OLIVEIRA, 2024"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [
-        "2003-2023",
-        "2024"
-      ],
-      "origem": {
-        "codigo_documento": "E3-19",
-        "nome_no_documento": "Migração",
-        "eixo_documento": 3,
-        "paragrafo_docx": 147
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E3-F16": {
-      "texto": "A discriminação racial em Campo Grande manifesta-se em múltiplas dimensões: no mercado de trabalho, com negros e indígenas concentrados nas faixas salariais mais baixas e nos empregos de maior precariedade; no acesso diferenciado a serviços de saúde e educação; na sobre representação no sistema prisional; e na invisibilidade nos processos de tomada de decisão institucional. Os dados do Censo 2022 para Campo Grande ainda não estão plenamente desagregados por raça e etnia em indicadores de saúde e educação ao nível intraurbano, lacuna que o sistema de informação da APS (e-SUS) pode preencher.",
+    "E1-F20": {
+      "texto": "O acesso a serviços bancários em Campo Grande é amplo na área urbana consolidada, com agências, correspondentes e serviços digitais, e o sistema de pagamentos instantâneos ampliou a bancarização de trabalhadores informais. As barreiras persistem para pessoas sem documentação civil, pessoas em situação de rua e parte da população indígena urbana: o Censo 2022 indica que apenas 6% dos indígenas residentes na capital possuem o Registro Administrativo de Nascimento de Indígena, documento complementar que facilita o acesso a direitos, o que se soma a dificuldades de registro civil (E3-F08). A exclusão bancária limita o acesso a crédito (E1-F22, E1-F29) e a benefícios sociais operados por conta. O fator relaciona-se a E1-F11 e E3-F12, e o plano popular pode incorporar ações de documentação e educação financeira articuladas aos CRAS e às unidades de saúde.",
       "fontes_citadas": [
         "Censo 2022"
       ],
@@ -1096,39 +865,1505 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "periodos_citados": [
         "2022"
       ],
+      "fatores_relacionados": [
+        "E3-F08",
+        "E1-F22",
+        "E1-F29",
+        "E1-F11",
+        "E3-F12"
+      ],
       "origem": {
-        "codigo_documento": "E3-2",
-        "nome_no_documento": "Discriminação racial, todas as formas",
-        "eixo_documento": 3,
-        "paragrafo_docx": 113
+        "codigo_documento": "E1-F20",
+        "nome_no_documento": "Acesso a serviços bancários",
+        "eixo_documento": 1
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta todas as formas."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E3-F18": {
-      "texto": "A promoção da igualdade racial em Campo Grande tem como principal referência normativa a Política Nacional de Saúde Integral da População Negra (PNSIPN), implementada na SESAU por meio da qualificação de equipes para o manejo diferenciado de condições de saúde prevalentes na população negra, como anemia falciforme, hipertensão e saúde mental. O Conselho Municipal de Promoção da Igualdade Racial é a instância de controle social dessa política, mas sua efetividade depende de orçamento específico e de articulação intersetorial entre saúde, educação e assistência social.",
+    "E1-F21": {
+      "texto": "A indústria responde por 14,8% do valor adicionado de Campo Grande, com predominância de agroindústria, frigoríficos, alimentos, construção civil e indústria farmacêutica, enquanto a industrialização de grande porte do estado se desloca para o interior. A inclusividade dessa industrialização é limitada: as faixas salariais mais baixas concentram trabalhadores com menor escolaridade e populações negras e indígenas, e a localização de plantas industriais próximas a áreas residenciais periféricas gera conflitos por emissões e ruído não monitorados de forma sistemática (E2-F21, E2-F25). A ausência de indicadores municipais de emprego industrial desagregados por raça e território é lacuna a ser preenchida com microdados da RAIS. O fator articula-se a E1-F23, E5-F15 e E5-F05 e deve orientar a exigência de contrapartidas sociais e ambientais em incentivos fiscais concedidos pelo município.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F21",
+        "E2-F25",
+        "E1-F23",
+        "E5-F15",
+        "E5-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F21",
+        "nome_no_documento": "Industrialização inclusiva e sustentável",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F22": {
+      "texto": "O crédito para micro e pequenas empresas e cooperativas em Campo Grande é ofertado por bancos públicos, cooperativas de crédito e pelo programa estadual de microcrédito, além de iniciativas municipais vinculadas à Fundação Social do Trabalho. As barreiras de acesso concentram-se em exigências de garantias, documentação e histórico bancário, que excluem empreendimentos solidários, grupos de mulheres e empreendedores indígenas e migrantes. A ausência de dados públicos sobre o volume de microcrédito concedido por território constitui lacuna de informação. Após o vendaval de setembro de 2026, a necessidade de crédito para recomposição de pequenos negócios atingidos por destelhamento e perda de energia tornou-se visível, articulando este fator a E1-F29. O crédito orientado condiciona E1-F09 e E1-F11 e deve ser acompanhado de assistência técnica para evitar endividamento em territórios de renda baixa e instável.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F29",
+        "E1-F09",
+        "E1-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F22",
+        "nome_no_documento": "Crédito para micro, pequenas empresas e cooperativas",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F23": {
+      "texto": "As atividades econômicas sustentáveis em Campo Grande têm expressão em iniciativas privadas de energia solar distribuída, eficiência no uso da água e reciclagem, mas não estão organizadas em política municipal com metas e incentivos. A economia local mantém dependência de cadeias associadas à conversão do Cerrado e à pecuária extensiva, cuja expansão regional tem custos ambientais documentados pelo MapBiomas (E4-F16). A transição para atividades de menor impacto, como agroecologia periurbana (E1-F05), reciclagem organizada (E1-F27), turismo de natureza e serviços ambientais, depende de crédito (E1-F22), formação (E5-F10) e compras públicas. A ausência de indicadores de economia verde no município é lacuna a ser registrada. O fator articula-se a E1-F21 e E4-F22 e permite ao plano popular vincular geração de renda e proteção ambiental nos territórios periféricos e rurais.",
+      "fontes_citadas": [
+        "MapBiomas"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F16",
+        "E1-F05",
+        "E1-F27",
+        "E1-F22",
+        "E5-F10",
+        "E1-F21",
+        "E4-F22"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F23",
+        "nome_no_documento": "Atividades econômicas sustentáveis",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F24": {
+      "texto": "A cobrança de preços abusivos por itens básicos manifesta-se em Campo Grande sobretudo em momentos de crise: durante o vendaval de setembro de 2026 e nos episódios de interrupção do abastecimento de energia e água, relatos de elevação de preços de água mineral, gás e serviços de reparo são recorrentes, embora sem registro sistemático. O Procon municipal e o estadual são as instâncias de fiscalização, e seus registros de reclamações constituem fonte a ser incorporada ao diagnóstico. Para as famílias inscritas no CadÚnico, a variação dos preços de alimentos e gás de cozinha determina diretamente a insegurança alimentar (E1-F02, E2-F02). O fator relaciona-se a E1-F25 e E2-F29, e o plano popular pode prever mecanismos de comunicação comunitária para denúncia de abusos em situações de emergência, articulados às rádios e aos grupos de mensagens locais (E6-F03, E6-F11).",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F02",
+        "E2-F02",
+        "E1-F25",
+        "E2-F29",
+        "E6-F03",
+        "E6-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F24",
+        "nome_no_documento": "Cobrança de preços abusivos por itens básicos",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F25": {
+      "texto": "A regulação de mercados com efeito direto sobre a vida cotidiana em Campo Grande inclui os serviços concedidos de água e esgoto (Águas Guariroba), transporte coletivo (Consórcio Guaicurus) e energia elétrica (Energisa), cuja fiscalização envolve a agência reguladora municipal e a ANEEL. A qualidade e o preço desses serviços condicionam saúde, mobilidade e renda das famílias de menor renda. A queda de Campo Grande do 17º para o 37º lugar no Ranking do Saneamento do Instituto Trata Brasil entre 2024 e 2025 e a interrupção de energia para mais de 300 mil pessoas no vendaval de setembro de 2026 evidenciam a relevância do controle regulatório sobre metas de investimento e resiliência. O fator articula-se a E2-F22, E5-F23 e E6-F09 e exige transparência dos contratos de concessão e participação social nas revisões tarifárias e de metas.",
+      "fontes_citadas": [
+        "Ranking do Saneamento do Instituto Trata Brasil"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F22",
+        "E5-F23",
+        "E6-F09"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F25",
+        "nome_no_documento": "Regulamentação e monitoramento dos mercados e instituições (monopólios e preço justo)",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F26": {
+      "texto": "O sistema alimentar de Campo Grande é dominado por cadeias longas e por produção regional voltada à exportação de commodities, com baixa integração entre a produção local de alimentos e o consumo urbano. A CEASA e o Mercado Municipal organizam parte do abastecimento de hortifrutigranjeiros, cuja origem é em grande medida externa ao município. A sustentabilidade do sistema depende da ampliação da agricultura familiar e agroecológica periurbana (E1-F03, E1-F05), da redução do desperdício na distribuição e da promoção de alimentação adequada nas escolas e unidades de saúde. Eventos climáticos como a estiagem e as queimadas de 2024 no Pantanal, que queimaram cerca de 1,5 milhão de hectares entre janeiro e setembro segundo o Monitor do Fogo do MapBiomas, sinalizam riscos crescentes para a produção regional (E2-F30, E2-F38). O fator articula-se a E1-F06 e E4-F02.",
+      "fontes_citadas": [
+        "Monitor do Fogo do MapBiomas"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E1-F03",
+        "E1-F05",
+        "E2-F30",
+        "E2-F38",
+        "E1-F06",
+        "E4-F02"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F26",
+        "nome_no_documento": "Sistemas sustentáveis de produção de alimentos",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F27": {
+      "texto": "Campo Grande coleta resíduos domiciliares de 99,23% da população, com geração de 0,98 kg por habitante por dia (Instituto Água e Saneamento, base SNIS), mas a reciclagem efetiva é baixa e dependente de cooperativas e catadores autônomos com remuneração precária. A ausência de dados municipais atualizados sobre o percentual de resíduos recuperados constitui lacuna a ser preenchida com o SINISA. A economia circular nomeada pelo fator inclui ainda reúso de água, logística reversa de embalagens, inclusive de agrotóxicos, e aproveitamento de resíduos de poda, cujo volume aumentou após o vendaval de setembro de 2026. A organização da cadeia de reciclagem com inclusão dos catadores (E1-F11) reduziria o descarte irregular em terrenos baldios, que favorece criadouros do Aedes aegypti e escorpiões (E2-F07, E2-F35). O fator articula-se a E2-F31 e E6-F05 e é uma das interfaces mais diretas entre renda, ambiente e saúde no território.",
+      "fontes_citadas": [
+        "Instituto Água e Saneamento, base SNIS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F11",
+        "E2-F07",
+        "E2-F35",
+        "E2-F31",
+        "E6-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F27",
+        "nome_no_documento": "Economia circular",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F28": {
+      "texto": "O trabalho informal é o componente mais extenso e menos visível do mercado de trabalho de Campo Grande. A PNAD Contínua divulga a taxa de informalidade para o conjunto das capitais, e os microdados do CadÚnico permitem estimar a informalidade entre famílias de baixa renda por território, fontes que devem compor a série do diagnóstico. A informalidade concentra-se em serviços domésticos, construção, comércio ambulante, transporte por aplicativo e reciclagem, e atinge mais intensamente mulheres, pessoas negras, indígenas e migrantes. A ausência de proteção previdenciária expõe esses trabalhadores à perda total de renda em situações de doença ou desastre, como ocorreu com trabalhadores autônomos durante o vendaval de setembro de 2026. O fator articula-se a E1-F10, E1-F13 e E3-F01 e afeta o acesso à saúde, pois limita a disponibilidade de horário para consultas na rede pública em horário comercial (E2-F15).",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F10",
+        "E1-F13",
+        "E3-F01",
+        "E2-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F28",
+        "nome_no_documento": "Trabalho informal",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E1-F29": {
+      "texto": "O crédito para adaptação climática e reconstrução tornou-se fator concreto em Campo Grande após o vendaval de 10 de setembro de 2026, que destelhou 26 escolas municipais, derrubou árvores e postes e motivou decreto de situação de emergência por 180 dias, com autorização para uso da contribuição de iluminação pública na recuperação de infraestrutura e do Fundo Municipal de Meio Ambiente na recuperação ambiental. O decreto não prevê, contudo, linha de crédito para famílias e pequenos negócios atingidos, que dependem de instrumentos federais acionados mediante reconhecimento da situação de emergência pelo Ministério da Integração. A inexistência de programa municipal de crédito para adaptação de moradias, como reforço de telhados e drenagem, constitui lacuna de política pública. O fator articula-se a E4-F10, E4-F07 e E2-F32, e o plano popular deve associar crédito a assistência técnica para reconstrução resiliente.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F10",
+        "E4-F07",
+        "E2-F32"
+      ],
+      "origem": {
+        "codigo_documento": "E1-F29",
+        "nome_no_documento": "Crédito para adaptação climática e reconstrução",
+        "eixo_documento": 1
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F01": {
+      "texto": "As áreas inundáveis de Campo Grande concentram-se nos fundos de vale dos córregos urbanos, como Anhanduí, Prosa, Segredo, Bandeira e Lagoa, cuja canalização e impermeabilização das bacias reduziram a capacidade de infiltração e aumentaram a velocidade do escoamento. O evento de 24 de abril de 2025, com 88 mm de chuva registrados pelo CEMADEN, produziu enxurradas nas avenidas Rachid Neder, Tamandaré, Rachel de Queiroz e Espírito Santo e alagamentos em bairros como Coophatrabalho e Aguadinha. O município não dispõe de mapa público de manchas de inundação por tempo de retorno, lacuna central para o planejamento urbano e sanitário, que deve ser suprida pela Defesa Civil, pelo Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018) e pela cartografia social. O fator articula-se a E2-F34, E2-F33 e E5-F24, e define onde devem ser priorizadas drenagem, rotas de fuga (E2-F26) e vigilância de doenças de veiculação hídrica (E2-F06).",
+      "fontes_citadas": [
+        "CEMADEN"
+      ],
+      "referencias_normativas": [
+        "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+      ],
+      "periodos_citados": [
+        "2025",
+        "2018"
+      ],
+      "fatores_relacionados": [
+        "E2-F34",
+        "E2-F33",
+        "E5-F24",
+        "E2-F26",
+        "E2-F06"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F01",
+        "nome_no_documento": "Área inundada",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F02": {
+      "texto": "A insegurança alimentar em Campo Grande não dispõe de medição municipal pela Escala Brasileira de Insegurança Alimentar, sendo as estimativas disponíveis estaduais, produzidas pela PNAD Contínua, o que impede identificar sua distribuição intraurbana. O SISVAN, alimentado pelas equipes de Saúde da Família e pelo acompanhamento das condicionalidades do Bolsa Família, é a fonte local para o estado nutricional de crianças e gestantes por unidade de saúde, e sua cobertura e resultados devem ser extraídos para o diagnóstico. A população em situação de rua, que somava 1.476 pessoas no Censo do GT-PSR de 2025, e as famílias indígenas urbanas constituem os grupos de maior risco. O fator é desfecho de E1-F02, E1-F06 e E1-F24 e determinante de E2-F05 e E2-F09, em que a má nutrição coexiste com sobrepeso associado ao consumo de ultraprocessados. O plano popular deve priorizar a vigilância alimentar e nutricional territorializada pela APS.",
+      "fontes_citadas": [
+        "Censo do GT-PSR de 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E1-F02",
+        "E1-F06",
+        "E1-F24",
+        "E2-F05",
+        "E2-F09"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F02",
+        "nome_no_documento": "Insegurança alimentar",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F03": {
+      "texto": "A mortalidade materna em Mato Grosso do Sul apresenta perfil sociorracial concentrado: entre os óbitos analisados pelo Comitê Estadual de Prevenção da Mortalidade, 66% ocorreram em mulheres pardas, 61% em solteiras e 48% na faixa de 30 a 39 anos (SES-MS, 2023). Em Campo Grande, que concentra as maternidades de referência para gestação de alto risco, como o Hospital Regional de Mato Grosso do Sul, a Santa Casa e o Hospital Universitário Maria Aparecida Pedrossian, a razão de mortalidade materna deve ser calculada por local de residência para evitar distorções decorrentes da atração de casos do interior. A identificação precoce de risco no pré-natal pela APS e a regulação oportuna para a atenção especializada são os pontos críticos da linha de cuidado. O fator articula-se a E2-F12, E2-F15 e E3-F02, e a estratificação por raça e cor e por território é condição para orientar a resposta.",
+      "fontes_citadas": [
+        "SES-MS, 2023"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E2-F12",
+        "E2-F15",
+        "E3-F02"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F03",
+        "nome_no_documento": "Mortalidade materna",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F04": {
+      "texto": "A mortalidade neonatal é o principal componente da mortalidade infantil em contextos com cobertura ampliada de APS, como Campo Grande, e depende da qualidade do pré-natal, da assistência ao parto e da disponibilidade de leitos de UTI neonatal. A capital concentra a oferta estadual de cuidados intensivos neonatais, o que exige leitura dos dados do SIM e do SINASC por local de residência. A série municipal do coeficiente de mortalidade neonatal precoce e tardia não foi sistematizada nesta versão e deve ser extraída do DATASUS. Fatores de risco como prematuridade, baixo peso ao nascer e gravidez na adolescência apresentam distribuição desigual entre as regiões urbanas e devem ser cruzados com a cobertura de Saúde da Família por território. O fator relaciona-se a E2-F03, E2-F05 e E2-F12, e sua análise orienta investimentos na linha de cuidado materno-infantil e na regulação de leitos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F03",
+        "E2-F05",
+        "E2-F12"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F04",
+        "nome_no_documento": "Mortalidade neonatal",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F05": {
+      "texto": "A mortalidade infantil é indicador sentinela da efetividade da APS e das condições de vida. Em Mato Grosso do Sul, a macrorregião de Corumbá apresentou em 2023 a maior taxa estadual, de 17,1 óbitos por mil nascidos vivos, seguida pela macrorregião de Dourados (Boletim do Comitê Estadual de Prevenção da Mortalidade, 2025). Para Campo Grande, o IBGE Cidades registra coeficiente de 12,88 óbitos por mil nascidos vivos, calculado com base no DATASUS (escala municipal), valor inferior ao das macrorregiões de Corumbá e Dourados; a série anual por local de residência e a decomposição em componentes neonatal e pós-neonatal devem ser extraídas do SIM e do SINASC. A expansão da cobertura de Saúde da Família de 33,27% em 2017 para 76,28% em 2023 (e-Gestor) tende a reduzir óbitos por causas evitáveis, mas a distribuição territorial das equipes determina se essa redução alcança as regiões de maior vulnerabilidade. O fator articula-se a E2-F02, E2-F04, E2-F14 e E2-F20, e a investigação dos óbitos pelo comitê municipal deve alimentar o planejamento territorial.",
+      "fontes_citadas": [
+        "Boletim do Comitê Estadual de Prevenção da Mortalidade, 2025",
+        "e-Gestor",
+        "IBGE Cidades",
+        "DATASUS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2025",
+        "2017"
+      ],
+      "fatores_relacionados": [
+        "E2-F02",
+        "E2-F04",
+        "E2-F14",
+        "E2-F20"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F05",
+        "nome_no_documento": "Mortalidade infantil",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F06": {
+      "texto": "As doenças decorrentes de contaminação do ambiente em Campo Grande incluem diarreias infecciosas, hepatite A e leptospirose associadas a água contaminada e enchentes, doenças respiratórias agravadas pela fumaça das queimadas e intoxicações por agrotóxicos em áreas rurais e periurbanas. Em 2024, a cidade registrou pela primeira vez qualidade do ar classificada como péssima pelo projeto QualiAr da UFMS, com apenas cinco dias de qualidade boa em setembro, durante a temporada de incêndios no Pantanal (E2-F38, E2-F25). O lançamento de esgoto não tratado nos córregos, estimado em 18,3 milhões de m³ em 2022 (Instituto Água e Saneamento), mantém a exposição de moradores de fundos de vale (E2-F21). As internações por doenças respiratórias e diarreicas no SIH, desagregadas por mês e região de residência, são o indicador para quantificar o efeito, ainda não sistematizado. O fator integra a vigilância em saúde ambiental (VIGIAR, VIGIAGUA, VIGIPEQ) com a APS.",
+      "fontes_citadas": [
+        "Instituto Água e Saneamento",
+        "projeto QualiAr da UFMS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F38",
+        "E2-F25",
+        "E2-F21"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F06",
+        "nome_no_documento": "Doenças decorrentes de contaminação e poluição do ar, da água e do solo",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F07": {
+      "texto": "A dengue é o agravo de maior carga epidêmica em Campo Grande. Em 2024, Mato Grosso do Sul registrou 19.473 casos prováveis e 32 óbitos confirmados, e o chikungunya atingiu recorde estadual de 2.766 casos prováveis (SES-MS), com a capital concentrando parcela relevante da transmissão. Em 2026, o boletim municipal registrou 1.534 notificações e 878 casos autóctones confirmados até a semana epidemiológica 33, sem casos graves ou óbitos até a semana 29 (Sesau), sinalizando ano de menor intensidade. A sazonalidade acompanha o período chuvoso de outubro a abril, e a persistência de criadouros associa-se ao armazenamento domiciliar de água, ao descarte irregular de resíduos (E1-F27) e a imóveis abandonados. A vacina contra dengue incorporada ao SUS em 2024 amplia a resposta, condicionada à cobertura vacinal (E2-F14). O fator articula-se a E2-F35, E2-F20 e E6-F05, e a mobilização comunitária é componente estrutural do controle vetorial.",
+      "fontes_citadas": [
+        "SES-MS",
+        "Sesau",
+        "boletim municipal"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E1-F27",
+        "E2-F14",
+        "E2-F35",
+        "E2-F20",
+        "E6-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F07",
+        "nome_no_documento": "Dengue",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F08": {
+      "texto": "Campo Grande mantém transmissão de doenças infecciosas de relevância para a saúde pública, incluindo tuberculose, HIV e AIDS, hanseníase, sífilis e leishmaniose visceral humana, esta última endêmica no município e objeto do Informe Técnico em Saúde Única da SES-MS (2025), que documenta a relação entre transmissão humana, presença de cães infectados e condições ambientais de bairros periféricos. A tuberculose concentra-se em populações privadas de liberdade, pessoas em situação de rua e indígenas, e a coinfecção com HIV é indicador crítico de vulnerabilidade. As séries municipais de incidência no SINAN devem ser extraídas para cada agravo, dado não consolidado nesta versão. O fator articula-se a E3-F14, E4-F19 e E2-F15 e exige integração entre APS, Consultório na Rua, vigilância epidemiológica e controle de zoonoses, com atenção à adesão ao tratamento em populações de alta mobilidade.",
+      "fontes_citadas": [
+        "Informe Técnico em Saúde Única da SES-MS (2025)"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E3-F14",
+        "E4-F19",
+        "E2-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F08",
+        "nome_no_documento": "Doenças transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F09": {
+      "texto": "As doenças crônicas não transmissíveis são a principal causa de morte em adultos e idosos de Campo Grande, com predominância das doenças do aparelho circulatório, seguidas das neoplasias, segundo o Plano Regional da Macrorregião de Saúde de Campo Grande (SES-MS, 2024), que analisou o período de 2018 a 2021. O envelhecimento populacional (E2-F19) e a transição alimentar para ultraprocessados ampliam a prevalência de hipertensão, diabetes e obesidade. O acompanhamento desses agravos depende da cobertura e da qualidade da APS, que atingia 76,28% da população em 2023 (e-Gestor), e do acesso contínuo a medicamentos (E2-F13). Os indicadores de desempenho da APS no SISAB, como proporção de hipertensos e diabéticos acompanhados, devem ser extraídos por equipe para identificar desigualdades territoriais. O fator articula-se a E1-F18, E5-F26 e E5-F28, pois o acesso a atividade física e lazer seguros condiciona a prevenção.",
+      "fontes_citadas": [
+        "SES-MS, 2024",
+        "e-Gestor",
+        "Plano Regional da Macrorregião de Saúde de Campo Grande"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2018",
+        "2021",
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E2-F19",
+        "E2-F13",
+        "E1-F18",
+        "E5-F26",
+        "E5-F28"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F09",
+        "nome_no_documento": "Doenças não transmissíveis (crônicas)",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F10": {
+      "texto": "O uso problemático de álcool e outras drogas em Campo Grande é tratado pela Rede de Atenção Psicossocial, que em 2023 contava com sete CAPS, dos quais quatro do tipo III, dois CAPS AD IV e um infantojuvenil, duas unidades de acolhimento, quatro residências terapêuticas e 110 leitos próprios na rede municipal, além de leitos contratualizados (Prefeitura Municipal, 2023). Entre as pessoas em situação de rua entrevistadas no Censo do GT-PSR de 2025, o tratamento para uso de substâncias apareceu como necessidade declarada em 77 registros. O uso de substâncias associa-se a violência (E2-F28), acidentes (E2-F11), perda de vínculos e situação de rua (E3-F14), e sua abordagem exclusivamente clínica tem efetividade limitada sem moradia, renda e proteção social. O fator articula-se a E2-F18 e E6-F06, dado que o mercado ilegal de drogas estrutura parte da violência nos territórios periféricos.",
+      "fontes_citadas": [
+        "Prefeitura Municipal, 2023",
+        "Censo do GT-PSR de 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E2-F28",
+        "E2-F11",
+        "E3-F14",
+        "E2-F18",
+        "E6-F06"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F10",
+        "nome_no_documento": "Uso de drogas e álcool",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F11": {
+      "texto": "Campo Grande é entroncamento das rodovias BR-163, BR-262 e BR-060, com tráfego intenso de veículos de carga que atravessa ou contorna a área urbana, e possui frota elevada em relação à população, padrão comum às capitais do Centro-Oeste. Os acidentes de trânsito são causa relevante de mortalidade por causas externas em homens jovens e de internações de alto custo no Hospital Regional, na Santa Casa e na rede de urgência. A série de óbitos e internações por acidentes de transporte no SIM e no SIH, desagregada por tipo de vítima, deve ser extraída para o diagnóstico, dado ainda não consolidado. Motociclistas, inclusive trabalhadores de entrega por aplicativo, constituem grupo de risco crescente, articulando o fator a E1-F28 e E1-F16. O fator relaciona-se a E5-F19, E5-F23 e E5-F03, e o planejamento deve integrar segurança viária, fiscalização e atendimento pré-hospitalar do SAMU.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F28",
+        "E1-F16",
+        "E5-F19",
+        "E5-F23",
+        "E5-F03"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F11",
+        "nome_no_documento": "Acidentes em estradas",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F12": {
+      "texto": "A saúde sexual e reprodutiva em Campo Grande é ofertada pela APS, com planejamento reprodutivo, pré-natal, testagem rápida para HIV, sífilis e hepatites e acesso a métodos contraceptivos, e por serviços especializados de referência. A sífilis adquirida e congênita mantém tendência de elevação no estado, segundo o Plano Estadual de Saúde 2024-2027, e exige rastreamento oportuno no pré-natal. A gravidez na adolescência, com reflexos sobre E2-F03 e E2-F04, apresenta distribuição territorial desigual que deve ser verificada no SINASC por bairro de residência. Mulheres indígenas, migrantes e em situação de rua enfrentam barreiras culturais, linguísticas e de documentação no acesso. A dignidade menstrual, incluída na definição do fator, depende da distribuição de absorventes pelo programa federal nas unidades de saúde e escolas, cuja cobertura municipal não foi verificada. O fator articula-se a E3-F02, E3-F03 e E3-F04.",
+      "fontes_citadas": [
+        "Plano Estadual de Saúde 2024-2027"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024-2027"
+      ],
+      "fatores_relacionados": [
+        "E2-F03",
+        "E2-F04",
+        "E3-F02",
+        "E3-F03",
+        "E3-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F12",
+        "nome_no_documento": "Saúde sexual e reprodutiva",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F13": {
+      "texto": "O acesso a medicamentos em Campo Grande é garantido pela Farmácia Básica das unidades de saúde, pelo Programa Farmácia Popular e pela Farmácia de Componente Especializado do estado, que concentra a dispensação de medicamentos de alto custo para toda a macrorregião. Episódios de desabastecimento pontual na rede municipal são relatados pela imprensa e pelo controle social, e sua frequência deve ser monitorada por meio dos relatórios de gestão da assistência farmacêutica e das atas do Conselho Municipal de Saúde, dado não sistematizado nesta versão. A interrupção do tratamento de hipertensão, diabetes e saúde mental por falta de medicamento repercute diretamente em internações evitáveis (E2-F09, E2-F18). Para populações sem documentação ou endereço fixo (E3-F08, E3-F14), o acesso depende de flexibilização de cadastros. O fator articula-se a E2-F15 e E1-F24, dado que a compra direta de medicamentos compromete a renda das famílias de menor rendimento.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F09",
+        "E2-F18",
+        "E3-F08",
+        "E3-F14",
+        "E2-F15",
+        "E1-F24"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F13",
+        "nome_no_documento": "Acesso a medicamentos",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F14": {
+      "texto": "A cobertura vacinal em Campo Grande permanece abaixo das metas do Programa Nacional de Imunizações para vacinas do calendário infantil. Em outubro de 2026, a Secretaria Municipal de Saúde informou cobertura de 78,53% para a tríplice viral, 16,47 pontos percentuais abaixo da meta de 95%, em contexto continental de recrudescimento do sarampo, com 55.792 casos nas Américas até outubro de 2026 segundo a OPAS. A capital não registra casos confirmados desde 2020, mas a cobertura insuficiente mantém o risco de reintrodução. Os dados de cobertura por sala de vacina e por território devem ser extraídos do painel de cobertura vacinal por residência do Ministério da Saúde para identificar bolsões de não vacinados. O fator articula-se a E2-F07, pela vacinação contra dengue, a E2-F15, pela organização das salas de vacina, e a E6-F11, pois a comunicação comunitária é decisiva para enfrentar a hesitação vacinal.",
+      "fontes_citadas": [
+        "OPAS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2020"
+      ],
+      "fatores_relacionados": [
+        "E2-F07",
+        "E2-F15",
+        "E6-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F14",
+        "nome_no_documento": "Cobertura vacinal",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F15": {
+      "texto": "Campo Grande possui a rede de serviços de saúde mais complexa de Mato Grosso do Sul. Na atenção primária, contava em 2023 com 197 equipes de Saúde da Família, 147 equipes de Saúde Bucal e 1.574 agentes comunitários de saúde, com cobertura de 76,28% (e-Gestor), resultado de expansão sustentada pelo programa de residência em Medicina de Família e Comunidade e multiprofissional. Na atenção especializada e hospitalar, destacam-se o Hospital Regional, a Santa Casa, o Hospital Universitário da UFMS e a rede de UPAs e Centros Regionais de Saúde. O vendaval de setembro de 2026 danificou a UPA Universitário e atingiu veículos no Hospital Universitário, evidenciando a vulnerabilidade da infraestrutura assistencial a eventos extremos (E5-F20). A concentração de serviços atrai demanda do interior e pressiona a regulação. O fator articula-se a E2-F16, E5-F23 e E5-F19, que determinam o acesso efetivo.",
+      "fontes_citadas": [
+        "e-Gestor"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E5-F20",
+        "E2-F16",
+        "E5-F23",
+        "E5-F19"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F15",
+        "nome_no_documento": "Serviços de saúde",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F16": {
+      "texto": "A força de trabalho em saúde de Campo Grande foi ampliada nos últimos anos pela estratégia de residências em Medicina de Família e Comunidade e multiprofissional, que permitiu dobrar o número de equipes de Saúde da Família entre 2017 e 2023, de 96 para 197. A sustentabilidade desse modelo depende da conversão de vínculos de residência e contratos temporários em carreira estável, condição para reduzir a rotatividade nas unidades das regiões periféricas. A composição das equipes registrada no CNES, a proporção de vínculos precários e a cobertura de agentes comunitários de saúde por microárea devem ser extraídas para o diagnóstico. A exposição de profissionais à violência nos territórios (E2-F28) e as condições de trabalho em unidades danificadas por eventos climáticos afetam a fixação. O fator articula-se a E1-F18, E2-F15 e E5-F06, dado que a formação local pela UFMS e demais instituições abastece a rede.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2017",
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E2-F28",
+        "E1-F18",
+        "E2-F15",
+        "E5-F06"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F16",
+        "nome_no_documento": "Profissionais de saúde",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F17": {
+      "texto": "O vendaval de 10 de setembro de 2026 é o evento extremo de maior impacto recente em Campo Grande: rajadas de 83,8 km/h registradas pelo INMET em cerca de meia hora, 3.095 raios em 36 minutos, 155 chamados ao Corpo de Bombeiros por árvores caídas ou em risco em uma única noite, 26 escolas municipais destelhadas, danos na UPA Universitário, no Hospital Universitário e em equipamentos culturais, e interrupção de energia para mais de 300 mil pessoas. A prefeitura decretou situação de emergência por 180 dias em 12 de setembro, com dispensa de licitação para obras emergenciais e solicitação de reconhecimento estadual e federal. O evento revela a vulnerabilidade da arborização urbana sem manejo, das coberturas de prédios públicos e da rede elétrica aérea. O fator articula-se a E2-F32, E2-F29, E5-F20 e E4-F10, e o plano popular deve incorporar a preparação para ventos extremos como risco recorrente.",
+      "fontes_citadas": [
+        "INMET"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F32",
+        "E2-F29",
+        "E5-F20",
+        "E4-F10"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F17",
+        "nome_no_documento": "Tornado/Vendaval",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F18": {
+      "texto": "A saúde mental tornou-se demanda crescente na APS e na Rede de Atenção Psicossocial de Campo Grande, composta em 2023 por sete CAPS, duas unidades de acolhimento, quatro residências terapêuticas e leitos próprios e contratualizados (Prefeitura Municipal). A distribuição territorial dos CAPS e a capacidade de matriciamento das equipes de Saúde da Família determinam o acesso nas regiões periféricas. Determinantes sociais como desemprego (E1-F13), violência (E2-F28), discriminação racial (E3-F16) e exposição a desastres (E2-F17) produzem sofrimento psíquico que se manifesta na APS, enquanto a perda de moradia e de bens após eventos extremos exige suporte psicossocial específico. As taxas de mortalidade por suicídio e as notificações de lesão autoprovocada no SINAN devem ser analisadas com cautela e por equipe técnica. O fator articula-se a E6-F15, pois grupos de escuta comunitários ampliam a rede de cuidado além dos serviços.",
+      "fontes_citadas": [
+        "Prefeitura Municipal"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E1-F13",
+        "E2-F28",
+        "E3-F16",
+        "E2-F17",
+        "E6-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F18",
+        "nome_no_documento": "Saúde mental",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F19": {
+      "texto": "O envelhecimento populacional é tendência consolidada no Brasil, com crescimento de 57,4% da população de 65 anos ou mais entre os Censos de 2010 e 2022 (IBGE), e Campo Grande acompanha esse movimento, ainda que com estrutura etária mais jovem que a dos estados do Sul e Sudeste. A proporção municipal de pessoas com 60 anos ou mais e o índice de envelhecimento do Censo 2022 devem ser extraídos para o diagnóstico. Os idosos concentram a carga de doenças crônicas (E2-F09), polifarmácia (E2-F13), risco de quedas e maior vulnerabilidade a ondas de calor, fumaça (E2-F25) e interrupções de energia que afetam equipamentos domiciliares. O cuidado recai sobre as famílias, sobretudo mulheres (E1-F07), e a rede de instituições de longa permanência e centros de convivência é insuficiente para a demanda projetada. O fator articula-se a E3-F09 e E3-F11 e exige planejamento intersetorial de cuidado continuado.",
+      "fontes_citadas": [
+        "IBGE",
+        "Censos de 2010 e 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2010",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F09",
+        "E2-F13",
+        "E2-F25",
+        "E1-F07",
+        "E3-F09",
+        "E3-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F19",
+        "nome_no_documento": "Saúde do idoso",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F20": {
+      "texto": "Campo Grande apresenta indicadores de saneamento superiores às médias nacional e estadual: 97,41% de atendimento de água e 87,64% de coleta de esgoto em 2023 (Instituto Trata Brasil, Ranking 2025, base SINISA), e a capital figura entre as sete capitais com mais de 90% de coleta no ranking publicado em 2026, com base em 2024. A trajetória, contudo, é instável: entre 2022 e 2023 a cobertura de água caiu de 99,98% para 97,41%, e o município recuou do 17º para o 37º lugar no ranking dos cem maiores municípios. O Censo 2022 registra domicílios sem água canalizada e com soluções individuais de abastecimento, concentrados em áreas de expansão e na zona rural. O fator articula-se a E2-F23, E2-F06 e E2-F07, e o diagnóstico deve verificar a cobertura nas aldeias urbanas indígenas e em ocupações irregulares, onde a ausência de titulação impede a ligação formal à rede (E3-F19, E5-F22).",
+      "fontes_citadas": [
+        "Instituto Trata Brasil, Ranking 2025, base SINISA",
+        "Censo 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2025",
+        "2026",
+        "2024",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F23",
+        "E2-F06",
+        "E2-F07",
+        "E3-F19",
+        "E5-F22"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F20",
+        "nome_no_documento": "Acesso à água e saneamento",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F21": {
+      "texto": "A contaminação ambiental em Campo Grande tem quatro vetores principais: o lançamento de esgoto não tratado nos córregos urbanos, estimado em 18,3 milhões de m³ em 2022 (Instituto Água e Saneamento); o descarte irregular de resíduos em terrenos baldios e fundos de vale; a deriva e a lixiviação de agrotóxicos em áreas rurais e periurbanas; e a poluição atmosférica por fumaça de queimadas regionais. Os córregos Anhanduí, Prosa e Segredo concentram a carga poluidora e atravessam áreas residenciais densas. A vigilância da qualidade da água para consumo humano é feita pelo VIGIAGUA, cujos resultados por ponto de coleta devem ser incorporados ao diagnóstico, enquanto o monitoramento de solo e de agrotóxicos em água é incipiente. O fator é determinante de E2-F06 e expressão de E3-F17, pois a exposição se concentra em territórios de menor renda e maior proporção de população negra e indígena.",
+      "fontes_citadas": [
+        "Instituto Água e Saneamento"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F06",
+        "E3-F17"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F21",
+        "nome_no_documento": "Contaminação e poluição do ar, da água e do solo",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F22": {
+      "texto": "A participação comunitária na gestão da água e do saneamento em Campo Grande ocorre por meio do Conselho Municipal de Saneamento, das audiências públicas de revisão contratual da concessão à Águas Guariroba e do comitê da bacia hidrográfica, instâncias de baixa visibilidade para a população das regiões periféricas. A regulação da concessão pela agência municipal define metas de cobertura e qualidade, mas o acompanhamento social dessas metas é limitado pela linguagem técnica dos relatórios. A queda do município no Ranking do Saneamento entre 2024 e 2025 não foi objeto de debate público proporcional à sua relevância. A cartografia social pode produzir informação qualificada sobre falhas de abastecimento, vazamentos e pontos de lançamento de esgoto, capaz de alimentar o processo regulatório. O fator articula-se a E6-F07, E6-F09 e E1-F25, e o plano popular deve propor canais permanentes de participação territorial na fiscalização do saneamento.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E6-F07",
+        "E6-F09",
+        "E1-F25"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F22",
+        "nome_no_documento": "Participação das comunidades locais na gestão da água e saneamento",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F23": {
+      "texto": "A gestão da água em Campo Grande depende de mananciais superficiais, como o Guariroba e o Lageado, e de poços profundos que captam o aquífero, sob operação da concessionária Águas Guariroba. As perdas na distribuição, de 19,7% segundo o SNIS 2021, estão abaixo do parâmetro de referência de 25%, indicador favorável de eficiência. A pressão sobre os mananciais decorre da conversão de vegetação nativa nas bacias de captação (E4-F16), do assoreamento e da intensificação das estiagens prolongadas associadas à variabilidade climática no Cerrado (E2-F30). O Plano Municipal de Saneamento Básico e os planos de segurança da água devem incorporar cenários de escassez, ainda ausentes do planejamento municipal na forma de metas explícitas. O fator articula-se a E4-F04, E4-F17 e E2-F22, e define a necessidade de proteger as áreas de recarga e captação como estratégia de saúde pública.",
+      "fontes_citadas": [
+        "SNIS 2021"
+      ],
+      "referencias_normativas": [
+        "Plano Municipal de Saneamento Básico"
+      ],
+      "periodos_citados": [
+        "2021"
+      ],
+      "fatores_relacionados": [
+        "E4-F16",
+        "E2-F30",
+        "E4-F04",
+        "E4-F17",
+        "E2-F22"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F23",
+        "nome_no_documento": "Gestão da água e saneamento",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F25": {
+      "texto": "A qualidade do ar em Campo Grande é monitorada pelo projeto QualiAr, coordenado pela UFMS, que registrou em 2024 a primeira classificação péssima da série, durante episódios de fumaça de incêndios no Pantanal e na Bolívia transportada por massas de ar frio em agosto, setembro e início de outubro, com apenas cinco dias de qualidade boa em setembro. Os incêndios no Pantanal consumiram cerca de 1,5 milhão de hectares entre janeiro e setembro de 2024, aumento de 2.306% sobre a média de cinco anos (MapBiomas, Monitor do Fogo). Não há rede oficial de monitoramento do órgão ambiental estadual na capital, o que torna o projeto universitário a única fonte sistemática. A exposição agrava doenças respiratórias e cardiovasculares em crianças, idosos e pessoas com doenças crônicas (E2-F09, E2-F19). O fator articula-se a E2-F38 e E2-F37, pois alertas de qualidade do ar permitiriam medidas de proteção.",
+      "fontes_citadas": [
+        "MapBiomas, Monitor do Fogo",
+        "projeto QualiAr"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E2-F09",
+        "E2-F19",
+        "E2-F38",
+        "E2-F37"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F25",
+        "nome_no_documento": "Qualidade do ar",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F26": {
+      "texto": "Rotas de fuga para evacuação em caso de enchente, ventos extremos ou rompimento de barragem não estão definidas nem sinalizadas nos bairros de Campo Grande, segundo a informação pública disponível, o que configura lacuna de preparação a ser confirmada junto à Defesa Civil municipal. A relevância do fator é concreta para as populações a jusante de barragens urbanas classificadas como de risco: o barramento do antigo Clube Atlântico possui classificação de risco alto e dano potencial associado alto no Relatório de Segurança de Barragens 2024-2025 da ANA, com cerca de 100 moradores a jusante, e o Lago do Amor e o Lageado constam de relatório do Imasul sobre barragens urbanas. O fator articula-se a E2-F33, E2-F39 e E5-F02, e a cartografia social é o instrumento adequado para traçar rotas com os moradores, considerando idosos, pessoas com deficiência e crianças (E3-F09, E3-F11).",
+      "fontes_citadas": [
+        "relatório do Imasul sobre barragens urbanas",
+        "Relatório de Segurança de Barragens 2024-2025 da ANA"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024-2025"
+      ],
+      "fatores_relacionados": [
+        "E2-F33",
+        "E2-F39",
+        "E5-F02",
+        "E3-F09",
+        "E3-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F26",
+        "nome_no_documento": "Rota de fuga",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F27": {
+      "texto": "A segurança pública em Campo Grande é percebida de forma desigual entre as regiões urbanas, com maior sensação de insegurança nas áreas periféricas e no centro, onde se concentra a população em situação de rua. A iluminação pública deficiente (E5-F30), a ausência de equipamentos de convivência (E5-F25) e a presença do mercado ilegal de drogas (E6-F06) compõem os determinantes territoriais. A insegurança restringe o uso de espaços públicos, a circulação noturna, a frequência a atividades de saúde e o trabalho das equipes de APS em determinados horários. Os registros de ocorrências da Secretaria de Justiça e Segurança Pública por bairro devem ser incorporados ao diagnóstico, dado não sistematizado nesta versão. O fator articula-se a E2-F28 e E3-F02 e deve ser abordado no plano popular por estratégias de prevenção comunitária e ocupação qualificada dos espaços públicos, e não apenas pelo reforço policial.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F30",
+        "E5-F25",
+        "E6-F06",
+        "E2-F28",
+        "E3-F02"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F27",
+        "nome_no_documento": "Segurança",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F28": {
+      "texto": "A violência em Campo Grande tem expressão racial e territorial: jovens negros e indígenas do sexo masculino de 15 a 29 anos morrem mais por homicídio que jovens brancos, padrão documentado para as capitais do Centro-Oeste pelo Instituto Cidades Sustentáveis (Agência Brasil, 2024). A violência contra mulheres, registrada no monitor estadual da Sejusp-MS e do Tribunal de Justiça, mantém Mato Grosso do Sul entre os estados com taxas elevadas de feminicídio segundo o Anuário Brasileiro de Segurança Pública (E3-F02). As notificações de violência interpessoal e autoprovocada no SINAN, o SIM por causas externas e os registros policiais devem ser cruzados por região de residência, raça e sexo. A violência produz efeitos sobre saúde mental (E2-F18), uso de substâncias (E2-F10) e acesso a serviços. O fator articula-se a E2-F27, E6-F06 e E3-F16 e exige abordagem intersetorial de prevenção.",
+      "fontes_citadas": [
+        "Agência Brasil, 2024",
+        "Instituto Cidades Sustentáveis",
+        "monitor estadual da Sejusp-MS e do Tribunal de Justiça",
+        "Anuário Brasileiro de Segurança Pública"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E3-F02",
+        "E2-F18",
+        "E2-F10",
+        "E2-F27",
+        "E6-F06",
+        "E3-F16"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F28",
+        "nome_no_documento": "Violência",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F29": {
+      "texto": "A comunicação e a gestão pós-desastre em Campo Grande foram testadas pelo vendaval de setembro de 2026, quando a recomposição da energia para 82% dos clientes afetados ocorreu até a tarde do dia seguinte, segundo a Energisa, e a prefeitura mobilizou equipes para remoção de árvores e desobstrução de vias. A informação aos moradores circulou principalmente por imprensa, redes sociais e grupos de mensagens, sem canal oficial único de orientação sobre abrigos, riscos remanescentes e apoio disponível. O decreto de situação de emergência e o registro no S2iD organizam a dimensão administrativa da resposta, mas não substituem um plano de comunicação de risco com linguagem acessível e alcance nas regiões periféricas. O fator articula-se a E6-F03, E6-F11, E2-F37 e E5-F01, e o plano popular deve definir canais e responsáveis comunitários para informação antes, durante e depois de eventos extremos.",
+      "fontes_citadas": [
+        "Energisa"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F03",
+        "E6-F11",
+        "E2-F37",
+        "E5-F01"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F29",
+        "nome_no_documento": "Comunicação e gestão pós-desastre",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F30": {
+      "texto": "As estiagens em Campo Grande concentram-se entre maio e setembro e têm se tornado mais severas no contexto da variabilidade climática regional, como indicado pelo monitoramento mensal de secas do governo estadual, que registrou em abril de 2024 chuva acumulada 87% abaixo da média na capital (Semadesc, Monitor de Secas). Os efeitos incluem pressão sobre os mananciais de abastecimento (E2-F23), aumento de focos de incêndio em vegetação periurbana (E2-F38), baixa umidade relativa do ar com agravamento de doenças respiratórias (E2-F25) e perdas na produção agrícola familiar (E1-F03). A estiagem prolongada também favorece o acúmulo domiciliar de água, com efeito paradoxal sobre a proliferação do Aedes aegypti na retomada das chuvas (E2-F07). O fator articula-se a E4-F12 e E4-F04, e o planejamento hídrico municipal deve incorporar cenários de escassez e protocolos sanitários para períodos de seca.",
+      "fontes_citadas": [
+        "Semadesc, Monitor de Secas"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E2-F23",
+        "E2-F38",
+        "E2-F25",
+        "E1-F03",
+        "E2-F07",
+        "E4-F12",
+        "E4-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F30",
+        "nome_no_documento": "Seca/Estiagem",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F31": {
+      "texto": "O acesso a serviços essenciais em Campo Grande é elevado na área urbana consolidada, com cobertura quase universal de coleta de lixo (99,23%) e de energia elétrica, e atendimento de água de 97,41% em 2023. A fragilidade revela-se na continuidade e na resiliência: o vendaval de setembro de 2026 interrompeu a energia de mais de 300 mil pessoas, afetando conservação de alimentos e medicamentos, funcionamento de equipamentos médicos domiciliares e abastecimento de água em imóveis dependentes de bombeamento. Nas aldeias urbanas indígenas, ocupações irregulares e na zona rural, a cobertura é incompleta, e a ausência de titulação dificulta ligações formais. O fator articula-se a E2-F20, E5-F13 e E1-F27, e o diagnóstico deve identificar domicílios com pessoas dependentes de equipamentos elétricos de saúde para priorização em emergências.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F20",
+        "E5-F13",
+        "E1-F27"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F31",
+        "nome_no_documento": "Acesso a serviços essenciais de energia, abastecimento de água, coleta de lixo etc.",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F32": {
+      "texto": "A gestão de riscos e emergências em Campo Grande é conduzida pela Defesa Civil municipal, pelo Corpo de Bombeiros Militar e pela articulação com a Defesa Civil estadual, com uso do S2iD para registro de ocorrências e decretos. O vendaval de setembro de 2026 e os alagamentos de abril de 2025 evidenciaram capacidade de mobilização de equipes, mas também a ausência de brigadas comunitárias organizadas, de planos de contingência por bairro de conhecimento público e de exercícios simulados com a população. O modelo de Brigadas Populares de Resposta a Desastres desenvolvido pela PICAPS em territórios do Paraná é referência metodológica aplicável às regiões de maior exposição, integrando pesquisadores populares, APS e Defesa Civil. O fator articula-se a E2-F33, E2-F37, E2-F39 e E6-F16 e constitui eixo estruturante do plano popular diante da recorrência de eventos extremos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E2-F33",
+        "E2-F37",
+        "E2-F39",
+        "E6-F16"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F32",
+        "nome_no_documento": "Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos)",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F33": {
+      "texto": "Os pontos de risco de desastres em Campo Grande incluem áreas de alagamento nos fundos de vale dos córregos urbanos, barragens urbanas classificadas como de risco, como a do antigo Clube Atlântico, com risco e dano potencial altos no relatório da ANA, e o Lago do Amor, apontado como prioritário na gestão de segurança, áreas com arborização de grande porte sem manejo sujeitas a queda em ventos fortes, e trechos de rodovias com tráfego de produtos perigosos (E5-F03). Não há mapa público consolidado de áreas de risco do município, e o Serviço Geológico do Brasil não registra setorização de risco geológico alto para a capital, dado a ser confirmado. O conhecimento dos moradores sobre pontos de alagamento, quedas recorrentes de árvores e postes é informação insubstituível. O fator articula-se a E2-F01, E2-F34, E2-F26 e E5-F15, e a cartografia social é o instrumento para produzir esse inventário.",
+      "fontes_citadas": [
+        "relatório da ANA"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F03",
+        "E2-F01",
+        "E2-F34",
+        "E2-F26",
+        "E5-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F33",
+        "nome_no_documento": "Pontos de riscos e desastres no território",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F34": {
+      "texto": "Enchentes e alagamentos em Campo Grande são recorrentes no período chuvoso e decorrem da combinação entre chuvas intensas, impermeabilização do solo e drenagem insuficiente. Em 24 de abril de 2025, 88 mm em 24 horas registrados pelo CEMADEN produziram enxurradas em avenidas de fundo de vale, arrastaram veículos e alagaram bairros como Coophatrabalho e Aguadinha, mobilizando mais de 25 equipes municipais. O vendaval de setembro de 2026 também causou alagamentos associados à chuva intensa e à obstrução de bocas de lobo por galhos. Os efeitos sobre a saúde incluem afogamentos, traumatismos, leptospirose, diarreias e perdas materiais que afetam a saúde mental. O fator articula-se a E2-F01, E2-F06, E5-F24 e E3-F17, pois os alagamentos atingem de forma desproporcional as áreas de menor renda, e o plano popular deve associar drenagem, alerta e limpeza comunitária de bocas de lobo (E6-F05).",
+      "fontes_citadas": [
+        "CEMADEN"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F01",
+        "E2-F06",
+        "E5-F24",
+        "E3-F17",
+        "E6-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F34",
+        "nome_no_documento": "Enchentes e alagamentos",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F35": {
+      "texto": "As infestações por animais peçonhentos e vetores constituem problema de saúde pública relevante em Campo Grande. Em 2025, a cidade registrou 2.041 acidentes com escorpiões, segundo dados divulgados pela imprensa local com base na Secretaria Municipal de Saúde, e o estado contabilizou 6.101 acidentes escorpiônicos entre janeiro de 2024 e janeiro de 2025, com escorpiões respondendo por três de cada quatro acidentes com peçonhentos (SES-MS). O Aedes aegypti mantém transmissão sazonal de dengue e chikungunya (E2-F07), e o vetor da leishmaniose visceral está associado a quintais com matéria orgânica (E2-F08). Os determinantes comuns são o acúmulo de entulho e resíduos (E1-F27), terrenos baldios, redes de esgoto com falhas e imóveis abandonados. O fator articula-se a E6-F05 e E4-F19, e o controle depende de manejo ambiental comunitário associado à ação do Centro de Controle de Zoonoses.",
+      "fontes_citadas": [
+        "SES-MS",
+        "dados divulgados pela imprensa local com base na Secretaria Municipal de Saúde"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E2-F07",
+        "E2-F08",
+        "E1-F27",
+        "E6-F05",
+        "E4-F19"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F35",
+        "nome_no_documento": "Infestações e pragas (mosquito, carrapato, escorpião, animais peçonhentos etc.)",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F36": {
+      "texto": "Campo Grande situa-se em relevo de planalto suavemente ondulado, sem encostas íngremes ocupadas que caracterizem risco de deslizamento de terra nos termos considerados pelo Serviço Geológico do Brasil, condição a ser confirmada na consulta à setorização de riscos geológicos do município. A ausência de exposição a deslizamentos é, portanto, achado do diagnóstico, registrado nas notas metodológicas. A interface pertinente do fator no território são os processos erosivos lineares, como ravinas e voçorocas, em solos arenosos de áreas de expansão urbana sem drenagem e nas margens de córregos, que comprometem vias, redes e moradias e assoreiam os cursos d'água (E4-F04, E4-F16). O fator articula-se a E2-F33 e E5-F24, e a vigilância dessas feições erosivas deve integrar o inventário comunitário de riscos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F04",
+        "E4-F16",
+        "E2-F33",
+        "E5-F24"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F36",
+        "nome_no_documento": "Pontos de deslizamento de terra",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F37": {
+      "texto": "Campo Grande não dispõe de sistema de sirenes de alerta comunitário, e a comunicação de alertas meteorológicos depende dos avisos do INMET, do envio de mensagens por SMS e aplicativos da Defesa Civil mediante cadastro voluntário e da divulgação pela imprensa. Antes do vendaval de setembro de 2026, havia alerta laranja do INMET para chuva de 30 a 60 mm por hora, informação que não se traduziu em medidas de proteção para a maior parte da população. A eficácia dos alertas depende de alcance, linguagem e confiança, dimensões frágeis entre idosos, pessoas com deficiência, indígenas e migrantes com barreiras linguísticas. A instalação de sirenes é pertinente sobretudo para as populações a jusante de barragens de risco (E2-F33, E5-F15). O fator articula-se a E2-F29, E6-F03 e E6-F11, e o plano popular deve definir uma cadeia comunitária de alerta associada às redes locais.",
+      "fontes_citadas": [
+        "INMET"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F33",
+        "E5-F15",
+        "E2-F29",
+        "E6-F03",
+        "E6-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F37",
+        "nome_no_documento": "Sirenes e alertas de emergências",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F38": {
+      "texto": "As queimadas e incêndios afetam Campo Grande diretamente, em focos de vegetação nativa e terrenos baldios no período seco, e indiretamente, pela fumaça dos incêndios no Pantanal e em outras regiões. Em 2024, os incêndios no Pantanal atingiram cerca de 1,5 milhão de hectares entre janeiro e setembro, 2.306% acima da média de cinco anos (MapBiomas), e a fumaça levou a capital à primeira classificação péssima de qualidade do ar da série do projeto QualiAr da UFMS. Os focos de calor no território municipal, registrados pelo Programa Queimadas do INPE, devem ser incorporados ao diagnóstico. Os efeitos sanitários incluem exacerbação de asma, doença pulmonar obstrutiva crônica e doenças cardiovasculares. O fator articula-se a E2-F25, E2-F30, E4-F16 e E4-F11, e a prevenção exige fiscalização, educação ambiental e brigadas para combate inicial.",
+      "fontes_citadas": [
+        "MapBiomas",
+        "projeto QualiAr da UFMS"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E2-F25",
+        "E2-F30",
+        "E4-F16",
+        "E4-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F38",
+        "nome_no_documento": "Queimada/Incêndio",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E2-F39": {
+      "texto": "Pontos de encontro para emergências, definidos e conhecidos pela população, não foram identificados nas informações públicas disponíveis sobre Campo Grande, o que configura lacuna de preparação a ser confirmada com a Defesa Civil. No vendaval de setembro de 2026, escolas e unidades de saúde, que seriam candidatas naturais a pontos de encontro, foram elas próprias atingidas, com 26 escolas destelhadas, o que demonstra a necessidade de avaliar a segurança estrutural das edificações antes de designá-las. Igrejas, centros comunitários e equipamentos esportivos com estrutura adequada podem compor a rede (E6-F16, E5-F25). O fator articula-se a E5-F01, E2-F26 e E2-F32, e a definição dos pontos deve ser feita com os moradores na cartografia social, considerando acessibilidade para pessoas com deficiência e idosos (E3-F11) e a localização das populações expostas a alagamentos e barragens.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F16",
+        "E5-F25",
+        "E5-F01",
+        "E2-F26",
+        "E2-F32",
+        "E3-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E2-F39",
+        "nome_no_documento": "Ponto de encontro em emergências",
+        "eixo_documento": 2
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F01": {
+      "texto": "A pobreza em Campo Grande coexiste com indicadores econômicos agregados elevados: o município é a maior economia do estado, mas seu PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal) é inferior à média estadual de R$ 66,8 mil (Semadesc, 2023), e as classes de menor renda detêm 31,4% das remunerações formais contra 33,7% das classes mais altas. O IDHM de 0,784 (Atlas do Desenvolvimento Humano, base Censo 2010) situa a capital em faixa alta, mas não capta a heterogeneidade intraurbana. A pobreza concentra-se nas regiões do Anhanduizinho, da Lagoa, do Bandeira e do Imbirussu, nas aldeias urbanas indígenas e na população em situação de rua, que passou de 503 pessoas em 2018 para 1.611 em 2025 segundo levantamento municipal. O número de famílias no CadÚnico e no Bolsa Família por território, a ser extraído do VIS Data do MDS, é o indicador operacional. O fator é síntese de E1-F13, E1-F28 e E5-F22 e determinante transversal de todo o Eixo 2.",
+      "fontes_citadas": [
+        "IBGE, escala municipal",
+        "Semadesc, 2023",
+        "Atlas do Desenvolvimento Humano, base Censo 2010",
+        "levantamento municipal"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023",
+        "2010",
+        "2018",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E1-F13",
+        "E1-F28",
+        "E5-F22"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F01",
+        "nome_no_documento": "Pobreza",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F02": {
+      "texto": "A violência contra mulheres em Campo Grande é monitorada pelo painel estadual da Sejusp-MS e do Tribunal de Justiça, que consolida feminicídios, tentativas e medidas protetivas, e pelas notificações de violência doméstica, sexual e outras violências no SINAN. Mato Grosso do Sul figura entre os estados com taxas elevadas de feminicídio segundo o Anuário Brasileiro de Segurança Pública, e a capital concentra parte relevante dos casos. A rede de atendimento inclui a Casa da Mulher Brasileira, primeira implantada no país, a Delegacia Especializada, a Defensoria Pública e os serviços de saúde, mas a efetividade depende da articulação entre notificação, proteção e acompanhamento. A violência atinge de forma desproporcional mulheres negras e indígenas (E3-F16) e se agrava em contextos de dependência econômica (E1-F07) e uso de álcool (E2-F10). O fator articula-se a E2-F28 e E3-F06, e a APS é porta de entrada para identificação precoce.",
+      "fontes_citadas": [
+        "Anuário Brasileiro de Segurança Pública"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E3-F16",
+        "E1-F07",
+        "E2-F10",
+        "E2-F28",
+        "E3-F06"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F02",
+        "nome_no_documento": "Discriminação e violência contra mulheres e meninas",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F03": {
+      "texto": "Casamentos e uniões precoces envolvendo adolescentes têm ocorrência subnotificada em Campo Grande e só podem ser estimados indiretamente, pelo Censo 2022, que registra o estado conjugal por idade, e pelo SINASC, que registra nascidos vivos de mães adolescentes. Em Mato Grosso do Sul, nasceram cerca de 3,9 mil bebês de mães com menos de 14 anos em uma década, segundo dados divulgados pela imprensa com base no SINASC, situação que configura estupro de vulnerável nos termos legais e articula este fator a E3-F02. As uniões precoces associam-se à evasão escolar (E5-F04), à pobreza (E3-F01) e a riscos obstétricos (E2-F03, E2-F04). A abordagem em comunidades indígenas exige mediação intercultural que considere as normas próprias sem relativizar a proteção legal. O fator demanda articulação entre escola, Conselho Tutelar e APS, e a série municipal de gestações na adolescência deve ser extraída do SINASC.",
+      "fontes_citadas": [
+        "dados divulgados pela imprensa com base no SINASC"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E3-F02",
+        "E5-F04",
+        "E3-F01",
+        "E2-F03",
+        "E2-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F03",
+        "nome_no_documento": "Casamentos prematuros, forçados e de crianças",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F04": {
+      "texto": "A igualdade de oportunidades para mulheres em Campo Grande é limitada pela sobrecarga de cuidado (E1-F07), pela insuficiência de creches nas regiões periféricas (E1-F01), pela segmentação ocupacional que concentra mulheres em serviços de menor remuneração (E1-F18) e pela violência de gênero (E3-F02). Os programas de qualificação e geração de renda operados pelos CRAS e pela Fundação Social do Trabalho alcançam parte dessa demanda, sem avaliação pública de resultados por território. A participação feminina em espaços de decisão, como conselhos e a Câmara Municipal, é indicador a ser incorporado ao diagnóstico. A Casa da Mulher Brasileira articula serviços de proteção e autonomia econômica, mas sua localização centralizada limita o acesso das mulheres das regiões periféricas. O fator articula-se a E3-F06, E3-F10 e E5-F05, e o plano popular deve prever metas de vagas em creche e de inserção produtiva desagregadas por território.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F07",
+        "E1-F01",
+        "E1-F18",
+        "E3-F02",
+        "E3-F06",
+        "E3-F10",
+        "E5-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F04",
+        "nome_no_documento": "Igualdade de oportunidades para promover o empoderamento das mulheres",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F05": {
+      "texto": "A propriedade e o controle da terra pelas mulheres em Campo Grande devem ser analisados em duas escalas. Na zona rural e nos assentamentos de reforma agrária, a titulação conjunta ou preferencial às mulheres, prevista na legislação agrária, deve ser verificada nos registros do INCRA. Na zona urbana, a regularização fundiária de núcleos informais e os programas habitacionais podem priorizar a titulação em nome das mulheres, conforme a Lei nº 13.465/2017 e as regras dos programas federais de habitação de interesse social. A ausência de dados municipais desagregados por sexo sobre titularidade de imóveis regularizados constitui lacuna. A titularidade feminina reduz a vulnerabilidade em situações de violência doméstica (E3-F02) e separação, e amplia o acesso a crédito (E1-F22). O fator articula-se a E5-F22 e E3-F19, e o plano popular deve incluir a perspectiva de gênero nos processos de regularização fundiária.",
       "fontes_citadas": [],
       "referencias_normativas": [
-        "Política Nacional de Saúde Integral da População Negra (PNSIPN)"
+        "Lei nº 13.465/2017"
       ],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2017"
+      ],
+      "fatores_relacionados": [
+        "E3-F02",
+        "E1-F22",
+        "E5-F22",
+        "E3-F19"
+      ],
       "origem": {
-        "codigo_documento": "E3-3",
-        "nome_no_documento": "Igualdade racial",
-        "eixo_documento": 3,
-        "paragrafo_docx": 115
+        "codigo_documento": "E3-F05",
+        "nome_no_documento": "Propriedade e controle sobre a terra para as mulheres",
+        "eixo_documento": 3
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    "E3-F19": {
-      "texto": "As aldeias urbanas indígenas de Campo Grande, majoritariamente Terena, com seis aldeias formais identificadas, incluindo Água Bonita e Marçal de Souza, habitam territórios sem titulação fundiária formal, sob constante pressão da especulação imobiliária. A reestruturação do Conselho Municipal dos Direitos e Defesa dos Povos Indígenas (Lei nº 7.227/2024) é um avanço normativo, mas a efetivação do direito à terra exige demarcação, regularização e proteção jurídica que transcendem a capacidade municipal e demandam articulação com FUNAI, INCRA e Ministério dos Povos Indígenas.",
+    "E3-F06": {
+      "texto": "A coordenação de políticas para igualdade de gênero em Campo Grande envolve a Subsecretaria municipal de Políticas para as Mulheres, as secretarias de Saúde, Assistência Social e Educação, a Casa da Mulher Brasileira e o sistema de justiça. A existência de equipamentos de referência não garante, por si, coerência entre políticas: a notificação de violência na APS nem sempre resulta em acompanhamento pela assistência social, e programas de geração de renda nem sempre se articulam à oferta de creche. O plano municipal de políticas para mulheres e o Conselho Municipal dos Direitos da Mulher são os instrumentos de coordenação, e sua vigência, metas e execução orçamentária devem ser verificadas para o diagnóstico. O fator articula-se a E3-F02, E3-F04 e E6-F07, e a avaliação deve se basear em fluxos efetivos de atendimento e não apenas na existência formal de serviços.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E3-F02",
+        "E3-F04",
+        "E6-F07"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F06",
+        "nome_no_documento": "Ação do Estado na coordenação e coerência de políticas para igualdade de gênero",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F07": {
+      "texto": "O tráfico de pessoas tem relevância regional para Campo Grande em razão da posição do estado na fronteira com Paraguai e Bolívia e da circulação de migrantes, trabalhadores sazonais e populações indígenas. As modalidades de maior risco são a exploração sexual, o trabalho em condições análogas às de escravidão (E1-F15) e o aliciamento de adolescentes. O Núcleo de Enfrentamento ao Tráfico de Pessoas do estado e a Polícia Federal concentram as investigações, mas a subnotificação é estrutural. A presença de 17,1% de estrangeiros entre as pessoas em situação de rua recenseadas em 2025 (GT-PSR) indica grupo exposto a redes de exploração. Na ausência de dados municipais sistematizados, o fator é tratado como lacuna de informação e risco provável. Articula-se a E3-F13 e E3-F14, e as equipes de APS, Consultório na Rua e assistência social devem ser capacitadas para reconhecer sinais de tráfico e acionar a rede de proteção.",
+      "fontes_citadas": [
+        "GT-PSR"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E1-F15",
+        "E3-F13",
+        "E3-F14"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F07",
+        "nome_no_documento": "Tráfico de pessoas",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F08": {
+      "texto": "O acesso a direitos fundamentais em Campo Grande é desigual entre grupos populacionais. Entre os 18.439 indígenas residentes na capital segundo o Censo 2022, apenas 6% possuíam o Registro Administrativo de Nascimento de Indígena, documento complementar que facilita o acesso a políticas específicas, e a falta de documentação civil também afeta pessoas em situação de rua e migrantes. Sem documentos, o acesso ao CadÚnico, a benefícios previdenciários e ao cartão do SUS fica comprometido. A garantia de saúde, educação e moradia, conteúdo do fator, é desigual entre as regiões urbanas, como mostram os demais fatores deste diagnóstico. O fator articula-se a E3-F12, E3-F14, E1-F20 e E3-F19, e o plano popular pode prever mutirões de documentação nas aldeias urbanas, nos pontos de concentração da população em situação de rua e nos territórios de maior vulnerabilidade, articulando cartórios, Defensoria Pública e assistência social.",
+      "fontes_citadas": [
+        "Censo 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E3-F12",
+        "E3-F14",
+        "E1-F20",
+        "E3-F19"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F08",
+        "nome_no_documento": "Direitos fundamentais",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F09": {
+      "texto": "O monitoramento de idosos, pessoas com deficiência e crianças em situação de vulnerabilidade em Campo Grande depende do cadastro territorial das equipes de Saúde da Família e dos agentes comunitários de saúde, do Cadastro Único e do acompanhamento dos CRAS, sistemas que não se integram em base nominal compartilhada. A cobertura de Saúde da Família de 76,28% em 2023 deixa sem acompanhamento domiciliar regular parcela relevante da população. Em emergências, como o vendaval de setembro de 2026, a ausência de listagem de pessoas dependentes de equipamentos elétricos, acamadas ou com mobilidade reduzida impede priorização no restabelecimento de energia e no resgate. O fator articula-se a E2-F19, E3-F11, E1-F01 e E2-F32, e o plano popular deve propor a construção de um registro territorial de vulnerabilidades, alimentado pelos agentes comunitários e pelos pesquisadores populares, com proteção de dados pessoais conforme a LGPD.",
+      "fontes_citadas": [],
+      "referencias_normativas": [
+        "LGPD"
+      ],
+      "periodos_citados": [
+        "2023",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F19",
+        "E3-F11",
+        "E1-F01",
+        "E2-F32"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F09",
+        "nome_no_documento": "Monitoramento dos vulneráveis (idosos, PCDs e crianças)",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F10": {
+      "texto": "O empoderamento e a inclusão social, econômica e política das populações vulnerabilizadas em Campo Grande expressam-se na existência de organizações indígenas urbanas, movimentos de moradia, associações de catadores e coletivos de juventude, e na reestruturação do Conselho Municipal dos Direitos e Defesa dos Povos Indígenas pela Lei nº 7.227/2024. A inclusão política efetiva, contudo, permanece restrita: a representação de pessoas negras, indígenas e de moradores das periferias nos espaços de decisão municipal é baixa, e os conselhos têm capacidade limitada de influenciar o orçamento. A formação de pesquisadores populares pela PICAPS é estratégia direta de empoderamento, ao reconhecer a comunidade como produtora de conhecimento sobre o próprio território. O fator articula-se a E6-F07, E6-F01, E6-F02 e E3-F04, e seus indicadores incluem composição dos conselhos, participação em audiências públicas e lideranças comunitárias formadas.",
       "fontes_citadas": [],
       "referencias_normativas": [
         "Lei nº 7.227/2024"
@@ -1136,1344 +2371,1873 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "periodos_citados": [
         "2024"
       ],
+      "fatores_relacionados": [
+        "E6-F07",
+        "E6-F01",
+        "E6-F02",
+        "E3-F04"
+      ],
       "origem": {
-        "codigo_documento": "E3-10",
-        "nome_no_documento": "Igualdade de direitos à terra para comunidades tradicionais e quilombolas",
-        "eixo_documento": 3,
-        "paragrafo_docx": 129
+        "codigo_documento": "E3-F10",
+        "nome_no_documento": "Empoderamento e inclusão social, econômica e política",
+        "eixo_documento": 3
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Direitos à terra no documento; direitos à propriedade e controle da terra no cadastro."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F11": {
+      "texto": "A acessibilidade urbana em Campo Grande é limitada fora das áreas centrais, com calçadas irregulares ou inexistentes, transporte coletivo com frota acessível incompleta e equipamentos públicos sem adequação plena às normas técnicas. O Censo 2022 estimou 14,4 milhões de pessoas com deficiência no Brasil, e o recorte municipal deve ser extraído para dimensionar a demanda local. As barreiras de acessibilidade afetam o acesso a serviços de saúde (E2-F15), educação (E5-F04) e trabalho (E1-F12) e tornam-se críticas em emergências, quando rotas de fuga e pontos de encontro não consideram cadeirantes, pessoas cegas ou surdas (E2-F26, E2-F39). Os alertas de emergência raramente incluem formatos acessíveis (E2-F37). O fator articula-se a E3-F09 e E5-F24, e o plano popular deve incorporar auditorias comunitárias de acessibilidade nos trajetos entre moradias e serviços essenciais.",
+      "fontes_citadas": [
+        "Censo 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F15",
+        "E5-F04",
+        "E1-F12",
+        "E2-F26",
+        "E2-F39",
+        "E2-F37",
+        "E3-F09",
+        "E5-F24"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F11",
+        "nome_no_documento": "Acessibilidade e inclusão",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F12": {
+      "texto": "A rede de proteção social de Campo Grande compreende os CRAS e CREAS, os serviços de acolhimento, o Centro POP, os benefícios socioassistenciais e o Cadastro Único, articulados à APS e à rede de educação. A demanda cresce mais rápido que a capacidade instalada, como indica a triplicação da população em situação de rua entre 2018 e 2025. A gestão do Bolsa Família e das condicionalidades de saúde e educação conecta a proteção social à APS, e o acompanhamento das condicionalidades de saúde por equipe deve ser verificado no sistema do programa. A distribuição territorial dos CRAS em relação à concentração de famílias no CadÚnico e os dados do Censo SUAS sobre equipes e infraestrutura são indicadores a incorporar. O fator articula-se a E3-F01, E3-F14, E3-F09 e E1-F01, e o plano popular deve priorizar a integração de cadastros e fluxos entre assistência social e saúde nos territórios.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2018",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E3-F01",
+        "E3-F14",
+        "E3-F09",
+        "E1-F01"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F12",
+        "nome_no_documento": "Serviços públicos e políticas de proteção social",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F13": {
+      "texto": "Campo Grande é destino de fluxos migratórios internos e internacionais: indígenas Terena e Guarani-Kaiowá oriundos de aldeias do interior, processo estudado no período de 2003 a 2023 (Fernandes e Oliveira, Interações, 2024), migrantes nordestinos atraídos pela construção civil e pelo agronegócio, e imigrantes paraguaios, bolivianos, venezuelanos e haitianos. O Censo do GT-PSR de 2025 identificou 17,1% de estrangeiros entre as pessoas em situação de rua, indicador de falhas na acolhida e inserção laboral de imigrantes. A população indígena da capital cresceu mais de 212% entre 2010 e 2022, passando de 5,8 mil para 18,4 mil pessoas, em parte por migração e em parte por mudança na autodeclaração. As barreiras linguísticas e documentais afetam o acesso à saúde (E2-F15) e à proteção social (E3-F12). O fator articula-se a E3-F07, E3-F19 e E1-F15, e o plano popular deve prever mediação intercultural nos serviços.",
+      "fontes_citadas": [
+        "Fernandes e Oliveira, Interações, 2024",
+        "Censo do GT-PSR de 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2003",
+        "2023",
+        "2024",
+        "2025",
+        "2010",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F15",
+        "E3-F12",
+        "E3-F07",
+        "E3-F19",
+        "E1-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F13",
+        "nome_no_documento": "Migração",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F14": {
+      "texto": "O Censo da População em Situação de Rua conduzido pelo Grupo de Trabalho Intersetorial em setembro de 2025 e divulgado em agosto de 2026 contou 1.476 pessoas, das quais 80,6% homens, 15,9% mulheres e 52 crianças, com 40% concentradas no centro, 25,6% na região do Anhanduizinho e 60 pessoas em comunidade terapêutica na zona rural; 17,1% eram estrangeiras, e mais de 77% dos entrevistados se declararam pardos ou pretos. Levantamento municipal anterior registrou crescimento de 503 pessoas em 2018 para 1.611 em outubro de 2025. As necessidades declaradas mais frequentes incluíram saúde e tratamento para uso de substâncias (E2-F10). A rede de acolhimento, com Centro POP, casas de passagem, Consultório na Rua e unidades de acolhimento da RAPS, é insuficiente para a demanda. O fator articula-se a E3-F08, E2-F08, E2-F18 e E5-F22, e a resposta estrutural exige moradia primeiro, renda e cuidado integrado.",
+      "fontes_citadas": [
+        "Censo da População em Situação de Rua"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2026",
+        "2018"
+      ],
+      "fatores_relacionados": [
+        "E2-F10",
+        "E3-F08",
+        "E2-F08",
+        "E2-F18",
+        "E5-F22"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F14",
+        "nome_no_documento": "Acolhimento de vulneráveis e população em situação de rua",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F16": {
+      "texto": "A discriminação racial em Campo Grande manifesta-se na distribuição desigual de renda, emprego, moradia e violência entre brancos, negros e indígenas. A sobremortalidade de jovens negros e indígenas por homicídio (Agência Brasil, 2024), a predominância de pessoas pardas e pretas entre a população em situação de rua (mais de 77% dos entrevistados no censo de 2025) e o perfil racial da mortalidade materna estadual, com 66% de mulheres pardas (SES-MS, 2023), são indicadores convergentes. A discriminação nos serviços de saúde, embora pouco registrada, afeta a adesão e a qualidade do cuidado, e a Política Nacional de Saúde Integral da População Negra estabelece diretrizes cuja implementação municipal deve ser verificada. O preenchimento do quesito raça e cor nos sistemas de informação é condição para análise. O fator articula-se a E3-F17, E3-F18 e E2-F28 e exige desagregação racial de todos os indicadores do diagnóstico.",
+      "fontes_citadas": [
+        "Agência Brasil, 2024",
+        "SES-MS, 2023"
+      ],
+      "referencias_normativas": [
+        "Política Nacional de Saúde Integral da População Negra"
+      ],
+      "periodos_citados": [
+        "2024",
+        "2025",
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E3-F17",
+        "E3-F18",
+        "E2-F28"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F16",
+        "nome_no_documento": "Discriminação racial",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F17": {
+      "texto": "O racismo ambiental expressa-se em Campo Grande na concentração das exposições ambientais adversas em territórios de maior proporção de população negra, indígena e de baixa renda: fundos de vale sujeitos a alagamento (E2-F34), margens de córregos receptores de esgoto não tratado (E2-F21), áreas periféricas com menor arborização e drenagem, e aldeias urbanas indígenas instaladas em áreas de infraestrutura precária. A cartografia dessas sobreposições, cruzando dados do Censo 2022 por setor censitário com mapas de risco e de saneamento, não foi realizada para o município e constitui lacuna analítica relevante. O fator, incorporado à matriz com o ODS 18 de Igualdade Étnico-Racial, permite nomear como injustiça estrutural o que frequentemente é tratado como acaso geográfico. Articula-se a E3-F16, E3-F19, E2-F01 e E5-F24, e orienta a priorização de investimentos em saneamento e drenagem pelos territórios mais expostos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F34",
+        "E2-F21",
+        "E3-F16",
+        "E3-F19",
+        "E2-F01",
+        "E5-F24"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F17",
+        "nome_no_documento": "Racismo ambiental",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F18": {
+      "texto": "A promoção da igualdade racial em Campo Grande conta com marcos institucionais como o Estatuto da Igualdade Racial, a Política Nacional de Saúde Integral da População Negra e a política de saúde indígena, além de conselhos municipais de direitos, mas a tradução desses marcos em metas mensuráveis no planejamento municipal é limitada. A educação para as relações étnico-raciais, prevista nas Leis nº 10.639/2003 e nº 11.645/2008, deve ser verificada na Rede Municipal de Ensino. As comunidades quilombolas urbanas de Campo Grande, como Tia Eva, Chácara Buriti e São João Batista, e as aldeias urbanas indígenas são sujeitos centrais dessas políticas. O fator articula-se a E3-F16, E3-F19 e E5-F29 e tem como indicadores a redução das desigualdades raciais em mortalidade, renda e escolaridade, a qualidade do quesito raça e cor nos registros e a presença de pessoas negras e indígenas em cargos de decisão.",
+      "fontes_citadas": [],
+      "referencias_normativas": [
+        "Estatuto da Igualdade Racial",
+        "Política Nacional de Saúde Integral da População Negra",
+        "Leis nº 10.639/2003 e nº 11.645/2008"
+      ],
+      "periodos_citados": [
+        "2003",
+        "2008"
+      ],
+      "fatores_relacionados": [
+        "E3-F16",
+        "E3-F19",
+        "E5-F29"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F18",
+        "nome_no_documento": "Igualdade racial",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E3-F19": {
+      "texto": "Campo Grande abriga 18.439 indígenas segundo o Censo 2022, o maior contingente entre os municípios do estado, majoritariamente Terena e residentes em aldeias urbanas como Marçal de Souza e Água Bonita e em bairros periféricos, além de comunidades quilombolas urbanas: a comunidade Tia Eva, a maior do estado entre as recenseadas, com 428 moradores dos quais 326 se autodeclararam quilombolas, Chácara Buriti e São João Batista. A segurança da posse dessas comunidades é frágil, com processos de regularização incompletos e pressão imobiliária sobre áreas urbanizadas. A reestruturação do Conselho Municipal dos Direitos e Defesa dos Povos Indígenas (Lei nº 7.227/2024) cria instância de interlocução, mas a regularização depende de INCRA, FUNAI e do Ministério dos Povos Indígenas. O fator articula-se a E3-F17, E5-F22, E4-F18 e E2-F20, e o plano popular deve tratar a segurança territorial dessas comunidades como determinante de saúde.",
+      "fontes_citadas": [
+        "Censo 2022"
+      ],
+      "referencias_normativas": [
+        "Lei nº 7.227/2024"
+      ],
+      "periodos_citados": [
+        "2022",
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E3-F17",
+        "E5-F22",
+        "E4-F18",
+        "E2-F20"
+      ],
+      "origem": {
+        "codigo_documento": "E3-F19",
+        "nome_no_documento": "Igualdade de direitos à propriedade e controle da terra (comunidades tradicionais e quilombolas)",
+        "eixo_documento": 3
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F01": {
-      "texto": "O financiamento da gestão ambiental municipal em Campo Grande é insuficiente frente ao passivo ambiental acumulado. O Fundo Municipal de Meio Ambiente, previsto em lei, opera com dotação orçamentária abaixo das necessidades identificadas pela SEMADUR. Os recursos de compensação ambiental de empreendimentos licenciados são a fonte principal de financiamento de projetos de conservação, mas sem planejamento estratégico que garanta continuidade e escala dos projetos.",
+      "texto": "O financiamento da conservação da biodiversidade em Campo Grande provém do orçamento da secretaria municipal de meio ambiente, do Fundo Municipal de Meio Ambiente, de compensações ambientais de empreendimentos licenciados e de programas estaduais e federais. O decreto de situação de emergência de setembro de 2026 autorizou o uso do Fundo Municipal de Meio Ambiente para recuperação de danos ambientais causados pelo vendaval, sinalizando o papel do fundo também na resposta a desastres. A execução orçamentária da função gestão ambiental, consultável no SIOPS e no portal de transparência municipal, deve ser incorporada ao diagnóstico, assim como o saldo e a aplicação do fundo, dados não sistematizados nesta versão. O fator articula-se a E4-F22, E4-F25 e E6-F09, e o plano popular deve propor critérios públicos de aplicação dos recursos ambientais, priorizando a recuperação de matas ciliares em córregos urbanos e a arborização das regiões periféricas.",
       "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F22",
+        "E4-F25",
+        "E6-F09"
+      ],
       "origem": {
-        "codigo_documento": "E4-24",
-        "nome_no_documento": "Recursos financeiros para gestão da biodiversidade",
-        "eixo_documento": 4,
-        "paragrafo_docx": 198
+        "codigo_documento": "E4-F01",
+        "nome_no_documento": "Acesso a recursos financeiros para gestão, conservação sustentável da biodiversidade (investimentos públicos e privados)",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O nome no documento reúne recursos financeiros, gestão e biodiversidade, presentes em E4-F01 Acesso a recursos financeiros para gestão, conservação sustentável da biodiversidade (investimentos públicos e privados). Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F02": {
-      "texto": "A conservação de sementes crioulas de espécies do Cerrado e de variedades agrícolas tradicionais tem expressão nas iniciativas de agricultores familiares assentados no entorno de Campo Grande e nas comunidades indígenas que mantêm práticas de cultivo e coleta de plantas nativas. Bancos comunitários de sementes crioulas existem em assentamentos ligados à Via Campesina no estado, com potencial de integração com a rede de APS como estratégia de soberania alimentar e conservação da agrobiodiversidade local.",
+      "texto": "A gestão de bancos de sementes em Campo Grande tem expressão limitada a iniciativas de agricultores familiares, assentamentos e comunidades indígenas que conservam sementes crioulas e variedades tradicionais, sem registro municipal ou apoio institucional sistemático. A Embrapa Gado de Corte, sediada na capital, e as universidades locais detêm acervos e competência técnica em recursos genéticos que poderiam apoiar iniciativas comunitárias. A manutenção de sementes adaptadas ao Cerrado tem valor estratégico diante da intensificação de estiagens e calor (E2-F30), pois amplia a resiliência da produção familiar. Nas aldeias urbanas Terena, a guarda de sementes associa-se a práticas alimentares e culturais (E4-F18). A inexistência de inventário dessas iniciativas é lacuna que a cartografia social pode suprir. O fator articula-se a E1-F03, E1-F04 e E1-F26, e experiências como a de bancos comunitários de sementes acompanhados pela PICAPS em outros territórios podem orientar a ação local.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F30",
+        "E4-F18",
+        "E1-F03",
+        "E1-F04",
+        "E1-F26"
+      ],
       "origem": {
-        "codigo_documento": "E4-11",
-        "nome_no_documento": "Sementes, plantas e animais, bancos de sementes",
-        "eixo_documento": 4,
-        "paragrafo_docx": 172
+        "codigo_documento": "E4-F02",
+        "nome_no_documento": "Gestão de bancos de sementes",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O nome no documento inclui bancos de sementes, e o texto trata de conservação de sementes crioulas e bancos comunitários."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F03": {
-      "texto": "O uso de plantas medicinais do Cerrado é uma prática cultural mantida pelas comunidades indígenas urbanas de Campo Grande e por famílias de agricultores assentados no entorno. A SESAU incorpora as Práticas Integrativas e Complementares (PICS) nas UBS, incluindo fitoterapia com espécies do RENISUS, mas o acesso a plantas medicinais de qualidade e a profissionais capacitados para prescrição é heterogêneo entre os distritos sanitários. A integração entre o conhecimento tradicional Terena sobre plantas medicinais do Cerrado e os protocolos de PICS da APS é uma inovação metodológica com potencial de valorização cultural e de ampliação da oferta terapêutica.",
+      "texto": "O uso e o plantio de plantas medicinais em Campo Grande estão presentes em quintais domésticos, nas aldeias urbanas indígenas e em comunidades quilombolas, e mobilizam espécies do Cerrado e de origem exótica transmitidas por saberes tradicionais. A Política Nacional de Práticas Integrativas e Complementares e a Política Nacional de Plantas Medicinais e Fitoterápicos orientam a incorporação da fitoterapia ao SUS, e a oferta municipal de fitoterápicos e de práticas integrativas nas unidades de saúde deve ser verificada para o diagnóstico. O conhecimento Terena sobre plantas medicinais é ativo cultural e sanitário pouco reconhecido pelos serviços. A integração entre saberes tradicionais e protocolos da APS exige diálogo intercultural, segurança no uso e proteção contra a apropriação indevida de conhecimento. O fator articula-se a E4-F18, E1-F04 e E5-F29, e hortos comunitários de plantas medicinais junto às unidades de saúde constituem estratégia viável.",
       "fontes_citadas": [],
-      "referencias_normativas": [],
+      "referencias_normativas": [
+        "Política Nacional de Práticas Integrativas e Complementares",
+        "Política Nacional de Plantas Medicinais e Fitoterápicos"
+      ],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F18",
+        "E1-F04",
+        "E5-F29"
+      ],
       "origem": {
-        "codigo_documento": "E4-22",
+        "codigo_documento": "E4-F03",
         "nome_no_documento": "Plantas medicinais (uso e plantio)",
-        "eixo_documento": 4,
-        "paragrafo_docx": 194
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F04": {
-      "texto": "A restauração dos ecossistemas hídricos de Campo Grande enfrenta o passivo acumulado de décadas de canalização e poluição dos córregos urbanos. O Projeto Córrego Limpo, iniciativa municipal de despoluição e recuperação de matas ciliares, avançou em alguns trechos dos córregos Prosa e Anhanduizinho, mas sem escala suficiente para reverter a degradação sistêmica. A proteção dos mananciais de captação da Águas Guariroba, localizados fora do perímetro urbano, em área rural do município, é estratégica para a segurança hídrica de longo prazo.",
-      "fontes_citadas": [],
+      "texto": "Os ecossistemas hídricos de Campo Grande, formados pelos córregos Anhanduí, Prosa, Segredo, Bandeira, Lagoa, Imbirussu e seus afluentes, integrantes da bacia do rio Paraná, foram intensamente alterados por canalização, ocupação de áreas de preservação permanente e lançamento de esgoto não tratado, estimado em 18,3 milhões de m³ em 2022 (Instituto Água e Saneamento). Os mananciais de abastecimento, como o Guariroba, dependem da proteção de suas bacias de contribuição na zona rural. Os parques lineares e o Parque das Nações Indígenas preservam trechos de função ecológica, mas a restauração de matas ciliares é pontual. Barragens urbanas como a do antigo Clube Atlântico apresentam problemas estruturais documentados desde 2024. O fator articula-se a E2-F21, E2-F23, E4-F25 e E4-F14, e a recuperação dos córregos é simultaneamente medida de saúde, de drenagem urbana e de qualidade de vida.",
+      "fontes_citadas": [
+        "Instituto Água e Saneamento"
+      ],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2022",
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E2-F21",
+        "E2-F23",
+        "E4-F25",
+        "E4-F14"
+      ],
       "origem": {
-        "codigo_documento": "E4-9",
+        "codigo_documento": "E4-F04",
         "nome_no_documento": "Proteção e restauração de ecossistemas hídricos",
-        "eixo_documento": 4,
-        "paragrafo_docx": 168
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F05": {
+      "texto": "As tecnologias sociais em Campo Grande incluem cisternas e sistemas de captação de água de chuva, biodigestores, fossas ecológicas, hortas verticais e soluções de construção de baixo custo, aplicadas em iniciativas de extensão universitária, organizações da sociedade civil e assentamentos rurais, sem programa municipal que as difunda de forma sistemática. A relevância dessas tecnologias aumenta com a recorrência de eventos extremos: captação de chuva reduz a dependência do abastecimento em estiagens (E2-F30), e técnicas simples de reforço de coberturas reduzem danos em vendavais (E2-F17). A ausência de inventário municipal de tecnologias sociais em uso constitui lacuna. O fator articula-se a E5-F10, que trata da formação para criar e usar essas soluções, a E4-F24 e a E1-F23, e o plano popular pode prever a seleção, com a comunidade, de tecnologias sociais prioritárias para cada território.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F30",
+        "E2-F17",
+        "E5-F10",
+        "E4-F24",
+        "E1-F23"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F05",
+        "nome_no_documento": "Tecnologias sociais",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F06": {
-      "texto": "A UFMS, a UCDB, a Uniderp e a Fiocruz Brasília são os principais atores de pesquisa científica em saúde ambiental e territorial em Campo Grande. O CoLaboratório CTIS da Fiocruz e a plataforma PICAPS produzem pesquisa aplicada que articula evidências científicas com conhecimento popular, posicionamento epistemológico que corresponde ao fator E4-25 da matriz. A criação de uma agenda de pesquisa compartilhada entre essas instituições e as comunidades, orientada pelos nós críticos identificados na cartografia social, é a aplicação concreta desse fator ao ciclo de planejamento territorial.",
+      "texto": "Campo Grande concentra a maior capacidade de pesquisa científica de Mato Grosso do Sul, com a UFMS, a UEMS, a UCDB, a Embrapa Gado de Corte e a Fiocruz Mato Grosso do Sul, além da articulação com a Fiocruz Brasília por meio da PICAPS. A produção científica sobre o próprio município em temas como saúde indígena urbana, leishmaniose, arboviroses, qualidade do ar e mudanças climáticas é significativa, como demonstra o projeto QualiAr da UFMS, que fornece o único monitoramento sistemático da qualidade do ar na capital. A tradução desse conhecimento em políticas públicas, contudo, é irregular. O fator articula-se a E4-F14, E6-F04 e E5-F06, e o plano popular deve propor uma agenda de pesquisa compartilhada entre instituições e comunidades, orientada pelos nós críticos deste diagnóstico e pela participação dos pesquisadores populares.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F14",
+        "E6-F04",
+        "E5-F06"
+      ],
       "origem": {
-        "codigo_documento": "E4-25",
+        "codigo_documento": "E4-F06",
         "nome_no_documento": "Pesquisa científica e inovação",
-        "eixo_documento": 4,
-        "paragrafo_docx": 200
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F07": {
-      "texto": "As periferias de Campo Grande concentram habitações populares construídas sem critérios de eficiência energética, conforto térmico ou resiliência a eventos climáticos extremos. A ausência de ventilação cruzada, a impermeabilização do solo sem compensação hídrica e a ausência de arborização tornam esses territórios mais quentes, mais inundáveis e mais insalubres. O Programa Minha Casa Minha Vida, principal vetor de habitação popular no município, adotou padrões mínimos de sustentabilidade apenas nas versões mais recentes, sem retroação para o estoque existente.",
+      "texto": "As edificações de Campo Grande, sobretudo as habitações populares e os prédios públicos, apresentam baixa adaptação a eventos climáticos extremos e ao calor. O vendaval de setembro de 2026 destelhou 26 escolas municipais e danificou a cobertura de vidro de uma UPA, expondo padrões construtivos e de manutenção inadequados para ventos de 80 km/h, intensidade que tende a se repetir. Nas regiões periféricas, coberturas leves, ausência de ventilação cruzada e impermeabilização integral dos lotes agravam o desconforto térmico e os alagamentos. O Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018) estabelece parâmetros urbanísticos, mas a incorporação de critérios de resiliência climática ao código de obras e aos programas habitacionais deve ser verificada. O fator articula-se a E4-F10, E5-F20, E5-F22 e E2-F17, e o plano popular deve tratar a adequação das escolas e unidades de saúde como prioridade.",
       "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
+      "referencias_normativas": [
+        "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+      ],
+      "periodos_citados": [
+        "2026",
+        "2018"
+      ],
+      "fatores_relacionados": [
+        "E4-F10",
+        "E5-F20",
+        "E5-F22",
+        "E2-F17"
+      ],
       "origem": {
-        "codigo_documento": "E4-19",
+        "codigo_documento": "E4-F07",
         "nome_no_documento": "Construções sustentáveis e resilientes",
-        "eixo_documento": 4,
-        "paragrafo_docx": 188
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F08": {
-      "texto": "A adoção de tecnologias ambientalmente corretas em Campo Grande é mais visível no setor privado, energia solar, eficiência hídrica, materiais de construção sustentáveis, do que nas políticas públicas municipais. A SESAU não dispõe de programa sistematizado de eficiência energética para suas unidades de saúde, apesar do potencial de economia e do ganho ambiental. A geração distribuída de energia solar nas UBS das periferias seria um investimento de alto retorno social e ambiental, ainda não incorporado ao planejamento da secretaria.",
+      "texto": "As tecnologias ambientalmente corretas em uso em Campo Grande concentram-se no setor privado e em domicílios de renda média e alta, com expansão da geração solar distribuída favorecida pela alta irradiação regional. Nos serviços públicos, a adoção é pontual: a instalação de geração solar em unidades de saúde e escolas, que reduziria custos e garantiria funcionamento em interrupções de energia como a de setembro de 2026, não está organizada em programa municipal, segundo a informação pública disponível. Tecnologias de tratamento de esgoto descentralizado, reúso de água e iluminação pública eficiente têm aplicação potencial nas áreas de expansão. O fator articula-se a E4-F24, que trata do acesso a essas tecnologias pelas populações que delas mais necessitam, a E5-F14 e a E1-F23, e o diagnóstico registra como lacuna a inexistência de inventário municipal de tecnologias ambientais nos equipamentos públicos.",
       "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F24",
+        "E5-F14",
+        "E1-F23"
+      ],
       "origem": {
-        "codigo_documento": "E4-20",
+        "codigo_documento": "E4-F08",
         "nome_no_documento": "Tecnologias ambientalmente corretas",
-        "eixo_documento": 4,
-        "paragrafo_docx": 190
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F09": {
-      "texto": "O acesso à informação sobre produção sustentável e gestão ambiental em Campo Grande é fragmentado entre órgãos municipais, estaduais e federais sem portal integrado de comunicação com a sociedade. A PLANURB publica o Perfil Socioeconômico de Campo Grande anualmente, com dados ambientais e de saneamento, mas sem linguagem adaptada ao público geral. A PICAPS pode atuar como mediadora entre a informação técnica disponível nos sistemas institucionais e a compreensão da comunidade, usando os pesquisadores populares como tradutores locais do dado técnico.",
-      "fontes_citadas": [],
+      "texto": "O acesso à informação de qualidade sobre ambiente, saúde e riscos em Campo Grande é fragmentado entre portais municipais, estaduais e federais, com dados técnicos de difícil leitura para a população. A informação sobre qualidade do ar depende de projeto universitário (QualiAr/UFMS), a de barragens de risco circula sobretudo pela imprensa, e a de alertas meteorológicos chega de forma desigual entre grupos sociais. Em contrapartida, circulam desinformação sobre vacinas, que contribui para a cobertura da tríplice viral de 78,53% em 2026 (Sesau), e boatos em situações de emergência. O fator articula-se a E6-F09, E6-F03, E6-F11 e E2-F37, e o plano popular pode atribuir aos pesquisadores populares a função de mediação entre dados técnicos e conhecimento comunitário, com produção de boletins territoriais em linguagem acessível e verificação de informações em circulação.",
+      "fontes_citadas": [
+        "QualiAr/UFMS",
+        "Sesau"
+      ],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F09",
+        "E6-F03",
+        "E6-F11",
+        "E2-F37"
+      ],
       "origem": {
-        "codigo_documento": "E4-23",
-        "nome_no_documento": "Acesso à informação de qualidade sobre produção sustentável",
-        "eixo_documento": 4,
-        "paragrafo_docx": 196
+        "codigo_documento": "E4-F09",
+        "nome_no_documento": "Acesso à informação de qualidade",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta sobre produção sustentável."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F10": {
+      "texto": "A reconstrução sustentável e resiliente tornou-se agenda concreta em Campo Grande após o vendaval de setembro de 2026, cujo decreto de situação de emergência autoriza obras emergenciais com dispensa de licitação por até um ano. A forma como escolas, unidades de saúde, rede elétrica e arborização forem reconstruídas determinará a vulnerabilidade da cidade aos próximos eventos: reconstruir com os mesmos padrões reproduz o risco. A substituição de árvores caídas por espécies adequadas ao espaço urbano, o reforço de coberturas, o enterramento seletivo de redes elétricas em trechos críticos e a revisão da drenagem são componentes de uma reconstrução resiliente. O fator articula-se a E4-F07, E1-F29, E5-F20 e E4-F25, e o plano popular deve propor que as obras financiadas pela situação de emergência incorporem critérios de resiliência verificáveis e acompanhamento social.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F07",
+        "E1-F29",
+        "E5-F20",
+        "E4-F25"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F10",
+        "nome_no_documento": "Reconstruções sustentáveis e resilientes",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F11": {
-      "texto": "A educação para as mudanças climáticas em Campo Grande é ainda incipiente como política pública municipal, apesar da vulnerabilidade crescente do território a eventos extremos. As enchentes urbanas de outubro-março, as estiagens de julho-setembro e as ondas de calor que afetam desproporcionalmente os moradores de habitações precárias nas periferias são expressões locais da crise climática global. A incorporação da educação climática nos currículos escolares municipais, nas atividades dos ACS e nos Círculos de Cultura da PICAPS é uma resposta metodologicamente pertinente e operacionalmente viável.",
+      "texto": "A educação ambiental e para adaptação climática em Campo Grande ocorre de forma dispersa em projetos escolares, ações da secretaria de meio ambiente e iniciativas de universidades e organizações da sociedade civil, sem programa municipal articulado que trate riscos locais concretos, como alagamentos, vendavais, fumaça e estiagem. A Política Nacional de Educação Ambiental e as diretrizes de educação para a redução de riscos de desastres fornecem o marco normativo. A experiência recente de eventos extremos, com 26 escolas destelhadas em 2026, oferece oportunidade pedagógica de tratar o risco a partir da vivência dos estudantes e das famílias. O fator articula-se a E4-F12, E2-F32, E5-F04 e E6-F07, e os Círculos de Cultura da PICAPS constituem espaço metodológico para a educação ambiental crítica, que relaciona riscos a desigualdades territoriais e não apenas a comportamentos individuais.",
       "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
+      "referencias_normativas": [
+        "Política Nacional de Educação Ambiental"
+      ],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F12",
+        "E2-F32",
+        "E5-F04",
+        "E6-F07"
+      ],
       "origem": {
-        "codigo_documento": "E4-17",
-        "nome_no_documento": "Educação para mitigação e adaptação às mudanças do clima",
-        "eixo_documento": 4,
-        "paragrafo_docx": 184
+        "codigo_documento": "E4-F11",
+        "nome_no_documento": "Educação ambiental e para adaptação climática",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Educação para mitigação e adaptação às mudanças do clima no documento; educação ambiental e para adaptação climática no cadastro."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F12": {
-      "texto": "Campo Grande não dispõe de Plano Municipal de Adaptação às Mudanças Climáticas formalizado. O Plano Diretor municipal (LC nº 74/2006 e revisões) incorpora alguns dispositivos de zoneamento ambiental e de proteção de mananciais, mas sem o enfoque climático prospectivo que as projeções do IPCC para o Cerrado demandam. As projeções de elevação de temperatura de até 2,5°C até 2050 e de intensificação das estiagens impõem necessidade de planejamento hídrico, habitacional e de saúde orientado por cenários climáticos.",
-      "fontes_citadas": [
-        "IPCC"
-      ],
+      "texto": "O planejamento relacionado à mudança do clima em Campo Grande carece de plano municipal de adaptação climática com metas, responsáveis e orçamento, segundo a informação pública disponível. O Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018) contém instrumentos de zoneamento ambiental e proteção de áreas verdes, mas não incorpora cenários climáticos explícitos. A sequência de eventos recentes, com fumaça e qualidade do ar péssima em 2024, alagamentos com 88 mm em um dia em abril de 2025 e vendaval com decreto de emergência em setembro de 2026, demonstra que os riscos climáticos já operam no território. O fator articula-se a E4-F11, E2-F32, E2-F23 e E5-F20, e o plano popular deve propor a elaboração participativa de um plano de adaptação que integre saúde, drenagem, arborização, energia e proteção das populações mais vulneráveis.",
+      "fontes_citadas": [],
       "referencias_normativas": [
-        "Plano Diretor municipal (LC nº 74/2006 e revisões)"
+        "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
       ],
       "periodos_citados": [
-        "2006",
-        "2050"
+        "2018",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F11",
+        "E2-F32",
+        "E2-F23",
+        "E5-F20"
       ],
       "origem": {
-        "codigo_documento": "E4-18",
-        "nome_no_documento": "Planejamento relacionado à mudança do clima",
-        "eixo_documento": 4,
-        "paragrafo_docx": 186
+        "codigo_documento": "E4-F12",
+        "nome_no_documento": "Planejamento relacionado à mudança do clima e à gestão eficaz",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e à gestão eficaz."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F13": {
-      "texto": "De aplicabilidade indireta para Campo Grande, este fator é relevante na perspectiva da bacia hidrográfica do Rio Paraná, da qual Campo Grande faz parte por meio do Rio Anhanduí, e da contribuição do Cerrado para os ciclos hidrológicos que alimentam os grandes rios e os estuários costeiros. A conservação do Cerrado é condição para a sustentabilidade hídrica de toda a bacia do Paraná.",
+      "texto": "Campo Grande não possui costa marítima e não tem relação direta com a gestão de oceanos e recursos marinhos, razão pela qual o fator é tratado pela via da interface indireta, conforme as notas metodológicas. O município integra a bacia do rio Paraná por meio do córrego Anhanduí e do rio Pardo, e a qualidade das águas que deixa o território, afetada pelo lançamento de esgoto não tratado e pela carga de sedimentos e agroquímicos, contribui para a condição dos sistemas hídricos a jusante e, em última instância, dos ambientes estuarinos e costeiros. O consumo urbano de pescado de origem marinha e o descarte de plásticos e resíduos que alcançam a rede de drenagem são as outras interfaces. O fator articula-se a E4-F04 e E2-F21, e sua relevância para o planejamento local reside na responsabilidade do município pela qualidade da água que exporta para a bacia.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F04",
+        "E2-F21"
+      ],
       "origem": {
-        "codigo_documento": "E4-15",
-        "nome_no_documento": "Gestão sustentável de oceanos e recursos marinhos",
-        "eixo_documento": 4,
-        "paragrafo_docx": 180
+        "codigo_documento": "E4-F13",
+        "nome_no_documento": "Gerenciar e proteger os oceanos, mares e recursos marinhos de forma sustentável",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Gestão sustentável de oceanos e recursos marinhos no documento; gerenciar e proteger os oceanos, mares e recursos marinhos de forma sustentável no cadastro. As notas metodológicas do documento registram que o fator foi analisado na dimensão de bacia hidrográfica."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F14": {
+      "texto": "A pesquisa científica voltada à recuperação de ambientes degradados em Campo Grande é conduzida pela UFMS, pela UCDB e pela Embrapa em temas como recuperação de áreas degradadas do Cerrado, monitoramento de córregos urbanos e manejo de pastagens. A aplicação desse conhecimento à restauração dos córregos urbanos, à recuperação de voçorocas em áreas de expansão e à recomposição da arborização após o vendaval de 2026 é oportunidade concreta de cooperação entre universidades e poder público. A participação comunitária no monitoramento, por meio de ciência cidadã e da cartografia social, amplia a capacidade de acompanhamento. O fator articula-se a E4-F06, E4-F04, E4-F25 e E6-F04, e o diagnóstico registra como lacuna a inexistência de programa municipal de recuperação ambiental com base em evidências e metas de restauração por microbacia.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F06",
+        "E4-F04",
+        "E4-F25",
+        "E6-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F14",
+        "nome_no_documento": "Pesquisa científica e inovação para recuperação de ambientes",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F15": {
-      "texto": "A pesca artesanal em Campo Grande ocorre nos açudes, represas e no Rio Anhanduí, com comunidades de pescadores artesanais que dependem da qualidade da água e da biomassa dos ambientes aquáticos. A poluição dos córregos urbanos pelo lançamento de esgoto sem tratamento compromete diretamente a reprodução dos estoques pesqueiros locais, afetando a renda e a segurança alimentar dessas comunidades. O Colônia de Pescadores do município é a entidade representativa, com interface com o MAPA para regularização da atividade.",
+      "texto": "A pesca artesanal em Campo Grande é atividade de pequena escala, praticada em rios e represas do território e do entorno, sem a relevância econômica e cultural que possui nos municípios pantaneiros e ribeirinhos do estado. Pescadores artesanais residentes na capital podem atuar em outros municípios, especialmente no Pantanal, onde a pesca é regulada por normas estaduais e afetada pelos incêndios e pela redução das cheias. O registro de pescadores artesanais residentes no município no Registro Geral da Atividade Pesqueira deve ser consultado para dimensionar o grupo, dado não sistematizado nesta versão. O fator é tratado como de baixa aplicabilidade direta, com análise pela interface regional, e articula-se a E4-F20, que trata da pesca ilegal, e a E4-F04, pois a qualidade dos ambientes aquáticos determina a viabilidade da atividade e a segurança do pescado consumido.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F20",
+        "E4-F04"
+      ],
       "origem": {
-        "codigo_documento": "E4-12",
+        "codigo_documento": "E4-F15",
         "nome_no_documento": "Pescadores artesanais",
-        "eixo_documento": 4,
-        "paragrafo_docx": 174
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F16": {
-      "texto": "Campo Grande está integralmente inserida no bioma Cerrado, o mais ameaçado do Brasil. Dados do PRODES/INPE e do MapBiomas indicam que menos de 20% da cobertura vegetal original do Cerrado permanece no Mato Grosso do Sul, com fragmentação intensa nas regiões de entorno da capital. No território municipal, o desmatamento avança pela expansão de loteamentos periurbanos sobre APPs dos córregos, pela conversão de reservas legais em pastagens e pelo crescimento da área urbanizada sobre solos de recarga de mananciais. Os solos degradados por erosão e compactação nas periferias sem cobertura vegetal intensificam as enchentes urbanas e o assoreamento dos córregos.",
-      "fontes_citadas": [
-        "PRODES/INPE",
-        "MapBiomas"
-      ],
+      "texto": "O município está inserido no bioma Cerrado, o mais pressionado pela conversão para agropecuária no Brasil, e sua zona rural é dominada por pastagens e lavouras, com remanescentes de vegetação nativa concentrados em áreas de preservação permanente, reservas legais e unidades de conservação. A série de cobertura e uso do solo do MapBiomas para o município, que permite quantificar a perda de vegetação nativa e a expansão da área urbanizada desde 1985, e os dados anuais do PRODES Cerrado devem ser extraídos para o diagnóstico, não sistematizados nesta versão. Na área urbana, a expansão sobre fundos de vale e a impermeabilização degradam solos e favorecem erosão e assoreamento (E2-F36). O desmatamento regional relaciona-se à intensificação das estiagens e dos incêndios (E2-F30, E2-F38) e à pressão sobre os mananciais (E2-F23). O fator articula-se a E4-F17 e E4-F25.",
+      "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "1985"
+      ],
+      "fatores_relacionados": [
+        "E2-F36",
+        "E2-F30",
+        "E2-F38",
+        "E2-F23",
+        "E4-F17",
+        "E4-F25"
+      ],
       "origem": {
-        "codigo_documento": "E4-1",
+        "codigo_documento": "E4-F16",
         "nome_no_documento": "Desmatamento e solos degradados",
-        "eixo_documento": 4,
-        "paragrafo_docx": 152
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F17": {
+      "texto": "A gestão dos recursos naturais em Campo Grande envolve a secretaria municipal de meio ambiente, o Imasul e o IBAMA, com instrumentos como o licenciamento ambiental, o Cadastro Ambiental Rural, as unidades de conservação municipais e o zoneamento do Plano Diretor. A capacidade de fiscalização é insuficiente frente à expansão urbana sobre áreas sensíveis e às pressões sobre os mananciais. A gestão de barragens urbanas é exemplo das fragilidades: laudos técnicos apontam desde 2024 problemas estruturais na barragem do antigo Clube Atlântico, de responsabilidade privada, objeto de inquérito civil do Ministério Público estadual. O fator, que na Matriz v1.0.2 reúne a gestão de ecossistemas terrestres e aquáticos, fauna e produtos químicos, articula-se a E4-F04, E4-F16, E4-F22 e E5-F15, e o plano popular deve fortalecer a participação social nos conselhos ambientais e no acompanhamento do licenciamento.",
+      "fontes_citadas": [],
+      "referencias_normativas": [
+        "Plano Diretor"
+      ],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E4-F04",
+        "E4-F16",
+        "E4-F22",
+        "E5-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F17",
+        "nome_no_documento": "Gestão sustentável dos recursos naturais",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F18": {
-      "texto": "As comunidades indígenas Terena urbanas de Campo Grande detêm conhecimento tradicional sobre plantas medicinais do Cerrado, práticas de manejo sustentável e sistemas agroflorestais que são invisibilizados no espaço urbano. O fator E4-10 nomeia esse conhecimento como ativo estratégico para a gestão ambiental e para a saúde, especialmente em interface com o fator E4-22 (plantas medicinais) e com as práticas integrativas e complementares da APS. A documentação e valorização desse conhecimento por meio da cartografia social é uma contribuição original da PICAPS ao diagnóstico territorial.",
+      "texto": "Os conhecimentos e práticas tradicionais de conservação em Campo Grande estão presentes nas comunidades indígenas urbanas, majoritariamente Terena, nas comunidades quilombolas urbanas e entre agricultores familiares. Esses saberes incluem o manejo de plantas medicinais (E4-F03), a guarda de sementes (E4-F02), práticas alimentares e formas de relação com o território que contrastam com o modelo de ocupação urbana e agropecuária dominante. A urbanização restringe o espaço para essas práticas: as aldeias urbanas ocupam áreas reduzidas, sem acesso a vegetação nativa e cursos d'água. O reconhecimento desses saberes é condição para uma gestão ambiental culturalmente adequada e para a valorização de identidades historicamente invisibilizadas. O fator articula-se a E5-F29, E3-F19 e E4-F22, e o plano popular pode prever espaços de cultivo e transmissão de conhecimentos tradicionais em áreas verdes públicas próximas às comunidades.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F03",
+        "E4-F02",
+        "E5-F29",
+        "E3-F19",
+        "E4-F22"
+      ],
       "origem": {
-        "codigo_documento": "E4-10",
-        "nome_no_documento": "Conhecimentos e práticas tradicionais de conservação",
-        "eixo_documento": 4,
-        "paragrafo_docx": 170
+        "codigo_documento": "E4-F18",
+        "nome_no_documento": "Conhecimentos e práticas tradicionais de conservação e uso sustentável",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e uso sustentável."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F19": {
+      "texto": "O atendimento veterinário e o resgate de animais em Campo Grande envolvem o Centro de Controle de Zoonoses municipal, clínicas veterinárias universitárias, a Polícia Militar Ambiental, o Centro de Reabilitação de Animais Silvestres estadual e organizações de proteção animal. O fator tem relevância sanitária direta pela leishmaniose visceral, endêmica no município, cuja transmissão envolve cães infectados (E2-F08), pela raiva e pelos acidentes com animais. A ausência de hospital veterinário público com atendimento gratuito para animais de famílias de baixa renda limita o diagnóstico e o tratamento de cães, com implicações para o controle da leishmaniose em bairros periféricos. Os incêndios no Pantanal em 2024 e eventos como o vendaval de 2026 ampliaram a demanda por resgate de fauna. O fator articula-se a E2-F35, E4-F20 e à abordagem de Saúde Única preconizada pelo Informe Técnico da SES-MS (2025).",
+      "fontes_citadas": [
+        "Informe Técnico da SES-MS (2025)"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024",
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E2-F08",
+        "E2-F35",
+        "E4-F20"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F19",
+        "nome_no_documento": "Hospital veterinário e resgate de animais",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E4-F20": {
-      "texto": "Campo Grande é ponto de passagem documentado no tráfico de animais silvestres do Cerrado e do Pantanal: araras, papagaios, jacarés e peixes ornamentais são espécies frequentemente apreendidas em operações da Polícia Federal e do IBAMA no estado. A fronteira com o Paraguai facilita o trânsito ilegal e a demanda de mercados externos. A fauna silvestre apreendida é encaminhada ao Centro de Reabilitação de Animais Silvestres (CRAS) do estado, mas com capacidade de reabilitação e reintrodução limitada.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-7",
-        "nome_no_documento": "Tráfico de espécies da flora e fauna",
-        "eixo_documento": 4,
-        "paragrafo_docx": 164
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite (caça e pesca ilegal)."
-      }
-    },
-    "E4-F21": {
-      "texto": "As espécies exóticas invasoras em Campo Grande incluem plantas como o capim-braquiária que avança sobre remanescentes de Cerrado, suprimindo a regeneração natural, e o nim africano amplamente plantado em arborização urbana sem critérios ecológicos. No ambiente aquático, as espécies invasoras nos açudes e represas do entorno comprometem a biodiversidade nativa dos sistemas hídricos tributários do Rio Anhanduí. A legislação municipal de arborização urbana poderia ser um instrumento de controle, mas não é sistematicamente aplicada.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-6",
-        "nome_no_documento": "Espécies exóticas invasoras",
-        "eixo_documento": 4,
-        "paragrafo_docx": 162
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E4-F22": {
-      "texto": "A biodiversidade do Cerrado no entorno de Campo Grande inclui espécies endêmicas de flora e fauna com alto valor ecológico e potencial para o desenvolvimento de biotecnologia, cosméticos naturais e fitoterapia. O Parque Municipal do Prosa e a APA do Córrego do Lageado são as principais unidades de conservação intramunicipais, mas com gestão insuficiente para garantir a conectividade entre fragmentos florestais. A integração entre conservação da biodiversidade e desenvolvimento local, por meio de práticas de extrativismo sustentável e etnobotânica, referenciada no fator E4-22, é uma potencialidade subutilizada.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-2",
-        "nome_no_documento": "Gestão sustentável da biodiversidade para o desenvolvimento",
-        "eixo_documento": 4,
-        "paragrafo_docx": 154
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite e redução da pobreza."
-      }
-    },
-    "E4-F24": {
-      "texto": "A transferência de tecnologias ambientalmente corretas para comunidades vulneráveis, filtros de água, biodigestores, cisternas, sistemas agroflorestais, é uma estratégia de adaptação e resiliência com baixo custo relativo e alto impacto nas condições de vida. Em Campo Grande, iniciativas de ONGs e da extensão universitária da UFMS introduzem essas tecnologias em assentamentos rurais do entorno, mas sem integração sistemática com a política municipal de saúde ambiental.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-21",
-        "nome_no_documento": "Transferência de tecnologias ambientalmente corretas",
-        "eixo_documento": 4,
-        "paragrafo_docx": 192
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite (acesso)."
-      }
-    },
-    "E4-F25": {
-      "texto": "O reflorestamento com espécies nativas do Cerrado em áreas degradadas do entorno de Campo Grande é realizado em escala ainda modesta por iniciativas da SEMADUR, do setor privado por compensação ambiental e por organizações da sociedade civil como o Instituto Cerrado. A recuperação de matas ciliares ao longo dos córregos urbanos é a prioridade funcional mais urgente, dado o impacto direto sobre a qualidade da água, o controle de enchentes e a biodiversidade urbana.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-8",
-        "nome_no_documento": "Promoção da gestão sustentável, reflorestamento",
-        "eixo_documento": 4,
-        "paragrafo_docx": 166
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O nome no documento inclui reflorestamento, e o texto trata de reflorestamento com espécies nativas e recuperação de matas ciliares."
-      }
-    },
-    "E5-F04": {
-      "texto": "O IDEB das escolas municipais de Campo Grande apresenta variação territorial significativa: escolas da área central e de bairros consolidados das regiões Norte e Oeste têm desempenho acima da média nacional, enquanto escolas das periferias Sul e Leste apresentam indicadores abaixo da meta. As condições de aprendizagem, infraestrutura escolar, qualificação docente, suporte para alunos com necessidades especiais, reproduzem a segregação socioespacial do território e condicionam as trajetórias educacionais e de saúde ao longo do ciclo de vida.",
+      "texto": "O tráfico de fauna e flora silvestres afeta Mato Grosso do Sul em razão da biodiversidade do Pantanal e do Cerrado e da posição de fronteira, e Campo Grande funciona como ponto de trânsito e destino de animais capturados ilegalmente, como aves, répteis e peixes ornamentais, segundo registros de apreensões da Polícia Militar Ambiental e do IBAMA. A pesca ilegal nos rios do estado é componente do mesmo fenômeno. Os dados de autos de infração e apreensões por município, disponíveis nos órgãos de fiscalização, devem ser consultados para dimensionar a ocorrência local, não sistematizados nesta versão. O tráfico ameaça espécies, introduz riscos sanitários associados a zoonoses e alimenta redes criminosas que podem se sobrepor a outras atividades ilícitas (E6-F06). O fator articula-se a E4-F19 e E4-F15, e a educação ambiental (E4-F11) e os canais de denúncia comunitária são componentes da prevenção.",
       "fontes_citadas": [
-        "IDEB"
+        "registros de apreensões da Polícia Militar Ambiental e do IBAMA"
       ],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E6-F06",
+        "E4-F19",
+        "E4-F15",
+        "E4-F11"
+      ],
       "origem": {
-        "codigo_documento": "E5-9",
-        "nome_no_documento": "Educação, ensino primário",
-        "eixo_documento": 5,
-        "paragrafo_docx": 222
+        "codigo_documento": "E4-F20",
+        "nome_no_documento": "Tráfico de espécies da flora e fauna (caça e pesca ilegal)",
+        "eixo_documento": 4
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F21": {
+      "texto": "As espécies exóticas invasoras em Campo Grande incluem gramíneas africanas que dominam pastagens e áreas degradadas e dificultam a regeneração do Cerrado, espécies arbóreas exóticas amplamente usadas na arborização urbana e organismos aquáticos introduzidos em represas. A composição da arborização urbana é relevante após o vendaval de 2026: a queda de árvores de grande porte, muitas delas exóticas plantadas sem planejamento de espaço e manejo, revelou riscos associados à escolha de espécies. O mosquito Aedes aegypti e o caramujo-africano, espécies exóticas de relevância sanitária, completam o quadro (E2-F35). A elaboração de lista municipal de espécies recomendadas e proibidas para arborização e de plano de substituição gradual deve ser verificada no plano municipal de arborização. O fator articula-se a E4-F25, E4-F10 e E4-F17.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F35",
+        "E4-F25",
+        "E4-F10",
+        "E4-F17"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F21",
+        "nome_no_documento": "Espécies exóticas invasoras",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F22": {
+      "texto": "A gestão da biodiversidade para o desenvolvimento e a redução da pobreza em Campo Grande tem potencial ainda pouco explorado em atividades como turismo de natureza e observação de aves, produção de mudas nativas para restauração, extrativismo sustentável de espécies do Cerrado e serviços ambientais em propriedades rurais. Essas atividades podem gerar renda para agricultores familiares, comunidades tradicionais e trabalhadores urbanos, desde que acompanhadas de formação, crédito e mercado. Os parques urbanos e as unidades de conservação municipais oferecem base para iniciativas de educação e turismo com participação comunitária. A inexistência de programa municipal que articule conservação e geração de renda constitui lacuna de política pública. O fator articula-se a E1-F23, E4-F25, E4-F01 e E4-F18, e o plano popular pode identificar, com a comunidade, cadeias da sociobiodiversidade viáveis no território.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F23",
+        "E4-F25",
+        "E4-F01",
+        "E4-F18"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F22",
+        "nome_no_documento": "Gestão sustentável da biodiversidade para o desenvolvimento e redução da pobreza",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F24": {
+      "texto": "O acesso das populações vulneráveis a tecnologias ambientalmente corretas em Campo Grande é restrito pelo custo de aquisição: a geração solar, as cisternas, os sistemas de reúso e os equipamentos de maior eficiência energética concentram-se em domicílios de renda média e alta. Os programas federais de tarifa social de energia e de habitação de interesse social com componentes de sustentabilidade são as principais vias de acesso, e sua cobertura municipal deve ser verificada. A transferência de tecnologia para comunidades indígenas urbanas, quilombolas e famílias de baixa renda reduziria custos com energia, ampliaria a resiliência em interrupções de serviços (E2-F31) e geraria oportunidades de trabalho na instalação e manutenção. O fator articula-se a E4-F08, E4-F05, E5-F14 e E5-F10, e o plano popular pode propor programas comunitários de acesso associados à formação técnica de moradores.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F31",
+        "E4-F08",
+        "E4-F05",
+        "E5-F14",
+        "E5-F10"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F24",
+        "nome_no_documento": "Transferência de tecnologias ambientalmente corretas (acesso)",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E4-F25": {
+      "texto": "O reflorestamento em Campo Grande é conduzido de forma pontual por programas municipais de arborização, compensações ambientais de empreendimentos e iniciativas de organizações da sociedade civil, sem meta municipal de recomposição de matas ciliares por microbacia. A restauração das áreas de preservação permanente dos córregos urbanos é a prioridade funcional, pela relação direta com a qualidade da água, o controle de enchentes e a redução das ilhas de calor. A perda de árvores no vendaval de setembro de 2026 cria necessidade e oportunidade de replantio planejado, com espécies nativas adequadas ao espaço urbano e manejo preventivo (E4-F21). A cobertura arbórea por região urbana, que tende a ser menor nas periferias, deve ser medida com base em imagens de satélite, dado não sistematizado nesta versão. O fator articula-se a E4-F16, E4-F04 e E4-F10, e mutirões comunitários de plantio (E6-F05) favorecem a apropriação social das áreas recuperadas.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F21",
+        "E4-F16",
+        "E4-F04",
+        "E4-F10",
+        "E6-F05"
+      ],
+      "origem": {
+        "codigo_documento": "E4-F25",
+        "nome_no_documento": "Reflorestamento",
+        "eixo_documento": 4
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F01": {
+      "texto": "A disponibilidade de abrigos para emergências em Campo Grande não está documentada em plano de contingência de acesso público, segundo a informação disponível, o que configura lacuna de preparação a ser verificada junto à Defesa Civil municipal. A rede potencial inclui escolas, ginásios, centros comunitários e igrejas, mas o vendaval de 10 de setembro de 2026, que destelhou 26 escolas municipais segundo a Prefeitura, demonstra que a designação de abrigos exige avaliação prévia de segurança estrutural das edificações. Os serviços de acolhimento institucional da assistência social, dimensionados para a população em situação de rua de 1.476 pessoas recenseadas pelo GT-PSR em 2025 (escala municipal), operam no limite e não comportam deslocamentos em massa. O fator articula-se a E2-F39, E6-F16, E3-F14 e E4-F07, e o plano popular deve mapear, com a comunidade, edificações seguras por região urbana e acordos prévios com organizações religiosas e comunitárias para seu uso em emergências.",
+      "fontes_citadas": [
+        "Prefeitura",
+        "GT-PSR"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E2-F39",
+        "E6-F16",
+        "E3-F14",
+        "E4-F07"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F01",
+        "nome_no_documento": "Disponibilidade a abrigos para emergências",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F02": {
+      "texto": "A obstrução e o dano de vias em Campo Grande decorrem sobretudo de quedas de árvores e postes em ventos fortes e de enxurradas que erodem pavimentos em fundos de vale. Na noite do vendaval de 10 de setembro de 2026, o Corpo de Bombeiros Militar recebeu 155 chamados por árvores caídas ou em risco entre 17h e 6h, com bloqueios em avenidas como Bandeirantes, Hiroshima e Afonso Pena e previsão de substituição de até 100 postes pela Energisa (escala municipal). Em 24 de abril de 2025, a chuva de 88 mm registrada pelo CEMADEN produziu enxurradas que comprometeram avenidas de fundo de vale. A obstrução de vias atrasa o socorro, o deslocamento de equipes de saúde e o acesso a hospitais e UPAs. O fator articula-se a E5-F19, E2-F17, E2-F26 e E4-F21, pois o manejo preventivo da arborização é a medida mais direta para reduzir bloqueios em eventos de vento.",
+      "fontes_citadas": [
+        "CEMADEN"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E5-F19",
+        "E2-F17",
+        "E2-F26",
+        "E4-F21"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F02",
+        "nome_no_documento": "Vias obstruídas e danificadas – vias municipais, estaduais e federais",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F03": {
+      "texto": "Campo Grande é atravessada ou contornada pelas rodovias federais BR-163 e BR-262, corredores de escoamento de grãos, combustíveis, fertilizantes e agroquímicos, e abriga terminais de distribuição de combustíveis, o que configura exposição a acidentes com produtos perigosos em áreas próximas a bairros residenciais. Os registros de acidentes com cargas perigosas no município, mantidos pela Polícia Rodoviária Federal, pelo Corpo de Bombeiros e pelos órgãos ambientais, não foram sistematizados nesta versão e constituem lacuna de informação. O plano de contingência para acidentes com produtos perigosos, previsto no Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais com Produtos Químicos Perigosos, deve ser verificado no âmbito municipal. O fator articula-se a E2-F11, E5-F15, E2-F21 e E2-F33, e a cartografia social pode identificar trechos de tráfego pesado próximos a escolas, unidades de saúde e moradias.",
+      "fontes_citadas": [],
+      "referencias_normativas": [
+        "Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais"
+      ],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F11",
+        "E5-F15",
+        "E2-F21",
+        "E2-F33"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F03",
+        "nome_no_documento": "Acidentes no transporte de produtos perigosos",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F04": {
+      "texto": "O ensino fundamental em Campo Grande apresenta escolarização de 98,07% na faixa de 6 a 14 anos segundo o IBGE Cidades, com referência ao Censo Demográfico de 2010, indicador que deve ser atualizado com os resultados educacionais do Censo 2022. Na Rede Municipal de Ensino, o IDEB dos anos iniciais passou de 5,3 em 2023 para 5,7 na edição seguinte, e o dos anos finais alcançou 4,8, segundo a Prefeitura com base no INEP (escala municipal, rede municipal). O desempenho médio esconde desigualdades entre escolas das regiões centrais e das periféricas, que devem ser analisadas por unidade escolar a partir dos microdados do INEP. A infraestrutura escolar mostrou-se vulnerável a eventos climáticos: 26 escolas municipais tiveram coberturas danificadas no vendaval de setembro de 2026. O fator articula-se a E5-F08, E5-F12, E1-F14 e E4-F07.",
+      "fontes_citadas": [
+        "IBGE Cidades"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2010",
+        "2022",
+        "2023",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E5-F08",
+        "E5-F12",
+        "E1-F14",
+        "E4-F07"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F04",
+        "nome_no_documento": "Educação – ensino primário",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F05": {
-      "texto": "O SENAI, SENAC, SENAR e os Institutos Federais (IFMS) são os principais ofertantes de educação técnica e profissional em Campo Grande, com cursos orientados para as cadeias produtivas do agronegócio, construção civil, serviços e saúde. A FUNSAT opera como equipamento de intermediação de emprego e qualificação profissional para trabalhadores em situação de desemprego ou informalidade, com interface direta com os CRAS nas regiões de maior vulnerabilidade.",
+      "texto": "A educação técnica e profissional em Campo Grande é ofertada pelo Instituto Federal de Mato Grosso do Sul, pelas instituições do Sistema S, como SENAI, SENAC e SENAR, pela rede estadual e por programas municipais de qualificação vinculados à Fundação Social do Trabalho. A oferta concentra-se em cursos alinhados ao setor de serviços, à indústria de alimentos e ao agronegócio. O número de matrículas em educação profissional por instituição e curso, disponível no Censo Escolar do INEP, e a distribuição territorial das unidades ofertantes devem ser incorporados ao diagnóstico, dados não sistematizados nesta versão. A distância entre as unidades de ensino e as regiões periféricas, somada ao custo do transporte (E5-F23), limita o acesso de jovens e mulheres de menor renda. O fator articula-se a E5-F16, E1-F12 e E1-F08, e o plano popular pode orientar a oferta para ocupações com demanda local e para a formação em tecnologias sociais (E5-F10).",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F23",
+        "E5-F16",
+        "E1-F12",
+        "E1-F08",
+        "E5-F10"
+      ],
       "origem": {
-        "codigo_documento": "E5-12",
-        "nome_no_documento": "Educação Técnica e profissional",
-        "eixo_documento": 5,
-        "paragrafo_docx": 228
+        "codigo_documento": "E5-F05",
+        "nome_no_documento": "Educação técnica e profissional",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F06": {
-      "texto": "Campo Grande concentra a maior oferta de educação superior de Mato Grosso do Sul, com UFMS, UCDB, Uniderp, UEMS e instituições privadas. A presença de programas de graduação e pós-graduação em saúde, medicina, enfermagem, odontologia, farmácia, psicologia, é estratégica para a formação de profissionais que alimentam o SUS municipal. A parceria com a Fiocruz Brasília amplia essa capacidade formativa na interface entre pesquisa e gestão em saúde coletiva.",
+      "texto": "Campo Grande concentra a maior oferta de educação superior de Mato Grosso do Sul, com a Universidade Federal de Mato Grosso do Sul, a Universidade Estadual de Mato Grosso do Sul, a Universidade Católica Dom Bosco, o Instituto Federal e instituições privadas, incluindo cursos de graduação e pós-graduação em todas as profissões da saúde. A presença dessas instituições sustenta a formação da força de trabalho do SUS municipal (E2-F16) e a capacidade de pesquisa local (E4-F06). O acesso de estudantes negros, indígenas e de baixa renda depende das políticas de ação afirmativa, das bolsas (E5-F11) e das condições de permanência. Os dados de matrícula por cor ou raça e origem escolar, disponíveis no Censo da Educação Superior do INEP, devem ser incorporados ao diagnóstico. O fator articula-se a E5-F11 e E6-F04, e a extensão universitária é via de articulação com os territórios.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F16",
+        "E4-F06",
+        "E5-F11",
+        "E6-F04"
+      ],
       "origem": {
-        "codigo_documento": "E5-11",
-        "nome_no_documento": "Educação Superior",
-        "eixo_documento": 5,
-        "paragrafo_docx": 226
+        "codigo_documento": "E5-F06",
+        "nome_no_documento": "Educação superior",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F08": {
+      "texto": "A rede pública de educação em Campo Grande compreende a Rede Municipal de Ensino, responsável pela educação infantil e pelo ensino fundamental, e a rede estadual, com predominância no ensino médio. A oferta de vagas em educação infantil é o ponto crítico nas regiões periféricas, com efeito direto sobre o trabalho das mulheres (E1-F07) e o cuidado infantil (E1-F01). O número de matrículas e de estabelecimentos por rede e etapa, disponível no Censo Escolar do INEP, e a demanda manifesta por vagas em creche, registrada pela Secretaria Municipal de Educação, devem compor a série do diagnóstico. O desempenho da rede municipal no IDEB melhorou nos anos iniciais, de 5,3 em 2023 para 5,7 na edição seguinte (Prefeitura com base no INEP). A escola pública é também equipamento de proteção social, alimentação e, potencialmente, abrigo em emergências (E5-F01). O fator articula-se a E5-F04 e E5-F12.",
+      "fontes_citadas": [
+        "Prefeitura com base no INEP"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E1-F07",
+        "E1-F01",
+        "E5-F01",
+        "E5-F04",
+        "E5-F12"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F08",
+        "nome_no_documento": "Educação pública",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F09": {
-      "texto": "A Educação de Jovens e Adultos (EJA) em Campo Grande atende trabalhadores informais, adultos com trajetória escolar interrompida e idosos que não completaram a educação básica. A alfabetização é condição para o exercício pleno de direitos, acesso a benefícios sociais, letramento financeiro, uso de serviços de saúde digitalizados, e sua ausência compõe o perfil de vulnerabilidade das famílias mais pobres. A PICAPS, ao adotar o método pedagógico de Paulo Freire, incorpora a alfabetização popular como dimensão transversal da formação de pesquisadores populares.",
-      "fontes_citadas": [],
+      "texto": "A Educação de Jovens e Adultos em Campo Grande é ofertada pelas redes municipal e estadual e atende trabalhadores, mulheres que interromperam os estudos por responsabilidades de cuidado, pessoas idosas e migrantes. A taxa de analfabetismo da população de 15 anos ou mais, disponível no Censo 2022 com recorte municipal, deve ser extraída para dimensionar a demanda potencial, não sistematizada nesta versão. Entre os indígenas residentes na capital, 95% eram alfabetizados segundo o Censo 2022 (IBGE, escala municipal). O analfabetismo funcional limita o acesso a serviços digitalizados, a compreensão de prescrições e orientações de saúde e a participação em espaços de decisão. O fator articula-se a E5-F21, E2-F13 e E6-F07, e a metodologia freireana dos Círculos de Cultura da PICAPS tem afinidade direta com a alfabetização popular, o que permite integrar formação de pesquisadores populares e elevação de escolaridade.",
+      "fontes_citadas": [
+        "IBGE, escala municipal",
+        "Censo 2022"
+      ],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E5-F21",
+        "E2-F13",
+        "E6-F07"
+      ],
       "origem": {
-        "codigo_documento": "E5-10",
-        "nome_no_documento": "Alfabetização, EJA",
-        "eixo_documento": 5,
-        "paragrafo_docx": 224
+        "codigo_documento": "E5-F09",
+        "nome_no_documento": "Alfabetização – EJA",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F10": {
+      "texto": "A formação em tecnologias sociais em Campo Grande ocorre principalmente em programas de extensão universitária, organizações da sociedade civil e movimentos sociais rurais, sem oferta regular na rede pública de educação profissional. A formação de moradores para construir e manter cisternas, sistemas de reúso, hortas, biodigestores, coberturas mais resistentes e soluções de drenagem de baixo custo amplia a autonomia comunitária e gera oportunidades de trabalho. A experiência dos eventos extremos de 2025 e 2026 confere urgência à formação em técnicas de adaptação e reconstrução (E4-F10). A inexistência de dados sobre cursos e egressos nessa área constitui lacuna de informação. O fator articula-se a E4-F05, E4-F24, E1-F09 e E5-F16, e o plano popular pode associar a formação de pesquisadores populares à formação técnica em tecnologias sociais prioritárias para cada território.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F10",
+        "E4-F05",
+        "E4-F24",
+        "E1-F09",
+        "E5-F16"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F10",
+        "nome_no_documento": "Formação em tecnologias sociais",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F11": {
-      "texto": "O PROUNI, o FIES e as bolsas universitárias estaduais são os principais mecanismos de acesso ao ensino superior privado para estudantes de baixa renda em Campo Grande. O acesso ao ProUni cresceu na última década, mas a permanência dos estudantes, condicionada por renda, transporte e tempo disponível, é o gargalo principal. Estudantes indígenas e negros têm acesso adicional pelas políticas de ação afirmativa, mas com suporte institucional insuficiente para garantir a conclusão dos cursos.",
+      "texto": "As bolsas de estudo acessíveis a estudantes de Campo Grande incluem o Programa Universidade para Todos e o Fundo de Financiamento Estudantil para o ensino superior privado, as bolsas de permanência das instituições públicas, inclusive a Bolsa Permanência para estudantes indígenas e quilombolas, e o programa federal de incentivo à permanência no ensino médio. O número de bolsistas residentes no município por programa, disponível nos sistemas do Ministério da Educação, deve ser incorporado ao diagnóstico, não sistematizado nesta versão. A permanência estudantil depende não apenas do custeio da mensalidade, mas de transporte, alimentação e moradia, especialmente para estudantes indígenas e de baixa renda. O fator articula-se a E5-F06, E5-F05 e E3-F18, e seu efeito sobre a redução de desigualdades raciais na escolarização superior é indicador relevante para o planejamento.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F06",
+        "E5-F05",
+        "E3-F18"
+      ],
       "origem": {
-        "codigo_documento": "E5-15",
+        "codigo_documento": "E5-F11",
         "nome_no_documento": "Bolsas de estudo",
-        "eixo_documento": 5,
-        "paragrafo_docx": 234
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F12": {
-      "texto": "A qualificação do corpo docente da rede municipal de ensino de Campo Grande apresenta variação entre escolas da área central e das periferias. A rotatividade de professores nas escolas de regiões de maior vulnerabilidade, associada a condições de trabalho mais difíceis, distância e infraestrutura, compromete a continuidade pedagógica e os resultados do IDEB nessas regiões.",
-      "fontes_citadas": [],
+      "texto": "A qualificação dos professores em Campo Grande é medida pelo indicador de adequação da formação docente do INEP, que expressa a proporção de disciplinas ministradas por professores com formação específica, e pela proporção de docentes com pós-graduação, dados disponíveis por escola e rede no Censo Escolar e não sistematizados nesta versão. A rotatividade docente nas escolas das regiões periféricas, associada à distância, às condições de trabalho e à insegurança (E2-F27), compromete a continuidade pedagógica. A formação dos professores para a educação para as relações étnico-raciais, a educação escolar indígena e a educação em riscos e clima (E4-F11) é dimensão qualitativa do fator. A melhora do IDEB dos anos iniciais na rede municipal, de 5,3 em 2023 para 5,7 na edição seguinte (Prefeitura com base no INEP), sugere efeito de investimentos pedagógicos. O fator articula-se a E5-F04 e E5-F08.",
+      "fontes_citadas": [
+        "Prefeitura com base no INEP"
+      ],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2023"
+      ],
+      "fatores_relacionados": [
+        "E2-F27",
+        "E4-F11",
+        "E5-F04",
+        "E5-F08"
+      ],
       "origem": {
-        "codigo_documento": "E5-14",
+        "codigo_documento": "E5-F12",
         "nome_no_documento": "Professores qualificados",
-        "eixo_documento": 5,
-        "paragrafo_docx": 232
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F13": {
-      "texto": "A cobertura de energia elétrica em Campo Grande é praticamente universal na área urbana consolidada, com o programa Luz para Todos cobrindo os remanescentes rurais. Contudo, a qualidade do fornecimento, com interrupções frequentes e tensão instável em bairros periféricos, afeta domicílios com eletrodomésticos essenciais para armazenamento de alimentos e medicamentos termossensíveis, como insulina. As aldeias indígenas urbanas relatam problemas de regularização das instalações elétricas por ausência de documentação fundiária.",
-      "fontes_citadas": [],
+      "texto": "O acesso à energia elétrica em Campo Grande é praticamente universal nas áreas urbanas regularizadas, sob concessão da Energisa, com cobertura residual a completar na zona rural e em ocupações irregulares e aldeias urbanas, onde a ausência de titulação dificulta ligações formais. A fragilidade principal é a continuidade: o vendaval de 10 de setembro de 2026 deixou mais de 300 mil pessoas sem energia, cerca de um terço da população estimada de 970.843 habitantes (IBGE, 2026), com 82% dos clientes restabelecidos até a tarde do dia seguinte segundo a concessionária. Os indicadores de continuidade do fornecimento por conjunto elétrico, publicados pela ANEEL, devem ser incorporados ao diagnóstico. A interrupção afeta conservação de medicamentos e alimentos, equipamentos de saúde domiciliares e abastecimento de água bombeada. O fator articula-se a E2-F31, E5-F14, E3-F09 e E1-F25.",
+      "fontes_citadas": [
+        "IBGE, 2026",
+        "concessionária"
+      ],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F31",
+        "E5-F14",
+        "E3-F09",
+        "E1-F25"
+      ],
       "origem": {
-        "codigo_documento": "E5-6",
-        "nome_no_documento": "Acesso aos serviços de Energia",
-        "eixo_documento": 5,
-        "paragrafo_docx": 216
+        "codigo_documento": "E5-F13",
+        "nome_no_documento": "Acesso aos serviços de energia",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F14": {
-      "texto": "Campo Grande avança na geração distribuída de energia solar fotovoltaica, com crescimento expressivo de instalações residenciais e comerciais no setor privado. A SESAU não possui programa sistematizado de energia solar para suas unidades de saúde. A implantação de sistemas fotovoltaicos nas UBS das periferias, que operam em clima de alta irradiação solar, reduziria custos operacionais e garantiria fornecimento de energia em situações de interrupção da rede, aumentando a resiliência dos serviços de saúde a eventos climáticos extremos.",
+      "texto": "A geração de energia solar distribuída cresce em Campo Grande, favorecida pela alta irradiação da região, mas concentra-se em domicílios e empresas com capacidade de investimento. A tarifa social de energia elétrica, destinada a famílias do CadÚnico, é o principal instrumento de acessibilidade econômica, e sua cobertura no município, disponível na ANEEL e no MDS, deve ser verificada. A instalação de sistemas fotovoltaicos com armazenamento em unidades de saúde, escolas e abrigos aumentaria a resiliência desses equipamentos em interrupções como a de setembro de 2026. Programas de geração compartilhada em conjuntos habitacionais e comunidades poderiam reduzir o peso da conta de energia no orçamento das famílias de menor renda. O fator articula-se a E4-F08, E4-F24 e E5-F13, e o diagnóstico registra como lacuna a inexistência de levantamento da geração solar em equipamentos públicos municipais.",
       "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E4-F08",
+        "E4-F24",
+        "E5-F13"
+      ],
       "origem": {
-        "codigo_documento": "E5-7",
-        "nome_no_documento": "Serviços de Energia modernos e sustentáveis",
-        "eixo_documento": 5,
-        "paragrafo_docx": 218
+        "codigo_documento": "E5-F14",
+        "nome_no_documento": "Serviços de energia modernos e sustentáveis",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F15": {
+      "texto": "Os empreendimentos com elevado risco de desastres em Campo Grande incluem barragens urbanas, terminais e depósitos de combustíveis e produtos químicos, plantas industriais e o tráfego de cargas perigosas nas rodovias (E5-F03). A barragem do antigo Clube Atlântico, de responsabilidade privada, foi classificada com risco alto e dano potencial associado alto no Relatório de Segurança de Barragens 2024-2025 da ANA, com cerca de 100 moradores a jusante, e é objeto de inquérito civil da 26ª Promotoria de Justiça do Meio Ambiente; o Lago do Amor, em área densamente ocupada, passou a ter prioridade na gestão de segurança. O Sistema Nacional de Informações sobre Segurança de Barragens da ANA é a fonte para o inventário municipal. O fator articula-se a E2-F33, E2-F37, E2-F26 e E4-F17, e as populações a jusante devem ser incluídas nos planos de alerta e evacuação.",
+      "fontes_citadas": [
+        "Relatório de Segurança de Barragens 2024-2025 da ANA"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2024-2025"
+      ],
+      "fatores_relacionados": [
+        "E5-F03",
+        "E2-F33",
+        "E2-F37",
+        "E2-F26",
+        "E4-F17"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F15",
+        "nome_no_documento": "Empreendimento com elevado risco de desastres",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F16": {
-      "texto": "A educação para o trabalho em Campo Grande precisa incorporar, além das competências técnicas, as dimensões de direitos trabalhistas, saúde do trabalhador e economia solidária. O fator E5-13 articula-se diretamente com o Eixo 1 (formalização, economia solidária, geração de renda) e com o projeto pedagógico da PICAPS, que integra a formação de pesquisadores populares com a produção de conhecimento sobre as condições de trabalho e vida nos territórios.",
+      "texto": "A educação para o trabalho em Campo Grande abrange a intermediação de mão de obra e a qualificação realizadas pela Fundação Social do Trabalho e pelo sistema público de emprego, os cursos do Sistema S e os programas de aprendizagem para jovens. A distância entre o perfil das vagas criadas, concentradas em serviços e comércio, e a qualificação da população das regiões periféricas reduz a efetividade da intermediação. Os dados de inscritos, encaminhados e colocados pelo sistema público de emprego no município devem ser incorporados ao diagnóstico, não sistematizados nesta versão. A formação para o trabalho deve incluir direitos trabalhistas, saúde do trabalhador e economia solidária, ampliando a autonomia dos trabalhadores informais (E1-F28). O fator articula-se a E5-F05, E1-F12, E1-F13 e E5-F10, e o plano popular pode propor formações vinculadas às demandas identificadas na cartografia social.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F28",
+        "E5-F05",
+        "E1-F12",
+        "E1-F13",
+        "E5-F10"
+      ],
       "origem": {
-        "codigo_documento": "E5-13",
-        "nome_no_documento": "Educação para o trabalho",
-        "eixo_documento": 5,
-        "paragrafo_docx": 230
+        "codigo_documento": "E5-F16",
+        "nome_no_documento": "Educação para trabalho",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Educação para o trabalho no documento; educação para trabalho no cadastro."
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F17": {
-      "texto": "A produção e o consumo cultural em Campo Grande são concentrados na região central, com teatros, museus e centros culturais de difícil acesso para as populações periféricas. A cultura indígena Terena, com expressões em artesanato, língua, música e rituais, é invisibilizada no espaço urbano, sem política municipal de valorização e difusão que contrabalance o processo de apagamento cultural documentado nas aldeias urbanas. O diagnóstico de agosto de 2025 que posiciona Campo Grande como a pior capital do país em acesso à cultura é um indicador objetivo da gravidade desse déficit.",
+      "texto": "A promoção da cultura em Campo Grande é conduzida pela fundação municipal de cultura, pela fundação estadual e por coletivos culturais, com equipamentos concentrados na região central, como teatros, a Plataforma Cultural e o Armazém Cultural na Esplanada Ferroviária, este destelhado no vendaval de setembro de 2026. A política cultural tem baixa capilaridade nas regiões periféricas e reconhecimento limitado das expressões culturais indígenas, quilombolas e populares. O orçamento municipal da função cultura, consultável no portal de transparência, e o número de projetos apoiados por região devem ser incorporados ao diagnóstico. A cultura é determinante de saúde mental, coesão comunitária e identidade, e sua ausência agrava o isolamento de jovens e idosos. O fator articula-se a E5-F18, E5-F29, E3-F18 e E5-F25, e o plano popular pode priorizar o apoio a grupos culturais já atuantes nos territórios.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E5-F18",
+        "E5-F29",
+        "E3-F18",
+        "E5-F25"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F17",
+        "nome_no_documento": "Promoção de cultura",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F18": {
+      "texto": "Campo Grande obteve o pior índice cultural entre as capitais brasileiras em pesquisa do Ministério da Cultura divulgada em agosto de 2025, com posições inferiores em 14 indicadores de acesso e consumo cultural, incluindo livros, cinema, espetáculos musicais e festas populares (G1, 2025, escala das capitais). O resultado expressa a concentração de equipamentos na região central, o custo de acesso, a oferta reduzida de programação gratuita nos bairros e a baixa integração entre cultura, educação e assistência. O acesso à cultura é marcadamente desigual por renda e território, padrão que deve ser verificado pela cartografia social. O fator articula-se a E5-F17, E5-F25, E5-F27 e E5-F28, e o plano popular pode propor circuitos culturais descentralizados, uso das escolas nos fins de semana e apoio a festas e expressões comunitárias, com efeitos sobre convivência, saúde mental e prevenção da violência.",
       "fontes_citadas": [
-        "diagnóstico de agosto de 2025"
+        "G1, 2025, escala das capitais",
+        "pesquisa do Ministério da Cultura divulgada em agosto de 2025"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
         "2025"
       ],
+      "fatores_relacionados": [
+        "E5-F17",
+        "E5-F25",
+        "E5-F27",
+        "E5-F28"
+      ],
       "origem": {
-        "codigo_documento": "E5-20",
-        "nome_no_documento": "Promoção de cultura",
-        "eixo_documento": 5,
-        "paragrafo_docx": 244
+        "codigo_documento": "E5-F18",
+        "nome_no_documento": "Acesso à cultura",
+        "eixo_documento": 5
       },
       "correspondencia": {
         "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
     "E5-F19": {
-      "texto": "Campo Grande é polo logístico do Centro-Oeste, com convergência das rodovias federais BR-163, BR-262 e BR-060. Internamente, o sistema viário é radial, centrado no Centro Histórico, com insuficiência de vias perimetrais que permitam mobilidade entre periferias sem passar pelo centro. Essa estrutura viária produz congestionamentos, aumenta o tempo de deslocamento das populações periféricas para os serviços de saúde especializados e dificulta a logística das equipes de saúde nas visitas domiciliares.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-4",
-        "nome_no_documento": "Sistema viário, vias municipais, estaduais e federais",
-        "eixo_documento": 5,
-        "paragrafo_docx": 212
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F20": {
-      "texto": "A infraestrutura urbana de Campo Grande apresenta vulnerabilidades climáticas identificadas: sistemas de drenagem pluvial insuficientes nas periferias, provocando enchentes anuais; arborização viária insuficiente, contribuindo para ilhas de calor; e pavimentação de baixa permeabilidade que intensifica o escoamento superficial. A incorporação de critérios de resiliência climática, infraestrutura verde, pavimentos permeáveis, parques lineares como corredores de drenagem, é uma agenda emergente que o Plano Diretor revisado deveria incorporar sistematicamente.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-3",
-        "nome_no_documento": "Infraestrutura sustentável e resiliente",
-        "eixo_documento": 5,
-        "paragrafo_docx": 210
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F21": {
-      "texto": "O acesso à internet em Campo Grande tem cobertura expressiva na área urbana consolidada, mas com digitalização desigual entre estratos sociais. As famílias de menor renda nas periferias acessam a internet predominantemente pelo celular em planos de dados limitados, sem acesso a computadores ou conexões fixas de alta qualidade. Essa brecha digital limita o acesso a serviços governamentais digitalizados, à telemedicina e a plataformas de educação à distância, exacerbando desigualdades existentes. As aldeias indígenas urbanas apresentam conectividade especialmente precária.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-8",
-        "nome_no_documento": "Acesso a tecnologias de informação e comunicação",
-        "eixo_documento": 5,
-        "paragrafo_docx": 220
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta Acesso a; o fator E5-F21 passou a ser Tecnologias de informação e comunicação na versão 2.0.0. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
-      }
-    },
-    "E5-F22": {
-      "texto": "O déficit habitacional em Campo Grande concentra-se nas periferias Sul e Leste, onde famílias de baixa renda habitam domicílios precários em loteamentos irregulares, sem documentação fundiária e sem infraestrutura básica. O Programa Minha Casa Minha Vida entregou unidades habitacionais em Campo Grande nas últimas décadas, mas sem integração com serviços de saúde, educação e transporte que garantam habitabilidade plena. As aldeias indígenas urbanas apresentam as condições habitacionais mais precárias do município: construções improvisadas, superlotação e ausência de saneamento diferenciado.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-1",
-        "nome_no_documento": "Habitação",
-        "eixo_documento": 5,
-        "paragrafo_docx": 206
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F23": {
-      "texto": "O transporte público coletivo de Campo Grande é operado pelo consórcio Transcol em sistema de ônibus urbanos, com frota e frequência insuficientes nas rotas periféricas das regiões Sul e Leste. As populações dessas regiões dependem de mais de uma condução para acessar UBS de referência, hospitais e equipamentos de assistência social no centro ou em outras regiões. A ausência de ciclovias e calçadas em condições nas periferias torna a mobilidade ativa, a pé e de bicicleta, insegura, com impacto sobre a atividade física e sobre a acessibilidade a serviços.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-5",
-        "nome_no_documento": "Transportes seguros",
-        "eixo_documento": 5,
-        "paragrafo_docx": 214
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F24": {
-      "texto": "A urbanização de Campo Grande avançou de forma heterogênea: centro e regiões Norte/Oeste com infraestrutura consolidada e qualidade urbana; periferias Sul/Leste com urbanização incompleta, vias sem pavimentação, ausência de calçadas e equipamentos públicos insuficientes. O Plano Diretor (LC nº 74/2006 e revisões) define o Macrozoneamento, mas a implementação das exigências de infraestrutura mínima nos novos loteamentos é frequentemente negociada com redução de padrões. O Censo 2022 confirmou o esvaziamento do Centro Histórico, queda de 13,21% da população entre 2010 e 2022, enquanto as periferias cresceram, evidenciando o padrão de segregação socioespacial estruturante.",
-      "fontes_citadas": [
-        "Censo 2022"
-      ],
-      "referencias_normativas": [
-        "Plano Diretor (LC nº 74/2006 e revisões)"
-      ],
-      "periodos_citados": [
-        "2006",
-        "2022",
-        "2010"
-      ],
-      "origem": {
-        "codigo_documento": "E5-2",
-        "nome_no_documento": "Urbanização e infraestrutura",
-        "eixo_documento": 5,
-        "paragrafo_docx": 208
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F26": {
-      "texto": "O acesso a espaços esportivos de qualidade em Campo Grande é assimétrico: quadras, ginásios e academias ao ar livre concentram-se em bairros consolidados das regiões Norte e Oeste, enquanto as periferias Sul e Leste têm cobertura insuficiente. A ausência de espaços esportivos seguros e acessíveis nas periferias é determinante de sedentarismo, obesidade e doenças crônicas na população jovem dessas regiões, impacto documentado pelos indicadores do VIGITEL para capitais do Centro-Oeste.",
-      "fontes_citadas": [
-        "VIGITEL"
-      ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-18",
-        "nome_no_documento": "Esportes",
-        "eixo_documento": 5,
-        "paragrafo_docx": 240
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F27": {
-      "texto": "A distribuição de bibliotecas públicas em Campo Grande é desigual: as bibliotecas de maior acervo e estrutura concentram-se na área central e nas universidades, enquanto as regiões periféricas Sul e Leste têm cobertura precária. A biblioteca é um equipamento de promoção da saúde que vai além da leitura: é espaço de cultura, sociabilidade e acesso à informação. A PICAPS reconhece nas práticas culturais e educativas dos territórios uma potencialidade a ser qualificada.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-17",
-        "nome_no_documento": "Biblioteca",
-        "eixo_documento": 5,
-        "paragrafo_docx": 238
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F28": {
-      "texto": "Os equipamentos de lazer público em Campo Grande, parques, praças, centros comunitários, têm distribuição territorial heterogênea. O Parque das Nações Indígenas e os parques lineares dos córregos são os espaços de lazer de maior acesso para a população, mas geograficamente favoráveis às regiões centrais. As periferias carecem de espaços de lazer seguros, bem iluminados e com atividades programadas que promovam saúde e reduzam a vulnerabilidade de jovens à violência.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-19",
-        "nome_no_documento": "Lazer",
-        "eixo_documento": 5,
-        "paragrafo_docx": 242
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E5-F29": {
-      "texto": "Os saberes e práticas locais das comunidades periféricas e indígenas de Campo Grande, incluindo o uso de plantas medicinais, as técnicas de produção de alimentos, as práticas espirituais de cura e os métodos de manejo ambiental, são ativos epistemológicos que a Pedagogia da Práxis no Território da PICAPS reconhece e valoriza como ponto de partida do processo de investigação. A cartografia social é o instrumento que torna esses saberes visíveis, registráveis e integráveis ao planejamento em saúde sem perder sua natureza coletiva e territorial.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-21",
-        "nome_no_documento": "Experiências das comunidades, saberes e práticas locais",
-        "eixo_documento": 5,
-        "paragrafo_docx": 246
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Experiências das comunidades, saberes e práticas locais no documento; valorização dos saberes e práticas locais no cadastro."
-      }
-    },
-    "E6-F02": {
-      "texto": "As redes de mobilização comunitária em Campo Grande incluem associações de moradores, grupos de mulheres, movimentos indígenas urbanos, organizações de catadores e coletivos de juventude nas periferias. Os pesquisadores populares PICAPS são o elo operacional entre essas redes e o ciclo de planejamento participativo: são eles que conduzem os Círculos de Cultura, coletam as inscrições da cartografia social e garantem que a voz das comunidades entre no processo técnico sem perder sua autoria.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-2",
-        "nome_no_documento": "Estratégias de mobilização, redes e grupos organizados",
-        "eixo_documento": 6,
-        "paragrafo_docx": 253
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Estratégias de mobilização, redes e grupos organizados no documento; Mobilização de redes e grupos organizados no cadastro. O fator de nome idêntico (E6-F14) foi retirado na versão 2.0.0. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
-      }
-    },
-    "E6-F06": {
-      "texto": "O crime organizado em Campo Grande, com expressão no tráfico de drogas, no tráfico de armas e na exploração sexual, é um determinante de saúde que condiciona a segurança das periferias, a vulnerabilidade de jovens e a capacidade das equipes de saúde de operar nos territórios de maior risco. A SESAU e as equipes de APS que atuam em bairros com alta incidência de violência armada desenvolvem estratégias de segurança operacional, visitas em duplas, articulação com a Defesa Social, que não estão protocoladas formalmente, mas são práticas cotidianas de gestão de risco.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-9",
-        "nome_no_documento": "Combate ao crime organizado e armas ilegais",
-        "eixo_documento": 6,
-        "paragrafo_docx": 267
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta e armas ilegais."
-      }
-    },
-    "E6-F07": {
-      "texto": "O controle social do SUS em Campo Grande é exercido pelo Conselho Municipal de Saúde (CMS), com representação de usuários, trabalhadores e gestores, e pelas Conferências Municipais de Saúde. A efetividade desse controle, entendida como capacidade real de influenciar decisões orçamentárias e programáticas, é o indicador qualitativo central do Eixo 6. A PICAPS, ao capacitar pesquisadores populares e produzir diagnósticos com base em evidências territoriais, amplia a capacidade técnica da participação social, tornando-a mais qualificada para disputar a agenda do planejamento em saúde.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-1",
-        "nome_no_documento": "Tomada de decisão responsiva, inclusiva e participativa",
-        "eixo_documento": 6,
-        "paragrafo_docx": 251
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O nome no documento está contido em E6-F07 Participação social na tomada de decisão responsiva, inclusiva e participativa. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
-      }
-    },
-    "E6-F08": {
-      "texto": "A corrupção nos processos de licitação, contratação e repasse de recursos públicos na saúde é um determinante estrutural da ineficiência e inefetividade dos serviços. Em Campo Grande, o controle social exercido pelo CMS, o trabalho do Ministério Público Estadual e da Controladoria-Geral do Município são os mecanismos formais de combate à corrupção. A transparência ativa (E6-07) e a participação qualificada da sociedade civil nos processos de planejamento e avaliação são as respostas preventivas mais eficazes, pois reduzem as assimetrias de informação que facilitam práticas corruptas.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-6",
-        "nome_no_documento": "Corrupção e suborno",
-        "eixo_documento": 6,
-        "paragrafo_docx": 261
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento omite (em todos os níveis)."
-      }
-    },
-    "E6-F09": {
-      "texto": "A transparência ativa da SESAU Campo Grande é exercida por meio do Portal da Transparência municipal, dos Relatórios Anuais de Gestão apreciados pelo CMS e dos dados publicados no DATASUS e e-Gestor. A qualidade e a acessibilidade desses dados para o público geral, e especialmente para as comunidades e pesquisadores populares, é ainda insuficiente: dados publicados em formatos não interoperáveis, sem visualização territorial e sem interface compreensível para não especialistas. A PICAPS pode atuar como mediadora, traduzindo dados técnicos em informações utilizáveis pelos pesquisadores populares nos Círculos de Cultura.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-7",
-        "nome_no_documento": "Transparência ativa das instituições",
-        "eixo_documento": 6,
-        "paragrafo_docx": 263
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Transparência ativa das instituições no documento; instituições públicas e privadas em todos os níveis (transparência ativa) no cadastro."
-      }
-    }
-  },
-  "pendentes_validacao": [
-    {
-      "texto": "O ecossistema de inovação de Campo Grande articula UFMS, UCDB, Uniderp e instituições como SEBRAE e SENAI em torno de um polo tecnológico em consolidação. A Secretaria Municipal de Inovação, Desenvolvimento Econômico e Agronegócio (SIDAGRO) monitora indicadores de abertura de empresas e geração de emprego formal com periodicidade mensal. O desafio é que o empreendedorismo de necessidade, trabalhadores que abrem MEI por ausência de vínculo formal, não por oportunidade, constitui parcela expressiva do crescimento de novas empresas nas regiões periféricas, sem que isso represente melhoria real das condições de vida.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E1-13",
-        "nome_no_documento": "Empreendedorismo, criatividade e inovação",
-        "eixo_documento": 1,
-        "paragrafo_docx": 35
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "qualificador divergente",
-        "candidatos": [
-          "E1-F09"
-        ],
-        "motivo": "O cadastro tem Empreendedorismo solidário, criatividade e inovação. O texto do documento trata do ecossistema de empreendedorismo e inovação em geral (incluindo o empreendedorismo de necessidade), sem o recorte solidário."
-      }
-    },
-    {
-      "texto": "O acesso a medicamentos na APS é assegurado pela Farmácia Básica das UBS, com distribuição de itens do Componente Básico da Assistência Farmacêutica. A CAFE (Farmácia Especializada Estadual) em Campo Grande registrou repasse federal de R$ 12,7 milhões nos primeiros oito meses de 2025, indicando escala relevante de dispensação de medicamentos de alto custo. A cobertura vacinal, após a queda pós-pandemia, está em processo de recuperação com campanhas de busca ativa pelos ACS. A vacina contra dengue foi incorporada ao calendário do SUS em 2024, ampliando a estratégia de controle das arboviroses no município.",
+      "texto": "Campo Grande é entroncamento das rodovias federais BR-163, BR-262 e BR-060, com função logística regional, e possui malha viária urbana radial convergente para o centro, com avenidas estruturais em fundos de vale e deficiência de ligações perimetrais entre as regiões periféricas. Essa estrutura alonga os deslocamentos entre bairros, concentra o tráfego no centro e torna as avenidas de fundo de vale vulneráveis a enxurradas, como em abril de 2025. A extensão de vias pavimentadas por região e a proporção de domicílios em vias com pavimentação, calçada e drenagem, disponíveis no Censo 2022 (entorno dos domicílios), devem ser incorporadas ao diagnóstico, não sistematizadas nesta versão. O fator articula-se a E5-F02, E5-F23, E2-F11 e E2-F15, pois a acessibilidade viária determina o tempo de resposta do SAMU e o acesso aos serviços de saúde.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
         "2025",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E5-F02",
+        "E5-F23",
+        "E2-F11",
+        "E2-F15"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F19",
+        "nome_no_documento": "Sistema viário – vias municipais, estaduais e federais",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F20": {
+      "texto": "A infraestrutura urbana de Campo Grande apresentou vulnerabilidades evidentes nos eventos extremos recentes. O vendaval de 10 de setembro de 2026 derrubou postes e árvores, interrompeu a energia de mais de 300 mil pessoas, desligou semáforos e danificou escolas, unidades de saúde e equipamentos culturais; os alagamentos de abril de 2025 revelaram a insuficiência da drenagem em fundos de vale. A rede elétrica aérea, a arborização sem manejo e a drenagem dimensionada para chuvas de menor intensidade são os pontos críticos. O decreto de situação de emergência autorizou o uso da contribuição de iluminação pública na recuperação, abrindo espaço para incorporar critérios de resiliência à reconstrução (E4-F10). O fator articula-se a E4-F07, E4-F12, E5-F13 e E2-F17, e o plano popular deve priorizar a resiliência das infraestruturas críticas de saúde, educação, energia e drenagem.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E4-F10",
+        "E4-F07",
+        "E4-F12",
+        "E5-F13",
+        "E2-F17"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F20",
+        "nome_no_documento": "Infraestrutura sustentável e resiliente",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F21": {
+      "texto": "O acesso a tecnologias de informação e comunicação em Campo Grande é amplo pela telefonia móvel, mas desigual em qualidade de conexão, disponibilidade de computadores e habilidades digitais entre regiões e grupos sociais, padrão a ser quantificado com os dados de acesso à internet do Censo 2022 e da ANATEL por município, não sistematizados nesta versão. A digitalização de serviços públicos, como agendamento de consultas, acesso ao CadÚnico e serviços previdenciários, aprofunda a exclusão de idosos, pessoas com baixa escolaridade e indígenas com conectividade precária. Em emergências, o celular é o principal canal de alertas e informação (E2-F37, E6-F11), mas depende de energia, sinal e crédito, afetados em eventos como o de setembro de 2026. O fator articula-se a E5-F09, E3-F04 e E6-F11, e o plano popular pode prever pontos comunitários de acesso e formação digital.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F37",
+        "E6-F11",
+        "E5-F09",
+        "E3-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F21",
+        "nome_no_documento": "Tecnologias de informação e comunicação",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F22": {
+      "texto": "A habitação em Campo Grande combina expansão horizontal por loteamentos periféricos, conjuntos habitacionais de interesse social, ocupações irregulares e aldeias urbanas indígenas. O déficit habitacional municipal, estimado pela Fundação João Pinheiro, e a proporção de domicílios em favelas e comunidades urbanas do Censo 2022 devem ser incorporados ao diagnóstico, não sistematizados nesta versão. Segundo o Censo 2022, 89% dos indígenas residentes na capital moravam em casas de alvenaria (IBGE, escala municipal), o que não informa sobre adensamento, segurança da posse e acesso a serviços. A triplicação da população em situação de rua entre 2018 e 2025 indica a pressão do custo da moradia sobre famílias de baixa renda (E3-F14). O fator articula-se a E5-F24, E3-F19, E3-F05 e E4-F07, e o plano popular deve associar regularização fundiária, melhorias habitacionais e adaptação climática.",
+      "fontes_citadas": [
+        "IBGE, escala municipal",
+        "Censo 2022"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2022",
+        "2018",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E3-F14",
+        "E5-F24",
+        "E3-F19",
+        "E3-F05",
+        "E4-F07"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F22",
+        "nome_no_documento": "Habitação",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F23": {
+      "texto": "O transporte coletivo de Campo Grande é operado pelo Consórcio Guaicurus em regime de concessão, com sistema de terminais e linhas troncais e alimentadoras. As queixas recorrentes de usuários e do controle social referem-se à frequência insuficiente, à superlotação nos horários de pico, à idade da frota e ao valor da tarifa, com efeito desproporcional sobre trabalhadores das regiões periféricas, que dependem de integração para chegar ao centro e às unidades de saúde especializadas. Os indicadores de passageiros transportados, frota, idade média e acessibilidade, disponíveis na agência municipal de transporte, devem ser incorporados ao diagnóstico. A segurança no transporte inclui acidentes, assédio contra mulheres e condições de espera em pontos sem abrigo nem iluminação (E5-F30). O fator articula-se a E5-F19, E2-F15, E1-F12 e E3-F11.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F30",
+        "E5-F19",
+        "E2-F15",
+        "E1-F12",
+        "E3-F11"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F23",
+        "nome_no_documento": "Transportes seguros",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F24": {
+      "texto": "A urbanização de Campo Grande, com 898.100 habitantes no Censo 2022 e densidade de 111,11 habitantes por km² em área de 8.082,33 km² (IBGE, escala municipal), produziu cidade horizontal e dispersa, com vazios urbanos em áreas centrais e expansão periférica de menor infraestrutura. O Censo 2022 mostrou redução da população da região central, de 71.037 para 61.653 moradores entre 2010 e 2022, enquanto as periferias cresceram. O Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018) estabelece zoneamento e instrumentos de função social da propriedade cuja aplicação deve ser avaliada. As características do entorno dos domicílios no Censo 2022, como pavimentação, calçada, iluminação, arborização e bueiros, permitem comparar regiões e devem ser extraídas por setor censitário. O fator articula-se a E5-F22, E2-F01, E3-F17 e E5-F20 e é determinante transversal das desigualdades de saúde.",
+      "fontes_citadas": [
+        "IBGE, escala municipal",
+        "Censo 2022"
+      ],
+      "referencias_normativas": [
+        "Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018)"
+      ],
+      "periodos_citados": [
+        "2022",
+        "2010",
+        "2018"
+      ],
+      "fatores_relacionados": [
+        "E5-F22",
+        "E2-F01",
+        "E3-F17",
+        "E5-F20"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F24",
+        "nome_no_documento": "Urbanização e infraestrutura",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F25": {
+      "texto": "Os equipamentos públicos de lazer e cultura seguros em Campo Grande concentram-se em parques de grande porte, como o Parque das Nações Indígenas e os parques lineares, e na região central, com oferta escassa e manutenção irregular de praças, quadras e centros comunitários nas regiões periféricas. A segurança desses espaços depende de iluminação (E5-F30), manutenção e ocupação comunitária, e sua ausência reduz o uso por mulheres, crianças e idosos. O vendaval de 2026 danificou equipamentos culturais centrais, como o Armazém Cultural e a Plataforma Cultural, evidenciando também sua vulnerabilidade física. O inventário de equipamentos de lazer, esporte e cultura por região urbana, a ser elaborado com a prefeitura e a cartografia social, é lacuna do diagnóstico. O fator articula-se a E5-F18, E5-F26, E5-F28 e E2-F27, e a ocupação qualificada desses espaços é estratégia de prevenção da violência.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E5-F30",
+        "E5-F18",
+        "E5-F26",
+        "E5-F28",
+        "E2-F27"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F25",
+        "nome_no_documento": "Equipamentos públicos de lazer e cultura seguros",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F26": {
+      "texto": "O acesso ao esporte em Campo Grande depende de equipamentos públicos como ginásios, quadras e academias ao ar livre, de programas municipais e estaduais de iniciação esportiva e de projetos sociais, com distribuição desigual entre regiões. A prática de atividade física no lazer, monitorada para o conjunto das capitais pelo VIGITEL do Ministério da Saúde, tem relação com a prevenção de doenças crônicas (E2-F09) e com a saúde mental (E2-F18). Os indicadores do VIGITEL para Campo Grande, como prevalência de atividade física suficiente no lazer e de excesso de peso, devem ser extraídos da edição mais recente, não sistematizados nesta versão. A oferta de esporte para jovens nas regiões periféricas é também estratégia de prevenção da violência e do uso de drogas. O fator articula-se a E5-F25, E5-F28 e E2-F27, e as academias da saúde vinculadas à APS são ponto de integração entre esporte e cuidado.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E2-F09",
+        "E2-F18",
+        "E5-F25",
+        "E5-F28",
+        "E2-F27"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F26",
+        "nome_no_documento": "Esportes",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F27": {
+      "texto": "As bibliotecas públicas de Campo Grande concentram-se na região central e nas instituições de ensino superior, com cobertura reduzida nas regiões periféricas, onde as bibliotecas escolares são o principal acesso a livros. O resultado da pesquisa do Ministério da Cultura de 2025, que colocou a capital em último lugar entre as capitais em índice cultural, inclui o acesso a livros entre os indicadores avaliados (G1, 2025). O número de bibliotecas públicas e comunitárias por região, seu horário de funcionamento e acervo devem ser inventariados, lacuna desta versão. Bibliotecas comunitárias mantidas por associações e coletivos podem ampliar o acesso com baixo custo. O fator articula-se a E5-F18, E5-F09 e E5-F21, e a biblioteca pode funcionar como espaço de encontro, acesso digital e informação em saúde nos territórios, inclusive como ponto de referência para a comunicação comunitária.",
+      "fontes_citadas": [
+        "G1, 2025",
+        "pesquisa do Ministério da Cultura de 2025"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E5-F18",
+        "E5-F09",
+        "E5-F21"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F27",
+        "nome_no_documento": "Biblioteca",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F28": {
+      "texto": "O lazer em Campo Grande é desigualmente distribuído: os parques urbanos de maior porte, como o Parque das Nações Indígenas, concentram a oferta gratuita de lazer ao ar livre, enquanto as regiões periféricas dispõem de poucas praças equipadas e seguras. As restrições de tempo impostas por jornadas extensas e longos deslocamentos (E1-F18, E5-F23), a sobrecarga de cuidado das mulheres (E1-F07) e a insegurança (E2-F27) reduzem o tempo e as oportunidades de lazer. O lazer tem efeitos documentados sobre saúde mental, convivência comunitária e envelhecimento ativo. Na ausência de inquérito municipal sobre uso do tempo e práticas de lazer, a cartografia social é a fonte para identificar espaços usados, demandas e barreiras. O fator articula-se a E5-F25, E5-F26, E2-F18 e E2-F19, e a qualificação de áreas verdes recuperadas em fundos de vale (E4-F25) pode ampliar a oferta de lazer onde ela é mais escassa.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E1-F18",
+        "E5-F23",
+        "E1-F07",
+        "E2-F27",
+        "E5-F25",
+        "E5-F26",
+        "E2-F18",
+        "E2-F19",
+        "E4-F25"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F28",
+        "nome_no_documento": "Lazer",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F29": {
+      "texto": "Os saberes e práticas locais de Campo Grande incluem as tradições Terena e de outros povos indígenas, as expressões culturais das comunidades quilombolas urbanas, como a festa de São Benedito da comunidade Tia Eva, a culinária e as práticas de cuidado de origem pantaneira, paraguaia e nordestina, e o conhecimento dos moradores sobre o próprio território. Esses saberes são pouco reconhecidos pelas políticas públicas, que tendem a tratá-los como folclore e não como conhecimento. A valorização dos saberes locais é princípio metodológico da Pedagogia da Práxis no Território, que parte do universo temático das comunidades para construir o conhecimento sobre o território. O fator articula-se a E4-F18, E4-F03, E3-F18 e E5-F17, e o plano popular pode prever registro, transmissão intergeracional e integração desses saberes à escola, à APS e às estratégias de adaptação climática.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E4-F18",
+        "E4-F03",
+        "E3-F18",
+        "E5-F17"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F29",
+        "nome_no_documento": "Valorização dos saberes e práticas locais",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E5-F30": {
+      "texto": "A iluminação pública em Campo Grande é financiada pela contribuição de iluminação pública cobrada na conta de energia e gerida pela prefeitura, com programas de substituição por tecnologia LED em andamento. A cobertura e a manutenção são desiguais entre regiões, e a cartografia social é a fonte para identificar trechos escuros em rotas de pedestres, pontos de ônibus, praças e acessos a unidades de saúde e escolas. O decreto de situação de emergência de setembro de 2026 autorizou o uso da contribuição de iluminação pública na recuperação da infraestrutura danificada pelo vendaval, dentro dos limites constitucionais de sua finalidade. A proporção de domicílios com iluminação pública no entorno, disponível no Censo 2022, deve ser extraída por setor censitário. O fator articula-se a E2-F27, E5-F23, E5-F25 e E3-F02, pois a iluminação é condição de segurança para mulheres e de uso noturno dos espaços públicos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026",
+        "2022"
+      ],
+      "fatores_relacionados": [
+        "E2-F27",
+        "E5-F23",
+        "E5-F25",
+        "E3-F02"
+      ],
+      "origem": {
+        "codigo_documento": "E5-F30",
+        "nome_no_documento": "Acesso a iluminação pública",
+        "eixo_documento": 5
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F01": {
+      "texto": "As associações de moradores e lideranças locais de Campo Grande constituem rede extensa, mas heterogênea em atividade e representatividade, que inclui associações de bairro, lideranças das aldeias urbanas indígenas e das comunidades quilombolas, conselhos locais de saúde e grupos ligados a igrejas e movimentos de moradia. O registro dessas organizações não está consolidado em base pública municipal, e sua capacidade de mobilização varia entre regiões, o que constitui lacuna que a cartografia social deve suprir com inventário de organizações, lideranças e pautas por território. Nos eventos extremos de 2025 e 2026, lideranças locais atuaram na identificação de famílias atingidas e na mobilização de ajuda, função não reconhecida formalmente nos planos de contingência. O fator articula-se a E6-F02, E6-F07, E1-F17 e E2-F32, e o plano popular deve reconhecer essas lideranças como interlocutoras permanentes do planejamento territorial e da gestão de riscos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F02",
+        "E6-F07",
+        "E1-F17",
+        "E2-F32"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F01",
+        "nome_no_documento": "Associação de moradores e lideranças locais",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F02": {
+      "texto": "A mobilização de redes e grupos organizados em Campo Grande expressa-se em movimentos indígenas urbanos, coletivos de mulheres, movimentos negros, organizações de catadores, movimentos de moradia, redes de proteção animal, coletivos culturais e de juventude e pastorais sociais. A capacidade dessas redes de articular pautas comuns e de dialogar com o poder público é desigual, e a fragmentação entre agendas setoriais limita sua incidência. A formação de pesquisadores populares pela PICAPS é estratégia de mobilização ancorada na produção de conhecimento: ao investigar o território com os instrumentos da cartografia social, os grupos organizados qualificam suas demandas com evidências. O fator articula-se a E6-F01, E6-F07, E3-F10 e E6-F04, e a efetividade da mobilização deve ser avaliada por sua capacidade de alterar decisões, como inclusão de demandas no orçamento e nos planos setoriais.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "fatores_relacionados": [
+        "E6-F01",
+        "E6-F07",
+        "E3-F10",
+        "E6-F04"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F02",
+        "nome_no_documento": "Mobilização de redes e grupos organizados",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F03": {
+      "texto": "As rádios comunitárias autorizadas no município de Campo Grande, cujo registro é mantido pelo Ministério das Comunicações e pela ANATEL, devem ser levantadas para o diagnóstico, dado não sistematizado nesta versão e registrado como lacuna. Em uma capital com mais de 970 mil habitantes estimados pelo IBGE para 2026, a comunicação comunitária por rádio tende a ter alcance segmentado, concentrado em públicos específicos, como comunidades religiosas, indígenas e moradores de bairros periféricos. A relevância do fator cresce em emergências, quando a interrupção de energia e de internet, como ocorreu no vendaval de setembro de 2026, reduz o alcance dos canais digitais e torna o rádio a pilhas um meio resiliente de alerta e orientação. O fator articula-se a E2-F37, E2-F29, E6-F11 e E4-F09, e o plano popular pode prever acordos com rádios comunitárias e locais para veiculação de alertas e informações de saúde em linguagem acessível.",
+      "fontes_citadas": [
+        "IBGE"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F37",
+        "E2-F29",
+        "E6-F11",
+        "E4-F09"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F03",
+        "nome_no_documento": "Rádios comunitárias",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F04": {
+      "texto": "A parceria entre a Secretaria Municipal de Saúde de Campo Grande e a Fundação Oswaldo Cruz, que inclui o apoio à expansão da APS por meio de residências e a atuação da PICAPS, é a parceria sociotécnica mais consolidada no campo da saúde do município: o número de equipes de Saúde da Família passou de 96 em 2017 para 197 em 2023 (Prefeitura com base no e-Gestor, escala municipal). Outras parcerias relevantes envolvem universidades, a Embrapa, organizações da sociedade civil e o Ministério Público. A intersetorialidade, contudo, opera por projetos, sem arquitetura permanente de governança territorial que reúna saúde, assistência social, educação, meio ambiente, defesa civil e comunidades por região urbana. O Grupo de Trabalho Intersetorial que conduziu o Censo da População em Situação de Rua em 2025 é exemplo de arranjo que pode ser replicado. O fator articula-se a E6-F07, E4-F06 e E2-F32.",
+      "fontes_citadas": [
+        "Prefeitura com base no e-Gestor, escala municipal"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2017",
+        "2023",
+        "2025"
+      ],
+      "fatores_relacionados": [
+        "E6-F07",
+        "E4-F06",
+        "E2-F32"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F04",
+        "nome_no_documento": "Parcerias entre instituições públicas, privadas e com a sociedade civil",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F05": {
+      "texto": "Os mutirões de limpeza em Campo Grande são realizados por moradores, igrejas, escolas e associações e por campanhas municipais de combate ao Aedes aegypti e de limpeza de terrenos, sem calendário integrado nem registro sistemático de sua frequência e alcance. A relevância sanitária do fator é direta: o acúmulo de resíduos e entulho em quintais e terrenos baldios favorece criadouros do mosquito transmissor da dengue (E2-F07) e abrigo de escorpiões, responsáveis por 2.041 acidentes no município em 2025 segundo dados municipais divulgados pela imprensa (E2-F35). A limpeza de bocas de lobo antes do período chuvoso reduz alagamentos (E2-F34), e mutirões de plantio contribuem para a recomposição da arborização (E4-F25). Após o vendaval de setembro de 2026, a remoção de galhos mobilizou moradores e equipes públicas. O fator articula-se a E1-F27 e E6-F01, e o plano popular pode organizar um calendário territorial de mutirões associado à vigilância em saúde.",
+      "fontes_citadas": [
+        "dados municipais divulgados pela imprensa"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E2-F07",
+        "E2-F35",
+        "E2-F34",
+        "E4-F25",
+        "E1-F27",
+        "E6-F01"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F05",
+        "nome_no_documento": "Mutirão de limpeza",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F06": {
+      "texto": "O crime organizado tem presença em Campo Grande associada às rotas de tráfico de drogas e armas que atravessam Mato Grosso do Sul a partir da fronteira com Paraguai e Bolívia, segundo análises do Anuário Brasileiro de Segurança Pública e das forças de segurança. Nos territórios periféricos, o mercado varejista de drogas estrutura parte da violência letal, recruta adolescentes e jovens e restringe a circulação de moradores e de equipes de serviços públicos. A sobremortalidade de jovens negros e indígenas por homicídio na capital (Agência Brasil, 2024) é expressão desse padrão (E2-F28). Os dados de mortes violentas intencionais e de apreensões por região, disponíveis na Secretaria de Justiça e Segurança Pública, devem ser incorporados ao diagnóstico, não sistematizados nesta versão. O fator articula-se a E2-F27, E2-F10 e E3-F07, e o enfrentamento exige articular repressão qualificada, prevenção social e oferta de alternativas para a juventude.",
+      "fontes_citadas": [
+        "Agência Brasil, 2024",
+        "Anuário Brasileiro de Segurança Pública"
+      ],
+      "referencias_normativas": [],
+      "periodos_citados": [
         "2024"
       ],
+      "fatores_relacionados": [
+        "E2-F28",
+        "E2-F27",
+        "E2-F10",
+        "E3-F07"
+      ],
       "origem": {
-        "codigo_documento": "E2-5",
-        "nome_no_documento": "Acesso a medicamentos e vacinas",
-        "eixo_documento": 2,
-        "paragrafo_docx": 64
+        "codigo_documento": "E6-F06",
+        "nome_no_documento": "Combate ao crime organizado",
+        "eixo_documento": 6
       },
       "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "um texto para dois fatores",
-        "candidatos": [
-          "E2-F13",
-          "E2-F14"
-        ],
-        "motivo": "Acesso a medicamentos e vacinas corresponde a dois fatores do cadastro: E2-F13 Acesso a medicamentos e E2-F14 Cobertura vacinal. Opções: repetir o texto nos dois fatores, atribuir a um deles ou dividir o texto (o que exigiria autorização, por alterar o conteúdo)."
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    {
-      "texto": "A desnutrição infantil em Campo Grande apresenta distribuição territorial heterogênea, concentrada nos bairros de maior vulnerabilidade social das regiões Sul e Leste. O SISVAN registra proporções relevantes de crianças menores de cinco anos com baixo peso para a idade nas microáreas atendidas por ESF nessas regiões, reflexo da insegurança alimentar documentada pelo CadÚnico. A desnutrição de idosos, frequentemente subdiagnosticada, é outro componente relevante, especialmente entre idosos que vivem sozinhos sem suporte familiar ou de proteção social ativa.",
+    "E6-F07": {
+      "texto": "A participação social na tomada de decisão em Campo Grande é institucionalizada no Conselho Municipal de Saúde, nas conferências municipais, nos conselhos de assistência social, de direitos da criança e do adolescente, de meio ambiente e no Conselho Municipal dos Direitos e Defesa dos Povos Indígenas, reestruturado pela Lei nº 7.227/2024. A efetividade dessas instâncias depende da representatividade de seus membros, da regularidade de funcionamento, do acesso à informação e da capacidade de incidir sobre o orçamento e os planos setoriais. A participação dos moradores das regiões periféricas, das populações indígenas e negras e das mulheres é proporcionalmente menor. As atas, resoluções e o acompanhamento do Relatório Anual de Gestão pelo Conselho Municipal de Saúde são fontes para avaliar a qualidade da participação. O fator articula-se a E6-F01, E6-F02, E6-F09 e E3-F10, e a PICAPS contribui ao qualificar tecnicamente a participação com dados territoriais.",
+      "fontes_citadas": [],
+      "referencias_normativas": [
+        "Lei nº 7.227/2024"
+      ],
+      "periodos_citados": [
+        "2024"
+      ],
+      "fatores_relacionados": [
+        "E6-F01",
+        "E6-F02",
+        "E6-F09",
+        "E3-F10"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F07",
+        "nome_no_documento": "Participação social na tomada de decisão responsiva, inclusiva e participativa",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F08": {
+      "texto": "A corrupção afeta a efetividade das políticas públicas ao desviar recursos e distorcer prioridades de investimento, com efeitos sobre a qualidade dos serviços de saúde, saneamento e infraestrutura. Em Campo Grande, os mecanismos de controle incluem a Controladoria-Geral do Município, o Tribunal de Contas do Estado, o Ministério Público, a Câmara Municipal e o controle social exercido pelos conselhos. Situações de excepcionalidade, como o decreto de situação de emergência de setembro de 2026, que autoriza contratações diretas sem licitação por até um ano para obras vinculadas ao vendaval, ampliam a necessidade de transparência e acompanhamento social, pois reduzem os controles prévios. Os relatórios de auditoria e as decisões do Tribunal de Contas sobre o município devem ser consultados. O fator articula-se a E6-F09 e E6-F07, e o plano popular pode propor o acompanhamento comunitário das contratações emergenciais, com divulgação pública dos contratos e de sua execução.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F09",
+        "E6-F07"
+      ],
+      "origem": {
+        "codigo_documento": "E6-F08",
+        "nome_no_documento": "Corrupção e suborno (em todos os níveis)",
+        "eixo_documento": 6
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
+      }
+    },
+    "E6-F09": {
+      "texto": "A transparência ativa em Campo Grande é exercida pelo portal de transparência municipal, pelos relatórios de gestão submetidos ao Conselho Municipal de Saúde, pelo SIOPS e pelos portais das concessionárias de serviços públicos e das agências reguladoras. O IBGE Cidades registra receitas brutas realizadas de R$ 6,06 bilhões e despesas empenhadas de R$ 6,39 bilhões pelo município, com referência às contas municipais (IBGE, escala municipal), magnitude que indica a relevância do acompanhamento social do gasto. A disponibilidade de dados abertos, georreferenciados e em linguagem acessível é limitada: informações sobre qualidade do ar, barragens de risco, alertas e execução de obras emergenciais circulam de forma dispersa. O fator articula-se a E6-F08, E6-F07, E4-F09 e E1-F25, e o plano popular pode propor um painel territorial público que reúna indicadores de saúde, saneamento, riscos e investimento por região urbana.",
       "fontes_citadas": [
-        "SISVAN",
-        "CadÚnico"
+        "IBGE, escala municipal",
+        "IBGE Cidades"
       ],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E6-F08",
+        "E6-F07",
+        "E4-F09",
+        "E1-F25"
+      ],
       "origem": {
-        "codigo_documento": "E2-12",
-        "nome_no_documento": "Desnutrição",
-        "eixo_documento": 2,
-        "paragrafo_docx": 78
+        "codigo_documento": "E6-F09",
+        "nome_no_documento": "Instituições públicas e privadas em todos os níveis (transparência ativa)",
+        "eixo_documento": 6
       },
       "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E2-F02"
-        ],
-        "motivo": "Não há fator Desnutrição no cadastro. O fator mais próximo é E2-F02 Insegurança alimentar, cuja descrição menciona não consumir os nutrientes necessários."
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    {
-      "texto": "A reutilização de água em Campo Grande é praticamente inexistente em escala sistêmica. O reuso de efluentes tratados para irrigação de áreas verdes públicas e para usos industriais não potáveis é uma tecnologia disponível e aplicável ao contexto, especialmente considerando a pressão crescente sobre os mananciais no contexto de mudanças climáticas. A ETA (Estação de Tratamento de Água) e as ETEs (Estações de Tratamento de Esgoto) da Águas Guariroba poderiam operar como pontos de origem de circuitos de reuso, mas isso exigiria investimento e marco regulatório municipal ainda não existente.",
+    "E6-F11": {
+      "texto": "Os grupos de mensagens são o principal canal de comunicação comunitária em Campo Grande, usados por associações de moradores, escolas, igrejas, equipes de saúde, comunidades indígenas e redes de vizinhança para avisos, organização de ações e circulação de informações. Nos eventos extremos de 2025 e 2026, esses grupos difundiram alertas, informações sobre interrupção de energia e pedidos de ajuda com rapidez superior à dos canais oficiais, mas também propagaram informações imprecisas. Sua efetividade depende de moderação, de fontes confiáveis e da conexão, comprometida quando a energia falha por longos períodos. A inexistência de levantamento desses grupos e de sua abrangência territorial é lacuna que a cartografia social pode suprir. O fator articula-se a E6-F03, E2-F29, E2-F37 e E4-F09, e o plano popular pode estruturar uma rede de grupos territoriais com pontos focais formados para retransmitir alertas oficiais e informações verificadas de saúde.",
       "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [],
+      "periodos_citados": [
+        "2025",
+        "2026"
+      ],
+      "fatores_relacionados": [
+        "E6-F03",
+        "E2-F29",
+        "E2-F37",
+        "E4-F09"
+      ],
       "origem": {
-        "codigo_documento": "E2-19",
-        "nome_no_documento": "Redução, reciclagem e reuso, água e saneamento",
-        "eixo_documento": 2,
-        "paragrafo_docx": 92
+        "codigo_documento": "E6-F11",
+        "nome_no_documento": "Comunicação comunitária – grupos de mensagens",
+        "eixo_documento": 6
       },
       "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [],
-        "motivo": "Não há fator de redução, reciclagem e reuso aplicado à água e ao saneamento no cadastro. Fatores relacionados: E2-F23 Gestão da água e saneamento (já com diagnóstico do E2-13) e E2-F20 Acesso à água e saneamento (já com diagnóstico do E2-14)."
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    {
-      "texto": "A coleta de resíduos sólidos atinge 99,23% da população campo-grandense, com geração de 0,98 kg por habitante por dia. A coleta seletiva existe em alguns bairros, mas com cobertura parcial e dependência de cooperativas de catadores com capacidade operacional limitada. O aterro sanitário municipal opera como destino final da maioria dos resíduos coletados. A ausência de uma política de logística reversa estruturada para resíduos de construção civil, eletrônicos e embalagens de agroquímicos representa passivo ambiental relevante para o município.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-20",
-        "nome_no_documento": "Redução, reciclagem e reuso, gestão de resíduos",
-        "eixo_documento": 2,
-        "paragrafo_docx": 94
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [],
-        "motivo": "Não há fator de redução, reciclagem e reuso de resíduos no cadastro. Fatores relacionados: E1-F27 Economia circular (já com diagnóstico do E1-8) e E6-F05 Mutirão de limpeza (sem diagnóstico)."
-      }
-    },
-    {
-      "texto": "A pandemia de COVID-19 evidenciou fragilidades na gestão de emergências de saúde pública em Campo Grande: insuficiência de leitos de UTI no pico da crise, déficit de pessoal especializado e fragmentação da gestão de dados entre níveis de governo. A sala de situação da SESAU, estruturada durante a pandemia, precisa ser mantida como instrumento permanente de monitoramento e não apenas ativada em crises. Os surtos endêmicos anuais de dengue e leishmaniose são emergências programadas, previsíveis nos seus ciclos sazonais, que demandam prontidão operacional permanente e protocolos de resposta integrada entre vigilância epidemiológica, APS e rede hospitalar.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-21",
-        "nome_no_documento": "Gestão de riscos e emergências",
-        "eixo_documento": 2,
-        "paragrafo_docx": 96
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator retirado na versão 2.0.0",
-        "candidatos": [
-          "E2-F32"
-        ],
-        "motivo": "O fator de nome idêntico, E2-F24 Gestão de riscos e emergências, foi retirado na versão 2.0.0. O fator remanescente, E2-F32 Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos), já tem diagnóstico do E2-22. Opções: complementar o diagnóstico do E2-F32 com este texto ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "A desigualdade de oportunidades em Campo Grande é estruturada territorialmente: moradores das periferias Sul e Leste têm acesso a escolas com piores indicadores do IDEB, menor cobertura de equipamentos culturais e esportivos, maior distância dos centros de formação técnica e profissional e menor acesso ao emprego formal de qualidade. O fator E3-04 articula a dimensão racial e de gênero à dimensão territorial: não ser branco, não ser homem e morar na periferia é uma combinação de desvantagens que se multiplicam ao longo das trajetórias de vida.",
+    "E6-F15": {
+      "texto": "Os grupos de escuta, entendidos como espaços regulares em que pessoas podem expressar sofrimento e necessidades e ser acolhidas, existem em Campo Grande nos grupos terapêuticos da APS e dos CAPS, em pastorais e igrejas, em grupos de mulheres e em iniciativas comunitárias, sem mapeamento sistemático de sua oferta por território. A relevância do fator aumenta com a demanda crescente em saúde mental (E2-F18) e após desastres, quando o sofrimento associado a perdas materiais e à insegurança se manifesta de forma difusa. Grupos de escuta conduzidos por agentes comunitários, lideranças formadas e profissionais de saúde ampliam a capacidade de cuidado além dos serviços especializados, cuja rede municipal contava com sete CAPS em 2023 (Prefeitura, escala municipal). O fator articula-se a E2-F18, E6-F16 e E3-F14, e o plano popular pode prever a formação de facilitadores comunitários e a articulação desses grupos com o matriciamento em saúde mental.",
       "fontes_citadas": [
-        "IDEB"
+        "Prefeitura, escala municipal"
       ],
       "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-4",
-        "nome_no_documento": "Igualdade de oportunidades",
-        "eixo_documento": 3,
-        "paragrafo_docx": 117
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E3-F04",
-          "E3-F18"
-        ],
-        "motivo": "Igualdade de oportunidades, sem qualificação. No cadastro, E3-F04 é específico para mulheres (já com diagnóstico do E3-5) e E3-F18 Igualdade racial já tem diagnóstico do E3-3. O próprio texto vincula o fator à dimensão racial e de gênero."
-      }
-    },
-    {
-      "texto": "O uso de aplicativos, grupos de WhatsApp e plataformas digitais por grupos de mulheres em bairros periféricos de Campo Grande é uma realidade identificada pelos ACS como canal de circulação de informações sobre saúde, violência e direitos. A PICAPS pode potencializar esse uso ao capacitar mulheres como pesquisadoras populares e ao integrar ferramentas digitais ao ciclo de investigação do universo temático.",
-      "fontes_citadas": [
-        "ACS"
+      "periodos_citados": [
+        "2023"
       ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-12",
-        "nome_no_documento": "Tecnologias de informação para empoderamento das mulheres",
-        "eixo_documento": 3,
-        "paragrafo_docx": 133
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E3-F04",
-          "E5-F21"
-        ],
-        "motivo": "Não há fator de tecnologias de informação para empoderamento das mulheres no cadastro. Fatores relacionados: E3-F04 Igualdade de oportunidades para promover o empoderamento das mulheres (já com diagnóstico do E3-5) e E5-F21 Tecnologias de informação e comunicação (já com diagnóstico do E5-8)."
-      }
-    },
-    {
-      "texto": "A ausência de documentação civil, registro de nascimento e RG, é uma barreira de acesso a direitos que afeta principalmente populações indígenas urbanas, pessoas em situação de rua e filhos de mulheres migrantes em situação irregular. Em Campo Grande, o Cartório de Registro Civil atende em parceria com unidades de saúde e assistência social para registro de recém-nascidos, mas a cobertura para populações adultas indígenas sem documentação é insuficiente. Sem RG, não há acesso ao CadÚnico, ao SUS com prontuário nominado, ou à Previdência Social.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-13",
-        "nome_no_documento": "Acesso a direitos fundamentais, Registro de Nascimento e RG",
-        "eixo_documento": 3,
-        "paragrafo_docx": 135
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator retirado na versão 2.0.0",
-        "candidatos": [
-          "E3-F08"
-        ],
-        "motivo": "O fator correspondente, E3-F15 Acesso a direitos fundamentais, foi retirado na versão 2.0.0, e sua definição passou para E3-F08 Direitos fundamentais, que já tem diagnóstico do E3-14. Opções: complementar o diagnóstico do E3-F08 com este texto ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "Pessoas em situação de rua, usuários de drogas, indígenas sem documentação e trabalhadoras domésticas informais constituem os grupos de maior invisibilidade nos sistemas de informação e de maior dificuldade de acesso a serviços públicos em Campo Grande. O Consultório na Rua, o CAPS-AD e as equipes de assistência social itinerantes são os pontos de atenção que mais diretamente atendem esses grupos, mas com capacidade insuficiente frente à magnitude da demanda.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-15",
-        "nome_no_documento": "Direitos fundamentais para pessoas em situação de vulnerabilidade",
-        "eixo_documento": 3,
-        "paragrafo_docx": 139
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E3-F08",
-          "E3-F14"
-        ],
-        "motivo": "Não há fator de direitos fundamentais específico para pessoas em situação de vulnerabilidade. E3-F08 Direitos fundamentais já tem diagnóstico do E3-14; E3-F14 Acolhimento de vulneráveis e população em situação de rua não tem diagnóstico."
-      }
-    },
-    {
-      "texto": "O atendimento especializado a populações em situação de vulnerabilidade extrema, pessoas em situação de rua, vítimas de violência doméstica, crianças em situação de risco, é operado pelos CREAS e por unidades de acolhimento institucional. A capacidade de vagas para acolhimento, incluindo casas de passagem, abrigos para mulheres em situação de violência e moradias assistidas para pessoas com transtorno mental, é insuficiente para a demanda documentada no Plano Municipal de Saúde.",
-      "fontes_citadas": [
-        "Plano Municipal de Saúde"
+      "fatores_relacionados": [
+        "E2-F18",
+        "E6-F16",
+        "E3-F14"
       ],
-      "referencias_normativas": [],
-      "periodos_citados": [],
       "origem": {
-        "codigo_documento": "E3-17",
-        "nome_no_documento": "Proteção social para pessoas em situação de vulnerabilidade",
-        "eixo_documento": 3,
-        "paragrafo_docx": 143
+        "codigo_documento": "E6-F15",
+        "nome_no_documento": "Grupos de escuta diários",
+        "eixo_documento": 6
       },
       "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E3-F12",
-          "E3-F14"
-        ],
-        "motivo": "Não há fator de proteção social específico para pessoas em situação de vulnerabilidade. E3-F12 Serviços públicos e políticas de proteção social já tem diagnóstico do E3-16; E3-F14 Acolhimento de vulneráveis e população em situação de rua não tem diagnóstico."
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     },
-    {
-      "texto": "Os córregos Prosa, Segredo e Anhanduizinho, estruturantes do sistema hídrico urbano de Campo Grande, têm seus ecossistemas severamente degradados pela canalização, pelo lançamento de esgoto sem tratamento e pela ocupação das APPs. O Programa de Recuperação de Córregos Urbanos, conduzido pela SEMADUR em parceria com o governo estadual, avança lentamente frente à dimensão do passivo ambiental acumulado. A gestão sustentável desses ecossistemas é condição para a regulação hídrica, o controle de enchentes, a redução da temperatura urbana e a manutenção da qualidade da água dos mananciais.",
+    "E6-F16": {
+      "texto": "As igrejas, grupos religiosos e coletivos comunitários de Campo Grande desempenham papel relevante no apoio a pessoas em situação de vulnerabilidade, com distribuição de alimentos, acolhimento de pessoas em situação de rua, apoio a famílias atingidas por eventos extremos e cessão de espaços para atividades comunitárias. Sua capilaridade nas regiões periféricas supera a de muitos serviços públicos, o que os torna atores estratégicos na resposta a emergências, como pontos de abrigo, distribuição de doações e comunicação. A ausência de cadastro dessas organizações e de acordos prévios com a Defesa Civil limita sua integração aos planos de contingência, lacuna que a cartografia social pode suprir. O fator articula-se a E5-F01, E2-F39, E1-F17 e E6-F15, e o plano popular deve prever formas de cooperação que respeitem a laicidade do Estado e a autonomia das organizações, com foco na proteção das pessoas atingidas.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
+      "fatores_relacionados": [
+        "E5-F01",
+        "E2-F39",
+        "E1-F17",
+        "E6-F15"
+      ],
       "origem": {
-        "codigo_documento": "E4-3",
-        "nome_no_documento": "Gestão sustentável de ecossistemas terrestres e de água doce",
-        "eixo_documento": 4,
-        "paragrafo_docx": 156
+        "codigo_documento": "E6-F16",
+        "nome_no_documento": "Igrejas, grupos religiosos e outros coletivos que apoiam as situações de emergência",
+        "eixo_documento": 6
       },
       "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E4-F17"
-        ],
-        "motivo": "Não há fator de gestão de ecossistemas terrestres e de água doce. O mais próximo é E4-F17 Gestão sustentável dos recursos naturais (sem diagnóstico); E4-F04 ecossistemas hídricos já tem diagnóstico do E4-9."
-      }
-    },
-    {
-      "texto": "O Cerrado abriga a maior diversidade de aves, répteis e mamíferos do Brasil Central, com espécies como o lobo-guará, a anta e o tamanduá-bandeira presentes em fragmentos florestais do entorno de Campo Grande. A pressão do desmatamento, dos atropelamentos em rodovias e da captura ilegal reduz as populações dessas espécies continuamente. O Instituto Homem Pantaneiro e o IMASUL têm projetos de monitoramento, mas a integração com a política de uso do solo municipal, que poderia criar corredores ecológicos entre fragmentos, é ainda incipiente.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-4",
-        "nome_no_documento": "Gestão sustentável, espécies ameaçadas (fauna)",
-        "eixo_documento": 4,
-        "paragrafo_docx": 158
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E4-F17"
-        ],
-        "motivo": "Não há fator de espécies ameaçadas da fauna. O mais próximo é E4-F17 Gestão sustentável dos recursos naturais (sem diagnóstico)."
-      }
-    },
-    {
-      "texto": "Campo Grande é polo de distribuição e consumo de agroquímicos para o agronegócio sul-mato-grossense. As propriedades rurais periurbanas e os assentamentos do entorno da cidade aplicam defensivos agrícolas sem zona de amortecimento em relação às áreas residenciais, expondo moradores a contaminação por deriva de pulverização e por contaminação do lençol freático. A vigilância em saúde do trabalhador rural, VIGIPEQ, é o instrumento de monitoramento, mas opera com capacidade insuficiente para o volume de intoxicações estimadas.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-5",
-        "nome_no_documento": "Manejo ambientalmente saudável de produtos químicos",
-        "eixo_documento": 4,
-        "paragrafo_docx": 160
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [],
-        "motivo": "Não há fator de manejo de produtos químicos no cadastro. Fatores relacionados: E5-F03 Acidentes no transporte de produtos perigosos e E2-F21 Contaminação e poluição (já com diagnóstico do E2-16)."
-      }
-    },
-    {
-      "texto": "A sobrepesca e a pesca ilegal nos ambientes aquáticos do município e do entorno são fatores de degradação dos ecossistemas hídricos com impacto sobre a diversidade aquática do Cerrado. A regulação pela SEMA-MS e pelo IBAMA é o mecanismo formal de controle, mas a fiscalização é insuficiente frente à extensão territorial e ao número de infratores potenciais.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-13",
-        "nome_no_documento": "Regulação da pesca, sobrepesca e pesca ilegal",
-        "eixo_documento": 4,
-        "paragrafo_docx": 176
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E4-F20"
-        ],
-        "motivo": "Não há fator de regulação da pesca. E4-F20 Tráfico de espécies da flora e fauna (caça e pesca ilegal) já tem diagnóstico do E4-7."
-      }
-    },
-    {
-      "texto": "Este fator tem aplicabilidade limitada ao contexto de Campo Grande, município sem acesso direto a ambientes marinhos. No entanto, a pesquisa científica sobre os ecossistemas aquáticos de água doce, rios, açudes, veredas, do Cerrado sul-mato-grossense é relevante para a gestão ambiental local e tem na UFMS e na UCDB seus principais atores institucionais.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-14",
-        "nome_no_documento": "Cooperação e pesquisa científica para a vida marinha",
-        "eixo_documento": 4,
-        "paragrafo_docx": 178
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E4-F14"
-        ],
-        "motivo": "Não há fator de cooperação e pesquisa para a vida marinha. O mais próximo é E4-F14 Pesquisa científica e inovação para recuperação de ambientes (sem diagnóstico). As notas metodológicas registram análise na dimensão de bacia hidrográfica."
-      }
-    },
-    {
-      "texto": "O turismo de natureza no entorno de Campo Grande, incluindo o ecoturismo no Parque das Nações Indígenas, as rotas de observação de aves do Cerrado e os pesque-pagues rurais, é uma atividade econômica com potencial de geração de renda sustentável ainda subutilizado. A integração entre conservação ambiental, turismo e geração de renda para comunidades rurais e indígenas é uma estratégia de desenvolvimento territorial saudável que o Eixo 4 da cartografia social nomeia como potencialidade.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-16",
-        "nome_no_documento": "Gestão sustentável da pesca, aquicultura e turismo",
-        "eixo_documento": 4,
-        "paragrafo_docx": 182
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "sem correspondente nominal",
-        "candidatos": [
-          "E4-F15"
-        ],
-        "motivo": "Não há fator de gestão da pesca, aquicultura e turismo. E4-F15 Pescadores artesanais já tem diagnóstico do E4-12."
-      }
-    },
-    {
-      "texto": "A inclusão digital de jovens e adultos em Campo Grande é operada por telecentros comunitários, laboratórios de informática em escolas municipais e por programas estaduais de qualificação digital. A digitalização dos serviços públicos, CADSUS, e-SUS, plataformas de agendamento de consultas, exige letramento digital dos usuários do SUS, especialmente nas populações mais velhas e de menor escolaridade das periferias.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-16",
-        "nome_no_documento": "Tecnologias de informação para jovens e adultos",
-        "eixo_documento": 5,
-        "paragrafo_docx": 236
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator já diagnosticado",
-        "candidatos": [
-          "E5-F21"
-        ],
-        "motivo": "Tecnologias de informação para jovens e adultos; o texto trata de inclusão e letramento digital. Não há fator específico. O fator mais próximo, E5-F21 Tecnologias de informação e comunicação, já tem diagnóstico do E5-8. Opções: complementar o diagnóstico do E5-F21 com este texto ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "A parceria entre SESAU Campo Grande e Fiocruz Brasília, operacionalizada pelo CoLaboratório CTIS e pela plataforma PICAPS, é o exemplo mais robusto de parceria sociotécnica no campo da saúde do município. O programa de residência multiprofissional em saúde da família, o maior do Centro-Oeste, foi o vetor que triplicou a cobertura de APS em seis anos. A sustentabilidade dessa parceria, que combina formação, pesquisa e inovação em um único arranjo institucional, é um ativo estratégico que precisa ser protegido e ampliado no próximo ciclo de planejamento.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-3",
-        "nome_no_documento": "Apoio a instituições públicas, privadas e sociedade civil, parcerias sociotécnicas",
-        "eixo_documento": 6,
-        "paragrafo_docx": 255
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator retirado na versão 2.0.0",
-        "candidatos": [
-          "E6-F04"
-        ],
-        "motivo": "O fator correspondente, E6-F13 Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas), foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-4 e do E6-5. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "A intersetorialidade entre saúde, educação, assistência social, meio ambiente e habitação é condição metodológica para enfrentar os nós críticos identificados no diagnóstico. Em Campo Grande, as parcerias multissetoriais existem pontualmente, nos programas de saúde escolar, nos NASF, nos CREAS, mas sem uma arquitetura de governança intersetorial que garanta continuidade, financiamento compartilhado e avaliação integrada. A implantação de Grupos de Trabalho Intersetorial por território vulnerável, articulando CRAS, ESF, escola e agentes comunitários, é uma inovação organizacional de baixo custo e alto impacto.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-4",
-        "nome_no_documento": "Parcerias multissetoriais",
-        "eixo_documento": 6,
-        "paragrafo_docx": 257
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator retirado na versão 2.0.0",
-        "candidatos": [
-          "E6-F04"
-        ],
-        "motivo": "O fator de nome idêntico, E6-F12 Parcerias multissetoriais, foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-3 e do E6-5. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "A agenda dos Objetivos de Desenvolvimento Sustentável no nível municipal em Campo Grande não tem estrutura de governança dedicada. A Câmara Municipal e a Prefeitura não dispõem de mecanismo de monitoramento e reporte dos ODS que integre os dados setoriais em um painel territorial unificado. A PICAPS, ao organizar os fatores da cartografia social por eixos vinculados aos ODS, produz exatamente esse tipo de integração no nível do planejamento participativo, podendo constituir-se na base de um sistema de monitoramento local dos ODS com protagonismo comunitário.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-5",
-        "nome_no_documento": "Parcerias multissetoriais para os ODS",
-        "eixo_documento": 6,
-        "paragrafo_docx": 259
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator retirado na versão 2.0.0",
-        "candidatos": [
-          "E6-F04"
-        ],
-        "motivo": "Parcerias multissetoriais para os ODS. O fator E6-F12 Parcerias multissetoriais foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-3 e do E6-4. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
-      }
-    },
-    {
-      "texto": "A coordenação de políticas entre os níveis municipal, estadual e federal é determinante da efetividade do SUS em Campo Grande. Fragilidades nessa coordenação, como a regulação insuficiente dos serviços estaduais que operam no município, ou a descontinuidade de programas federais por mudança de orientação política, produzem rupturas na continuidade do cuidado. A Comissão Intergestores Bipartite (CIB-MS) é o fórum formal de coordenação entre estado e municípios, e o Pacto de Saúde é o instrumento de pactuação de metas. A qualidade da participação municipal nesse processo é um indicador de capacidade institucional.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-8",
-        "nome_no_documento": "Ação do Estado na coordenação e coerência de políticas",
-        "eixo_documento": 6,
-        "paragrafo_docx": 265
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E3-F06"
-        ],
-        "motivo": "Ação do Estado na coordenação e coerência de políticas, sem o recorte de gênero. O fator do cadastro (E3-F06, no Eixo 3) é específico para igualdade de gênero e já tem diagnóstico do E3-11."
-      }
-    },
-    {
-      "texto": "A governança da biodiversidade em Campo Grande articula o COMDAM (Conselho Municipal de Defesa do Meio Ambiente), a SEMADUR, o IMASUL estadual e o IBAMA federal em torno do licenciamento ambiental e da gestão das unidades de conservação. A participação de representantes de comunidades indígenas e de grupos ambientalistas nessas instâncias é insuficiente para garantir a perspectiva dos grupos mais diretamente afetados pela degradação ambiental.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-10",
-        "nome_no_documento": "Gestão sustentável da biodiversidade, interface com governança",
-        "eixo_documento": 6,
-        "paragrafo_docx": 269
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E4-F22"
-        ],
-        "motivo": "Leitura de governança de um fator do Eixo 4. E4-F22 já tem diagnóstico do E4-2. Opções: complementar o diagnóstico do E4-F22 com este texto ou mantê-lo fora do painel."
-      }
-    },
-    {
-      "texto": "O acesso à informação de qualidade sobre saúde, meio ambiente e direitos é uma condição para a participação social qualificada. Em Campo Grande, a dispersão das informações entre portais setoriais sem integração, a ausência de ouvidorias ativas com respostas tempestivas e a baixa cobertura de meios de comunicação locais com jornalismo investigativo sobre políticas públicas são barreiras concretas para a transparência efetiva.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-11",
-        "nome_no_documento": "Acesso à informação de qualidade, interface com governança",
-        "eixo_documento": 6,
-        "paragrafo_docx": 271
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E4-F09"
-        ],
-        "motivo": "Leitura de governança de um fator do Eixo 4. E4-F09 já tem diagnóstico do E4-23. Opções: complementar o diagnóstico do E4-F09 com este texto ou mantê-lo fora do painel."
-      }
-    },
-    {
-      "texto": "A governança dos serviços públicos de saúde e proteção social em Campo Grande envolve múltiplos atores: prefeitura, estado, governo federal, organizações sociais contratadas e controle social. A clareza sobre responsabilidades, o monitoramento de resultados e a prestação de contas são atributos que precisam ser continuamente aprimorados. A PICAPS contribui para essa governança ao produzir dados territoriais sobre as condições de vida e saúde que alimentam o planejamento com evidências não disponíveis nos sistemas formais.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-12",
-        "nome_no_documento": "Serviços públicos e proteção social, interface com governança",
-        "eixo_documento": 6,
-        "paragrafo_docx": 273
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E3-F12"
-        ],
-        "motivo": "Leitura de governança de um fator do Eixo 3. E3-F12 já tem diagnóstico do E3-16. Opções: complementar o diagnóstico do E3-F12 com este texto ou mantê-lo fora do painel."
-      }
-    },
-    {
-      "texto": "A gestão de emergências em saúde pública em Campo Grande envolve articulação entre SESAU, Defesa Civil, Corpo de Bombeiros, SAMU, hospitais públicos e privados e instâncias estaduais e federais de vigilância em saúde. A coordenação eficaz dessa rede em emergência exige protocolos pré-definidos, canais de comunicação funcionantes e exercícios regulares de simulação. A experiência da pandemia mostrou que a capacidade de coordenação existe, mas com lacunas de governança que precisam ser endereçadas no planejamento pós-pandemia.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-13",
-        "nome_no_documento": "Gestão de riscos e emergências, interface com governança",
-        "eixo_documento": 6,
-        "paragrafo_docx": 275
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E2-F32"
-        ],
-        "motivo": "Leitura de governança de um fator do Eixo 2. E2-F32 Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos) já tem diagnóstico do E2-22. Opções: complementar o diagnóstico do E2-F32 com este texto ou mantê-lo fora do painel."
-      }
-    },
-    {
-      "texto": "A alocação de recursos públicos para a gestão ambiental municipal é uma decisão de governança que reflete as prioridades políticas do executivo e do legislativo local. O orçamento da SEMADUR e do Fundo Municipal de Meio Ambiente em relação ao orçamento total da prefeitura é um indicador proxy da prioridade atribuída à agenda ambiental. A mobilização da sociedade civil organizada e dos pesquisadores populares PICAPS para monitorar e pressionar por adequação orçamentária é uma expressão concreta do Eixo 6: a voz na mesa que resulta em mais recursos para o território.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-14",
-        "nome_no_documento": "Recursos financeiros para gestão da biodiversidade, interface com governança",
-        "eixo_documento": 6,
-        "paragrafo_docx": 277
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo já diagnosticado",
-        "candidatos": [
-          "E4-F01"
-        ],
-        "motivo": "Leitura de governança de um fator do Eixo 4. E4-F01 já tem diagnóstico do E4-24. Opções: complementar o diagnóstico do E4-F01 com este texto ou mantê-lo fora do painel."
+        "situacao": "validada",
+        "tipo": "identificador_no_documento",
+        "observacao": "ID, nome, ODS e definição de referência do documento idênticos ao cadastro."
       }
     }
-  ]
+  },
+  "pendentes_validacao": []
 };

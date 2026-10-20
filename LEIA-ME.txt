@@ -72,10 +72,12 @@ CONTEÚDO
                  metodologia.js (cadastro usado pelo painel, gerado a partir
                  da planilha) e ferramentas/ (gerador do cadastro)
 - territorios/ → diagnósticos de cada território, separados da metodologia:
-                 campo-grande-ms.js (dados gerados), fontes/ (documento
-                 original), correspondencias/ (tabela de correspondência,
-                 fontes citadas e metadados, editáveis) e ferramentas/
-                 (extração do .docx e geração do arquivo do território)
+                 campo-grande-ms.js (dados gerados), fontes/ (documento de
+                 diagnóstico original, .docx), correspondencias/ (metadados
+                 do território e lista de fontes citadas, editáveis) e
+                 ferramentas/gerar_territorio.py (gera o arquivo do território
+                 a partir do .docx no formato padrão, em que cada fator é
+                 identificado por uma tabela com ID, nome e ODS)
 - testes/      → verificações automáticas da metodologia e da navegação
 - relatorios/  → relatórios das etapas de adaptação do painel
 - assets/icons → os 148 ícones de fatores usados (recortados do pacote
