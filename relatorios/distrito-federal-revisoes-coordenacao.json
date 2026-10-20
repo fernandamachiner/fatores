@@ -1,0 +1,67 @@
+[
+  {
+    "fator": "E1-F01",
+    "texto_original": "O IBGE registra 354.373 matrículas no ensino fundamental em 2025 (IBGE Estados), mas a cobertura de educação infantil por RA não foi sistematizada nesta versão.",
+    "texto_revisado": "O IBGE registra 354.373 matrículas no ensino fundamental em 2025 (IBGE Estados)."
+  },
+  {
+    "fator": "E1-F22",
+    "texto_original": "As cooperativas de catadores e da agricultura familiar dependem de linhas específicas, como o Pronaf, cuja execução por RA não foi sistematizada nesta versão.",
+    "texto_revisado": "As cooperativas de catadores e da agricultura familiar dependem de linhas específicas, como o Pronaf."
+  },
+  {
+    "fator": "E1-F26",
+    "texto_original": "Programas de pagamento por serviços ambientais a produtores, como o Produtor de Água na bacia do Pipiripau, são experiências relevantes cuja escala não foi quantificada nesta versão.",
+    "texto_revisado": "Programas de pagamento por serviços ambientais a produtores, como o Produtor de Água na bacia do Pipiripau, são experiências relevantes."
+  },
+  {
+    "fator": "E2-F26",
+    "texto_original": "A inexistência de planos de evacuação comunitários por área de risco nos registros consultados configura lacuna.",
+    "texto_revisado": "Inexistência de planos de evacuação comunitários por área de risco nos registros consultados."
+  },
+  {
+    "fator": "E2-F37",
+    "texto_original": "Não foram identificados sistemas de sirenes em áreas de risco do DF nos registros consultados, e a cobertura do cadastro de alertas por SMS por RA não foi sistematizada nesta versão.",
+    "texto_revisado": "Não foram identificados sistemas de sirenes em áreas de risco do DF nos registros consultados."
+  },
+  {
+    "fator": "E3-F18",
+    "texto_original": "O DF possui órgão distrital de promoção da igualdade racial e conselho de participação, mas os indicadores de saúde desagregados por raça e cor por região de saúde, como mortalidade materna e infantil, não foram sistematizados nesta versão.",
+    "texto_revisado": "O DF possui órgão distrital de promoção da igualdade racial e conselho de participação."
+  },
+  {
+    "fator": "E4-F01",
+    "texto_original": "O DF realizou receitas de R$ 42,81 bilhões em 2025 (IBGE, finanças públicas), mas a parcela destinada à gestão ambiental por RA e unidade de conservação não foi sistematizada nesta versão.",
+    "texto_revisado": "O DF realizou receitas de R$ 42,81 bilhões em 2025 (IBGE, finanças públicas), mas a parcela destinada à gestão ambiental por RA e unidade de conservação não foi identificada nas bases públicas consultadas."
+  },
+  {
+    "fator": "E4-F11",
+    "texto_original": "A educação climática ainda não está integrada de modo sistemático ao currículo das escolas das RAs mais expostas, e sua abrangência não foi quantificada nesta versão.",
+    "texto_revisado": "A educação climática ainda não está integrada de modo sistemático ao currículo das escolas das RAs mais expostas."
+  },
+  {
+    "fator": "E5-F18",
+    "texto_original": "A oferta de centros culturais, bibliotecas e espaços de convivência nas RAs de renda baixa é limitada e não foi quantificada por RA nesta versão.",
+    "texto_revisado": "A oferta de centros culturais, bibliotecas e espaços de convivência nas RAs de renda baixa é limitada."
+  },
+  {
+    "fator": "E5-F18",
+    "texto_original": "O fator articula-se a E5-F17, E5-F23, E5-F27 e E5-F25, e o plano popular pode mapear os espaços culturais existentes e as lacunas por RA, propondo a descentralização de equipamentos e a gratuidade do transporte em eventos culturais.",
+    "texto_revisado": "O fator articula-se a E5-F17, E5-F23, E5-F27 e E5-F25."
+  },
+  {
+    "fator": "E5-F26",
+    "texto_original": "Os Centros Olímpicos e Paralímpicos, distribuídos em RAs como Ceilândia, Samambaia, Gama, Planaltina e Recanto das Emas, oferecem atividades gratuitas, mas sua cobertura em relação à população jovem não foi quantificada nesta versão.",
+    "texto_revisado": "Os Centros Olímpicos e Paralímpicos, distribuídos em RAs como Ceilândia, Samambaia, Gama, Planaltina e Recanto das Emas, oferecem atividades gratuitas."
+  },
+  {
+    "fator": "E5-F30",
+    "texto_original": "A substituição por luminárias de LED avançou nos últimos anos, mas a cobertura por RA e os pontos com iluminação deficiente não foram sistematizados nesta versão.",
+    "texto_revisado": "A substituição por luminárias de LED avançou nos últimos anos."
+  },
+  {
+    "fator": "E6-F09",
+    "texto_original": "A transparência, contudo, raramente alcança a escala da Região Administrativa: orçamento, investimentos, indicadores de saúde e de risco não são publicados de forma sistemática por RA, como evidenciam as lacunas deste diagnóstico.",
+    "texto_revisado": "A transparência, contudo, raramente alcança a escala da Região Administrativa: orçamento, investimentos, indicadores de saúde e de risco não são publicados de forma sistemática por RA."
+  }
+]

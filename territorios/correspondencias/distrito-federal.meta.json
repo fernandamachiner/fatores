@@ -30,6 +30,10 @@
     {
       "data": "2026-10-20",
       "decisao": "Por decisão da coordenação, o painel não exibe a ressalva das notas metodológicas sobre a confirmação de dados obtidos de reportagens e sistematizações de terceiros. A ressalva permanece no documento-fonte e nas notas metodológicas registradas no arquivo de dados."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "Por decisão da coordenação, 13 frases de 12 fatores (E1-F01, E1-F22, E1-F26, E2-F26, E2-F37, E3-F18, E4-F01, E4-F11, E5-F18, E5-F26, E5-F30, E6-F09) tiveram a redação revisada no documento-fonte, em geral com a retirada das declarações de lacuna de informação. As frases originais e revisadas estão em relatorios/distrito-federal-revisoes-coordenacao.json."
     }
   ]
 }
