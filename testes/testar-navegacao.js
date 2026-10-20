@@ -131,6 +131,11 @@ const { chromium } = require("playwright");
       if (pop.rotulosReferencias.includes("Fontes citadas no texto")) falha(`lista de fontes citadas exibida: ${dadosCard.id}`);
       if (pop.titulo !== dadosCard.nome) falha(`popup com título diferente do card: ${dadosCard.nome}`);
       if (!pop.definicao.trim()) falha(`popup sem definição de referência: ${dadosCard.nome}`);
+      // a definição aparece sem rótulo, idêntica à do cadastro metodológico
+      const defCadastro = await page.evaluate((fid) => {
+        for (const e of window.METODOLOGIA.eixos) for (const f of e.fatores) if (f.id === fid) return f.definicao;
+      }, dadosCard.id);
+      if (pop.definicao !== defCadastro) falha(`definição exibida difere do cadastro ou contém rótulo: ${dadosCard.id}`);
 
       // alterna as três formas de fechar
       const modo = modosFechar[contadorPopup++ % 3];

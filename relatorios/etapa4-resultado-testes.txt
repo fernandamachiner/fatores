@@ -86,3 +86,5 @@ OK    [http] navegação por fator relacionado e retorno: E1-F27 -> Economia cir
 ERROS (0)
 Observação: o erro de console no teste http é a requisição automática de /favicon.ico pelo navegador na raiz do servidor local, fora da pasta do painel. Repetido com um favicon na raiz: 0 erros de console e 0 falhas de rede.
 Validador do território: 0 erros.
+
+== Definição sem rótulo (20/10/2026): navegação file:// e http /fatores/ 150/150 sem falhas, definição idêntica ao cadastro nos 150 popups; cenários de falha 16/16

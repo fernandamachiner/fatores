@@ -462,7 +462,7 @@
     popupOds.textContent = fator.nome_ods || ("ODS " + pad2(fator.ods));
     popupOds.style.background = eixo.cor;
     popupTitulo.textContent = fator.fator;
-    popupDefinicao.textContent = fator.definicao ? "Definição de referência: " + fator.definicao : "";
+    popupDefinicao.textContent = fator.definicao || "";
     preencherDiagnostico(fid);
 
     if (historicoPopup.length) {

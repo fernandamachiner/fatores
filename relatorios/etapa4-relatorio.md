@@ -54,13 +54,15 @@ A supressão é controlada pela classe popup-modo-territorio, aplicada apenas qu
 
 O teste de navegação passou a verificar, em cada um dos 150 popups, que os ícones e o selo ODS estão ocultos, que o nome e a definição estão visíveis e que a lista de fontes citadas não é exibida. O teste de falhas verifica que o popup mantém ícones e ODS quando o território não carrega e os omite no território parcial de teste.
 
+Em seguida, a definição passou a ser exibida sem o rótulo Definição de referência, apenas em itálico abaixo do nome do fator. O teste de navegação passou a conferir, nos 150 popups, que o texto exibido é idêntico à definição do cadastro metodológico, sem rótulo.
+
 ## Comportamento verificado
 
 Ao selecionar um fator, a aplicação:
 1. identifica o fator pelo identificador do card;
 2. consulta os dados do território ativo;
 3. localiza o diagnóstico pelo mesmo identificador;
-4. exibe o nome, a definição de referência, o texto integral, as referências normativas e os fatores relacionados, sem ícones, selo ODS ou lista de fontes citadas;
+4. exibe o nome, a definição (em itálico, sem rótulo), o texto integral, as referências normativas e os fatores relacionados, sem ícones, selo ODS ou lista de fontes citadas;
 5. informa a ausência de diagnóstico, quando for o caso;
 6. permite voltar ao fator anterior e fechar o popup pelo botão, por clique fora ou pela tecla Esc.
 
