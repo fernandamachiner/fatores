@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   verificar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -63,19 +63,22 @@ jobs:
 
       - name: Validar metodologia e cadastro de territórios
         run: |
-          node testes/validar-metodologia.js
-          python3 testes/conferir_metodologia_planilha.py
-          node testes/validar-cadastro-territorios.js
+          bash testes/ci-executar.sh node testes/validar-metodologia.js
+          bash testes/ci-executar.sh python3 testes/conferir_metodologia_planilha.py
+          bash testes/ci-executar.sh node testes/validar-cadastro-territorios.js
 
       - name: Verificar cada território com diagnóstico
         run: |
           ids=$(node -e 'const w={};new Function("window",require("fs").readFileSync("territorios/indice.js","utf8"))(w);console.log(w.TERRITORIOS_INDICE.territorios.filter(t=>t.situacao==="diagnostico").map(t=>t.id).join(" "))')
           for id in $ids; do
-            python3 testes/verificar_territorio.py "$id"
+            bash testes/ci-executar.sh python3 testes/verificar_territorio.py "$id"
           done
 
-      - name: Testar seletor, falhas e procedimento de cadastro
-        run: |
-          node testes/testar-seletor-territorios.js
-          node testes/testar-falhas-territorio.js
-          python3 testes/testar-procedimento-cadastro.py
+      - name: Testar seletor de territórios
+        run: bash testes/ci-executar.sh node testes/testar-seletor-territorios.js
+
+      - name: Testar falhas e ausências de dados
+        run: bash testes/ci-executar.sh node testes/testar-falhas-territorio.js
+
+      - name: Testar procedimento de cadastro
+        run: bash testes/ci-executar.sh python3 testes/testar-procedimento-cadastro.py
