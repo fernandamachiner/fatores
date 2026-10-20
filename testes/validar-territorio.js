@@ -77,8 +77,18 @@ ok.push(`${P.length} diagnósticos pendentes de validação, com motivo registra
 
 // 4. Cobertura do documento
 const declarados = (T.eixos_documento || []).reduce((s, e) => s + (e.fatores_no_documento || 0), 0);
-confere(codigos.size === declarados, `todos os ${declarados} fatores do documento estão no arquivo (validados ou pendentes), sem repetição`,
-  `fatores do documento: ${declarados}; no arquivo: ${codigos.size}`);
+const SD = T.fatores_sem_diagnostico || [];
+const sdDoc = SD.filter((x) => x.origem === "declarado_no_documento").length;
+SD.forEach((x) => {
+  if (!fatores.has(x.id)) erro("fator sem diagnóstico com id inexistente: " + x.id);
+  if (D[x.id]) erro(x.id + ": registrado ao mesmo tempo com diagnóstico e sem diagnóstico");
+  if (!["declarado_no_documento", "ausente_do_documento"].includes(x.origem)) erro(x.id + ": origem de ausência inválida");
+});
+confere(codigos.size + sdDoc === declarados, `todos os ${declarados} fatores do documento estão no arquivo (${codigos.size} com diagnóstico, ${sdDoc} declarados sem diagnóstico), sem repetição`,
+  `fatores do documento: ${declarados}; no arquivo: ${codigos.size} com diagnóstico e ${sdDoc} sem diagnóstico`);
+const semRegistro = [...fatores.keys()].filter((id) => !D[id] && !SD.some((x) => x.id === id));
+confere(!semRegistro.length, "todo fator do cadastro tem diagnóstico ou está registrado como sem diagnóstico",
+  "fatores sem diagnóstico e sem registro: " + semRegistro.join(", "));
 
 // 5. Presença no índice de territórios, apontando para este arquivo
 const wi = {};

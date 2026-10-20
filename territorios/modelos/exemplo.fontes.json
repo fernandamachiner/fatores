@@ -1,0 +1,31 @@
+{
+  "_instrucoes": "EXEMPLO SIMULADO. Mostra os três modos de registrar referências: fonte entre parênteses (parenteses_que_sao_fonte), fonte escrita no corpo do texto (fontes_no_texto, por fator) e lei ou norma (referencias_normativas, por fator).",
+  "parenteses_que_sao_fonte": [
+    "Fonte simulada: Relatório fictício da oficina de 2025"
+  ],
+  "fontes_no_texto": {
+    "E1-F01": [
+      "oficina simulada"
+    ]
+  },
+  "referencias_normativas": {
+    "E1-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ],
+    "E2-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ],
+    "E3-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ],
+    "E4-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ],
+    "E5-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ],
+    "E6-F02": [
+      "Lei Municipal fictícia nº 0000/2024"
+    ]
+  }
+}

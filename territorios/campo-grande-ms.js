@@ -4228,5 +4228,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     }
   },
+  "fatores_sem_diagnostico": [],
   "pendentes_validacao": []
 };

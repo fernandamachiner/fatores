@@ -1,0 +1,149 @@
+ETAPA 6. RESULTADO DOS TESTES (execução de 20/10/2026 06:00 UTC, ramo etapa-6-validacao)
+
+== A. Metodologia: validador do cadastro
+CADASTRO: 6 eixos, 150 fatores
+  E1  29 fatores  O Suor que não nos Sustenta
+  E2  38 fatores  A Vida em Risco
+  E3  18 fatores  Nossos Corpos Silenciados
+  E4  24 fatores  A Terra de Quem?
+  E5  29 fatores  A Cidade Negada
+  E6  12 fatores  A Voz na Mesa
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+ERROS (0)
+
+== A. Metodologia x planilha oficial
+Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+
+== A e B. Auditoria metodológica e de conteúdo (testes/auditoria_conteudo.py)
+APROVADO   A1 seis eixos | 6 eixos no cadastro, na planilha e na roda SVG; títulos e contagens coincidentes
+APROVADO   A2/A3 fatores e nomes contra a planilha oficial | 150 fatores no cadastro e 150 na planilha; nome, definição, ícone, ODS e eixo coincidentes em todos
+APROVADO   A3 comparação com a estrutura original publicada | versão original com 159 fatores; versão atual com 150 (Matriz v1.0.2, decisão de 19-20/10/2026); 146 nomes coincidentes, 13 nomes só na original e 4 só na atual; as diferenças decorrem da adoção da planilha final como fonte oficial (registro.json) e estão listadas no JSON de evidência
+APROVADO   A4 códigos e identificadores | 150 IDs únicos no formato E<eixo>-F<nn>, cada um no seu eixo; 8 números vagos, todos registrados como desativados (E2-F24, E3-F15, E4-F23, E5-F07, E6-F10, E6-F12, E6-F13, E6-F14); nenhum ID desativado reutilizado
+APROVADO   A5 duplicações e omissões | nenhum nome ou definição repetidos e nenhum campo vazio
+PENDENTE   A5 nomes próximos entre fatores | 16 pares de nomes semelhantes, para conferência da coordenação, sem alteração: E1-F02 Alimentos / E1-F04 Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos; E1-F02 Alimentos / E1-F06 Disponibilidade de alimentos; E1-F02 Alimentos / E1-F26 Sistemas sustentáveis de produção de alimentos; E1-F06 Disponibilidade de alimentos / E1-F12 Disponibilidade de emprego; E1-F14 Tra
+PENDENTE   A5 ícones compartilhados | códigos de ícone usados por mais de um fator, mantidos por decisão de 19/10/2026 até a entrega dos novos ícones: 03.09 em E2-F11, E5-F02; 03.11 em E2-F13, E2-F14
+PENDENTE   A5 classificação ODS diferente do código do ícone | 27 fatores com ODS diferente da numeração do ícone, mantidos sem definição por decisão de 19/10/2026 (E1-F28, E1-F29, E2-F01, E2-F17, E2-F26, E2-F30, E2-F31, E2-F34, E2-F35, E2-F36, E2-F37, E2-F38, E2-F39, E3-F09, E3-F14, E4-F05, E4-F25, E5-F01, E5-F21, E5-F30, E6-F01, E6-F02, E6-F03, E6-F05, E6-F11, E6-F15, E6-F16)
+APROVADO   B1 associação fator-diagnóstico (Campo Grande/MS) | 150 diagnósticos, cada um ligado ao ID do cadastro, ao mesmo ID, nome e eixo no documento
+APROVADO   B2 diagnósticos ausentes (Campo Grande/MS) | os 150 fatores do cadastro têm diagnóstico; nenhum fator do documento ficou fora dos dados
+APROVADO   B3 integridade das referências (Campo Grande/MS) | fontes e normas registradas aparecem literalmente no texto; os fatores relacionados correspondem exatamente aos IDs citados em cada texto e existem no cadastro
+PENDENTE   B3 diagnósticos com lacuna de informação declarada (Campo Grande/MS) | 65 de 150 diagnósticos declaram dado a extrair, levantar ou produzir (E1-F06, E1-F09, E1-F13, E1-F14, E1-F15, E1-F24, E1-F29, E2-F01, E2-F02, E2-F04, E2-F05, E2-F06, E2-F08, E2-F09, E2-F11, E2-F12, E2-F14, E2-F16, E2-F18, E2-F19, E2-F21, E2-F27, E2-F33, E2-F36, E2-F38, E3-F01, E3-F03, E3-F04, E3-F05, E3-F06, E3-F11, E3-F12, E3-F16, E3-F18, E4-F01, E4-F02, E4-F03, E4-F05, E4-F07, E4-F15, E4-F16, E4
+PENDENTE   B3 dados quantitativos sem fonte registrada (Campo Grande/MS) | 8 diagnósticos apresentam números, percentuais ou contagens sem fonte citada no texto: E1-F06, E1-F11, E1-F16, E1-F21, E2-F31, E3-F09, E4-F07, E5-F20
+APROVADO   B4 dados quantitativos contra o documento (Campo Grande/MS) | 1736 ocorrências numéricas (valores, percentuais, anos, leis) extraídas do documento e dos dados, idênticas fator a fator
+APROVADO   B5 mistura entre territórios nos dados (Campo Grande/MS) | o arquivo registra apenas campo-grande-ms e os 150 textos vêm do documento de Campo Grande/MS (B1, B4 e B6); a separação no painel é testada em C6
+PENDENTE   B5 dados de outras escalas nos textos (Campo Grande/MS) | textos que citam dados ou referências de escala estadual (38), nacional (13) ou de outras localidades (2). São trechos do documento-fonte, não mistura de arquivos, mas o leitor precisa distinguir dado municipal de dado estadual ou nacional: estado E1-F02, E1-F06, E1-F08, E1-F10, E1-F15, E1-F16, E1-F19, E1-F22, E1-F24, E2-F03, E2-F04, E2-F05, E2-F07, E2-F08, E2-F09, E2-F12, E2-F15, E2-F17, E2-F20, 
+APROVADO   B6 textos truncados nos dados (Campo Grande/MS) | 150 textos idênticos aos parágrafos do documento e terminados em pontuação final; tamanho de 621 (E1-F02) a 1061 caracteres (E2-F05)
+PENDENTE   Redação no documento-fonte (Campo Grande/MS) | E2-F26: sem espaço após pontuação (…blica disponível.A relevânci…); E2-F01: enumeração sem conjunção (pela Defesa Civil, pelo Plano Diretor…)
+
+reprovados: 0 | pendentes: 7 | aprovados: 11
+
+== B. Território: integridade e fidelidade ao documento
+AVISOS (1)
+  AVISO  0 fatores do cadastro sem diagnóstico validado neste território
+ERROS (0)
+Documento: 494 blocos com conteúdo (333 parágrafos e 161 tabelas)
+Diagnósticos conferidos literalmente contra o .docx: 150 de 150 no arquivo
+Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
+Conteúdos do documento não representados no arquivo: 0
+
+== Cadastro de territórios
+  OK     território campo-grande-ms: arquivo presente, registra o id correto, rótulo coerente, 150 diagnósticos
+  OK     território padrão: Campo Grande/MS
+
+ERROS (0)
+
+== C. Navegação completa (file://)
+file:///home/claude/fatores/index.html
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+
+== C. Navegação completa (http, subcaminho /fatores/)
+http://127.0.0.1:8772/fatores/
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+
+== C. Seletor de territórios
+OK    [file://] seletor lista os territórios do cadastro com os nomes registrados: Campo Grande/MS ; Território simulado (teste) (dados simulados) ; Localidade sem diagnóstico (teste) (sem diagnóstico) ; Localidade sem arqu
+OK    [file://] estrutura metodológica completa (6 eixos, 150 fatores)
+OK    [file://] Campo Grande/MS inicial: nome e diagnóstico: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] simulado: nome atualizado e identificado como simulado: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [file://] simulado: diagnóstico do território selecionado: Diagnóstico situacional · Território simulado (teste) · dados simulados, não é diagnóstico real
+OK    [file://] simulado: fator sem diagnóstico avisa e não usa Campo Grande: Não há diagnóstico situacional cadastrado para este fator em Território simulado (teste).
+OK    [file://] simulado: eixos e fatores idênticos aos de Campo Grande
+OK    [file://] simulado: endereço atualizado: file:///tmp/painel-seletor-TPNlBn/fatores/index.html?territorio=simulado-teste
+OK    [file://] sem diagnóstico: informa a ausência em todos os fatores: Território: Localidade sem diagnóstico (teste)sem diagnóstico cadastrado / Localidade sem diagnóstico (teste) ainda não possui diagnóstico s
+OK    [file://] sem diagnóstico: eixos e fatores preservados
+OK    [file://] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Não foi possível carregar os dados de Localidade sem arquivo (teste) (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [file://] falha de carregamento (teste-id-errado) sem dados de outra localidade: O arquivo de dados de Localidade com arquivo errado (teste) não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [file://] volta a Campo Grande/MS: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] sem erros de script na sequência de trocas
+OK    [file://] troca rápida de seleção sem mistura de dados: Território: Campo Grande/MSterritório de exemplo / Diagnóstico situacional · Campo Grande/MS
+OK    [file://] abertura pelo endereço seleciona o território: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [file://] território inexistente no endereço, seguido de seleção válida: O território solicitado (nao-cadastrado) não está cadastrado na plataforma. Nenhum diagnóstico será exibido. -> Território: Campo Grande/MSt
+OK    [file://] celular (390 px): seletor visível, sem rolagem horizontal, troca funciona: {"esq":24,"dir":366,"larg":390,"pagina":390}
+OK    [http] seletor lista os territórios do cadastro com os nomes registrados: Campo Grande/MS ; Território simulado (teste) (dados simulados) ; Localidade sem diagnóstico (teste) (sem diagnóstico) ; Localidade sem arqu
+OK    [http] estrutura metodológica completa (6 eixos, 150 fatores)
+OK    [http] Campo Grande/MS inicial: nome e diagnóstico: Território: Campo Grande/MSterritório de exemplo
+OK    [http] simulado: nome atualizado e identificado como simulado: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [http] simulado: diagnóstico do território selecionado: Diagnóstico situacional · Território simulado (teste) · dados simulados, não é diagnóstico real
+OK    [http] simulado: fator sem diagnóstico avisa e não usa Campo Grande: Não há diagnóstico situacional cadastrado para este fator em Território simulado (teste).
+OK    [http] simulado: eixos e fatores idênticos aos de Campo Grande
+OK    [http] simulado: endereço atualizado: http://127.0.0.1:35213/fatores/?territorio=simulado-teste
+OK    [http] sem diagnóstico: informa a ausência em todos os fatores: Território: Localidade sem diagnóstico (teste)sem diagnóstico cadastrado / Localidade sem diagnóstico (teste) ainda não possui diagnóstico s
+OK    [http] sem diagnóstico: eixos e fatores preservados
+OK    [http] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Não foi possível carregar os dados de Localidade sem arquivo (teste) (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [http] falha de carregamento (teste-id-errado) sem dados de outra localidade: O arquivo de dados de Localidade com arquivo errado (teste) não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [http] volta a Campo Grande/MS: Território: Campo Grande/MSterritório de exemplo
+OK    [http] sem erros de script na sequência de trocas
+OK    [http] troca rápida de seleção sem mistura de dados: Território: Campo Grande/MSterritório de exemplo / Diagnóstico situacional · Campo Grande/MS
+OK    [http] abertura pelo endereço seleciona o território: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [http] território inexistente no endereço, seguido de seleção válida: O território solicitado (nao-cadastrado) não está cadastrado na plataforma. Nenhum diagnóstico será exibido. -> Território: Campo Grande/MSt
+OK    [http] celular (390 px): seletor visível, sem rolagem horizontal, troca funciona: {"esq":24,"dir":366,"larg":390,"pagina":390}
+
+36 de 36 verificações aprovadas
+
+== C. Controles por mutação do seletor
+FALHA [file://] troca rápida de seleção sem mistura de dados: Território: Território simulado (teste)dados simulados, não é diagnóstico real / Diagnóstico situacional · Território simulado (teste) · dad
+FALHA [http] troca rápida de seleção sem mistura de dados: Território: Território simulado (teste)dados simulados, não é diagnóstico real / Diagnóstico situacional · Território simulado (teste) · dad
+34 de 36 verificações aprovadas (mutação: corrida)
+FALHA [file://] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Território: Campo Grande/MSterritório de exemplo
+FALHA [http] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Território: Campo Grande/MSterritório de exemplo
+34 de 36 verificações aprovadas (mutação: substituicao)
+
+== C. Falhas e ausências de dados
+OK    [file://] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [file://] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [file://] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [file://] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [file://] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [file://] alerta de versão de matriz divergente: Território: Território de testedados simulados, não é diagnóstico realDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [file://] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+OK    [http] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [http] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [http] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [http] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [http] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [http] alerta de versão de matriz divergente: Território: Território de testedados simulados, não é diagnóstico realDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [http] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [http] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+
+16 de 16 verificações aprovadas
+
+== C e D. Auditoria de interface (testes/auditoria-interface.js, com axe-core)
+APROVADO   D2 referências a arquivos inexistentes (análise estática) | 8 referências do index.html, do style.css e do cadastro de territórios e 592 arquivos de ícone (148 códigos × 4 variantes) existem com a grafia exata; 0 referências externas
+APROVADO   D4 compatibilidade dos arquivos com o GitHub Pages | 642 arquivos, 17.9 MB no total; maior arquivo 0.3 MB; .nojekyll presente; 0 arquivos com nome iniciado por ponto ou sublinhado; 0 colisões de maiúsculas/minúsculas; 0 caminhos absolutos; não há workflow próprio de publicação (publicação pelo branch)
+APROVADO   D5 recursos gráficos carregam e decodificam no navegador | 592 de 592 ícones decodificados; logotipo carregado; 2 de 2 imagens de fundo carregadas
+APROVADO   D5 nomes acessíveis de botões, seletor e imagens | todos os botões, o seletor de território e as imagens têm nome acessível ou atributo alt
+REPROVADO  D5 acessibilidade automática: color-contrast | Elements must meet minimum color contrast ratio thresholds; impacto serious; eixo 1 aberto (32), popup de E1-F01 (32), eixo 4 aberto (26), popup de E4-F01 (26), eixo 6 aberto (14), popup de E6-F01 (14); exemplos: .eixo-tag (contraste 2.56); h2 (contraste 2.56); #eixo-cabecalho > p (contraste 2.56); button[data-fator-id="E1-F01"] > .fator-ods-selo (contraste 2.56)
+APROVADO   C5 navegação por teclado: abrir eixo, abrir fator, fechar | seletor focável true; Enter abre eixo true; Enter abre fator true; foco no botão fechar true; Esc fecha true
+APROVADO   C5 retorno do foco ao fator após fechar o popup | o foco volta ao card do fator que abriu o popup
+APROVADO   C5 foco mantido dentro do popup aberto | a tecla Tab percorre apenas os elementos do popup enquanto ele está aberto
+APROVADO   C9 apresentação em diferentes tamanhos de tela | 7 tamanhos (320x568, 360x740, 390x844, 768x1024, 1024x768, 1366x768, 1920x1080): sem rolagem horizontal na tela inicial, com eixo aberto e com popup; seletor dentro da tela; popup do diagnóstico mais longo (E2-F05) dentro da tela, com botão de fechar visível e texto legível até o fim por rolagem
+APROVADO   C9 tamanho dos alvos de toque | menor botão de eixo 82 px; botão de fechar do popup 27 px (referência WCAG 2.2: mínimo de 24 px)
+APROVADO   D1 erros de JavaScript durante a auditoria de interface | nenhum erro de script ou de console em todas as páginas abertas nesta auditoria
+APROVADO   D3 respostas com erro ou requisições falhas | 601 endereços distintos requisitados no subcaminho /fatores/, todos com resposta bem-sucedida, em servidor sensível a maiúsculas/minúsculas
+
+reprovados: 1 | pendentes: 0 | aprovados: 11

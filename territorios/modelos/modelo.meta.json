@@ -1,20 +1,23 @@
 {
-  "_instrucoes": "Copie este arquivo para territorios/correspondencias/<id>.meta.json, troque <id> pelo identificador do território (minúsculas, números e hífens) e preencha os campos. Apague esta linha de instruções.",
+  "_instrucoes": "Copie este arquivo para territorios/correspondencias/<id>.meta.json e substitua todos os trechos entre < >. O id deve ser igual ao nome do arquivo e ao cadastro em territorios/indice.js. Esta linha de instruções pode permanecer.",
   "territorio": {
-    "id": "<id>",
-    "nome": "<nome da localidade>",
-    "uf": "<UF>",
-    "tipo": "<município, comunidade, distrito...>",
-    "rotulo": "<nome exibido no seletor, igual ao do cadastro em territorios/indice.js>"
+    "id": "<id: minúsculas, números e hífens, por exemplo dourados-ms>",
+    "nome": "<nome da localidade, por exemplo Dourados>",
+    "uf": "<sigla da UF, por exemplo MS>",
+    "tipo": "<município, comunidade, distrito, território indígena...>",
+    "rotulo": "<nome exibido no seletor, por exemplo Dourados/MS; igual ao rótulo em territorios/indice.js>"
   },
   "situacao": {
     "status": "diagnóstico situacional",
     "territorio_de_exemplo": false,
-    "aviso": "<frase exibida ao passar o mouse sobre o nome do território, por exemplo: Os textos referem-se exclusivamente a <localidade>.>"
+    "aviso": "<frase exibida ao passar o mouse sobre o nome do território, por exemplo: Os textos referem-se exclusivamente a Dourados/MS.>"
   },
   "documento_fonte": {
-    "arquivo": "territorios/fontes/<arquivo do diagnóstico>.docx",
+    "arquivo": "territorios/fontes/<nome do arquivo>.docx",
     "titulo": "<título do documento>",
+    "periodo_referencia": "<período dos dados, por exemplo 2020 a 2026>",
+    "responsaveis": "<equipe ou instituição que elaborou o diagnóstico>",
+    "data_elaboracao": "<data da versão do documento, por exemplo 2026-11-15>",
     "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
   },
   "campos_excluidos_da_abertura_dos_eixos": [

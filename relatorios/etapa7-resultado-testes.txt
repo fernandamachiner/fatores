@@ -1,0 +1,61 @@
+ETAPA 7. RESULTADO DOS TESTES (20/10/2026 06:30 UTC, ramo etapa-6-validacao)
+
+== Modelo de documento gerado da metodologia vigente
+territorios/modelos/modelo-diagnostico.docx: 6 eixos e 150 fatores (metodologia v1.0.2)
+
+== Campo Grande/MS gerado de novo com o gerador atualizado (diferença em relação à versão publicada)
+territorios/campo-grande-ms.js: 150 diagnósticos, 0 fatores sem diagnóstico (0 declarados no documento, 0 ausentes do documento), 77 com fonte citada, 16 com referência normativa
+ 1 file changed, 1 insertion(+)
++  "fatores_sem_diagnostico": [],
+
+== Verificação em um comando: Campo Grande/MS
+VERIFICAÇÃO DO TERRITÓRIO campo-grande-ms
+============================================================
+OK             1. Metodologia íntegra (eixos, fatores e ícones)
+OK             2. Cadastro de territórios (territorios/indice.js)
+OK             3. Estrutura do arquivo do território
+OK             4. Fidelidade dos textos ao documento-fonte (.docx)
+OK             5. Navegação no navegador: 6 eixos, 150 fatores e diagnósticos do território
+               eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+============================================================
+Resultado: aprovado nas verificações executadas
+
+== Teste do procedimento de cadastro com o território demonstrativo simulado
+OK    passo 6: geração do arquivo do território: territorios/demonstrativo-simulado.js: 12 diagnósticos, 138 fatores sem diagnóstico (138 declarados no documento, 0 ausentes do documento), 6 com fonte citada, 6 com referência normativa
+OK    dados: 12 diagnósticos, 138 fatores sem diagnóstico declarados, 1 com motivo: 12 diagnósticos; 138 sem diagnóstico; motivo: tema não discutido na oficina simulada
+OK    dados: fontes, normas e períodos registrados: fontes de E1-F01: ['Fonte simulada: Relatório fictício da oficina de 2025', 'oficina simulada']; períodos: ['2025']; período de referência: 2024 a 2025 (fictício)
+OK    passos 7 e 8: cadastro e verificação completa (verificar_territorio.py): OK             1. Metodologia íntegra (eixos, fatores e ícones) | OK             2. Cadastro de territórios (territorios/indice.js) | OK             3. Estrutura do arquivo do território | OK             4. Fidelidade dos textos ao documento-fonte (.docx) | OK             5. Navegação no navegador: 6 eixos, 150 fatores e diagnósticos do território
+OK    Campo Grande/MS continua aprovado depois do novo cadastro: Resultado: aprovado nas verificações executadas
+OK    nenhum arquivo da interface, da metodologia ou de outro território foi alterado: 7 arquivos conferidos por hash
+OK    sem PERMITIR_SIMULADO, o validador recusa território simulado no cadastro publicado
+OK    erro comum detectado: linha de instrução do modelo não apagada: ERRO texto de instrução do modelo ainda no documento: "[PREENCHER: diagnóstico esquecido]"
+OK    erro comum detectado: nome de fator alterado no documento: ERRO E1-F01: nome difere do cadastro ('Cuidado com crianças e grupos vulneráveis (alterado)')
+OK    erro comum detectado: definição de referência alterada: ERRO E1-F01: definição de referência difere do cadastro
+OK    erro comum detectado: fator sem texto e sem a frase Sem diagnóstico disponível: ERRO E6-F01: sem parágrafo de diagnóstico (escreva o diagnóstico ou 'Sem diagnóstico disponível.')
+OK    erro comum detectado: id do meta.json diferente do informado: ERRO o id em territorios/correspondencias/demonstrativo-simulado.meta.json (outro-id) difere do id informado (demonstrativo-simulado)
+OK    erro comum detectado: trecho do modelo entre < > no meta.json: ERRO o arquivo territorios/correspondencias/demonstrativo-simulado.meta.json ainda tem trechos do modelo entre < > a substituir
+OK    erro comum detectado: nome do .docx com maiúsculas diferentes: ERRO documento-fonte não encontrado: territorios/fontes/Diagnostico_Territorio_Demonstrativo_SIMULADO.docx (confira o nome, inclusive maiúsculas e acentos)
+OK    erro comum detectado: fonte ou norma que não aparece no texto: referência normativa não encontrada em E1-F01: Lei que não aparece no texto
+OK    erro comum detectado: caminho do arquivo com maiúsculas diferentes no cadastro: ERRO   território demonstrativo-simulado: arquivo deve ser territorios/demonstrativo-simulado.js (encontrado territorios/Demonstrativo-Simulado.js)
+OK    erro comum detectado: território gerado mas não cadastrado no índice: ERRO   território ausente de territorios/indice.js ou com caminho de arquivo diferente
+
+17 de 17 verificações aprovadas
+
+== Regressão: navegação completa (file:// e http /fatores/)
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+
+== Regressão: seletor
+36 de 36 verificações aprovadas
+
+== Regressão: falhas e ausências
+16 de 16 verificações aprovadas
+
+== Regressão: metodologia x planilha
+Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+
+== Regressão: auditoria de conteúdo e de interface (Etapa 6)
+reprovados: 0 | pendentes: 7 | aprovados: 11
+reprovados: 1 | pendentes: 0 | aprovados: 11

@@ -1,0 +1,546 @@
+{
+  "achados": [
+    {
+      "bloco": "D",
+      "item": "D2 referências a arquivos inexistentes (análise estática)",
+      "situacao": "aprovado",
+      "descricao": "8 referências do index.html, do style.css e do cadastro de territórios e 592 arquivos de ícone (148 códigos × 4 variantes) existem com a grafia exata; 0 referências externas",
+      "evidencia": {
+        "referencias": [
+          "style.css",
+          "assets/logo-picaps.png",
+          "metodologia/metodologia.js",
+          "territorios/indice.js",
+          "app.js",
+          "assets/marca-dagua-fundo.svg",
+          "assets/mapa-mundi-silhueta.png",
+          "territorios/campo-grande-ms.js"
+        ],
+        "icones": 592,
+        "externos": []
+      }
+    },
+    {
+      "bloco": "D",
+      "item": "D4 compatibilidade dos arquivos com o GitHub Pages",
+      "situacao": "aprovado",
+      "descricao": "642 arquivos, 17.9 MB no total; maior arquivo 0.3 MB; .nojekyll presente; 0 arquivos com nome iniciado por ponto ou sublinhado; 0 colisões de maiúsculas/minúsculas; 0 caminhos absolutos; não há workflow próprio de publicação (publicação pelo branch)",
+      "evidencia": {
+        "arquivos": 642,
+        "total_bytes": 18790321,
+        "grandes": [],
+        "ignoradosJekyll": [],
+        "colisoes": [],
+        "absolutos": []
+      }
+    },
+    {
+      "bloco": "D",
+      "item": "D5 recursos gráficos carregam e decodificam no navegador",
+      "situacao": "aprovado",
+      "descricao": "592 de 592 ícones decodificados; logotipo carregado; 2 de 2 imagens de fundo carregadas",
+      "evidencia": {
+        "falhas": [],
+        "logo": true,
+        "fundo": 2,
+        "falhasFundo": []
+      }
+    },
+    {
+      "bloco": "D",
+      "item": "D5 nomes acessíveis de botões, seletor e imagens",
+      "situacao": "aprovado",
+      "descricao": "todos os botões, o seletor de território e as imagens têm nome acessível ou atributo alt",
+      "evidencia": {
+        "semNome": [],
+        "imgsSemAlt": []
+      }
+    },
+    {
+      "bloco": "D",
+      "item": "D5 acessibilidade automática: color-contrast",
+      "situacao": "reprovado",
+      "descricao": "Elements must meet minimum color contrast ratio thresholds; impacto serious; eixo 1 aberto (32), popup de E1-F01 (32), eixo 4 aberto (26), popup de E4-F01 (26), eixo 6 aberto (14), popup de E6-F01 (14); exemplos: .eixo-tag (contraste 2.56); h2 (contraste 2.56); #eixo-cabecalho > p (contraste 2.56); button[data-fator-id=\"E1-F01\"] > .fator-ods-selo (contraste 2.56)",
+      "evidencia": {
+        "id": "color-contrast",
+        "impacto": "serious",
+        "descricao": "Elements must meet minimum color contrast ratio thresholds",
+        "ocorrencias": 32,
+        "exemplos": [
+          ".eixo-tag (contraste 2.56)",
+          "h2 (contraste 2.56)",
+          "#eixo-cabecalho > p (contraste 2.56)",
+          "button[data-fator-id=\"E1-F01\"] > .fator-ods-selo (contraste 2.56)"
+        ],
+        "telas": [
+          "eixo 1 aberto (32)",
+          "popup de E1-F01 (32)",
+          "eixo 4 aberto (26)",
+          "popup de E4-F01 (26)",
+          "eixo 6 aberto (14)",
+          "popup de E6-F01 (14)"
+        ]
+      }
+    },
+    {
+      "bloco": "C",
+      "item": "C5 navegação por teclado: abrir eixo, abrir fator, fechar",
+      "situacao": "aprovado",
+      "descricao": "seletor focável true; Enter abre eixo true; Enter abre fator true; foco no botão fechar true; Esc fecha true",
+      "evidencia": {
+        "seletorFocavel": true,
+        "eixoAbre": true,
+        "popupAbre": true,
+        "focoNoFechar": true,
+        "popupFecha": true,
+        "focoRetorna": true,
+        "focoDentroDoPopup": true
+      }
+    },
+    {
+      "bloco": "C",
+      "item": "C5 retorno do foco ao fator após fechar o popup",
+      "situacao": "aprovado",
+      "descricao": "o foco volta ao card do fator que abriu o popup",
+      "evidencia": {
+        "seletorFocavel": true,
+        "eixoAbre": true,
+        "popupAbre": true,
+        "focoNoFechar": true,
+        "popupFecha": true,
+        "focoRetorna": true,
+        "focoDentroDoPopup": true
+      }
+    },
+    {
+      "bloco": "C",
+      "item": "C5 foco mantido dentro do popup aberto",
+      "situacao": "aprovado",
+      "descricao": "a tecla Tab percorre apenas os elementos do popup enquanto ele está aberto",
+      "evidencia": {
+        "seletorFocavel": true,
+        "eixoAbre": true,
+        "popupAbre": true,
+        "focoNoFechar": true,
+        "popupFecha": true,
+        "focoRetorna": true,
+        "focoDentroDoPopup": true
+      }
+    },
+    {
+      "bloco": "C",
+      "item": "C9 apresentação em diferentes tamanhos de tela",
+      "situacao": "aprovado",
+      "descricao": "7 tamanhos (320x568, 360x740, 390x844, 768x1024, 1024x768, 1366x768, 1920x1080): sem rolagem horizontal na tela inicial, com eixo aberto e com popup; seletor dentro da tela; popup do diagnóstico mais longo (E2-F05) dentro da tela, com botão de fechar visível e texto legível até o fim por rolagem",
+      "evidencia": [
+        {
+          "tela": "320x568",
+          "inicial": 320,
+          "seletor": true,
+          "alvoEixoMin": 82.421875,
+          "eixoAberto": 320,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 280,
+          "alvoFechar": 27,
+          "larguraComPopup": 320,
+          "ok": true
+        },
+        {
+          "tela": "360x740",
+          "inicial": 360,
+          "seletor": true,
+          "alvoEixoMin": 92.71875,
+          "eixoAberto": 360,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 320,
+          "alvoFechar": 27,
+          "larguraComPopup": 360,
+          "ok": true
+        },
+        {
+          "tela": "390x844",
+          "inicial": 390,
+          "seletor": true,
+          "alvoEixoMin": 100.453125,
+          "eixoAberto": 390,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 350,
+          "alvoFechar": 27,
+          "larguraComPopup": 390,
+          "ok": true
+        },
+        {
+          "tela": "768x1024",
+          "inicial": 768,
+          "seletor": true,
+          "alvoEixoMin": 176.328125,
+          "eixoAberto": 768,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 680,
+          "alvoFechar": 27,
+          "larguraComPopup": 768,
+          "ok": true
+        },
+        {
+          "tela": "1024x768",
+          "inicial": 1024,
+          "seletor": true,
+          "alvoEixoMin": 176.328125,
+          "eixoAberto": 1024,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 680,
+          "alvoFechar": 27,
+          "larguraComPopup": 1024,
+          "ok": true
+        },
+        {
+          "tela": "1366x768",
+          "inicial": 1366,
+          "seletor": true,
+          "alvoEixoMin": 176.328125,
+          "eixoAberto": 1366,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 680,
+          "alvoFechar": 27,
+          "larguraComPopup": 1366,
+          "ok": true
+        },
+        {
+          "tela": "1920x1080",
+          "inicial": 1920,
+          "seletor": true,
+          "alvoEixoMin": 179.1875,
+          "eixoAberto": 1920,
+          "popupDentro": true,
+          "fecharVisivel": true,
+          "fimLegivel": true,
+          "popupLarg": 680,
+          "alvoFechar": 27,
+          "larguraComPopup": 1920,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "bloco": "C",
+      "item": "C9 tamanho dos alvos de toque",
+      "situacao": "aprovado",
+      "descricao": "menor botão de eixo 82 px; botão de fechar do popup 27 px (referência WCAG 2.2: mínimo de 24 px)",
+      "evidencia": [
+        {
+          "tela": "320x568",
+          "eixo": 82.421875,
+          "fechar": 27
+        },
+        {
+          "tela": "360x740",
+          "eixo": 92.71875,
+          "fechar": 27
+        },
+        {
+          "tela": "390x844",
+          "eixo": 100.453125,
+          "fechar": 27
+        },
+        {
+          "tela": "768x1024",
+          "eixo": 176.328125,
+          "fechar": 27
+        },
+        {
+          "tela": "1024x768",
+          "eixo": 176.328125,
+          "fechar": 27
+        },
+        {
+          "tela": "1366x768",
+          "eixo": 176.328125,
+          "fechar": 27
+        },
+        {
+          "tela": "1920x1080",
+          "eixo": 179.1875,
+          "fechar": 27
+        }
+      ]
+    },
+    {
+      "bloco": "D",
+      "item": "D1 erros de JavaScript durante a auditoria de interface",
+      "situacao": "aprovado",
+      "descricao": "nenhum erro de script ou de console em todas as páginas abertas nesta auditoria",
+      "evidencia": []
+    },
+    {
+      "bloco": "D",
+      "item": "D3 respostas com erro ou requisições falhas",
+      "situacao": "aprovado",
+      "descricao": "601 endereços distintos requisitados no subcaminho /fatores/, todos com resposta bem-sucedida, em servidor sensível a maiúsculas/minúsculas",
+      "evidencia": {
+        "respostasErro": [],
+        "requisicoes": 601
+      }
+    }
+  ],
+  "evidencias": {
+    "recursos": {
+      "falhas": [],
+      "logo": true,
+      "fundo": 2,
+      "falhasFundo": []
+    },
+    "axe": [
+      {
+        "rotulo": "tela inicial",
+        "violacoes": []
+      },
+      {
+        "rotulo": "eixo 1 aberto",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 32,
+            "exemplos": [
+              ".eixo-tag (contraste 2.56)",
+              "h2 (contraste 2.56)",
+              "#eixo-cabecalho > p (contraste 2.56)",
+              "button[data-fator-id=\"E1-F01\"] > .fator-ods-selo (contraste 2.56)"
+            ]
+          }
+        ]
+      },
+      {
+        "rotulo": "popup de E1-F01",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 32,
+            "exemplos": [
+              ".eixo-tag (contraste 2.56)",
+              "h2 (contraste 2.56)",
+              "#eixo-cabecalho > p (contraste 2.56)",
+              "button[data-fator-id=\"E1-F01\"] > .fator-ods-selo (contraste 2.56)"
+            ]
+          }
+        ]
+      },
+      {
+        "rotulo": "eixo 2 aberto",
+        "violacoes": []
+      },
+      {
+        "rotulo": "popup de E2-F01",
+        "violacoes": []
+      },
+      {
+        "rotulo": "eixo 3 aberto",
+        "violacoes": []
+      },
+      {
+        "rotulo": "popup de E3-F01",
+        "violacoes": []
+      },
+      {
+        "rotulo": "eixo 4 aberto",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 26,
+            "exemplos": [
+              ".eixo-tag (contraste 3.32)",
+              "#eixo-cabecalho > p (contraste 3.32)",
+              "button[data-fator-id=\"E4-F01\"] > .fator-ods-selo (contraste 3.32)",
+              "button[data-fator-id=\"E4-F02\"] > .fator-ods-selo (contraste 3.32)"
+            ]
+          }
+        ]
+      },
+      {
+        "rotulo": "popup de E4-F01",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 26,
+            "exemplos": [
+              ".eixo-tag (contraste 3.32)",
+              "#eixo-cabecalho > p (contraste 3.32)",
+              "button[data-fator-id=\"E4-F01\"] > .fator-ods-selo (contraste 3.32)",
+              "button[data-fator-id=\"E4-F02\"] > .fator-ods-selo (contraste 3.32)"
+            ]
+          }
+        ]
+      },
+      {
+        "rotulo": "eixo 5 aberto",
+        "violacoes": []
+      },
+      {
+        "rotulo": "popup de E5-F01",
+        "violacoes": []
+      },
+      {
+        "rotulo": "eixo 6 aberto",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 14,
+            "exemplos": [
+              ".eixo-tag (contraste 4.17)",
+              "#eixo-cabecalho > p (contraste 4.17)",
+              "button[data-fator-id=\"E6-F01\"] > .fator-ods-selo (contraste 4.17)",
+              "button[data-fator-id=\"E6-F02\"] > .fator-ods-selo (contraste 4.17)"
+            ]
+          }
+        ]
+      },
+      {
+        "rotulo": "popup de E6-F01",
+        "violacoes": [
+          {
+            "id": "color-contrast",
+            "impacto": "serious",
+            "descricao": "Elements must meet minimum color contrast ratio thresholds",
+            "ocorrencias": 14,
+            "exemplos": [
+              ".eixo-tag (contraste 4.17)",
+              "#eixo-cabecalho > p (contraste 4.17)",
+              "button[data-fator-id=\"E6-F01\"] > .fator-ods-selo (contraste 4.17)",
+              ".fator-botao[data-fator-id=\"E6-F02\"] > .fator-ods-selo (contraste 4.17)"
+            ]
+          }
+        ]
+      }
+    ],
+    "teclado": {
+      "seletorFocavel": true,
+      "eixoAbre": true,
+      "popupAbre": true,
+      "focoNoFechar": true,
+      "popupFecha": true,
+      "focoRetorna": true,
+      "focoDentroDoPopup": true
+    },
+    "telas": [
+      {
+        "tela": "320x568",
+        "inicial": 320,
+        "seletor": true,
+        "alvoEixoMin": 82.421875,
+        "eixoAberto": 320,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 280,
+        "alvoFechar": 27,
+        "larguraComPopup": 320,
+        "ok": true
+      },
+      {
+        "tela": "360x740",
+        "inicial": 360,
+        "seletor": true,
+        "alvoEixoMin": 92.71875,
+        "eixoAberto": 360,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 320,
+        "alvoFechar": 27,
+        "larguraComPopup": 360,
+        "ok": true
+      },
+      {
+        "tela": "390x844",
+        "inicial": 390,
+        "seletor": true,
+        "alvoEixoMin": 100.453125,
+        "eixoAberto": 390,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 350,
+        "alvoFechar": 27,
+        "larguraComPopup": 390,
+        "ok": true
+      },
+      {
+        "tela": "768x1024",
+        "inicial": 768,
+        "seletor": true,
+        "alvoEixoMin": 176.328125,
+        "eixoAberto": 768,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 680,
+        "alvoFechar": 27,
+        "larguraComPopup": 768,
+        "ok": true
+      },
+      {
+        "tela": "1024x768",
+        "inicial": 1024,
+        "seletor": true,
+        "alvoEixoMin": 176.328125,
+        "eixoAberto": 1024,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 680,
+        "alvoFechar": 27,
+        "larguraComPopup": 1024,
+        "ok": true
+      },
+      {
+        "tela": "1366x768",
+        "inicial": 1366,
+        "seletor": true,
+        "alvoEixoMin": 176.328125,
+        "eixoAberto": 1366,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 680,
+        "alvoFechar": 27,
+        "larguraComPopup": 1366,
+        "ok": true
+      },
+      {
+        "tela": "1920x1080",
+        "inicial": 1920,
+        "seletor": true,
+        "alvoEixoMin": 179.1875,
+        "eixoAberto": 1920,
+        "popupDentro": true,
+        "fecharVisivel": true,
+        "fimLegivel": true,
+        "popupLarg": 680,
+        "alvoFechar": 27,
+        "larguraComPopup": 1920,
+        "ok": true
+      }
+    ]
+  }
+}

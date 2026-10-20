@@ -299,6 +299,26 @@
     return param || cadastro.padrao;
   }
 
+  // fundo dos códigos dos fatores relacionados: a cor do eixo, escurecida
+  // apenas o necessário para o texto branco atingir contraste de 4,5:1
+  // (WCAG 2.1 AA)
+  function luminancia(hex) {
+    var c = [1, 3, 5].map(function (i) {
+      var v = parseInt(hex.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function corFundoComTextoBranco(hex) {
+    var rgb = [1, 3, 5].map(function (i) { return parseInt(hex.substr(i, 2), 16); });
+    var cor = hex;
+    for (var k = 0; k < 40 && 1.05 / (luminancia(cor) + 0.05) < 4.5; k++) {
+      rgb = rgb.map(function (v) { return Math.round(v * 0.94); });
+      cor = "#" + rgb.map(function (v) { return ("0" + v.toString(16)).slice(-2); }).join("");
+    }
+    return cor;
+  }
+
   function caminhoIcone(codigo) {
     return "assets/icons/" + codigo + ".png";
   }
@@ -543,7 +563,10 @@
       (territorio.simulado ? " · dados simulados, não é diagnóstico real" : "");
     var diag = (territorio.dados.diagnosticos || {})[fid];
     if (!diag || !diag.texto) {
-      popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + ".", "aviso-ausente"));
+      // motivo registrado no documento do território, quando houver
+      var registro = (territorio.dados.fatores_sem_diagnostico || []).filter(function (x) { return x.id === fid; })[0];
+      var motivo = registro && registro.motivo && registro.origem === "declarado_no_documento" ? " Motivo informado no diagnóstico: " + registro.motivo + "." : "";
+      popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + "." + motivo, "aviso-ausente"));
       return;
     }
 
@@ -576,7 +599,7 @@
         b.style.borderColor = info.eixo.cor;
         var cod = document.createElement("span");
         cod.className = "popup-chip-id";
-        cod.style.background = info.eixo.cor;
+        cod.style.background = corFundoComTextoBranco(info.eixo.cor);
         cod.textContent = r;
         b.appendChild(cod);
         b.appendChild(document.createTextNode(" " + info.fator.fator));
@@ -624,7 +647,10 @@
     if (rolarParaTopo) overlay.querySelector(".popup").scrollTop = 0;
   }
 
+  var elementoQueAbriu = null; // recebe o foco de volta ao fechar o popup
+
   function abrirPopup(fator) {
+    elementoQueAbriu = document.activeElement;
     historicoPopup = [];
     mostrarFator(fator.id, true);
     overlay.hidden = false;
@@ -642,6 +668,12 @@
     document.body.style.overflow = "";
     fatorAberto = null;
     historicoPopup = [];
+    // devolve o foco ao card do fator, para quem navega por teclado ou
+    // leitor de tela não perder a posição na lista
+    if (elementoQueAbriu && document.contains(elementoQueAbriu) && elementoQueAbriu.focus) {
+      elementoQueAbriu.focus();
+    }
+    elementoQueAbriu = null;
   }
 
   popupFechar.addEventListener("click", fecharPopup);
@@ -649,7 +681,28 @@
     if (ev.target === overlay) fecharPopup();
   });
   document.addEventListener("keydown", function (ev) {
-    if (ev.key === "Escape" && !overlay.hidden) fecharPopup();
+    if (overlay.hidden) return;
+    if (ev.key === "Escape") {
+      fecharPopup();
+      return;
+    }
+    // mantém o foco dentro do popup enquanto ele está aberto
+    if (ev.key === "Tab") {
+      var focaveis = Array.prototype.filter.call(
+        overlay.querySelectorAll("button, [href], select, input, textarea, [tabindex]:not([tabindex='-1'])"),
+        function (el) { return !el.hidden && !el.disabled && el.offsetParent !== null; }
+      );
+      if (!focaveis.length) return;
+      var primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+      var dentro = overlay.contains(document.activeElement);
+      if (ev.shiftKey && (document.activeElement === primeiro || !dentro)) {
+        ev.preventDefault();
+        ultimo.focus();
+      } else if (!ev.shiftKey && (document.activeElement === ultimo || !dentro)) {
+        ev.preventDefault();
+        primeiro.focus();
+      }
+    }
   });
 
   // ---------- Voltar a ver só a roda (desmarca o eixo selecionado) ----------

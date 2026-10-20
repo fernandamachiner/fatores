@@ -1,0 +1,28 @@
+{
+  "_instrucoes": "EXEMPLO SIMULADO: território fictício usado para demonstrar e testar o procedimento de cadastro. Não deve ser publicado.",
+  "territorio": {
+    "id": "demonstrativo-simulado",
+    "nome": "Território demonstrativo",
+    "uf": "--",
+    "tipo": "território simulado",
+    "rotulo": "Território demonstrativo (simulado)"
+  },
+  "situacao": {
+    "status": "dados simulados",
+    "simulado": true,
+    "territorio_de_exemplo": false,
+    "aviso": "Território fictício, criado apenas para demonstrar o procedimento de cadastro. Não é diagnóstico de nenhuma localidade real."
+  },
+  "documento_fonte": {
+    "arquivo": "territorios/fontes/Diagnostico_Territorio_Demonstrativo_SIMULADO.docx",
+    "titulo": "Diagnóstico Situacional - Território demonstrativo (SIMULADO)",
+    "periodo_referencia": "2024 a 2025 (fictício)",
+    "responsaveis": "equipe fictícia de demonstração",
+    "data_elaboracao": "2026-10-20",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
+  },
+  "campos_excluidos_da_abertura_dos_eixos": [
+    "ODS mobilizados"
+  ],
+  "decisoes": []
+}
