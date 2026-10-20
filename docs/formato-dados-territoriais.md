@@ -9,7 +9,7 @@ O documento de diagnóstico é a fonte de todos os textos exibidos no painel. El
 | Elemento | Formato | Obrigatório |
 |---|---|---|
 | Capa | parágrafos comuns antes do primeiro título | não |
-| Resumo executivo | título com estilo Título 1 Resumo executivo; parágrafos e, opcionalmente, uma tabela | não |
+| Resumo executivo | título com estilo Título 1 Resumo executivo; parágrafos, opcionalmente uma tabela e subseções com estilo Título 2 | não |
 | Eixo | título com estilo Título 1 no formato Eixo N. Título do eixo, na ordem de 1 a 6 | sim, para cada eixo com fatores |
 | Abertura do eixo | tabela logo após o título, com linhas Contradição central: ... e Foco pedagógico: ... | não |
 | Introdução do eixo | parágrafos antes do primeiro fator | não |
@@ -67,7 +67,7 @@ Gerado por territorios/ferramentas/gerar_territorio.py. Não deve ser editado à
 | territorio, situacao, decisoes | copiados do meta.json |
 | metodologia | arquivo e versão da metodologia usada na geração; se diferir da versão do painel, o painel exibe um alerta |
 | documento_fonte | copiado do meta.json, acrescido dos parágrafos da capa |
-| resumo_executivo | quadro (tabela) e texto do resumo executivo |
+| resumo_executivo | quadro (tabela), texto e, quando houver, subseções (secoes) do resumo executivo |
 | eixos_documento | para cada eixo: número, título no documento, contradição central, foco pedagógico, introdução e número de fatores no documento |
 | sintese_estrategica, notas_metodologicas | seções do documento, com subtítulos, parágrafos e tabelas |
 | diagnosticos | um item por fator com diagnóstico, indexado pelo identificador (ver abaixo) |

@@ -53,7 +53,7 @@ O rótulo é o nome que aparece no seletor, com acentos e maiúsculas (Dourados/
 3. O modelo já traz, para cada fator, uma tabela com identificador, nome e ODS e a linha Definição de referência. Não altere essas tabelas nem essas linhas: o gerador compara cada uma com a metodologia e recusa o documento se houver diferença.
 4. Abaixo da definição de cada fator, substitua a linha laranja que começa por [PREENCHER pelo diagnóstico daquele fator na localidade. O texto pode ter um ou mais parágrafos.
 5. Preencha ou apague as demais linhas [PREENCHER: título da capa, resumo executivo, tabela de abertura de cada eixo (contradição central e foco pedagógico), introdução dos eixos, síntese estratégica e notas metodológicas. Todas essas partes são opcionais.
-6. Não mude os títulos dos eixos nem os títulos Resumo executivo, Síntese estratégica e Notas metodológicas e fontes. Eles precisam continuar com o estilo Título 1 do Word. Dentro da síntese e das notas, podem ser usados subtítulos com o estilo Título 2.
+6. Não mude os títulos dos eixos nem os títulos Resumo executivo, Síntese estratégica e Notas metodológicas e fontes. Eles precisam continuar com o estilo Título 1 do Word. Dentro do resumo executivo, da síntese e das notas, podem ser usados subtítulos com o estilo Título 2.
 7. Antes de salvar a versão final, procure no documento (Ctrl+L ou Ctrl+F) por PREENCHER. Não pode restar nenhuma ocorrência.
 
 ### Como associar o diagnóstico ao fator
@@ -211,7 +211,7 @@ Nenhuma alteração adicional de código é necessária para incluir um territó
 | E6-F01: sem parágrafo de diagnóstico | o fator ficou sem texto | escreva o diagnóstico ou Sem diagnóstico disponível. |
 | Sem diagnóstico disponível deve ser o único parágrafo do fator | a frase de ausência foi escrita junto com um texto | deixe só o texto ou só a frase |
 | título não previsto no formato | um parágrafo comum foi formatado como Título 1 | volte o parágrafo ao estilo Normal |
-| título de nível 2 fora da síntese ou das notas | subtítulo dentro de um eixo | use estilo Normal dentro dos eixos |
+| título de nível 2 fora da síntese, das notas ou do resumo executivo | subtítulo dentro de um eixo | use estilo Normal dentro dos eixos |
 | tabela inesperada dentro do fator | tabela inserida no meio do diagnóstico | transforme o conteúdo em texto ou leve a tabela para as notas |
 | ainda tem trechos do modelo entre < > | campo do meta.json não preenchido | substitua todos os trechos entre < > |
 | o id em ...meta.json difere do id informado | id no arquivo diferente do nome do arquivo | iguale o id, o nome dos arquivos e o cadastro |

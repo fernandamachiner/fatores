@@ -39,6 +39,14 @@ window.TERRITORIOS_INDICE = {
       uf: "MS",
       situacao: "diagnostico",
       arquivo: "territorios/campo-grande-ms.js"
+    },
+    {
+      id: "distrito-federal",
+      rotulo: "Distrito Federal",
+      tipo: "unidade federativa (35 Regiões Administrativas)",
+      uf: "DF",
+      situacao: "diagnostico",
+      arquivo: "territorios/distrito-federal.js"
     }
   ]
 };

@@ -87,8 +87,13 @@ def estruturar(itens):
                 raise SystemExit("título não previsto no formato: " + valor)
             continue
         if tipo == "titulo2":
+            if secao == "resumo":
+                # subseção do resumo executivo (por exemplo, recorte territorial)
+                sub = {"titulo": valor, "conteudo": []}
+                doc["resumo_executivo"].setdefault("secoes", []).append(sub)
+                continue
             if secao not in ("sintese", "notas"):
-                raise SystemExit("título de nível 2 fora da síntese ou das notas: " + valor)
+                raise SystemExit("título de nível 2 fora da síntese, das notas ou do resumo executivo: " + valor)
             sub = {"titulo": valor, "conteudo": []}
             doc[secao].append(sub)
             continue
@@ -96,7 +101,11 @@ def estruturar(itens):
             if tipo != "p": raise SystemExit("tabela inesperada na capa")
             doc["capa"].append(valor)
         elif secao == "resumo":
-            if tipo == "tabela": doc["resumo_executivo"]["tabela"] = valor
+            if doc["resumo_executivo"].get("secoes"):
+                sub["conteudo"].append({"tabela": valor} if tipo == "tabela" else {"paragrafo": valor})
+            elif tipo == "tabela":
+                if doc["resumo_executivo"]["tabela"] is not None: raise SystemExit("mais de uma tabela no resumo executivo antes de uma subseção")
+                doc["resumo_executivo"]["tabela"] = valor
             else: doc["resumo_executivo"]["paragrafos"].append(valor)
         elif secao in ("sintese", "notas"):
             sub["conteudo"].append({"tabela": valor} if tipo == "tabela" else {"paragrafo": valor})
@@ -223,7 +232,8 @@ def main(tid):
         "decisoes": meta.get("decisoes", []),
         "metodologia": {"arquivo": "metodologia/metodologia.js", "versao": M["versao"]},
         "documento_fonte": dict(meta["documento_fonte"], capa=doc["capa"]),
-        "resumo_executivo": {"quadro_eixos": doc["resumo_executivo"]["tabela"], "texto": "\n\n".join(doc["resumo_executivo"]["paragrafos"])},
+        "resumo_executivo": dict({"quadro_eixos": doc["resumo_executivo"]["tabela"], "texto": "\n\n".join(doc["resumo_executivo"]["paragrafos"])},
+                                 **({"secoes": doc["resumo_executivo"]["secoes"]} if doc["resumo_executivo"].get("secoes") else {})),
         "eixos_documento": [{
             "numero": e["numero"], "titulo_no_documento": e["titulo_no_documento"],
             "contradicao_central": abertura[e["numero"]].get("Contradição central", ""),

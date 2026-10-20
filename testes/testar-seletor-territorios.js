@@ -156,7 +156,7 @@ async function cenarios(browser, b) {
   let { page, erros } = await nova();
   let st = await estado(page);
   registra(b, "seletor lista os territórios do cadastro com os nomes registrados",
-    JSON.stringify(st.opcoes) === JSON.stringify(["Campo Grande/MS", "Território simulado (teste) (dados simulados)", "Localidade sem diagnóstico (teste) (sem diagnóstico)", "Localidade sem arquivo (teste)", "Localidade com arquivo errado (teste)"]),
+    JSON.stringify(st.opcoes) === JSON.stringify(indice.territorios.map((t) => t.rotulo + (t.situacao === "simulado" ? " (dados simulados)" : t.situacao === "sem-diagnostico" ? " (sem diagnóstico)" : ""))),
     st.opcoes.join(" ; "));
   const estCG = await estrutura(page);
   registra(b, "estrutura metodológica completa (6 eixos, 150 fatores)", confereEstrutura(estCG), "");
@@ -225,7 +225,7 @@ async function cenarios(browser, b) {
   const okErro = st.estado === "erro" && /não está cadastrado/.test(st.status) && st.seletor === "" && st.opcoes[0] === "Selecione um território";
   await selecionar(page, "campo-grande-ms");
   const st2 = await estado(page);
-  registra(b, "território inexistente no endereço, seguido de seleção válida", okErro && st2.estado === "pronto" && st2.opcoes[0] === "Campo Grande/MS", st.status + " -> " + st2.status);
+  registra(b, "território inexistente no endereço, seguido de seleção válida", okErro && st2.estado === "pronto" && st2.opcoes[0] === indice.territorios[0].rotulo, st.status + " -> " + st2.status);
   await page.close();
 
   // 10. celular
