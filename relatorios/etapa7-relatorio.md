@@ -73,7 +73,7 @@ O registro completo está em relatorios/etapa7-resultado-testes.txt.
   - detecção, com a mensagem prevista no manual, de dez erros comuns: instrução do modelo não apagada, nome de fator alterado, definição alterada, fator vazio, id divergente, trecho entre < > no meta.json, nome do .docx com maiúsculas diferentes, fonte inexistente no texto, caminho com maiúsculas no cadastro e território não cadastrado.
 - **Verificação em um comando para Campo Grande/MS:** cinco passos aprovados, com 150 diagnósticos idênticos aos dados no navegador.
 - **Regressão:** navegação completa por file:// e por http em /fatores/; seletor com 36 de 36 verificações; falhas com 16 de 16; metodologia conferida com a planilha nas 1.200 células; auditorias da Etapa 6 sem novos reprovados. Permanece o item de contraste dos Eixos 1, 4 e 6, que aguarda decisão.
-- **Verificação automática no GitHub:** executada no pedido de incorporação nº 2. A primeira execução falhou no teste do procedimento, porque a cópia temporária do painel não encontrava o pacote do navegador instalado no repositório. A falha foi corrigida e reproduzida localmente nas mesmas condições, e a execução seguinte é registrada no pedido de incorporação.
+- **Verificação automática no GitHub:** executada no pedido de incorporação nº 2. A primeira execução falhou no teste do procedimento, porque a cópia temporária do painel não encontrava o pacote do navegador instalado no repositório. A falha foi corrigida e reproduzida localmente nas mesmas condições. A execução seguinte (commit 55951e6) foi aprovada em todas as etapas: geração dos arquivos, validação da metodologia e do cadastro, verificação de Campo Grande/MS, seletor, falhas e procedimento de cadastro.
 
 ## Critério de conclusão
 
