@@ -80,7 +80,10 @@ CONTEÚDO
                  ferramentas/gerar_territorio.py (gera o arquivo do território
                  a partir do .docx no formato padrão, em que cada fator é
                  identificado por uma tabela com ID, nome e ODS)
-- testes/      → verificações automáticas da metodologia e da navegação
+- docs/        → manual de cadastro de territórios, formato dos dados e
+                 checklist de validação
+- testes/      → verificações automáticas da metodologia, dos territórios e
+                 da navegação; exemplo-simulado/ (território demonstrativo)
 - relatorios/  → relatórios das etapas de adaptação do painel
 - assets/icons → os 148 ícones de fatores usados (recortados do pacote
                  oficial "ICONOGRAFIA_2026", variante em contorno)
@@ -108,52 +111,30 @@ outro fator.
 
 CADASTRAR OUTRA LOCALIDADE
 --------------------------
-A localidade precisa usar a mesma metodologia (Matriz de Fatores, mesmos
-IDs de fatores). Não é preciso alterar index.html, app.js nem style.css.
+O procedimento completo está em docs/manual-cadastro-territorios.md, com o
+formato dos arquivos em docs/formato-dados-territoriais.md e a lista de
+conferência em docs/checklist-validacao.md. Em resumo:
 
-1. Escolha o identificador: minúsculas, números e hífens, sem acentos
-   (por exemplo, dourados-ms ou comunidade-x-dourados-ms). Ele não muda
-   depois de publicado, porque aparece nos links.
+1. Escreva o diagnóstico a partir de territorios/modelos/modelo-diagnostico.docx
+   (já traz os 150 fatores com identificador, nome, ODS e definição).
+   Para um fator sem informação, escreva: Sem diagnóstico disponível.
+2. Copie territorios/modelos/modelo.meta.json e modelo.fontes.json para
+   territorios/correspondencias/<id>.meta.json e <id>.fontes.json e preencha.
+3. Gere o arquivo de dados:
+       python3 territorios/ferramentas/gerar_territorio.py <id>
+   (ou deixe a verificação automática do GitHub gerar, no pedido de
+   incorporação).
+4. Acrescente a localidade em territorios/indice.js.
+5. Verifique tudo em um comando:
+       python3 testes/verificar_territorio.py <id>
+6. Publique por pedido de incorporação ao branch main.
 
-2. Se a localidade ainda não tem diagnóstico, basta cadastrá-la em
-   territorios/indice.js com situacao "sem-diagnostico" e arquivo null:
-       { id: "dourados-ms", rotulo: "Dourados/MS", tipo: "município",
-         uf: "MS", situacao: "sem-diagnostico", arquivo: null }
-   O seletor passa a mostrá-la, e o painel informa que ainda não há
-   diagnóstico.
+Não é preciso alterar index.html, app.js, style.css nem a metodologia.
+Uma localidade ainda sem diagnóstico entra apenas com uma linha em
+territorios/indice.js, com situacao "sem-diagnostico" e arquivo null.
 
-3. Com o diagnóstico pronto (documento .docx no formato padrão, em que cada
-   fator é identificado por uma tabela com ID, nome e ODS, seguida da
-   definição de referência e do texto):
-   a) copie o .docx para territorios/fontes/;
-   b) copie territorios/modelos/modelo.meta.json para
-      territorios/correspondencias/<id>.meta.json e preencha;
-   c) copie territorios/modelos/modelo.fontes.json para
-      territorios/correspondencias/<id>.fontes.json;
-   d) gere o arquivo de dados:
-          python3 territorios/ferramentas/gerar_territorio.py <id>
-      O gerador interrompe se o ID, o nome, o ODS ou a definição de algum
-      fator no documento for diferente da metodologia; corrija o documento
-      e gere de novo. Os textos são copiados sem alteração;
-   e) no cadastro territorios/indice.js, inclua (ou atualize) a entrada com
-      situacao "diagnostico" e arquivo "territorios/<id>.js", usando o
-      mesmo rótulo do arquivo meta.json;
-   f) confira:
-          node testes/validar-cadastro-territorios.js
-          node testes/validar-territorio.js <id>
-          python3 testes/conferir_fidelidade_territorio.py <id>
-          node testes/testar-navegacao.js "index.html?territorio=<id>" saida.json
-      (os testes no navegador requerem o pacote playwright).
-
-4. Publique enviando ao repositório os arquivos novos ou alterados:
-   territorios/indice.js, territorios/<id>.js, territorios/fontes/ e
-   territorios/correspondencias/. Os nomes de arquivo devem ter exatamente
-   as mesmas maiúsculas e minúsculas usadas no cadastro, porque o GitHub
-   Pages as distingue.
-
-Dados simulados (testes/dados-simulados/) servem apenas para testar o
-painel e nunca devem ser cadastrados em territorios/indice.js; o validador
-do cadastro acusa erro se isso acontecer.
+Um exemplo completo, com dados simulados, está em testes/exemplo-simulado/.
+Dados simulados nunca devem ser cadastrados em territorios/indice.js.
 
 ATUALIZANDO OS TEXTOS/FATORES DEPOIS
 --------------------------------------

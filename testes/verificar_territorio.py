@@ -41,7 +41,7 @@ resultado = []
 for nome, cmd in passos:
     r = subprocess.run(cmd, capture_output=True, text=True)
     saida = (r.stdout + r.stderr).strip().splitlines()
-    erros = [l.strip() for l in saida if l.strip().startswith("ERRO")]
+    erros = [l.strip() for l in saida if l.strip().startswith("ERRO") and not l.strip().startswith("ERROS")]
     resultado.append((nome, r.returncode == 0, erros or (saida[-3:] if r.returncode else [])))
 
 nome = "5. Navegação no navegador: 6 eixos, 150 fatores e diagnósticos do território"

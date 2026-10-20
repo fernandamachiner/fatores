@@ -43,6 +43,9 @@ def copia_painel(dest):
 
 def roda(cmd, cwd, env=None):
     e = dict(os.environ)
+    # a cópia temporária não leva node_modules; o playwright é procurado
+    # também na pasta do painel original
+    e["NODE_PATH"] = os.pathsep.join(x for x in [os.path.join(RAIZ, "node_modules"), e.get("NODE_PATH", "")] if x)
     e.update(env or {})
     r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, env=e)
     return r.returncode, r.stdout + r.stderr
