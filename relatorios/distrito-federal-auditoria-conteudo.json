@@ -1,0 +1,872 @@
+{
+  "A": {
+    "A1_eixos": [
+      {
+        "eixo": "E1",
+        "titulo": "O Suor que não nos Sustenta",
+        "fatores_cadastro": 29,
+        "fatores_planilha": 29,
+        "titulo_planilha": "O Suor que não nos Sustenta",
+        "titulo_svg": "O Suor que não nos Sustenta"
+      },
+      {
+        "eixo": "E2",
+        "titulo": "A Vida em Risco",
+        "fatores_cadastro": 38,
+        "fatores_planilha": 38,
+        "titulo_planilha": "A Vida em Risco",
+        "titulo_svg": "A Vida em Risco"
+      },
+      {
+        "eixo": "E3",
+        "titulo": "Nossos Corpos Silenciados",
+        "fatores_cadastro": 18,
+        "fatores_planilha": 18,
+        "titulo_planilha": "Nossos Corpos Silenciados",
+        "titulo_svg": "Nossos Corpos Silenciados"
+      },
+      {
+        "eixo": "E4",
+        "titulo": "A Terra de Quem?",
+        "fatores_cadastro": 24,
+        "fatores_planilha": 24,
+        "titulo_planilha": "A Terra de Quem?",
+        "titulo_svg": "A Terra de Quem?"
+      },
+      {
+        "eixo": "E5",
+        "titulo": "A Cidade Negada",
+        "fatores_cadastro": 29,
+        "fatores_planilha": 29,
+        "titulo_planilha": "A Cidade Negada",
+        "titulo_svg": "A Cidade Negada"
+      },
+      {
+        "eixo": "E6",
+        "titulo": "A Voz na Mesa",
+        "fatores_cadastro": 12,
+        "fatores_planilha": 12,
+        "titulo_planilha": "A Voz na Mesa",
+        "titulo_svg": "A Voz na Mesa"
+      }
+    ],
+    "A2_A3_cadastro_x_planilha": {
+      "fatores_cadastro": 150,
+      "fatores_planilha": 150,
+      "divergencias": []
+    },
+    "A3b_estrutura_original": {
+      "fatores_versao_original": 159,
+      "fatores_atuais": 150,
+      "nomes_iguais_ignorando_caixa_e_acentos": 146,
+      "nomes_so_na_versao_original": [
+        "Acesso a comunicação (internet e telefonia)",
+        "Acesso a direitos fundamentais",
+        "Acesso a tecnologias de informação e comunicação para a inovação e infraestrutura",
+        "Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas)",
+        "Comunicação comunitária - grupos de mensagens",
+        "Corrupção e o suborno (em todos os níveis)",
+        "Estratégias de mobilização (redes e grupos organizados)",
+        "Gestão de riscos e emergências",
+        "Parcerias multissetoriais",
+        "Produção de alimentos - hortas, hortos, quintais e outros que produzem alimentos",
+        "Queimada/ Incêndio",
+        "Recursos financeiros para conservação sustentável da biodiversidade",
+        "Tomada de decisão responsiva, inclusiva e participativa (participação social)"
+      ],
+      "nomes_so_na_versao_atual": [
+        "Comunicação comunitária – grupos de mensagens",
+        "Corrupção e suborno (em todos os níveis)",
+        "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos",
+        "Queimada/Incêndio"
+      ]
+    },
+    "A4_identificadores": {
+      "fora_do_formato": [],
+      "numeros_vagos": [
+        {
+          "id": "E2-F24",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E3-F15",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E4-F23",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E5-F07",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E6-F10",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E6-F12",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E6-F13",
+          "registrado_como_desativado": true
+        },
+        {
+          "id": "E6-F14",
+          "registrado_como_desativado": true
+        }
+      ],
+      "desativados_reutilizados": [],
+      "id_em_eixo_errado": []
+    },
+    "A5_duplicacoes": {
+      "nomes_repetidos": {},
+      "definicoes_repetidas": {},
+      "campos_vazios": [],
+      "nomes_proximos": [
+        {
+          "ids": [
+            "E1-F02",
+            "E1-F04"
+          ],
+          "nomes": [
+            "Alimentos",
+            "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos"
+          ],
+          "similaridade": 0.2
+        },
+        {
+          "ids": [
+            "E1-F02",
+            "E1-F06"
+          ],
+          "nomes": [
+            "Alimentos",
+            "Disponibilidade de alimentos"
+          ],
+          "similaridade": 0.49
+        },
+        {
+          "ids": [
+            "E1-F02",
+            "E1-F26"
+          ],
+          "nomes": [
+            "Alimentos",
+            "Sistemas sustentáveis de produção de alimentos"
+          ],
+          "similaridade": 0.33
+        },
+        {
+          "ids": [
+            "E1-F06",
+            "E1-F12"
+          ],
+          "nomes": [
+            "Disponibilidade de alimentos",
+            "Disponibilidade de emprego"
+          ],
+          "similaridade": 0.81
+        },
+        {
+          "ids": [
+            "E1-F14",
+            "E1-F28"
+          ],
+          "nomes": [
+            "Trabalho infantil",
+            "Trabalho informal"
+          ],
+          "similaridade": 0.82
+        },
+        {
+          "ids": [
+            "E2-F02",
+            "E2-F27"
+          ],
+          "nomes": [
+            "Insegurança alimentar",
+            "Segurança"
+          ],
+          "similaridade": 0.6
+        },
+        {
+          "ids": [
+            "E2-F04",
+            "E2-F05"
+          ],
+          "nomes": [
+            "Mortalidade neonatal",
+            "Mortalidade infantil"
+          ],
+          "similaridade": 0.8
+        },
+        {
+          "ids": [
+            "E2-F06",
+            "E2-F21"
+          ],
+          "nomes": [
+            "Doenças decorrentes de contaminação e poluição do ar, da água e do solo",
+            "Contaminação e poluição do ar, da água e do solo"
+          ],
+          "similaridade": 0.81
+        },
+        {
+          "ids": [
+            "E2-F20",
+            "E2-F23"
+          ],
+          "nomes": [
+            "Acesso à água e saneamento",
+            "Gestão da água e saneamento"
+          ],
+          "similaridade": 0.87
+        },
+        {
+          "ids": [
+            "E2-F22",
+            "E2-F23"
+          ],
+          "nomes": [
+            "Participação das comunidades locais na gestão da água e saneamento",
+            "Gestão da água e saneamento"
+          ],
+          "similaridade": 0.58
+        },
+        {
+          "ids": [
+            "E2-F28",
+            "E3-F02"
+          ],
+          "nomes": [
+            "Violência",
+            "Discriminação e violência contra mulheres e meninas"
+          ],
+          "similaridade": 0.3
+        },
+        {
+          "ids": [
+            "E3-F01",
+            "E4-F22"
+          ],
+          "nomes": [
+            "Pobreza",
+            "Gestão sustentável da biodiversidade para o desenvolvimento e redução da pobreza"
+          ],
+          "similaridade": 0.16
+        },
+        {
+          "ids": [
+            "E4-F05",
+            "E5-F10"
+          ],
+          "nomes": [
+            "Tecnologias sociais",
+            "Formação em tecnologias sociais"
+          ],
+          "similaridade": 0.76
+        },
+        {
+          "ids": [
+            "E4-F06",
+            "E4-F14"
+          ],
+          "nomes": [
+            "Pesquisa científica e inovação",
+            "Pesquisa científica e inovação para recuperação de ambientes"
+          ],
+          "similaridade": 0.67
+        },
+        {
+          "ids": [
+            "E4-F07",
+            "E4-F10"
+          ],
+          "nomes": [
+            "Construções sustentáveis e resilientes",
+            "Reconstruções sustentáveis e resilientes"
+          ],
+          "similaridade": 0.97
+        },
+        {
+          "ids": [
+            "E4-F08",
+            "E4-F24"
+          ],
+          "nomes": [
+            "Tecnologias ambientalmente corretas",
+            "Transferência de tecnologias ambientalmente corretas (acesso)"
+          ],
+          "similaridade": 0.73
+        }
+      ],
+      "icones_compartilhados": {
+        "03.09": [
+          "E2-F11",
+          "E5-F02"
+        ],
+        "03.11": [
+          "E2-F13",
+          "E2-F14"
+        ]
+      },
+      "ods_diferente_do_codigo_do_icone": [
+        "E1-F28",
+        "E1-F29",
+        "E2-F01",
+        "E2-F17",
+        "E2-F26",
+        "E2-F30",
+        "E2-F31",
+        "E2-F34",
+        "E2-F35",
+        "E2-F36",
+        "E2-F37",
+        "E2-F38",
+        "E2-F39",
+        "E3-F09",
+        "E3-F14",
+        "E4-F05",
+        "E4-F25",
+        "E5-F01",
+        "E5-F21",
+        "E5-F30",
+        "E6-F01",
+        "E6-F02",
+        "E6-F03",
+        "E6-F05",
+        "E6-F11",
+        "E6-F15",
+        "E6-F16"
+      ]
+    }
+  },
+  "B": {
+    "campo-grande-ms": {
+      "territorio": "Campo Grande/MS",
+      "B1_associacao": [],
+      "B2_ausentes": {
+        "fatores_sem_diagnostico": [],
+        "fatores_do_documento_fora_dos_dados": []
+      },
+      "B3_referencias": {
+        "declaram_lacuna": [
+          "E1-F06",
+          "E1-F09",
+          "E1-F13",
+          "E1-F14",
+          "E1-F15",
+          "E1-F24",
+          "E1-F29",
+          "E2-F01",
+          "E2-F02",
+          "E2-F04",
+          "E2-F05",
+          "E2-F06",
+          "E2-F08",
+          "E2-F09",
+          "E2-F11",
+          "E2-F12",
+          "E2-F14",
+          "E2-F16",
+          "E2-F18",
+          "E2-F19",
+          "E2-F21",
+          "E2-F27",
+          "E2-F33",
+          "E2-F36",
+          "E2-F38",
+          "E3-F01",
+          "E3-F03",
+          "E3-F04",
+          "E3-F05",
+          "E3-F06",
+          "E3-F11",
+          "E3-F12",
+          "E3-F16",
+          "E3-F18",
+          "E4-F01",
+          "E4-F02",
+          "E4-F03",
+          "E4-F05",
+          "E4-F07",
+          "E4-F15",
+          "E4-F16",
+          "E4-F20",
+          "E4-F21",
+          "E4-F22",
+          "E4-F24",
+          "E5-F03",
+          "E5-F04",
+          "E5-F05",
+          "E5-F06",
+          "E5-F09",
+          "E5-F11",
+          "E5-F13",
+          "E5-F14",
+          "E5-F16",
+          "E5-F17",
+          "E5-F18",
+          "E5-F19",
+          "E5-F21",
+          "E5-F22",
+          "E5-F23",
+          "E5-F24",
+          "E5-F26",
+          "E5-F30",
+          "E6-F06",
+          "E6-F08"
+        ],
+        "dados_quantitativos_sem_fonte_registrada": [
+          "E1-F06",
+          "E1-F11",
+          "E1-F16",
+          "E1-F21",
+          "E2-F31",
+          "E3-F09",
+          "E4-F07",
+          "E5-F20"
+        ],
+        "fontes_nao_literais": [],
+        "relacionados_divergentes_do_texto": [],
+        "relacionados_inexistentes": [],
+        "com_fonte": 77,
+        "com_norma": 16
+      },
+      "B4_numeros": {
+        "numeros_conferidos": 1736,
+        "divergencias": []
+      },
+      "B5_mistura": {
+        "arquivo_registra_apenas": [
+          "campo-grande-ms"
+        ],
+        "mencoes_por_escala": {
+          "estado (MS)": [
+            "E1-F02",
+            "E1-F06",
+            "E1-F08",
+            "E1-F10",
+            "E1-F15",
+            "E1-F16",
+            "E1-F19",
+            "E1-F22",
+            "E1-F24",
+            "E2-F03",
+            "E2-F04",
+            "E2-F05",
+            "E2-F07",
+            "E2-F08",
+            "E2-F09",
+            "E2-F12",
+            "E2-F15",
+            "E2-F17",
+            "E2-F20",
+            "E2-F25",
+            "E2-F28",
+            "E2-F30",
+            "E2-F32",
+            "E2-F35",
+            "E3-F01",
+            "E3-F02",
+            "E3-F03",
+            "E3-F16",
+            "E4-F06",
+            "E4-F17",
+            "E4-F19",
+            "E4-F20",
+            "E5-F05",
+            "E5-F06",
+            "E5-F08",
+            "E5-F09",
+            "E5-F17",
+            "E6-F06"
+          ],
+          "país": [
+            "E1-F07",
+            "E1-F19",
+            "E1-F25",
+            "E2-F19",
+            "E2-F20",
+            "E2-F28",
+            "E2-F33",
+            "E2-F36",
+            "E3-F02",
+            "E3-F11",
+            "E3-F16",
+            "E4-F16",
+            "E6-F06"
+          ],
+          "outras localidades": [
+            "E2-F05",
+            "E4-F06"
+          ]
+        },
+        "textos_sem_referencia_explicita_ao_territorio": [
+          "E1-F03",
+          "E1-F05",
+          "E2-F39",
+          "E4-F16"
+        ]
+      },
+      "B6_truncamento": {
+        "problemas": [],
+        "menor": [
+          621,
+          "E1-F02"
+        ],
+        "maior": [
+          1061,
+          "E2-F05"
+        ]
+      },
+      "redacao_documento": [
+        "E2-F26: sem espaço após pontuação (…blica disponível.A relevânci…)",
+        "E2-F01: enumeração sem conjunção (pela Defesa Civil, pelo Plano Diretor…)"
+      ]
+    },
+    "distrito-federal": {
+      "territorio": "Distrito Federal",
+      "B1_associacao": [],
+      "B2_ausentes": {
+        "fatores_sem_diagnostico": [],
+        "fatores_do_documento_fora_dos_dados": []
+      },
+      "B3_referencias": {
+        "declaram_lacuna": [
+          "E1-F01",
+          "E1-F06",
+          "E1-F09",
+          "E1-F12",
+          "E1-F16",
+          "E1-F20",
+          "E1-F21",
+          "E1-F22",
+          "E1-F23",
+          "E1-F24",
+          "E1-F26",
+          "E2-F02",
+          "E2-F03",
+          "E2-F09",
+          "E2-F26",
+          "E2-F30",
+          "E2-F31",
+          "E2-F34",
+          "E2-F37",
+          "E2-F38",
+          "E2-F39",
+          "E3-F06",
+          "E3-F10",
+          "E3-F11",
+          "E3-F12",
+          "E3-F18",
+          "E4-F01",
+          "E4-F08",
+          "E4-F09",
+          "E4-F10",
+          "E4-F11",
+          "E4-F12",
+          "E4-F14",
+          "E4-F19",
+          "E4-F21",
+          "E4-F24",
+          "E5-F01",
+          "E5-F02",
+          "E5-F03",
+          "E5-F04",
+          "E5-F05",
+          "E5-F06",
+          "E5-F10",
+          "E5-F11",
+          "E5-F13",
+          "E5-F16",
+          "E5-F18",
+          "E5-F20",
+          "E5-F23",
+          "E5-F26",
+          "E5-F28",
+          "E5-F30",
+          "E6-F03",
+          "E6-F09"
+        ],
+        "dados_quantitativos_sem_fonte_registrada": [],
+        "fontes_nao_literais": [],
+        "relacionados_divergentes_do_texto": [],
+        "relacionados_inexistentes": [],
+        "com_fonte": 129,
+        "com_norma": 4
+      },
+      "B4_numeros": {
+        "numeros_conferidos": 1968,
+        "divergencias": []
+      },
+      "B5_mistura": {
+        "arquivo_registra_apenas": [
+          "distrito-federal"
+        ],
+        "mencoes_por_escala": {
+          "país": [
+            "E1-F02",
+            "E1-F08",
+            "E1-F10",
+            "E1-F15",
+            "E1-F18",
+            "E1-F20",
+            "E1-F22",
+            "E1-F24",
+            "E1-F28",
+            "E2-F01",
+            "E2-F02",
+            "E2-F03",
+            "E2-F05",
+            "E2-F19",
+            "E2-F20",
+            "E2-F23",
+            "E2-F27",
+            "E2-F28",
+            "E3-F01",
+            "E3-F03",
+            "E3-F13",
+            "E3-F19",
+            "E4-F02",
+            "E4-F06",
+            "E4-F13",
+            "E5-F06",
+            "E5-F11",
+            "E5-F12",
+            "E5-F17",
+            "E5-F21",
+            "E5-F22",
+            "E5-F29",
+            "E6-F06",
+            "E6-F11"
+          ],
+          "outras localidades": [
+            "E1-F09",
+            "E1-F11",
+            "E1-F22",
+            "E1-F23",
+            "E1-F27",
+            "E2-F01",
+            "E2-F06",
+            "E2-F09",
+            "E2-F11",
+            "E2-F20",
+            "E2-F21",
+            "E2-F23",
+            "E2-F25",
+            "E2-F26",
+            "E2-F28",
+            "E2-F30",
+            "E2-F32",
+            "E2-F38",
+            "E4-F01",
+            "E4-F02",
+            "E4-F05",
+            "E4-F06",
+            "E4-F08",
+            "E4-F12",
+            "E4-F13",
+            "E4-F14",
+            "E4-F17",
+            "E4-F19",
+            "E4-F21",
+            "E4-F24",
+            "E4-F25",
+            "E5-F04",
+            "E5-F05",
+            "E5-F06",
+            "E5-F08",
+            "E5-F13",
+            "E5-F15",
+            "E5-F16",
+            "E5-F27",
+            "E5-F30",
+            "E6-F04"
+          ]
+        },
+        "textos_sem_referencia_explicita_ao_territorio": [
+          "E3-F03"
+        ]
+      },
+      "B6_truncamento": {
+        "problemas": [],
+        "menor": [
+          532,
+          "E3-F03"
+        ],
+        "maior": [
+          1043,
+          "E6-F04"
+        ]
+      },
+      "redacao_documento": []
+    }
+  },
+  "achados": [
+    {
+      "bloco": "A",
+      "item": "A1 seis eixos",
+      "situacao": "aprovado",
+      "descricao": "6 eixos no cadastro, na planilha e na roda SVG; títulos e contagens coincidentes"
+    },
+    {
+      "bloco": "A",
+      "item": "A2/A3 fatores e nomes contra a planilha oficial",
+      "situacao": "aprovado",
+      "descricao": "150 fatores no cadastro e 150 na planilha; nome, definição, ícone, ODS e eixo coincidentes em todos"
+    },
+    {
+      "bloco": "A",
+      "item": "A3 comparação com a estrutura original publicada",
+      "situacao": "aprovado",
+      "descricao": "versão original com 159 fatores; versão atual com 150 (Matriz v1.0.2, decisão de 19-20/10/2026); 146 nomes coincidentes, 13 nomes só na original e 4 só na atual; as diferenças decorrem da adoção da planilha final como fonte oficial (registro.json) e estão listadas no JSON de evidência"
+    },
+    {
+      "bloco": "A",
+      "item": "A4 códigos e identificadores",
+      "situacao": "aprovado",
+      "descricao": "150 IDs únicos no formato E<eixo>-F<nn>, cada um no seu eixo; 8 números vagos, todos registrados como desativados (E2-F24, E3-F15, E4-F23, E5-F07, E6-F10, E6-F12, E6-F13, E6-F14); nenhum ID desativado reutilizado"
+    },
+    {
+      "bloco": "A",
+      "item": "A5 duplicações e omissões",
+      "situacao": "aprovado",
+      "descricao": "nenhum nome ou definição repetidos e nenhum campo vazio"
+    },
+    {
+      "bloco": "A",
+      "item": "A5 nomes próximos entre fatores",
+      "situacao": "pendente",
+      "descricao": "16 pares de nomes semelhantes, para conferência da coordenação, sem alteração: E1-F02 Alimentos / E1-F04 Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos; E1-F02 Alimentos / E1-F06 Disponibilidade de alimentos; E1-F02 Alimentos / E1-F26 Sistemas sustentáveis de produção de alimentos; E1-F06 Disponibilidade de alimentos / E1-F12 Disponibilidade de emprego; E1-F14 Trabalho infantil / E1-F28 Trabalho informal; E2-F02 Insegurança alimentar / E2-F27 Segurança; E2-F04 Mortalidade neonatal / E2-F05 Mortalidade infantil; E2-F06 Doenças decorrentes de contaminação e poluição do ar, da água e do solo / E2-F21 Contaminação e poluição do ar, da água e do solo; E2-F20 Acesso à água e saneamento / E2-F23 Gestão da água e saneamento; E2-F22 Participação das comunidades locais na gestão da água e saneamento / E2-F23 Gestão da água e saneamento; E2-F28 Violência / E3-F02 Discriminação e violência contra mulheres e meninas; E3-F01 Pobreza / E4-F22 Gestão sustentável da biodiversidade para o desenvolvimento e redução da pobreza; E4-F05 Tecnologias sociais / E5-F10 Formação em tecnologias sociais; E4-F06 Pesquisa científica e inovação / E4-F14 Pesquisa científica e inovação para recuperação de ambientes; E4-F07 Construções sustentáveis e resilientes / E4-F10 Reconstruções sustentáveis e resilientes; E4-F08 Tecnologias ambientalmente corretas / E4-F24 Transferência de tecnologias ambientalmente corretas (acesso)"
+    },
+    {
+      "bloco": "A",
+      "item": "A5 ícones compartilhados",
+      "situacao": "pendente",
+      "descricao": "códigos de ícone usados por mais de um fator, mantidos por decisão de 19/10/2026 até a entrega dos novos ícones: 03.09 em E2-F11, E5-F02; 03.11 em E2-F13, E2-F14"
+    },
+    {
+      "bloco": "A",
+      "item": "A5 classificação ODS diferente do código do ícone",
+      "situacao": "pendente",
+      "descricao": "27 fatores com ODS diferente da numeração do ícone, mantidos sem definição por decisão de 19/10/2026 (E1-F28, E1-F29, E2-F01, E2-F17, E2-F26, E2-F30, E2-F31, E2-F34, E2-F35, E2-F36, E2-F37, E2-F38, E2-F39, E3-F09, E3-F14, E4-F05, E4-F25, E5-F01, E5-F21, E5-F30, E6-F01, E6-F02, E6-F03, E6-F05, E6-F11, E6-F15, E6-F16)"
+    },
+    {
+      "bloco": "B",
+      "item": "B1 associação fator-diagnóstico (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "150 diagnósticos, cada um ligado ao ID do cadastro, ao mesmo ID, nome e eixo no documento"
+    },
+    {
+      "bloco": "B",
+      "item": "B2 diagnósticos ausentes (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "os 150 fatores do cadastro têm diagnóstico; nenhum fator do documento ficou fora dos dados"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 integridade das referências (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "fontes e normas registradas aparecem literalmente no texto; os fatores relacionados correspondem exatamente aos IDs citados em cada texto e existem no cadastro"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 diagnósticos com lacuna de informação declarada (Campo Grande/MS)",
+      "situacao": "pendente",
+      "descricao": "65 de 150 diagnósticos declaram dado a extrair, levantar ou produzir (E1-F06, E1-F09, E1-F13, E1-F14, E1-F15, E1-F24, E1-F29, E2-F01, E2-F02, E2-F04, E2-F05, E2-F06, E2-F08, E2-F09, E2-F11, E2-F12, E2-F14, E2-F16, E2-F18, E2-F19, E2-F21, E2-F27, E2-F33, E2-F36, E2-F38, E3-F01, E3-F03, E3-F04, E3-F05, E3-F06, E3-F11, E3-F12, E3-F16, E3-F18, E4-F01, E4-F02, E4-F03, E4-F05, E4-F07, E4-F15, E4-F16, E4-F20, E4-F21, E4-F22, E4-F24, E5-F03, E5-F04, E5-F05, E5-F06, E5-F09, E5-F11, E5-F13, E5-F14, E5-F16, E5-F17, E5-F18, E5-F19, E5-F21, E5-F22, E5-F23, E5-F24, E5-F26, E5-F30, E6-F06, E6-F08). O painel exibe os textos como estão no documento"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 dados quantitativos sem fonte registrada (Campo Grande/MS)",
+      "situacao": "pendente",
+      "descricao": "8 diagnósticos apresentam números, percentuais ou contagens sem fonte citada no texto: E1-F06, E1-F11, E1-F16, E1-F21, E2-F31, E3-F09, E4-F07, E5-F20"
+    },
+    {
+      "bloco": "B",
+      "item": "B4 dados quantitativos contra o documento (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "1736 ocorrências numéricas (valores, percentuais, anos, leis) extraídas do documento e dos dados, idênticas fator a fator"
+    },
+    {
+      "bloco": "B",
+      "item": "B5 mistura entre territórios nos dados (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "o arquivo registra apenas campo-grande-ms e os 150 textos vêm do documento de Campo Grande/MS (B1, B4 e B6); a separação no painel é testada em C6"
+    },
+    {
+      "bloco": "B",
+      "item": "B5 dados de outras escalas nos textos (Campo Grande/MS)",
+      "situacao": "pendente",
+      "descricao": "textos que citam dados ou referências de escala estadual (38), nacional (13) ou de outras localidades (2). São trechos do documento-fonte, não mistura de arquivos, mas o leitor precisa distinguir dado municipal de dado estadual ou nacional: estado E1-F02, E1-F06, E1-F08, E1-F10, E1-F15, E1-F16, E1-F19, E1-F22, E1-F24, E2-F03, E2-F04, E2-F05, E2-F07, E2-F08, E2-F09, E2-F12, E2-F15, E2-F17, E2-F20, E2-F25, E2-F28, E2-F30, E2-F32, E2-F35, E3-F01, E3-F02, E3-F03, E3-F16, E4-F06, E4-F17, E4-F19, E4-F20, E5-F05, E5-F06, E5-F08, E5-F09, E5-F17, E6-F06; país E1-F07, E1-F19, E1-F25, E2-F19, E2-F20, E2-F28, E2-F33, E2-F36, E3-F02, E3-F11, E3-F16, E4-F16, E6-F06; outras localidades E2-F05, E4-F06"
+    },
+    {
+      "bloco": "B",
+      "item": "B6 textos truncados nos dados (Campo Grande/MS)",
+      "situacao": "aprovado",
+      "descricao": "150 textos idênticos aos parágrafos do documento e terminados em pontuação final; tamanho de 621 (E1-F02) a 1061 caracteres (E2-F05)"
+    },
+    {
+      "bloco": "B",
+      "item": "Redação no documento-fonte (Campo Grande/MS)",
+      "situacao": "pendente",
+      "descricao": "E2-F26: sem espaço após pontuação (…blica disponível.A relevânci…); E2-F01: enumeração sem conjunção (pela Defesa Civil, pelo Plano Diretor…)"
+    },
+    {
+      "bloco": "B",
+      "item": "B1 associação fator-diagnóstico (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "150 diagnósticos, cada um ligado ao ID do cadastro, ao mesmo ID, nome e eixo no documento"
+    },
+    {
+      "bloco": "B",
+      "item": "B2 diagnósticos ausentes (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "os 150 fatores do cadastro têm diagnóstico; nenhum fator do documento ficou fora dos dados"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 integridade das referências (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "fontes e normas registradas aparecem literalmente no texto; os fatores relacionados correspondem exatamente aos IDs citados em cada texto e existem no cadastro"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 diagnósticos com lacuna de informação declarada (Distrito Federal)",
+      "situacao": "pendente",
+      "descricao": "54 de 150 diagnósticos declaram dado a extrair, levantar ou produzir (E1-F01, E1-F06, E1-F09, E1-F12, E1-F16, E1-F20, E1-F21, E1-F22, E1-F23, E1-F24, E1-F26, E2-F02, E2-F03, E2-F09, E2-F26, E2-F30, E2-F31, E2-F34, E2-F37, E2-F38, E2-F39, E3-F06, E3-F10, E3-F11, E3-F12, E3-F18, E4-F01, E4-F08, E4-F09, E4-F10, E4-F11, E4-F12, E4-F14, E4-F19, E4-F21, E4-F24, E5-F01, E5-F02, E5-F03, E5-F04, E5-F05, E5-F06, E5-F10, E5-F11, E5-F13, E5-F16, E5-F18, E5-F20, E5-F23, E5-F26, E5-F28, E5-F30, E6-F03, E6-F09). O painel exibe os textos como estão no documento"
+    },
+    {
+      "bloco": "B",
+      "item": "B3 dados quantitativos sem fonte registrada (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "0 diagnósticos apresentam números, percentuais ou contagens sem fonte citada no texto: "
+    },
+    {
+      "bloco": "B",
+      "item": "B4 dados quantitativos contra o documento (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "1968 ocorrências numéricas (valores, percentuais, anos, leis) extraídas do documento e dos dados, idênticas fator a fator"
+    },
+    {
+      "bloco": "B",
+      "item": "B5 mistura entre territórios nos dados (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "o arquivo registra apenas distrito-federal e os 150 textos vêm do documento de Distrito Federal (B1, B4 e B6); a separação no painel é testada em C6"
+    },
+    {
+      "bloco": "B",
+      "item": "B5 dados de outras escalas nos textos (Distrito Federal)",
+      "situacao": "pendente",
+      "descricao": "textos que citam dados ou referências de escala estadual (0), nacional (34) ou de outras localidades (41). São trechos do documento-fonte, não mistura de arquivos, mas o leitor precisa distinguir dado municipal de dado estadual ou nacional: estado ; país E1-F02, E1-F08, E1-F10, E1-F15, E1-F18, E1-F20, E1-F22, E1-F24, E1-F28, E2-F01, E2-F02, E2-F03, E2-F05, E2-F19, E2-F20, E2-F23, E2-F27, E2-F28, E3-F01, E3-F03, E3-F13, E3-F19, E4-F02, E4-F06, E4-F13, E5-F06, E5-F11, E5-F12, E5-F17, E5-F21, E5-F22, E5-F29, E6-F06, E6-F11; outras localidades E1-F09, E1-F11, E1-F22, E1-F23, E1-F27, E2-F01, E2-F06, E2-F09, E2-F11, E2-F20, E2-F21, E2-F23, E2-F25, E2-F26, E2-F28, E2-F30, E2-F32, E2-F38, E4-F01, E4-F02, E4-F05, E4-F06, E4-F08, E4-F12, E4-F13, E4-F14, E4-F17, E4-F19, E4-F21, E4-F24, E4-F25, E5-F04, E5-F05, E5-F06, E5-F08, E5-F13, E5-F15, E5-F16, E5-F27, E5-F30, E6-F04"
+    },
+    {
+      "bloco": "B",
+      "item": "B6 textos truncados nos dados (Distrito Federal)",
+      "situacao": "aprovado",
+      "descricao": "150 textos idênticos aos parágrafos do documento e terminados em pontuação final; tamanho de 532 (E3-F03) a 1043 caracteres (E6-F04)"
+    }
+  ]
+}

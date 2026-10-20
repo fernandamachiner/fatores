@@ -1,0 +1,39 @@
+{
+  "territorio": {
+    "id": "distrito-federal",
+    "nome": "Distrito Federal",
+    "uf": "DF",
+    "tipo": "unidade federativa (35 Regiões Administrativas)",
+    "rotulo": "Distrito Federal"
+  },
+  "situacao": {
+    "status": "diagnóstico situacional",
+    "territorio_de_exemplo": false,
+    "aviso": "Os textos referem-se ao Distrito Federal e, quando indicado, às suas Regiões Administrativas e regiões de saúde."
+  },
+  "documento_fonte": {
+    "arquivo": "territorios/fontes/Diagnostico_Situacional_DistritoFederal_RAs_Matriz_v1.0.2.docx",
+    "titulo": "Diagnóstico Situacional do Distrito Federal e Regiões Administrativas, Matriz de Fatores v1.0.2",
+    "periodo_referencia": "não declarado como período único; cada dado indica o próprio ano de referência e a escala territorial",
+    "responsaveis": "PICAPS | CoLaboratório CTIS | Fiocruz Brasília",
+    "data_elaboracao": "outubro de 2026",
+    "matriz_declarada_no_documento": "Matriz de Fatores v1.0.2, 150 fatores"
+  },
+  "campos_excluidos_da_abertura_dos_eixos": [
+    "ODS mobilizados"
+  ],
+  "decisoes": [
+    {
+      "data": "2026-10-20",
+      "decisao": "A linha ODS mobilizados da abertura dos eixos é excluída dos dados, pela mesma regra adotada para Campo Grande/MS em 20/10/2026; o painel não exibe esse campo. O documento-fonte não foi alterado."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "Por decisão da coordenação, o painel não exibe a ressalva das notas metodológicas sobre a confirmação de dados obtidos de reportagens e sistematizações de terceiros. A ressalva permanece no documento-fonte e nas notas metodológicas registradas no arquivo de dados."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "Por decisão da coordenação, 13 frases de 12 fatores (E1-F01, E1-F22, E1-F26, E2-F26, E2-F37, E3-F18, E4-F01, E4-F11, E5-F18, E5-F26, E5-F30, E6-F09) tiveram a redação revisada no documento-fonte, em geral com a retirada das declarações de lacuna de informação. As frases originais e revisadas estão em relatorios/distrito-federal-revisoes-coordenacao.json."
+    }
+  ]
+}

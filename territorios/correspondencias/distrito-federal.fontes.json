@@ -1,0 +1,101 @@
+{
+  "_criterio": "Mesmo critério de Campo Grande/MS. Fontes citadas: conteúdo integral dos parênteses que indicam a origem de um dado (órgão, pesquisa, base, publicação ou imprensa), excluídos parênteses com identificador de fator ou apenas ano. Referências normativas: planos, zoneamentos, códigos e políticas citados no texto. Todo trecho deve aparecer literalmente no texto do fator.",
+  "parenteses_que_sao_fonte": [
+    "Anuário Brasileiro de Segurança Pública 2026",
+    "Cadernos de Saúde Pública",
+    "Cadernos de Saúde Pública, série 1990 a 2000",
+    "Caesb e Adasa, conforme Congresso em Foco",
+    "Caesb, conforme Congresso em Foco",
+    "Codeplan, PDAD 2018",
+    "Congresso em Foco",
+    "Correio da Manhã",
+    "Correio da Manhã, 2026",
+    "Defesa Civil do DF",
+    "Defesa Civil do DF, conforme Jornal de Brasília",
+    "Defesa Civil do DF, dezembro de 2024",
+    "Detran-DF",
+    "Detran-DF, conforme Jornal de Brasília",
+    "IBGE",
+    "IBGE Cidades",
+    "IBGE Estados",
+    "IBGE, Contas Regionais",
+    "IBGE, PNAD Contínua",
+    "IBGE, PNAD Contínua, conforme Poder360",
+    "IBGE, PNAD Contínua, escala distrital",
+    "IBGE, PNAD Contínua, escala distrital, conforme Sedes-DF",
+    "IBGE, conforme Correio da Manhã",
+    "IBGE, finanças públicas",
+    "INEP",
+    "INEP, conforme Jornal de Brasília",
+    "INEP, conforme Jornal de Brasília e Correio da Manhã",
+    "INMET",
+    "INMET, outubro de 2024",
+    "INPE",
+    "IPEDF",
+    "IPEDF e DIEESE, PED-DF",
+    "IPEDF, PDAD 2021",
+    "IPEDF, PED-DF",
+    "Inesc",
+    "Inesc com base na PDAD",
+    "Inesc, Mapa das Desigualdades, com base na PDAD",
+    "Instituto Socioambiental",
+    "Instituto Socioambiental, Terras Indígenas no Brasil",
+    "Instituto Trata Brasil, 2026",
+    "Instituto Trata Brasil, Ranking do Saneamento 2026, base SINISA 2024",
+    "MapBiomas",
+    "MapBiomas, RAD 2023",
+    "MapBiomas, RAD 2023, escala distrital",
+    "SES-DF",
+    "SES-DF, 2º RDQA 2024",
+    "SES-DF, 2º RDQA 2025",
+    "SES-DF, boletim epidemiológico, conforme Correio Braziliense",
+    "SLU",
+    "SLU, conforme Jornal de Brasília",
+    "SLU, conforme Jornal de Brasília, 2018",
+    "SSP-DF",
+    "SSP-DF, 2º Anuário de Segurança Pública do DF",
+    "SSP-DF, conforme Sou Brasília",
+    "Sema-DF",
+    "Sema-DF, conforme Mais Goiás"
+  ],
+  "fontes_no_texto": {
+    "E2-F05": [
+      "IBGE Cidades",
+      "DATASUS"
+    ],
+    "E2-F20": [
+      "Mapa das Desigualdades do Inesc com base na PDAD"
+    ],
+    "E3-F16": [
+      "PDAD"
+    ],
+    "E3-F18": [
+      "Censo 2022"
+    ],
+    "E4-F05": [
+      "Inesc com base na PDAD"
+    ],
+    "E4-F13": [
+      "Instituto Trata Brasil"
+    ],
+    "E4-F16": [
+      "MapBiomas"
+    ]
+  },
+  "referencias_normativas": {
+    "E4-F03": [
+      "Política Distrital de Práticas Integrativas em Saúde"
+    ],
+    "E4-F07": [
+      "Código de Obras do DF"
+    ],
+    "E4-F12": [
+      "Plano Diretor de Ordenamento Territorial",
+      "Zoneamento Ecológico-Econômico",
+      "Plano Distrital de Saneamento"
+    ],
+    "E5-F24": [
+      "Plano Diretor de Ordenamento Territorial"
+    ]
+  }
+}
