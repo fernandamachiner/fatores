@@ -16,7 +16,8 @@
 # houver divergência. Os textos são copiados sem alteração.
 #
 # Entradas:
-#   territorios/correspondencias/<id>.meta.json    identificação e situação
+#   territorios/correspondencias/<id>.meta.json    identificação, situação, decisões
+#                                                   e campos excluídos da abertura dos eixos
 #   territorios/correspondencias/<id>.fontes.json  fontes e normas citadas
 #   metodologia/metodologia.js                      cadastro metodológico
 #
@@ -178,6 +179,7 @@ def main(tid):
         for linha in e["abertura"]:
             t = linha[0]
             m = re.match(r"(Contradição central|Foco pedagógico|ODS mobilizados):\s*(.+)", t)
+            if m and m.group(1) in meta.get("campos_excluidos_da_abertura_dos_eixos", []): continue
             if m: campos[m.group(1)] = m.group(2)
             else: campos.setdefault("outros", []).append(t)
         abertura[e["numero"]] = campos
@@ -186,6 +188,7 @@ def main(tid):
         "formato": "diagnostico-territorial/2",
         "territorio": meta["territorio"],
         "situacao": meta["situacao"],
+        "decisoes": meta.get("decisoes", []),
         "metodologia": {"arquivo": "metodologia/metodologia.js", "versao": M["versao"]},
         "documento_fonte": dict(meta["documento_fonte"], capa=doc["capa"]),
         "resumo_executivo": {"quadro_eixos": doc["resumo_executivo"]["tabela"], "texto": "\n\n".join(doc["resumo_executivo"]["paragrafos"])},
@@ -193,7 +196,6 @@ def main(tid):
             "numero": e["numero"], "titulo_no_documento": e["titulo_no_documento"],
             "contradicao_central": abertura[e["numero"]].get("Contradição central", ""),
             "foco_pedagogico": abertura[e["numero"]].get("Foco pedagógico", ""),
-            "ods_mobilizados": abertura[e["numero"]].get("ODS mobilizados", ""),
             "outros_itens_da_abertura": abertura[e["numero"]].get("outros", []),
             "introducao": "\n\n".join(e["introducao"]),
             "fatores_no_documento": sum(1 for x in doc["fatores"].values() if x["eixo_documento"] == e["numero"]),

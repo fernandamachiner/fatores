@@ -1,6 +1,6 @@
 /*
  * CADASTRO METODOLÓGICO CENTRAL
- * Matriz de Fatores Territoriais - 6 Eixos Estratégicos
+ * Matriz de Fatores, 6 Eixos Estratégicos
  *
  * Arquivo gerado por metodologia/ferramentas/gerar_metodologia.py a partir da
  * planilha oficial (metodologia/planilha/Fatores_organizacao.xlsx) e de
@@ -16,15 +16,15 @@
  * index.html (o teste testes/validar-metodologia.js acusa divergências).
  */
 window.METODOLOGIA = {
-  "nome": "Matriz de Fatores Territoriais - 6 Eixos Estratégicos",
-  "versao": "2.0.0",
+  "nome": "Matriz de Fatores",
+  "versao": "1.0.2",
   "data_versao": "2026-10-19",
   "fonte": "metodologia/planilha/Fatores_organizacao.xlsx",
   "formato_id_fator": "E<ordem do eixo>-F<número do fator, dois dígitos>; o número não muda e não é reaproveitado",
   "decisoes": [
     {
       "data": "2026-10-19",
-      "decisao": "A planilha metodologia/planilha/Fatores_organizacao.xlsx é a fonte oficial da metodologia. O cadastro metodologia/metodologia.js é gerado a partir dela e não deve ser editado à mão. A versão 2.0.0, com 150 fatores, é a versão final definida pela coordenação após a revisão das semelhanças entre fatores; as versões anteriores foram eliminadas."
+      "decisao": "A planilha metodologia/planilha/Fatores_organizacao.xlsx é a fonte oficial da metodologia. O cadastro metodologia/metodologia.js é gerado a partir dela e não deve ser editado à mão. A Matriz de Fatores v1.0.2, com 150 fatores, é a versão final definida pela coordenação após a revisão das semelhanças entre fatores; as versões anteriores foram eliminadas."
     },
     {
       "data": "2026-10-19",
@@ -41,55 +41,59 @@ window.METODOLOGIA = {
     {
       "data": "2026-10-19",
       "decisao": "A classificação ODS dos fatores cujo código de ícone tem numeração diferente do ODS permanece como está, sem definição por ora."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "A versão vigente da matriz é identificada como Matriz de Fatores v1.0.2, mesma nomenclatura dos documentos institucionais (planilha Fatores_organizacao_v1.0.2.xlsx e diagnósticos territoriais). As versões intermediárias do cadastro do painel, de 159 fatores, foram eliminadas e não são mais referência."
     }
   ],
   "desativados": [
     {
       "id": "E2-F24",
       "fator": "Gestão de riscos e emergências",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E3-F15",
       "fator": "Acesso a direitos fundamentais",
-      "versao": "2.0.0",
+      "versao": "1.0.2",
       "observacao": "A definição deste fator passou a ser a definição de E3-F08 Direitos fundamentais."
     },
     {
       "id": "E4-F23",
       "fator": "Recursos financeiros para conservação sustentável da biodiversidade",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E5-F07",
       "fator": "Tecnologias de informação e comunicação",
-      "versao": "2.0.0",
+      "versao": "1.0.2",
       "observacao": "O nome, o ícone e a definição deste fator passaram para E5-F21."
     },
     {
       "id": "E5-F31",
       "fator": "Acesso a comunicação (internet e telefonia)",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E6-F10",
       "fator": "Tomada de decisão responsiva, inclusiva e participativa (participação social)",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E6-F12",
       "fator": "Parcerias multissetoriais",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E6-F13",
       "fator": "Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas)",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     },
     {
       "id": "E6-F14",
       "fator": "Estratégias de mobilização (redes e grupos organizados)",
-      "versao": "2.0.0"
+      "versao": "1.0.2"
     }
   ],
   "eixos": [

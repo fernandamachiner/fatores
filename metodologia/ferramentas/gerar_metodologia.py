@@ -79,7 +79,7 @@ M = {
 }
 cab = """/*
  * CADASTRO METODOLÓGICO CENTRAL
- * Matriz de Fatores Territoriais - 6 Eixos Estratégicos
+ * Matriz de Fatores, 6 Eixos Estratégicos
  *
  * Arquivo gerado por metodologia/ferramentas/gerar_metodologia.py a partir da
  * planilha oficial (metodologia/planilha/Fatores_organizacao.xlsx) e de

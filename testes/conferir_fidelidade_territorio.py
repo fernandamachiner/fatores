@@ -80,23 +80,41 @@ while i < len(blocos):
 
 # demais conteúdos devem estar no arquivo do território
 arquivo = json.dumps(T, ensure_ascii=False)
+meta = json.load(open("territorios/correspondencias/%s.meta.json" % tid, encoding="utf-8"))
+excluidos_por_decisao = meta.get("campos_excluidos_da_abertura_dos_eixos", [])
+excluidos = []
 nao_representados = []
+campo_abertura = {"Contradição central": "contradicao_central", "Foco pedagógico": "foco_pedagogico"}
+eixos_arq = {e["numero"]: e for e in T["eixos_documento"]}
+eixo_atual = None
 for k, (tipo, v) in enumerate(blocos):
+    if tipo == "p":
+        m = re.match(r"^Eixo (\d)\. ", v)
+        if m:
+            eixo_atual = int(m.group(1))
+        elif re.match(r"^(Síntese estratégica|Notas metodológicas)", v):
+            eixo_atual = None
     if k in usados:
         continue
     pedacos = [v] if tipo == "p" else [c for linha in v for c in linha if c]
     for p in pedacos:
-        # nas tabelas de abertura dos eixos, o rótulo vira nome de campo
-        # (contradicao_central, foco_pedagogico, ods_mobilizados) e o
-        # conteúdo depois dos dois-pontos é guardado sem alteração
+        # nas tabelas de abertura dos eixos, o rótulo vira nome de campo do
+        # próprio eixo e o conteúdo depois dos dois-pontos é guardado sem
+        # alteração; a comparação é feita com o campo daquele eixo
         m = re.match(r"^(Contradição central|Foco pedagógico|ODS mobilizados):\s*(.+)$", p)
-        if m:
-            p = m.group(2)
+        if m and m.group(1) in excluidos_por_decisao:
+            excluidos.append((k, p[:90])); continue
+        if m and eixo_atual:
+            campo = campo_abertura.get(m.group(1))
+            if not campo or eixos_arq.get(eixo_atual, {}).get(campo) != m.group(2):
+                nao_representados.append((k, "Eixo %d, %s: %s" % (eixo_atual, m.group(1), m.group(2)[:60])))
+            continue
         if json.dumps(p, ensure_ascii=False)[1:-1] not in arquivo and not re.match(r"^(Resumo executivo|Eixo \d\. .+|Síntese estratégica|Notas metodológicas e fontes)$", p):
             nao_representados.append((k, p[:90]))
 
 print("Documento: %d blocos com conteúdo (%d parágrafos e %d tabelas)" % (len(blocos), sum(1 for b in blocos if b[0] == "p"), sum(1 for b in blocos if b[0] == "tbl")))
 print("Diagnósticos conferidos literalmente contra o .docx: %d de %d no arquivo" % (conferidos, len(T["diagnosticos"])))
+print("Conteúdos excluídos por decisão registrada (%s): %d" % (", ".join(excluidos_por_decisao) or "nenhum", len(excluidos)))
 print("Conteúdos do documento não representados no arquivo: %d" % len(nao_representados))
 for k, p in nao_representados[:20]:
     print("  bloco %d: %s" % (k, p))

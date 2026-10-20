@@ -1,11 +1,40 @@
-== Território Campo Grande/MS (documento Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx, metodologia 2.0.0)
+== Metodologia (Matriz de Fatores v1.0.2)
+CADASTRO: 6 eixos, 150 fatores
+  E1  29 fatores  O Suor que não nos Sustenta
+  E2  38 fatores  A Vida em Risco
+  E3  18 fatores  Nossos Corpos Silenciados
+  E4  24 fatores  A Terra de Quem?
+  E5  29 fatores  A Cidade Negada
+  E6  12 fatores  A Voz na Mesa
+
+VERIFICAÇÕES APROVADAS (10)
+  OK     window.METODOLOGIA carregado
+  OK     6 eixos cadastrados
+  OK     ordem dos eixos 1 a 6
+  OK     150 fatores com id único
+  OK     nomes de fatores sem repetição
+  OK     todas as 4 variantes de ícone presentes para cada fator
+  OK     rótulos ODS coerentes com o número do ODS
+  OK     cores e títulos dos eixos conferidos contra a roda SVG
+  OK     index.html carrega metodologia.js antes de app.js
+  OK     9 ids desativados registrados e não reaproveitados
+
+AVISOS (2)
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+
+ERROS (0)
+
+Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+
+== Território Campo Grande/MS (documento ajustado em 20/10/2026)
 TERRITÓRIO Campo Grande/MS: 150 validados, 0 pendentes, 0 fatores sem diagnóstico
 
 VERIFICAÇÕES APROVADAS (7)
   OK     id do território coincide com o nome do arquivo
   OK     situação do diagnóstico declarada (diagnóstico situacional)
   OK     documento-fonte presente: territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx
-  OK     território gerado com a versão vigente da metodologia (2.0.0)
+  OK     território gerado com a versão vigente da metodologia (1.0.2)
   OK     150 diagnósticos ligados a ids existentes no cadastro
   OK     0 diagnósticos pendentes de validação, com motivo registrado e sem ligação a fator
   OK     todos os 150 fatores do documento estão no arquivo (validados ou pendentes), sem repetição
@@ -17,25 +46,9 @@ ERROS (0)
 
 Documento: 496 blocos com conteúdo (335 parágrafos e 161 tabelas)
 Diagnósticos conferidos literalmente contra o .docx: 150 de 150 no arquivo
+Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
 Conteúdos do documento não representados no arquivo: 0
 
-== Controle 1: cópia com fonte IPEA inexistente em E1-F03, id E6-F99, número alterado na introdução do Eixo 1 e texto alterado nas potencialidades
-ERROS (4)
-  ERRO   E1-F03: "IPEA" (fontes_citadas) não aparece literalmente no texto
-  ERRO   diagnóstico ligado a id inexistente no cadastro: E6-F99
-  ERRO   diagnósticos com id inexistente
-  ERRO   fatores do documento: 150; no arquivo: 149
-Diagnósticos conferidos literalmente contra o .docx: 149 de 150 no arquivo
-Conteúdos do documento não representados no arquivo: 2
-  bloco 15: O eixo examina a contradição entre a condição de Campo Grande como maior economia de Mato 
-  bloco 486: Campo Grande dispõe de rede ampliada de APS, com 197 equipes de Saúde da Família, 147 de S
-ERRO  E6-F16: diagnóstico ausente no arquivo do território
-
-== Controle 2: cópia com número alterado no diagnóstico de E2-F07
-Diagnósticos conferidos literalmente contra o .docx: 149 de 150 no arquivo
-Conteúdos do documento não representados no arquivo: 0
-ERRO  E2-F07: texto difere do documento
-
-== Metodologia
-ERROS (0)
-Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+== Controle: contradição central do Eixo 3 apagada numa cópia
+Conteúdos do documento não representados no arquivo: 1
+  bloco 221: Eixo 3, Contradição central: A cor da pele e o gênero determinam quem sofre mais violênci

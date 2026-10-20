@@ -25,9 +25,15 @@ window.TERRITORIOS["campo-grande-ms"] = {
     "territorio_de_exemplo": true,
     "aviso": "Campo Grande/MS é o território de exemplo da plataforma. Os textos referem-se exclusivamente a Campo Grande/MS e não devem ser generalizados para outras localidades."
   },
+  "decisoes": [
+    {
+      "data": "2026-10-20",
+      "decisao": "A linha ODS mobilizados da abertura dos eixos, ausente no Eixo 1 do documento, é excluída dos dados de todos os eixos por decisão da coordenação. O documento-fonte não foi alterado."
+    }
+  ],
   "metodologia": {
     "arquivo": "metodologia/metodologia.js",
-    "versao": "2.0.0"
+    "versao": "1.0.2"
   },
   "documento_fonte": {
     "arquivo": "territorios/fontes/Diagnostico_Situacional_CampoGrande_MS_Matriz_v1.0.2.docx",
@@ -96,7 +102,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "O Suor que não nos Sustenta",
       "contradicao_central": "Nosso território produz riqueza, mas vivemos na precarização e no desemprego.",
       "foco_pedagogico": "Trabalho, renda, economia solidária e agricultura familiar",
-      "ods_mobilizados": "",
       "outros_itens_da_abertura": [],
       "introducao": "O eixo examina a contradição entre a condição de Campo Grande como maior economia de Mato Grosso do Sul e a precariedade do trabalho e da renda de parte expressiva de sua população. O município gerou PIB de R$ 34,7 bilhões em 2021 e PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), valor inferior à média estadual de R$ 66,8 mil (Semadesc, 2023), com estrutura produtiva dominada por serviços e administração pública e baixa participação da produção local de alimentos. Os 29 fatores do eixo descrevem como a riqueza circula sem se distribuir: informalidade, sobrecarga de cuidado não remunerado sobre as mulheres, dependência alimentar de cadeias externas e fragilidade das iniciativas de economia solidária. Os eventos climáticos de 2025 e 2026 acrescentaram ao eixo a dimensão da recuperação econômica após desastres, ainda sem instrumentos municipais de crédito e proteção para os trabalhadores e pequenos negócios atingidos.",
       "fatores_no_documento": 29
@@ -106,7 +111,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "A Vida em Risco",
       "contradicao_central": "A mortalidade, a insalubridade e o adoecimento expressam a negligência estatal.",
       "foco_pedagogico": "Saúde, corpo político, saneamento e adoecimento social",
-      "ods_mobilizados": "2, 3, 6, 11, 13  |  38 fatores da Matriz v1.0.2",
       "outros_itens_da_abertura": [
         "EIXO 2  |  A Vida em Risco"
       ],
@@ -118,7 +122,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "Nossos Corpos Silenciados",
       "contradicao_central": "A cor da pele e o gênero determinam quem sofre mais violência, exclusão e invisibilidade.",
       "foco_pedagogico": "Gênero, raça, direitos fundamentais e empoderamento",
-      "ods_mobilizados": "1, 5, 8, 10, 18  |  18 fatores da Matriz v1.0.2",
       "outros_itens_da_abertura": [
         "EIXO 3  |  Nossos Corpos Silenciados"
       ],
@@ -130,7 +133,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "A Terra de Quem?",
       "contradicao_central": "A natureza é tratada como mercadoria, expropriando comunidades tradicionais e destruindo ecossistemas.",
       "foco_pedagogico": "Soberania territorial, meio ambiente, biodiversidade e clima",
-      "ods_mobilizados": "1, 2, 3, 6, 9, 11, 12, 13, 14, 15, 17  |  24 fatores da Matriz v1.0.2",
       "outros_itens_da_abertura": [
         "EIXO 4  |  A Terra de Quem?"
       ],
@@ -142,7 +144,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "A Cidade Negada",
       "contradicao_central": "Habitação, mobilidade, educação e cultura são direitos sistematicamente sonegados.",
       "foco_pedagogico": "Infraestrutura, educação, cultura e território urbano-rural",
-      "ods_mobilizados": "3, 4, 7, 8, 9, 11, 12, 13  |  29 fatores da Matriz v1.0.2",
       "outros_itens_da_abertura": [
         "EIXO 5  |  A Cidade Negada"
       ],
@@ -154,7 +155,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       "titulo_no_documento": "A Voz na Mesa",
       "contradicao_central": "A comunidade transita de beneficiária a sujeito da história quando assume o protagonismo.",
       "foco_pedagogico": "Participação social, governança, transparência e parcerias sociotécnicas",
-      "ods_mobilizados": "11, 16, 17  |  12 fatores da Matriz v1.0.2",
       "outros_itens_da_abertura": [
         "EIXO 6  |  A Voz na Mesa"
       ],
@@ -395,11 +395,10 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F02": {
-      "texto": "O acesso a alimento adequado em Campo Grande é mediado sobretudo pela renda, dado que a agropecuária responde por apenas 2,8% do valor adicionado municipal e a cidade depende do abastecimento externo concentrado na CEASA e nas grandes redes atacadistas. O PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), inferior à média estadual de R$ 66,8 mil no mesmo ano (Semadesc), e a concentração da massa salarial nas faixas mais altas indicam que o preço dos alimentos pesa desproporcionalmente sobre as famílias inscritas no CadÚnico. A ausência de inquérito municipal de segurança alimentar com a Escala Brasileira de Insegurança Alimentar constitui lacuna de informação: os dados disponíveis são estaduais (PNAD Contínua, módulo de segurança alimentar) e não permitem identificar os territórios mais afetados. O fator relaciona-se a E1-F06 e E1-F24 e tem como desfecho sanitário E2-F02, devendo o plano popular priorizar a produção de dados intraurbanos por meio do SISVAN e do Cadastro Único.",
+      "texto": "O acesso a alimento adequado em Campo Grande é mediado sobretudo pela renda, dado que a agropecuária responde por apenas 2,8% do valor adicionado municipal e a cidade depende do abastecimento externo concentrado na CEASA e nas grandes redes atacadistas. O PIB per capita de R$ 47.065,77 em 2023 (IBGE, escala municipal), inferior à média estadual de R$ 66,8 mil no mesmo ano (Semadesc), e a concentração da massa salarial nas faixas mais altas indicam que o preço dos alimentos pesa desproporcionalmente sobre as famílias inscritas no CadÚnico. O fator relaciona-se a E1-F06 e E1-F24 e tem como desfecho sanitário E2-F02, devendo o plano popular priorizar a produção de dados intraurbanos por meio do SISVAN e do Cadastro Único.",
       "fontes_citadas": [
         "IBGE, escala municipal",
-        "Semadesc",
-        "PNAD Contínua, módulo de segurança alimentar"
+        "Semadesc"
       ],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -422,7 +421,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F03": {
-      "texto": "A agricultura familiar no município concentra-se em assentamentos de reforma agrária e pequenas propriedades do cinturão rural, que ocupa a maior parte dos 8.082,33 km² do território (IBGE), mas tem participação marginal na estrutura econômica dominada pela pecuária extensiva e pela lavoura empresarial de grãos. O Censo Agropecuário 2017 do IBGE é a fonte disponível para dimensionar estabelecimentos familiares e deve ser confrontado com os registros do Cadastro Nacional da Agricultura Familiar. A conexão entre essa produção e o consumo urbano é frágil: as compras públicas do PNAE e do PAA, principal instrumento de mercado institucional, não têm sua execução municipal publicada de forma acessível, o que constitui lacuna a ser investigada. O fortalecimento da agricultura familiar condiciona E1-F06 e E1-F26 e reduz a dependência de cadeias longas vulneráveis a choques de preço (E1-F24) e a eventos climáticos como os registrados em 2024 e 2026 (E2-F30, E2-F17).",
+      "texto": "A agricultura familiar no município concentra-se em assentamentos de reforma agrária e pequenas propriedades do cinturão rural, que ocupa a maior parte dos 8.082,33 km² do território (IBGE), mas tem participação marginal na estrutura econômica dominada pela pecuária extensiva e pela lavoura empresarial de grãos. O Censo Agropecuário 2017 do IBGE é a fonte disponível para dimensionar estabelecimentos familiares e deve ser confrontado com os registros do Cadastro Nacional da Agricultura Familiar. O fortalecimento da agricultura familiar condiciona E1-F06 e E1-F26 e reduz a dependência de cadeias longas vulneráveis a choques de preço (E1-F24) e a eventos climáticos como os registrados em 2024 e 2026 (E2-F30, E2-F17).",
       "fontes_citadas": [
         "IBGE"
       ],
@@ -451,7 +450,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F04": {
-      "texto": "Hortas comunitárias, hortas escolares e quintais produtivos existem de forma dispersa nas regiões urbanas periféricas de Campo Grande, geralmente associadas a grupos de mulheres, igrejas e unidades de saúde, sem cadastro municipal que permita dimensionar sua escala. Nas aldeias urbanas indígenas, majoritariamente Terena, o cultivo em pequenos espaços preserva práticas alimentares e medicinais tradicionais (E4-F03, E4-F18) apesar da restrição de área imposta pela ocupação urbana. A inexistência de inventário dessas iniciativas é lacuna de informação que a cartografia social tem capacidade de suprir, registrando localização, produção e necessidades de água, sementes e assistência técnica. O fator articula segurança alimentar (E1-F02), renda complementar (E1-F11) e promoção da saúde, e sua expansão depende do acesso a terrenos públicos ociosos, de água a custo compatível (E2-F20) e de apoio técnico, o que o torna objeto viável de ação intersetorial de baixo custo no plano popular.",
+      "texto": "Hortas comunitárias, hortas escolares e quintais produtivos existem de forma dispersa nas regiões urbanas periféricas de Campo Grande, geralmente associadas a grupos de mulheres, igrejas e unidades de saúde, sem cadastro municipal que permita dimensionar sua escala. Nas aldeias urbanas indígenas, majoritariamente Terena, o cultivo em pequenos espaços preserva práticas alimentares e medicinais tradicionais (E4-F03, E4-F18) apesar da restrição de área imposta pela ocupação urbana. O fator articula segurança alimentar (E1-F02), renda complementar (E1-F11) e promoção da saúde, e sua expansão depende do acesso a terrenos públicos ociosos, de água a custo compatível (E2-F20) e de apoio técnico, o que o torna objeto viável de ação intersetorial de baixo custo no plano popular.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -474,7 +473,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F05": {
-      "texto": "A produção orgânica certificada no município é residual e voltada a nichos de consumo de renda média e alta, comercializada em feiras específicas e pontos de venda especializados, sem presença significativa nas regiões urbanas de menor renda. O contexto produtivo regional, marcado pelo uso intensivo de agrotóxicos nas lavouras de soja e milho do entorno, amplia a relevância do fator tanto para a saúde dos consumidores quanto para a dos trabalhadores rurais expostos (E1-F16, E2-F21). O Cadastro Nacional de Produtores Orgânicos do Ministério da Agricultura é a fonte para quantificar produtores no município, dado não sistematizado nesta versão do diagnóstico e registrado como lacuna. A ampliação da oferta orgânica e agroecológica depende de crédito orientado (E1-F22), assistência técnica e compras públicas, e sua articulação com hortas comunitárias (E1-F04) permitiria levar alimentos livres de agrotóxicos a territórios hoje excluídos desse mercado.",
+      "texto": "A produção orgânica certificada no município é residual e voltada a nichos de consumo de renda média e alta, comercializada em feiras específicas e pontos de venda especializados, sem presença significativa nas regiões urbanas de menor renda. O contexto produtivo regional, marcado pelo uso intensivo de agrotóxicos nas lavouras de soja e milho do entorno, amplia a relevância do fator tanto para a saúde dos consumidores quanto para a dos trabalhadores rurais expostos (E1-F16, E2-F21). A ampliação da oferta orgânica e agroecológica depende de crédito orientado (E1-F22), assistência técnica e compras públicas, e sua articulação com hortas comunitárias (E1-F04) permitiria levar alimentos livres de agrotóxicos a territórios hoje excluídos desse mercado.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -579,7 +578,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F09": {
-      "texto": "O empreendedorismo em Campo Grande cresceu de 103.129 para 117.722 empresas ativas entre março de 2020 e janeiro de 2023 (Prefeitura Municipal), expansão em parte composta por microempreendedores individuais que formalizaram atividades de subsistência após a perda de vínculos empregatícios na pandemia. Esse empreendedorismo de necessidade difere da dimensão solidária e criativa nomeada pelo fator, que pressupõe cooperação, inovação social e acesso a apoio técnico. O município dispõe de equipamentos como a Fundação Social do Trabalho e de instituições de ensino com incubadoras, mas não há registro público consolidado de empreendimentos solidários ou de inovação social em territórios periféricos, o que constitui lacuna de informação. O fator articula-se a E1-F11, E1-F22 e E5-F10, e o plano popular pode orientar o apoio a iniciativas surgidas da própria comunidade, identificadas na cartografia social, em vez de replicar programas genéricos de capacitação empresarial.",
+      "texto": "O empreendedorismo em Campo Grande cresceu de 103.129 para 117.722 empresas ativas entre março de 2020 e janeiro de 2023 (Prefeitura Municipal), expansão em parte composta por microempreendedores individuais que formalizaram atividades de subsistência após a perda de vínculos empregatícios na pandemia. Esse empreendedorismo de necessidade difere da dimensão solidária e criativa nomeada pelo fator, que pressupõe cooperação, inovação social e acesso a apoio técnico. O município dispõe de equipamentos como a Fundação Social do Trabalho e de instituições de ensino com incubadoras, mas não há registro público consolidado de empreendimentos solidários ou de inovação social em territórios periféricos. O fator articula-se a E1-F11, E1-F22 e E5-F10, e o plano popular pode orientar o apoio a iniciativas surgidas da própria comunidade, identificadas na cartografia social, em vez de replicar programas genéricos de capacitação empresarial.",
       "fontes_citadas": [
         "Prefeitura Municipal"
       ],
@@ -629,7 +628,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F11": {
-      "texto": "As iniciativas de economia solidária em Campo Grande concentram-se em cooperativas e associações de catadores de materiais recicláveis, grupos de produção artesanal e feiras de economia popular, sem cadastro municipal atualizado que permita dimensionar seu número, faturamento e trabalhadores envolvidos, lacuna que deve ser suprida pela consulta ao Cadastro Nacional de Empreendimentos Econômicos Solidários e pela cartografia social. A coleta de resíduos domiciliares atinge 99,23% da população, gerando volume de recicláveis que poderia sustentar uma cadeia solidária mais robusta (E1-F27), hoje limitada pela baixa remuneração dos catadores e pela ausência de contratos de prestação de serviço com o poder público. As aldeias urbanas indígenas mantêm produção artesanal com potencial de comercialização coletiva. O fator depende de E1-F22 e E1-F20 para acesso a capital e de E6-F04 para parcerias institucionais, e constitui eixo estratégico de geração de renda nos territórios de maior vulnerabilidade.",
+      "texto": "As iniciativas de economia solidária em Campo Grande concentram-se em cooperativas e associações de catadores de materiais recicláveis, grupos de produção artesanal e feiras de economia popular, sem cadastro municipal atualizado que permita dimensionar seu número, faturamento e trabalhadores envolvidos. A coleta de resíduos domiciliares atinge 99,23% da população, gerando volume de recicláveis que poderia sustentar uma cadeia solidária mais robusta (E1-F27), hoje limitada pela baixa remuneração dos catadores e pela ausência de contratos de prestação de serviço com o poder público. As aldeias urbanas indígenas mantêm produção artesanal com potencial de comercialização coletiva. O fator depende de E1-F22 e E1-F20 para acesso a capital e de E6-F04 para parcerias institucionais, e constitui eixo estratégico de geração de renda nos territórios de maior vulnerabilidade.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -780,7 +779,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F17": {
-      "texto": "As ações solidárias locais em Campo Grande, como doação de alimentos, cozinhas comunitárias, apoio a famílias em situação de rua e redes de vizinhança, são conduzidas por igrejas, associações de moradores, coletivos e organizações indígenas, com intensidade que aumenta em momentos de crise. Após o vendaval de setembro de 2026, a mobilização comunitária complementou a resposta municipal na remoção de árvores e no apoio a famílias atingidas, padrão observado também nos alagamentos de abril de 2025. Essas ações não são registradas em sistema público, o que impede seu reconhecimento como componente da rede de proteção e da capacidade de resposta a desastres, lacuna que a cartografia social deve preencher. O fator articula-se a E6-F01, E6-F16 e E6-F05, e sua valorização no plano popular passa por apoio logístico e financeiro sem captura da autonomia das iniciativas.",
+      "texto": "As ações solidárias locais em Campo Grande, como doação de alimentos, cozinhas comunitárias, apoio a famílias em situação de rua e redes de vizinhança, são conduzidas por igrejas, associações de moradores, coletivos e organizações indígenas, com intensidade que aumenta em momentos de crise. Após o vendaval de setembro de 2026, a mobilização comunitária complementou a resposta municipal na remoção de árvores e no apoio a famílias atingidas, padrão observado também nos alagamentos de abril de 2025. O fator articula-se a E6-F01, E6-F16 e E6-F05, e sua valorização no plano popular passa por apoio logístico e financeiro sem captura da autonomia das iniciativas.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -884,7 +883,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F21": {
-      "texto": "A indústria responde por 14,8% do valor adicionado de Campo Grande, com predominância de agroindústria, frigoríficos, alimentos, construção civil e indústria farmacêutica, enquanto a industrialização de grande porte do estado se desloca para o interior. A inclusividade dessa industrialização é limitada: as faixas salariais mais baixas concentram trabalhadores com menor escolaridade e populações negras e indígenas, e a localização de plantas industriais próximas a áreas residenciais periféricas gera conflitos por emissões e ruído não monitorados de forma sistemática (E2-F21, E2-F25). A ausência de indicadores municipais de emprego industrial desagregados por raça e território é lacuna a ser preenchida com microdados da RAIS. O fator articula-se a E1-F23, E5-F15 e E5-F05 e deve orientar a exigência de contrapartidas sociais e ambientais em incentivos fiscais concedidos pelo município.",
+      "texto": "A indústria responde por 14,8% do valor adicionado de Campo Grande, com predominância de agroindústria, frigoríficos, alimentos, construção civil e indústria farmacêutica, enquanto a industrialização de grande porte do estado se desloca para o interior. A inclusividade dessa industrialização é limitada: as faixas salariais mais baixas concentram trabalhadores com menor escolaridade e populações negras e indígenas, e a localização de plantas industriais próximas a áreas residenciais periféricas gera conflitos por emissões e ruído não monitorados de forma sistemática (E2-F21, E2-F25). O fator articula-se a E1-F23, E5-F15 e E5-F05 e deve orientar a exigência de contrapartidas sociais e ambientais em incentivos fiscais concedidos pelo município.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -907,7 +906,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F22": {
-      "texto": "O crédito para micro e pequenas empresas e cooperativas em Campo Grande é ofertado por bancos públicos, cooperativas de crédito e pelo programa estadual de microcrédito, além de iniciativas municipais vinculadas à Fundação Social do Trabalho. As barreiras de acesso concentram-se em exigências de garantias, documentação e histórico bancário, que excluem empreendimentos solidários, grupos de mulheres e empreendedores indígenas e migrantes. A ausência de dados públicos sobre o volume de microcrédito concedido por território constitui lacuna de informação. Após o vendaval de setembro de 2026, a necessidade de crédito para recomposição de pequenos negócios atingidos por destelhamento e perda de energia tornou-se visível, articulando este fator a E1-F29. O crédito orientado condiciona E1-F09 e E1-F11 e deve ser acompanhado de assistência técnica para evitar endividamento em territórios de renda baixa e instável.",
+      "texto": "O crédito para micro e pequenas empresas e cooperativas em Campo Grande é ofertado por bancos públicos, cooperativas de crédito e pelo programa estadual de microcrédito, além de iniciativas municipais vinculadas à Fundação Social do Trabalho. As barreiras de acesso concentram-se em exigências de garantias, documentação e histórico bancário, que excluem empreendimentos solidários, grupos de mulheres e empreendedores indígenas e migrantes. Após o vendaval de setembro de 2026, a necessidade de crédito para recomposição de pequenos negócios atingidos por destelhamento e perda de energia tornou-se visível, articulando este fator a E1-F29. O crédito orientado condiciona E1-F09 e E1-F11 e deve ser acompanhado de assistência técnica para evitar endividamento em territórios de renda baixa e instável.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -930,7 +929,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F23": {
-      "texto": "As atividades econômicas sustentáveis em Campo Grande têm expressão em iniciativas privadas de energia solar distribuída, eficiência no uso da água e reciclagem, mas não estão organizadas em política municipal com metas e incentivos. A economia local mantém dependência de cadeias associadas à conversão do Cerrado e à pecuária extensiva, cuja expansão regional tem custos ambientais documentados pelo MapBiomas (E4-F16). A transição para atividades de menor impacto, como agroecologia periurbana (E1-F05), reciclagem organizada (E1-F27), turismo de natureza e serviços ambientais, depende de crédito (E1-F22), formação (E5-F10) e compras públicas. A ausência de indicadores de economia verde no município é lacuna a ser registrada. O fator articula-se a E1-F21 e E4-F22 e permite ao plano popular vincular geração de renda e proteção ambiental nos territórios periféricos e rurais.",
+      "texto": "As atividades econômicas sustentáveis em Campo Grande têm expressão em iniciativas privadas de energia solar distribuída, eficiência no uso da água e reciclagem, mas não estão organizadas em política municipal com metas e incentivos. A economia local mantém dependência de cadeias associadas à conversão do Cerrado e à pecuária extensiva, cuja expansão regional tem custos ambientais documentados pelo MapBiomas (E4-F16). A transição para atividades de menor impacto, como agroecologia periurbana (E1-F05), reciclagem organizada (E1-F27), turismo de natureza e serviços ambientais, depende de crédito (E1-F22), formação (E5-F10) e compras públicas. A ausência de indicadores de economia verde no município deve ser evidenciada. O fator articula-se a E1-F21 e E4-F22 e permite ao plano popular vincular geração de renda e proteção ambiental nos territórios periféricos e rurais.",
       "fontes_citadas": [
         "MapBiomas"
       ],
@@ -1038,7 +1037,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E1-F27": {
-      "texto": "Campo Grande coleta resíduos domiciliares de 99,23% da população, com geração de 0,98 kg por habitante por dia (Instituto Água e Saneamento, base SNIS), mas a reciclagem efetiva é baixa e dependente de cooperativas e catadores autônomos com remuneração precária. A ausência de dados municipais atualizados sobre o percentual de resíduos recuperados constitui lacuna a ser preenchida com o SINISA. A economia circular nomeada pelo fator inclui ainda reúso de água, logística reversa de embalagens, inclusive de agrotóxicos, e aproveitamento de resíduos de poda, cujo volume aumentou após o vendaval de setembro de 2026. A organização da cadeia de reciclagem com inclusão dos catadores (E1-F11) reduziria o descarte irregular em terrenos baldios, que favorece criadouros do Aedes aegypti e escorpiões (E2-F07, E2-F35). O fator articula-se a E2-F31 e E6-F05 e é uma das interfaces mais diretas entre renda, ambiente e saúde no território.",
+      "texto": "Campo Grande coleta resíduos domiciliares de 99,23% da população, com geração de 0,98 kg por habitante por dia (Instituto Água e Saneamento, base SNIS), mas a reciclagem efetiva é baixa e dependente de cooperativas e catadores autônomos com remuneração precária. A economia circular nomeada pelo fator inclui ainda reúso de água, logística reversa de embalagens, inclusive de agrotóxicos, e aproveitamento de resíduos de poda, cujo volume aumentou após o vendaval de setembro de 2026. A organização da cadeia de reciclagem com inclusão dos catadores (E1-F11) reduziria o descarte irregular em terrenos baldios, que favorece criadouros do Aedes aegypti e escorpiões (E2-F07, E2-F35). O fator articula-se a E2-F31 e E6-F05 e é uma das interfaces mais diretas entre renda, ambiente e saúde no território.",
       "fontes_citadas": [
         "Instituto Água e Saneamento, base SNIS"
       ],
@@ -1112,7 +1111,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E2-F01": {
-      "texto": "As áreas inundáveis de Campo Grande concentram-se nos fundos de vale dos córregos urbanos, como Anhanduí, Prosa, Segredo, Bandeira e Lagoa, cuja canalização e impermeabilização das bacias reduziram a capacidade de infiltração e aumentaram a velocidade do escoamento. O evento de 24 de abril de 2025, com 88 mm de chuva registrados pelo CEMADEN, produziu enxurradas nas avenidas Rachid Neder, Tamandaré, Rachel de Queiroz e Espírito Santo e alagamentos em bairros como Coophatrabalho e Aguadinha. O município não dispõe de mapa público de manchas de inundação por tempo de retorno, lacuna central para o planejamento urbano e sanitário, que deve ser suprida pela Defesa Civil, pelo Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018) e pela cartografia social. O fator articula-se a E2-F34, E2-F33 e E5-F24, e define onde devem ser priorizadas drenagem, rotas de fuga (E2-F26) e vigilância de doenças de veiculação hídrica (E2-F06).",
+      "texto": "As áreas inundáveis de Campo Grande concentram-se nos fundos de vale dos córregos urbanos, como Anhanduí, Prosa, Segredo, Bandeira e Lagoa, cuja canalização e impermeabilização das bacias reduziram a capacidade de infiltração e aumentaram a velocidade do escoamento. O evento de 24 de abril de 2025, com 88 mm de chuva registrados pelo CEMADEN, produziu enxurradas nas avenidas Rachid Neder, Tamandaré, Rachel de Queiroz e Espírito Santo e alagamentos em bairros como Coophatrabalho e Aguadinha. O município não dispõe de mapa público de manchas de inundação por tempo de retorno, lacuna central para o planejamento urbano e sanitário, que deve ser suprida pela Defesa Civil, pelo Plano Diretor de Desenvolvimento Urbano Ambiental (Lei Complementar nº 341/2018). O fator articula-se a E2-F34, E2-F33 e E5-F24, e define onde devem ser priorizadas drenagem, rotas de fuga (E2-F26) e vigilância de doenças de veiculação hídrica (E2-F06).",
       "fontes_citadas": [
         "CEMADEN"
       ],
@@ -2104,7 +2103,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E2-F39": {
-      "texto": "Pontos de encontro para emergências, definidos e conhecidos pela população, não foram identificados nas informações públicas disponíveis sobre Campo Grande, o que configura lacuna de preparação a ser confirmada com a Defesa Civil. No vendaval de setembro de 2026, escolas e unidades de saúde, que seriam candidatas naturais a pontos de encontro, foram elas próprias atingidas, com 26 escolas destelhadas, o que demonstra a necessidade de avaliar a segurança estrutural das edificações antes de designá-las. Igrejas, centros comunitários e equipamentos esportivos com estrutura adequada podem compor a rede (E6-F16, E5-F25). O fator articula-se a E5-F01, E2-F26 e E2-F32, e a definição dos pontos deve ser feita com os moradores na cartografia social, considerando acessibilidade para pessoas com deficiência e idosos (E3-F11) e a localização das populações expostas a alagamentos e barragens.",
+      "texto": "No vendaval de setembro de 2026, escolas e unidades de saúde, que seriam candidatas naturais a pontos de encontro, foram elas próprias atingidas, com 26 escolas destelhadas, o que demonstra a necessidade de avaliar a segurança estrutural das edificações antes de designá-las. Igrejas, centros comunitários e equipamentos esportivos com estrutura adequada podem compor a rede (E6-F16, E5-F25). O fator articula-se a E5-F01, E2-F26 e E2-F32, e a definição dos pontos deve ser feita com os moradores na cartografia social, considerando acessibilidade para pessoas com deficiência e idosos (E3-F11) e a localização das populações expostas a alagamentos e barragens.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -2536,12 +2535,10 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E3-F17": {
-      "texto": "O racismo ambiental expressa-se em Campo Grande na concentração das exposições ambientais adversas em territórios de maior proporção de população negra, indígena e de baixa renda: fundos de vale sujeitos a alagamento (E2-F34), margens de córregos receptores de esgoto não tratado (E2-F21), áreas periféricas com menor arborização e drenagem, e aldeias urbanas indígenas instaladas em áreas de infraestrutura precária. A cartografia dessas sobreposições, cruzando dados do Censo 2022 por setor censitário com mapas de risco e de saneamento, não foi realizada para o município e constitui lacuna analítica relevante. O fator, incorporado à matriz com o ODS 18 de Igualdade Étnico-Racial, permite nomear como injustiça estrutural o que frequentemente é tratado como acaso geográfico. Articula-se a E3-F16, E3-F19, E2-F01 e E5-F24, e orienta a priorização de investimentos em saneamento e drenagem pelos territórios mais expostos.",
+      "texto": "O racismo ambiental expressa-se em Campo Grande na concentração das exposições ambientais adversas em territórios de maior proporção de população negra, indígena e de baixa renda: fundos de vale sujeitos a alagamento (E2-F34), margens de córregos receptores de esgoto não tratado (E2-F21), áreas periféricas com menor arborização e drenagem, e aldeias urbanas indígenas instaladas em áreas de infraestrutura precária. O fator, incorporado à matriz com o ODS 18 de Igualdade Étnico-Racial, permite nomear como injustiça estrutural o que frequentemente é tratado como acaso geográfico. Articula-se a E3-F16, E3-F19, E2-F01 e E5-F24, e orienta a priorização de investimentos em saneamento e drenagem pelos territórios mais expostos.",
       "fontes_citadas": [],
       "referencias_normativas": [],
-      "periodos_citados": [
-        "2022"
-      ],
+      "periodos_citados": [],
       "fatores_relacionados": [
         "E2-F34",
         "E2-F21",
@@ -2642,7 +2639,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E4-F02": {
-      "texto": "A gestão de bancos de sementes em Campo Grande tem expressão limitada a iniciativas de agricultores familiares, assentamentos e comunidades indígenas que conservam sementes crioulas e variedades tradicionais, sem registro municipal ou apoio institucional sistemático. A Embrapa Gado de Corte, sediada na capital, e as universidades locais detêm acervos e competência técnica em recursos genéticos que poderiam apoiar iniciativas comunitárias. A manutenção de sementes adaptadas ao Cerrado tem valor estratégico diante da intensificação de estiagens e calor (E2-F30), pois amplia a resiliência da produção familiar. Nas aldeias urbanas Terena, a guarda de sementes associa-se a práticas alimentares e culturais (E4-F18). A inexistência de inventário dessas iniciativas é lacuna que a cartografia social pode suprir. O fator articula-se a E1-F03, E1-F04 e E1-F26, e experiências como a de bancos comunitários de sementes acompanhados pela PICAPS em outros territórios podem orientar a ação local.",
+      "texto": "A gestão de bancos de sementes em Campo Grande tem expressão limitada a iniciativas de agricultores familiares, assentamentos e comunidades indígenas que conservam sementes crioulas e variedades tradicionais, sem registro municipal ou apoio institucional sistemático. A Embrapa Gado de Corte, sediada na capital, e as universidades locais detêm acervos e competência técnica em recursos genéticos que poderiam apoiar iniciativas comunitárias. A manutenção de sementes adaptadas ao Cerrado tem valor estratégico diante da intensificação de estiagens e calor (E2-F30), pois amplia a resiliência da produção familiar. Nas aldeias urbanas Terena, a guarda de sementes associa-se a práticas alimentares e culturais (E4-F18). O fator articula-se a E1-F03, E1-F04 e E1-F26, e experiências como a de bancos comunitários de sementes acompanhados pela PICAPS em outros territórios podem orientar a ação local.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -2716,7 +2713,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E4-F05": {
-      "texto": "As tecnologias sociais em Campo Grande incluem cisternas e sistemas de captação de água de chuva, biodigestores, fossas ecológicas, hortas verticais e soluções de construção de baixo custo, aplicadas em iniciativas de extensão universitária, organizações da sociedade civil e assentamentos rurais, sem programa municipal que as difunda de forma sistemática. A relevância dessas tecnologias aumenta com a recorrência de eventos extremos: captação de chuva reduz a dependência do abastecimento em estiagens (E2-F30), e técnicas simples de reforço de coberturas reduzem danos em vendavais (E2-F17). A ausência de inventário municipal de tecnologias sociais em uso constitui lacuna. O fator articula-se a E5-F10, que trata da formação para criar e usar essas soluções, a E4-F24 e a E1-F23, e o plano popular pode prever a seleção, com a comunidade, de tecnologias sociais prioritárias para cada território.",
+      "texto": "As tecnologias sociais em Campo Grande incluem cisternas e sistemas de captação de água de chuva, biodigestores, fossas ecológicas, hortas verticais e soluções de construção de baixo custo, aplicadas em iniciativas de extensão universitária, organizações da sociedade civil e assentamentos rurais, sem programa municipal que as difunda de forma sistemática. A relevância dessas tecnologias aumenta com a recorrência de eventos extremos: captação de chuva reduz a dependência do abastecimento em estiagens (E2-F30), e técnicas simples de reforço de coberturas reduzem danos em vendavais (E2-F17). A ausência de inventário municipal de tecnologias sociais em uso constitui lacuna relevante. O fator articula-se a E5-F10, que trata da formação para criar e usar essas soluções, a E4-F24 e a E1-F23, e o plano popular pode prever a seleção, com a comunidade, de tecnologias sociais prioritárias para cada território.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
@@ -2787,7 +2784,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E4-F08": {
-      "texto": "As tecnologias ambientalmente corretas em uso em Campo Grande concentram-se no setor privado e em domicílios de renda média e alta, com expansão da geração solar distribuída favorecida pela alta irradiação regional. Nos serviços públicos, a adoção é pontual: a instalação de geração solar em unidades de saúde e escolas, que reduziria custos e garantiria funcionamento em interrupções de energia como a de setembro de 2026, não está organizada em programa municipal, segundo a informação pública disponível. Tecnologias de tratamento de esgoto descentralizado, reúso de água e iluminação pública eficiente têm aplicação potencial nas áreas de expansão. O fator articula-se a E4-F24, que trata do acesso a essas tecnologias pelas populações que delas mais necessitam, a E5-F14 e a E1-F23, e o diagnóstico registra como lacuna a inexistência de inventário municipal de tecnologias ambientais nos equipamentos públicos.",
+      "texto": "As tecnologias ambientalmente corretas em uso em Campo Grande concentram-se no setor privado e em domicílios de renda média e alta, com expansão da geração solar distribuída favorecida pela alta irradiação regional. Nos serviços públicos, a adoção é pontual: a instalação de geração solar em unidades de saúde e escolas, que reduziria custos e garantiria funcionamento em interrupções de energia como a de setembro de 2026, não está organizada em programa municipal, segundo a informação pública disponível. Tecnologias de tratamento de esgoto descentralizado, reúso de água e iluminação pública eficiente têm aplicação potencial nas áreas de expansão. O fator articula-se a E4-F24, que trata do acesso a essas tecnologias pelas populações que delas mais necessitam, a E5-F14 e a E1-F23.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -2936,7 +2933,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E4-F14": {
-      "texto": "A pesquisa científica voltada à recuperação de ambientes degradados em Campo Grande é conduzida pela UFMS, pela UCDB e pela Embrapa em temas como recuperação de áreas degradadas do Cerrado, monitoramento de córregos urbanos e manejo de pastagens. A aplicação desse conhecimento à restauração dos córregos urbanos, à recuperação de voçorocas em áreas de expansão e à recomposição da arborização após o vendaval de 2026 é oportunidade concreta de cooperação entre universidades e poder público. A participação comunitária no monitoramento, por meio de ciência cidadã e da cartografia social, amplia a capacidade de acompanhamento. O fator articula-se a E4-F06, E4-F04, E4-F25 e E6-F04, e o diagnóstico registra como lacuna a inexistência de programa municipal de recuperação ambiental com base em evidências e metas de restauração por microbacia.",
+      "texto": "A pesquisa científica voltada à recuperação de ambientes degradados em Campo Grande é conduzida pela UFMS, pela UCDB e pela Embrapa em temas como recuperação de áreas degradadas do Cerrado, monitoramento de córregos urbanos e manejo de pastagens. A aplicação desse conhecimento à restauração dos córregos urbanos, à recuperação de voçorocas em áreas de expansão e à recomposição da arborização após o vendaval de 2026 é oportunidade concreta de cooperação entre universidades e poder público. A participação comunitária no monitoramento, por meio de ciência cidadã e da cartografia social, amplia a capacidade de acompanhamento. O fator articula-se a E4-F06, E4-F04, E4-F25 e E6-F04.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -3200,7 +3197,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F01": {
-      "texto": "A disponibilidade de abrigos para emergências em Campo Grande não está documentada em plano de contingência de acesso público, segundo a informação disponível, o que configura lacuna de preparação a ser verificada junto à Defesa Civil municipal. A rede potencial inclui escolas, ginásios, centros comunitários e igrejas, mas o vendaval de 10 de setembro de 2026, que destelhou 26 escolas municipais segundo a Prefeitura, demonstra que a designação de abrigos exige avaliação prévia de segurança estrutural das edificações. Os serviços de acolhimento institucional da assistência social, dimensionados para a população em situação de rua de 1.476 pessoas recenseadas pelo GT-PSR em 2025 (escala municipal), operam no limite e não comportam deslocamentos em massa. O fator articula-se a E2-F39, E6-F16, E3-F14 e E4-F07, e o plano popular deve mapear, com a comunidade, edificações seguras por região urbana e acordos prévios com organizações religiosas e comunitárias para seu uso em emergências.",
+      "texto": "A rede potencial inclui escolas, ginásios, centros comunitários e igrejas, mas o vendaval de 10 de setembro de 2026, que destelhou 26 escolas municipais segundo a Prefeitura, demonstra que a designação de abrigos exige avaliação prévia de segurança estrutural das edificações. Os serviços de acolhimento institucional da assistência social, dimensionados para a população em situação de rua de 1.476 pessoas recenseadas pelo GT-PSR em 2025 (escala municipal), operam no limite e não comportam deslocamentos em massa. O fator articula-se a E2-F39, E6-F16, E3-F14 e E4-F07, e o plano popular deve mapear, com a comunidade, edificações seguras por região urbana e acordos prévios com organizações religiosas e comunitárias para seu uso em emergências.",
       "fontes_citadas": [
         "Prefeitura",
         "GT-PSR"
@@ -3255,7 +3252,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F03": {
-      "texto": "Campo Grande é atravessada ou contornada pelas rodovias federais BR-163 e BR-262, corredores de escoamento de grãos, combustíveis, fertilizantes e agroquímicos, e abriga terminais de distribuição de combustíveis, o que configura exposição a acidentes com produtos perigosos em áreas próximas a bairros residenciais. Os registros de acidentes com cargas perigosas no município, mantidos pela Polícia Rodoviária Federal, pelo Corpo de Bombeiros e pelos órgãos ambientais, não foram sistematizados nesta versão e constituem lacuna de informação. O plano de contingência para acidentes com produtos perigosos, previsto no Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais com Produtos Químicos Perigosos, deve ser verificado no âmbito municipal. O fator articula-se a E2-F11, E5-F15, E2-F21 e E2-F33, e a cartografia social pode identificar trechos de tráfego pesado próximos a escolas, unidades de saúde e moradias.",
+      "texto": "Campo Grande é atravessada ou contornada pelas rodovias federais BR-163 e BR-262, corredores de escoamento de grãos, combustíveis, fertilizantes e agroquímicos, e abriga terminais de distribuição de combustíveis, o que configura exposição a acidentes com produtos perigosos em áreas próximas a bairros residenciais. O plano de contingência para acidentes com produtos perigosos, previsto no Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais com Produtos Químicos Perigosos, deve ser verificado no âmbito municipal. O fator articula-se a E2-F11, E5-F15, E2-F21 e E2-F33, e a cartografia social pode identificar trechos de tráfego pesado próximos a escolas, unidades de saúde e moradias.",
       "fontes_citadas": [],
       "referencias_normativas": [
         "Plano Nacional de Prevenção, Preparação e Resposta Rápida a Emergências Ambientais"
@@ -3406,7 +3403,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F10": {
-      "texto": "A formação em tecnologias sociais em Campo Grande ocorre principalmente em programas de extensão universitária, organizações da sociedade civil e movimentos sociais rurais, sem oferta regular na rede pública de educação profissional. A formação de moradores para construir e manter cisternas, sistemas de reúso, hortas, biodigestores, coberturas mais resistentes e soluções de drenagem de baixo custo amplia a autonomia comunitária e gera oportunidades de trabalho. A experiência dos eventos extremos de 2025 e 2026 confere urgência à formação em técnicas de adaptação e reconstrução (E4-F10). A inexistência de dados sobre cursos e egressos nessa área constitui lacuna de informação. O fator articula-se a E4-F05, E4-F24, E1-F09 e E5-F16, e o plano popular pode associar a formação de pesquisadores populares à formação técnica em tecnologias sociais prioritárias para cada território.",
+      "texto": "A formação em tecnologias sociais em Campo Grande ocorre principalmente em programas de extensão universitária, organizações da sociedade civil e movimentos sociais rurais, sem oferta regular na rede pública de educação profissional. A formação de moradores para construir e manter cisternas, sistemas de reúso, hortas, biodigestores, coberturas mais resistentes e soluções de drenagem de baixo custo amplia a autonomia comunitária e gera oportunidades de trabalho. A experiência dos eventos extremos de 2025 e 2026 confere urgência à formação em técnicas de adaptação e reconstrução (E4-F10). O fator articula-se a E4-F05, E4-F24, E1-F09 e E5-F16, e o plano popular pode associar a formação de pesquisadores populares à formação técnica em tecnologias sociais prioritárias para cada território.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -3506,7 +3503,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F14": {
-      "texto": "A geração de energia solar distribuída cresce em Campo Grande, favorecida pela alta irradiação da região, mas concentra-se em domicílios e empresas com capacidade de investimento. A tarifa social de energia elétrica, destinada a famílias do CadÚnico, é o principal instrumento de acessibilidade econômica, e sua cobertura no município, disponível na ANEEL e no MDS, deve ser verificada. A instalação de sistemas fotovoltaicos com armazenamento em unidades de saúde, escolas e abrigos aumentaria a resiliência desses equipamentos em interrupções como a de setembro de 2026. Programas de geração compartilhada em conjuntos habitacionais e comunidades poderiam reduzir o peso da conta de energia no orçamento das famílias de menor renda. O fator articula-se a E4-F08, E4-F24 e E5-F13, e o diagnóstico registra como lacuna a inexistência de levantamento da geração solar em equipamentos públicos municipais.",
+      "texto": "A geração de energia solar distribuída cresce em Campo Grande, favorecida pela alta irradiação da região, mas concentra-se em domicílios e empresas com capacidade de investimento. A tarifa social de energia elétrica, destinada a famílias do CadÚnico, é o principal instrumento de acessibilidade econômica, e sua cobertura no município, disponível na ANEEL e no MDS, deve ser verificada. A instalação de sistemas fotovoltaicos com armazenamento em unidades de saúde, escolas e abrigos aumentaria a resiliência desses equipamentos em interrupções como a de setembro de 2026. Programas de geração compartilhada em conjuntos habitacionais e comunidades poderiam reduzir o peso da conta de energia no orçamento das famílias de menor renda. O fator articula-se a E4-F08, E4-F24 e E5-F13.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -3790,7 +3787,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F25": {
-      "texto": "Os equipamentos públicos de lazer e cultura seguros em Campo Grande concentram-se em parques de grande porte, como o Parque das Nações Indígenas e os parques lineares, e na região central, com oferta escassa e manutenção irregular de praças, quadras e centros comunitários nas regiões periféricas. A segurança desses espaços depende de iluminação (E5-F30), manutenção e ocupação comunitária, e sua ausência reduz o uso por mulheres, crianças e idosos. O vendaval de 2026 danificou equipamentos culturais centrais, como o Armazém Cultural e a Plataforma Cultural, evidenciando também sua vulnerabilidade física. O inventário de equipamentos de lazer, esporte e cultura por região urbana, a ser elaborado com a prefeitura e a cartografia social, é lacuna do diagnóstico. O fator articula-se a E5-F18, E5-F26, E5-F28 e E2-F27, e a ocupação qualificada desses espaços é estratégia de prevenção da violência.",
+      "texto": "Os equipamentos públicos de lazer e cultura seguros em Campo Grande concentram-se em parques de grande porte, como o Parque das Nações Indígenas e os parques lineares, e na região central, com oferta escassa e manutenção irregular de praças, quadras e centros comunitários nas regiões periféricas. A segurança desses espaços depende de iluminação (E5-F30), manutenção e ocupação comunitária, e sua ausência reduz o uso por mulheres, crianças e idosos. O vendaval de 2026 danificou equipamentos culturais centrais, como o Armazém Cultural e a Plataforma Cultural, evidenciando também sua vulnerabilidade física. O fator articula-se a E5-F18, E5-F26, E5-F28 e E2-F27, e a ocupação qualificada desses espaços é estratégia de prevenção da violência.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -3838,7 +3835,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E5-F27": {
-      "texto": "As bibliotecas públicas de Campo Grande concentram-se na região central e nas instituições de ensino superior, com cobertura reduzida nas regiões periféricas, onde as bibliotecas escolares são o principal acesso a livros. O resultado da pesquisa do Ministério da Cultura de 2025, que colocou a capital em último lugar entre as capitais em índice cultural, inclui o acesso a livros entre os indicadores avaliados (G1, 2025). O número de bibliotecas públicas e comunitárias por região, seu horário de funcionamento e acervo devem ser inventariados, lacuna desta versão. Bibliotecas comunitárias mantidas por associações e coletivos podem ampliar o acesso com baixo custo. O fator articula-se a E5-F18, E5-F09 e E5-F21, e a biblioteca pode funcionar como espaço de encontro, acesso digital e informação em saúde nos territórios, inclusive como ponto de referência para a comunicação comunitária.",
+      "texto": "As bibliotecas públicas de Campo Grande concentram-se na região central e nas instituições de ensino superior, com cobertura reduzida nas regiões periféricas, onde as bibliotecas escolares são o principal acesso a livros. O resultado da pesquisa do Ministério da Cultura de 2025, que colocou a capital em último lugar entre as capitais em índice cultural, inclui o acesso a livros entre os indicadores avaliados (G1, 2025). Bibliotecas comunitárias mantidas por associações e coletivos podem ampliar o acesso com baixo custo. O fator articula-se a E5-F18, E5-F09 e E5-F21, e a biblioteca pode funcionar como espaço de encontro, acesso digital e informação em saúde nos territórios, inclusive como ponto de referência para a comunicação comunitária.",
       "fontes_citadas": [
         "G1, 2025",
         "pesquisa do Ministério da Cultura de 2025"
@@ -3938,7 +3935,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E6-F01": {
-      "texto": "As associações de moradores e lideranças locais de Campo Grande constituem rede extensa, mas heterogênea em atividade e representatividade, que inclui associações de bairro, lideranças das aldeias urbanas indígenas e das comunidades quilombolas, conselhos locais de saúde e grupos ligados a igrejas e movimentos de moradia. O registro dessas organizações não está consolidado em base pública municipal, e sua capacidade de mobilização varia entre regiões, o que constitui lacuna que a cartografia social deve suprir com inventário de organizações, lideranças e pautas por território. Nos eventos extremos de 2025 e 2026, lideranças locais atuaram na identificação de famílias atingidas e na mobilização de ajuda, função não reconhecida formalmente nos planos de contingência. O fator articula-se a E6-F02, E6-F07, E1-F17 e E2-F32, e o plano popular deve reconhecer essas lideranças como interlocutoras permanentes do planejamento territorial e da gestão de riscos.",
+      "texto": "As associações de moradores e lideranças locais de Campo Grande constituem rede extensa, mas heterogênea em atividade e representatividade, que inclui associações de bairro, lideranças das aldeias urbanas indígenas e das comunidades quilombolas, conselhos locais de saúde e grupos ligados a igrejas e movimentos de moradia. O registro dessas organizações não está consolidado em base pública municipal, e sua capacidade de mobilização varia entre regiões. Nos eventos extremos de 2025 e 2026, lideranças locais atuaram na identificação de famílias atingidas e na mobilização de ajuda, função não reconhecida formalmente nos planos de contingência. O fator articula-se a E6-F02, E6-F07, E1-F17 e E2-F32, e o plano popular deve reconhecer essas lideranças como interlocutoras permanentes do planejamento territorial e da gestão de riscos.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -3985,7 +3982,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E6-F03": {
-      "texto": "As rádios comunitárias autorizadas no município de Campo Grande, cujo registro é mantido pelo Ministério das Comunicações e pela ANATEL, devem ser levantadas para o diagnóstico, dado não sistematizado nesta versão e registrado como lacuna. Em uma capital com mais de 970 mil habitantes estimados pelo IBGE para 2026, a comunicação comunitária por rádio tende a ter alcance segmentado, concentrado em públicos específicos, como comunidades religiosas, indígenas e moradores de bairros periféricos. A relevância do fator cresce em emergências, quando a interrupção de energia e de internet, como ocorreu no vendaval de setembro de 2026, reduz o alcance dos canais digitais e torna o rádio a pilhas um meio resiliente de alerta e orientação. O fator articula-se a E2-F37, E2-F29, E6-F11 e E4-F09, e o plano popular pode prever acordos com rádios comunitárias e locais para veiculação de alertas e informações de saúde em linguagem acessível.",
+      "texto": "Em uma capital com mais de 970 mil habitantes estimados pelo IBGE para 2026, a comunicação comunitária por rádio tende a ter alcance segmentado, concentrado em públicos específicos, como comunidades religiosas, indígenas e moradores de bairros periféricos. A relevância do fator cresce em emergências, quando a interrupção de energia e de internet, como ocorreu no vendaval de setembro de 2026, reduz o alcance dos canais digitais e torna o rádio a pilhas um meio resiliente de alerta e orientação. O fator articula-se a E2-F37, E2-F29, E6-F11 e E4-F09, e o plano popular pode prever acordos com rádios comunitárias e locais para veiculação de alertas e informações de saúde em linguagem acessível.",
       "fontes_citadas": [
         "IBGE"
       ],
@@ -4167,7 +4164,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E6-F11": {
-      "texto": "Os grupos de mensagens são o principal canal de comunicação comunitária em Campo Grande, usados por associações de moradores, escolas, igrejas, equipes de saúde, comunidades indígenas e redes de vizinhança para avisos, organização de ações e circulação de informações. Nos eventos extremos de 2025 e 2026, esses grupos difundiram alertas, informações sobre interrupção de energia e pedidos de ajuda com rapidez superior à dos canais oficiais, mas também propagaram informações imprecisas. Sua efetividade depende de moderação, de fontes confiáveis e da conexão, comprometida quando a energia falha por longos períodos. A inexistência de levantamento desses grupos e de sua abrangência territorial é lacuna que a cartografia social pode suprir. O fator articula-se a E6-F03, E2-F29, E2-F37 e E4-F09, e o plano popular pode estruturar uma rede de grupos territoriais com pontos focais formados para retransmitir alertas oficiais e informações verificadas de saúde.",
+      "texto": "Os grupos de mensagens são o principal canal de comunicação comunitária em Campo Grande, usados por associações de moradores, escolas, igrejas, equipes de saúde, comunidades indígenas e redes de vizinhança para avisos, organização de ações e circulação de informações. Nos eventos extremos de 2025 e 2026, esses grupos difundiram alertas, informações sobre interrupção de energia e pedidos de ajuda com rapidez superior à dos canais oficiais, mas também propagaram informações imprecisas. Sua efetividade depende de moderação, de fontes confiáveis e da conexão, comprometida quando a energia falha por longos períodos. O fator articula-se a E6-F03, E2-F29, E2-F37 e E4-F09, e o plano popular pode estruturar uma rede de grupos territoriais com pontos focais formados para retransmitir alertas oficiais e informações verificadas de saúde.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [
@@ -4217,7 +4214,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     "E6-F16": {
-      "texto": "As igrejas, grupos religiosos e coletivos comunitários de Campo Grande desempenham papel relevante no apoio a pessoas em situação de vulnerabilidade, com distribuição de alimentos, acolhimento de pessoas em situação de rua, apoio a famílias atingidas por eventos extremos e cessão de espaços para atividades comunitárias. Sua capilaridade nas regiões periféricas supera a de muitos serviços públicos, o que os torna atores estratégicos na resposta a emergências, como pontos de abrigo, distribuição de doações e comunicação. A ausência de cadastro dessas organizações e de acordos prévios com a Defesa Civil limita sua integração aos planos de contingência, lacuna que a cartografia social pode suprir. O fator articula-se a E5-F01, E2-F39, E1-F17 e E6-F15, e o plano popular deve prever formas de cooperação que respeitem a laicidade do Estado e a autonomia das organizações, com foco na proteção das pessoas atingidas.",
+      "texto": "As igrejas, grupos religiosos e coletivos comunitários de Campo Grande desempenham papel relevante no apoio a pessoas em situação de vulnerabilidade, com distribuição de alimentos, acolhimento de pessoas em situação de rua, apoio a famílias atingidas por eventos extremos e cessão de espaços para atividades comunitárias. Sua capilaridade nas regiões periféricas supera a de muitos serviços públicos, o que os torna atores estratégicos na resposta a emergências, como pontos de abrigo, distribuição de doações e comunicação. A ausência de cadastro dessas organizações e de acordos prévios com a Defesa Civil limita sua integração aos planos de contingência. O fator articula-se a E5-F01, E2-F39, E1-F17 e E6-F15, e o plano popular deve prever formas de cooperação que respeitem a laicidade do Estado e a autonomia das organizações, com foco na proteção das pessoas atingidas.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
