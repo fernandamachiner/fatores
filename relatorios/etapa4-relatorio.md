@@ -24,7 +24,7 @@ Em nenhum desses casos o painel exibe dados de outro território, e Campo Grande
 
 ### Apresentação do fator (app.js, index.html e style.css)
 
-A função abrirPopup passou a delegar a mostrarFator, que localiza o fator pelo identificador no cadastro e o diagnóstico pelo mesmo identificador nos dados do território ativo. O popup mantém os elementos metodológicos (os três ícones de resiliência, vulnerabilidade e ameaça, o selo ODS e o nome), e o lugar da antiga descrição em linguagem simples passou a ser ocupado pelos seguintes elementos:
+A função abrirPopup passou a delegar a mostrarFator, que localiza o fator pelo identificador no cadastro e o diagnóstico pelo mesmo identificador nos dados do território ativo. Na versão inicial desta etapa, o popup mantinha os elementos metodológicos (os três ícones de resiliência, vulnerabilidade e ameaça, o selo ODS e o nome; ver o ajuste posterior abaixo), e o lugar da antiga descrição em linguagem simples passou a ser ocupado pelos seguintes elementos:
 
 - definição de referência do cadastro, em linha discreta acima do diagnóstico, como no documento de diagnóstico;
 - rótulo Diagnóstico situacional seguido do nome do território ativo, para que o leitor saiba sempre a que localidade o texto se refere;
@@ -46,13 +46,21 @@ O teste de navegação (testes/testar-navegacao.js) passou a aguardar o carregam
 
 O novo testes/testar-falhas-territorio.js cria, numa cópia temporária, territórios fictícios de teste e verifica os cenários de falha e de ausência. O validador da metodologia passou a exigir a ordem metodologia.js, indice.js e app.js no index.html. O validador do território passou a exigir que o território esteja no índice com o caminho correto.
 
+### Ajuste do popup solicitado pela coordenação (20/10/2026)
+
+Com o diagnóstico de um território carregado, o popup deixou de exibir os três ícones de resiliência, vulnerabilidade e ameaça e o selo ODS do topo, e deixou de listar as fontes citadas no texto. Permanecem o nome do fator, a definição de referência, o rótulo do território, o texto integral do diagnóstico, as referências normativas e os fatores relacionados com retorno. As fontes citadas continuam registradas no arquivo do território, já que aparecem no próprio texto do diagnóstico, e podem voltar a ser exibidas sem nova extração.
+
+A supressão é controlada pela classe popup-modo-territorio, aplicada apenas quando o território está pronto. Enquanto o território carrega, ou quando o carregamento falha, o popup mantém a apresentação metodológica (ícones e selo ODS) junto com o aviso, de modo que o fator continua identificável mesmo sem diagnóstico. Os cards dos fatores na coluna do eixo não foram alterados.
+
+O teste de navegação passou a verificar, em cada um dos 150 popups, que os ícones e o selo ODS estão ocultos, que o nome e a definição estão visíveis e que a lista de fontes citadas não é exibida. O teste de falhas verifica que o popup mantém ícones e ODS quando o território não carrega e os omite no território parcial de teste.
+
 ## Comportamento verificado
 
 Ao selecionar um fator, a aplicação:
 1. identifica o fator pelo identificador do card;
 2. consulta os dados do território ativo;
 3. localiza o diagnóstico pelo mesmo identificador;
-4. exibe o texto integral, as fontes e os fatores relacionados;
+4. exibe o nome, a definição de referência, o texto integral, as referências normativas e os fatores relacionados, sem ícones, selo ODS ou lista de fontes citadas;
 5. informa a ausência de diagnóstico, quando for o caso;
 6. permite voltar ao fator anterior e fechar o popup pelo botão, por clique fora ou pela tecla Esc.
 

@@ -50,3 +50,39 @@ Conteúdos do documento não representados no arquivo: 0
 
 == Textos de diagnóstico embutidos nos arquivos da interface (index.html, app.js, style.css, indice.js): 0 de 150
 == Celular (390 px), diagnóstico mais longo (E2-F05): popup com 350 px, sem rolagem horizontal, texto integral acessível por rolagem
+
+== Ajuste do popup (20/10/2026): sem ícones, sem selo ODS e sem lista de fontes citadas no modo territorial
+== Navegação completa (file://)
+file:///home/claude/painel/index.html
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+== Navegação completa (http, /fatores/)
+http://127.0.0.1:8771/fatores/
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 1 | falhas de rede: 0
+   - Failed to load resource: the server responded with a status of 404 (File not found)
+== Cenários de falha
+OK    [file://] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [file://] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [file://] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [file://] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [file://] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [file://] alerta de versão de matriz divergente: Território: Território de testeDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [file://] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+OK    [http] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [http] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [http] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [http] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [http] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [http] alerta de versão de matriz divergente: Território: Território de testeDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [http] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [http] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+
+16 de 16 verificações aprovadas
+== Validadores
+ERROS (0)
+Observação: o erro de console no teste http é a requisição automática de /favicon.ico pelo navegador na raiz do servidor local, fora da pasta do painel. Repetido com um favicon na raiz: 0 erros de console e 0 falhas de rede.
+Validador do território: 0 erros.

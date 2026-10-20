@@ -762,3 +762,8 @@ html, body {
 @media (max-width: 760px), (hover: none) and (pointer: coarse) {
   html, body { background-attachment: scroll; }
 }
+
+/* Popup com diagnóstico territorial: sem ícones e sem selo ODS no topo */
+.popup.popup-modo-territorio .popup-icones-trio,
+.popup.popup-modo-territorio .popup-ods { display: none; }
+.popup.popup-modo-territorio h3 { margin: 6px 0 12px; padding: 0 32px; }

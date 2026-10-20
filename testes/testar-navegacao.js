@@ -1,7 +1,7 @@
 // Teste de navegação no navegador (Playwright + Chromium).
 //
 // Percorre os 6 eixos, abre o popup de todos os fatores e registra o que a
-// interface exibe, conferindo que o diagnóstico, as fontes e os fatores
+// interface exibe, conferindo que o diagnóstico, as referências normativas e os fatores
 // relacionados exibidos são idênticos aos do arquivo do território ativo. Gera um JSON com esse registro, que pode ser comparado
 // entre versões do painel para provar que a navegação foi preservada.
 //
@@ -77,7 +77,8 @@ const { chromium } = require("playwright");
       await card.scrollIntoViewIfNeeded();
       await card.click();
       await page.waitForSelector("#overlay-popup:not([hidden])");
-      // aguarda o carregamento das 3 imagens do popup
+      // aguarda o carregamento das 3 imagens do popup (presentes no DOM
+      // mesmo quando ocultas no modo de diagnóstico territorial)
       await page.waitForFunction(() =>
         ["popup-icone-resiliencia", "popup-icone-vulnerabilidade", "popup-icone-ameaca"]
           .every((id) => { const im = document.getElementById(id); return im.complete; })
@@ -98,6 +99,12 @@ const { chromium } = require("playwright");
           vulnerabilidade: im("popup-icone-vulnerabilidade"),
           ameaca: im("popup-icone-ameaca"),
           focoNoFechar: document.activeElement && document.activeElement.id === "popup-fechar",
+          modoTerritorio: document.querySelector(".popup").classList.contains("popup-modo-territorio"),
+          iconesVisiveis: document.querySelector(".popup-icones-trio").offsetParent !== null,
+          odsVisivel: document.getElementById("popup-ods").offsetParent !== null,
+          definicaoVisivel: document.getElementById("popup-definicao").offsetParent !== null,
+          tituloVisivel: document.getElementById("popup-titulo").offsetParent !== null,
+          rotulosReferencias: [...document.querySelectorAll("#popup-referencias h4")].map((h) => h.textContent),
         };
       });
       // o texto exibido deve ser idêntico ao diagnóstico do arquivo do território
@@ -105,7 +112,7 @@ const { chromium } = require("playwright");
         const ids = Object.keys(window.TERRITORIOS || {});
         const t = ids.length === 1 ? window.TERRITORIOS[ids[0]] : null;
         const d = t && t.diagnosticos[fid];
-        return d ? { texto: d.texto, fontes: d.fontes_citadas.concat(d.referencias_normativas), rel: d.fatores_relacionados } : null;
+        return d ? { texto: d.texto, fontes: d.referencias_normativas, rel: d.fatores_relacionados } : null;
       }, dadosCard.id);
       if (esperado) {
         if (pop.diagnostico !== esperado.texto) falha(`diagnóstico exibido difere dos dados: ${dadosCard.id}`);
@@ -115,6 +122,13 @@ const { chromium } = require("playwright");
         falha(`fator sem diagnóstico não exibiu aviso: ${dadosCard.id}`);
       }
       ["resiliencia", "vulnerabilidade", "ameaca"].forEach((k) => { if (!pop[k].ok) falha(`imagem não carregou: ${pop[k].src}`); });
+      // com território carregado: sem ícones, sem selo ODS e sem lista de
+      // fontes citadas; nome do fator e definição permanecem visíveis
+      if (!pop.modoTerritorio) falha(`popup fora do modo de diagnóstico territorial: ${dadosCard.id}`);
+      if (pop.iconesVisiveis) falha(`ícones visíveis no popup de diagnóstico: ${dadosCard.id}`);
+      if (pop.odsVisivel) falha(`selo ODS visível no popup de diagnóstico: ${dadosCard.id}`);
+      if (!pop.tituloVisivel || !pop.definicaoVisivel) falha(`nome ou definição ocultos: ${dadosCard.id}`);
+      if (pop.rotulosReferencias.includes("Fontes citadas no texto")) falha(`lista de fontes citadas exibida: ${dadosCard.id}`);
       if (pop.titulo !== dadosCard.nome) falha(`popup com título diferente do card: ${dadosCard.nome}`);
       if (!pop.definicao.trim()) falha(`popup sem definição de referência: ${dadosCard.nome}`);
 

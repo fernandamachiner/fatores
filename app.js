@@ -405,9 +405,8 @@
       popupTexto.appendChild(p);
     });
 
-    if (diag.fontes_citadas && diag.fontes_citadas.length) {
-      popupReferencias.appendChild(listaReferencias("Fontes citadas no texto", diag.fontes_citadas));
-    }
+    // as fontes citadas permanecem nos dados do território, mas não são
+    // listadas no popup: já aparecem no próprio texto do diagnóstico
     if (diag.referencias_normativas && diag.referencias_normativas.length) {
       popupReferencias.appendChild(listaReferencias("Referências normativas", diag.referencias_normativas));
     }
@@ -447,6 +446,11 @@
     if (!info) return;
     var fator = info.fator, eixo = info.eixo;
     fatorAberto = fid;
+
+    // com o diagnóstico de um território carregado, o popup omite os ícones
+    // de resiliência, vulnerabilidade e ameaça e o selo ODS do topo; sem
+    // território (carregando ou erro), mantém a apresentação metodológica
+    overlay.querySelector(".popup").classList.toggle("popup-modo-territorio", territorio.estado === "pronto");
 
     popupIconeResiliencia.src = caminhoIconeVariante(fator.icone, "verde");
     popupIconeResiliencia.alt = fator.fator + " – Resiliência";

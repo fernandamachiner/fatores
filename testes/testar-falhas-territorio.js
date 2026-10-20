@@ -85,6 +85,8 @@ const conteudoPopup = (page) => page.evaluate(() => ({
   texto: document.getElementById("popup-texto").textContent,
   aviso: (document.querySelector("#popup-texto .popup-aviso") || {}).className || "",
   corpo: document.body.textContent,
+  icones: document.querySelector(".popup-icones-trio").offsetParent !== null,
+  ods: document.getElementById("popup-ods").offsetParent !== null,
 }));
 
 async function cenarios(browser, base) {
@@ -102,7 +104,7 @@ async function cenarios(browser, base) {
   let st = await page.textContent("#territorio-status");
   await abrirFator(page, 1, "E1-F01");
   let c = await conteudoPopup(page);
-  registra(base, "território não cadastrado", /não está cadastrado/.test(st) && /aviso-erro/.test(c.aviso) && !c.corpo.includes(trechoCG("E1-F01")) && !(await page.evaluate(() => window.TERRITORIOS)) && !erros.length,
+  registra(base, "território não cadastrado (popup mantém ícones e ODS)", /não está cadastrado/.test(st) && /aviso-erro/.test(c.aviso) && !c.corpo.includes(trechoCG("E1-F01")) && !(await page.evaluate(() => window.TERRITORIOS)) && c.icones && c.ods && !erros.length,
     st.trim());
   await page.close();
 
@@ -128,7 +130,7 @@ async function cenarios(browser, base) {
   const alerta = await page.locator(".territorio-alerta").count();
   await abrirFator(page, 1, "E1-F01");
   c = await conteudoPopup(page);
-  const comTexto = c.texto === "Texto fictício de teste do fator E1-F01." && c.territorio.includes("Território de teste");
+  const comTexto = c.texto === "Texto fictício de teste do fator E1-F01." && c.territorio.includes("Território de teste") && !c.icones && !c.ods;
   // abre o fator relacionado E1-F04, que não tem diagnóstico neste território
   await page.locator('.popup-chip[data-fator-id="E1-F04"]').click();
   const c4 = await conteudoPopup(page);
