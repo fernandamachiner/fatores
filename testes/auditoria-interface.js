@@ -74,7 +74,7 @@ if (semUso.length) achado("D", "D2 arquivos sem uso na pasta assets", "pendente"
 const todos = [];
 (function varrer(d) {
   for (const n of fs.readdirSync(path.join(raiz, d))) {
-    if (d === "." && (n === ".git" || n === "node_modules")) continue;
+    if (d === "." && (n === ".git" || n === "node_modules" || n === ".github")) continue;
     const r = d === "." ? n : d + "/" + n;
     const st = fs.statSync(path.join(raiz, r));
     if (st.isDirectory()) varrer(r); else todos.push({ r, tam: st.size });

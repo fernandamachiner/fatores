@@ -42,7 +42,7 @@ for el in corpo:
             linhas.append([texto(tc) for tc in tr.iter(W + "tc")])
         blocos.append(("tbl", linhas))
 
-erros, conferidos, usados = [], 0, set()
+erros, conferidos, usados, sem_diag = [], 0, set(), 0
 i = 0
 while i < len(blocos):
     tipo, v = blocos[i]
@@ -68,7 +68,13 @@ while i < len(blocos):
             if re.match(r"^(Eixo \d\.|Síntese estratégica|Notas metodológicas)", blocos[j][1]): break
             paras.append(blocos[j][1]); usados.add(j); j += 1
         d = T["diagnosticos"].get(fid)
-        if not d:
+        sd = [x for x in T.get("fatores_sem_diagnostico", []) if x["id"] == fid]
+        if len(paras) == 1 and re.match(r"^Sem diagnóstico disponível(?:\.|:)", paras[0]):
+            if d or not sd or sd[0]["origem"] != "declarado_no_documento":
+                erros.append("%s: declarado sem diagnóstico no documento, mas não registrado assim no arquivo" % fid)
+            else:
+                sem_diag += 1
+        elif not d:
             erros.append("%s: diagnóstico ausente no arquivo do território" % fid)
         elif d["texto"] != "\n\n".join(paras):
             erros.append("%s: texto difere do documento" % fid)
@@ -114,6 +120,7 @@ for k, (tipo, v) in enumerate(blocos):
 
 print("Documento: %d blocos com conteúdo (%d parágrafos e %d tabelas)" % (len(blocos), sum(1 for b in blocos if b[0] == "p"), sum(1 for b in blocos if b[0] == "tbl")))
 print("Diagnósticos conferidos literalmente contra o .docx: %d de %d no arquivo" % (conferidos, len(T["diagnosticos"])))
+print("Fatores declarados sem diagnóstico no documento e registrados assim no arquivo: %d" % sem_diag)
 print("Conteúdos excluídos por decisão registrada (%s): %d" % (", ".join(excluidos_por_decisao) or "nenhum", len(excluidos)))
 print("Conteúdos do documento não representados no arquivo: %d" % len(nao_representados))
 for k, p in nao_representados[:20]:

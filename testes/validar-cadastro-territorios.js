@@ -3,13 +3,17 @@
 // Uso, a partir da pasta do painel:
 //   node testes/validar-cadastro-territorios.js
 // Termina com código 1 se houver ERRO.
+// Com a variável PERMITIR_SIMULADO=1 (usada apenas em testes), territórios
+// simulados no cadastro geram aviso em vez de erro.
 "use strict";
 const fs = require("fs");
 const path = require("path");
 
 const raiz = path.resolve(__dirname, "..");
-const erros = [], ok = [];
+const erros = [], ok = [], avisos = [];
 const erro = (m) => erros.push(m);
+const permiteSimulado = process.env.PERMITIR_SIMULADO === "1";
+const simulado = (m) => (permiteSimulado ? avisos.push(m) : erros.push(m));
 
 const w = {};
 new Function("window", fs.readFileSync(path.join(raiz, "territorios/indice.js"), "utf8"))(w);
@@ -31,7 +35,7 @@ I.territorios.forEach((t) => {
   rotulos.add(t.rotulo);
   if (!t.tipo) erro(r + ": sem tipo");
   if (!situacoes.includes(t.situacao)) return erro(r + ": situação inválida (" + t.situacao + ")");
-  if (t.situacao === "simulado") erro(r + ": território simulado no cadastro publicado; dados simulados ficam apenas em testes/dados-simulados");
+  if (t.situacao === "simulado") simulado(r + ": território simulado no cadastro publicado; dados simulados ficam apenas em testes/dados-simulados");
   if (t.situacao === "sem-diagnostico") {
     if (t.arquivo !== null) erro(r + ": território sem diagnóstico deve ter arquivo null");
     else ok.push(r + ": cadastrado sem diagnóstico");
@@ -49,7 +53,8 @@ I.territorios.forEach((t) => {
   const T = wd.TERRITORIOS[t.id];
   if ((T.territorio || {}).id !== t.id) erro(r + ": territorio.id do arquivo difere do cadastro");
   if ((T.territorio || {}).rotulo !== t.rotulo) erro(r + ": rótulo do arquivo (" + (T.territorio || {}).rotulo + ") difere do cadastro (" + t.rotulo + ")");
-  if (T.situacao && T.situacao.simulado) erro(r + ": arquivo marcado como simulado");
+  if (T.situacao && T.situacao.simulado && t.situacao !== "simulado") erro(r + ": arquivo marcado como simulado, mas cadastrado como " + t.situacao);
+  if (t.situacao === "simulado" && !(T.situacao && T.situacao.simulado)) erro(r + ": cadastrado como simulado, mas o arquivo não está marcado como simulado");
   ok.push(r + ": arquivo presente, registra o id correto, rótulo coerente, " + Object.keys(T.diagnosticos || {}).length + " diagnósticos");
 });
 const padrao = I.territorios.find((t) => t.id === I.padrao);
@@ -59,6 +64,7 @@ else ok.push("território padrão: " + padrao.rotulo);
 
 console.log("CADASTRO DE TERRITÓRIOS: " + I.territorios.length + " território(s)");
 ok.forEach((m) => console.log("  OK     " + m));
+if (avisos.length) { console.log("\nAVISOS (" + avisos.length + ")"); avisos.forEach((m) => console.log("  AVISO  " + m)); }
 console.log("\nERROS (" + erros.length + ")");
 erros.forEach((m) => console.log("  ERRO   " + m));
 process.exit(erros.length ? 1 : 0);

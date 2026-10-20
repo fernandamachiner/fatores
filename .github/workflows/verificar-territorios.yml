@@ -1,0 +1,81 @@
+# Verificação automática do painel a cada pedido de incorporação (pull request).
+#
+# 1. Gera de novo o arquivo de dados de cada território a partir do documento
+#    .docx e dos arquivos de territorios/correspondencias/; se o arquivo gerado
+#    mudar, grava a versão nova no próprio pedido de incorporação. Assim, quem
+#    envia um território pelo site do GitHub não precisa instalar nada.
+# 2. Executa os validadores e os testes no navegador (Chromium).
+#
+# Não publica o site: a publicação continua sendo feita pelo GitHub Pages a
+# partir do branch main, depois que o pedido de incorporação é aprovado.
+name: Verificar territórios
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: |
+          pip install python-docx==1.2.0 openpyxl==3.1.5
+          npm install --no-save playwright@1.56.0
+          npx playwright install --with-deps chromium
+
+      - name: Gerar os arquivos dos territórios a partir dos documentos
+        run: |
+          for meta in territorios/correspondencias/*.meta.json; do
+            id=$(basename "$meta" .meta.json)
+            python3 territorios/ferramentas/gerar_territorio.py "$id"
+          done
+
+      - name: Gravar arquivos gerados no pedido de incorporação
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          if [ -n "$(git status --porcelain territorios/*.js)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add territorios/*.js
+            git commit -m "Gera os arquivos de dados dos territórios a partir dos documentos"
+            git push
+          else
+            echo "Arquivos dos territórios já estavam atualizados."
+          fi
+
+      - name: Validar metodologia e cadastro de territórios
+        run: |
+          node testes/validar-metodologia.js
+          python3 testes/conferir_metodologia_planilha.py
+          node testes/validar-cadastro-territorios.js
+
+      - name: Verificar cada território com diagnóstico
+        run: |
+          ids=$(node -e 'const w={};new Function("window",require("fs").readFileSync("territorios/indice.js","utf8"))(w);console.log(w.TERRITORIOS_INDICE.territorios.filter(t=>t.situacao==="diagnostico").map(t=>t.id).join(" "))')
+          for id in $ids; do
+            python3 testes/verificar_territorio.py "$id"
+          done
+
+      - name: Testar seletor, falhas e procedimento de cadastro
+        run: |
+          node testes/testar-seletor-territorios.js
+          node testes/testar-falhas-territorio.js
+          python3 testes/testar-procedimento-cadastro.py

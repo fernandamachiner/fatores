@@ -563,7 +563,10 @@
       (territorio.simulado ? " · dados simulados, não é diagnóstico real" : "");
     var diag = (territorio.dados.diagnosticos || {})[fid];
     if (!diag || !diag.texto) {
-      popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + ".", "aviso-ausente"));
+      // motivo registrado no documento do território, quando houver
+      var registro = (territorio.dados.fatores_sem_diagnostico || []).filter(function (x) { return x.id === fid; })[0];
+      var motivo = registro && registro.motivo && registro.origem === "declarado_no_documento" ? " Motivo informado no diagnóstico: " + registro.motivo + "." : "";
+      popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + "." + motivo, "aviso-ausente"));
       return;
     }
 
