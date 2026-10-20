@@ -73,6 +73,11 @@ CONTEÚDO
 - metodologia/planilha/ → planilha da metodologia gerada a partir do
                  cadastro (versão atualizada, com ID e histórico de alterações)
                  e a planilha original recebida, arquivada sem alterações
+- territorios/ → diagnósticos de cada território, separados da metodologia:
+                 campo-grande-ms.js (dados gerados), fontes/ (documento
+                 original), correspondencias/ (tabela de correspondência,
+                 fontes citadas e metadados, editáveis) e ferramentas/
+                 (extração do .docx e geração do arquivo do território)
 - testes/      → verificações automáticas da metodologia e da navegação
 - relatorios/  → relatórios das etapas de adaptação do painel
 - assets/icons → os 157 ícones de fatores usados (recortados do pacote
