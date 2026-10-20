@@ -23,12 +23,16 @@ window.TERRITORIOS["distrito-federal"] = {
   "situacao": {
     "status": "diagnóstico situacional",
     "territorio_de_exemplo": false,
-    "aviso": "Os textos referem-se ao Distrito Federal e, quando indicado, às suas Regiões Administrativas e regiões de saúde. Conforme as notas metodológicas do documento, dados obtidos por meio de reportagens e sistematizações de terceiros devem ser confirmados nas bases primárias."
+    "aviso": "Os textos referem-se ao Distrito Federal e, quando indicado, às suas Regiões Administrativas e regiões de saúde."
   },
   "decisoes": [
     {
       "data": "2026-10-20",
       "decisao": "A linha ODS mobilizados da abertura dos eixos é excluída dos dados, pela mesma regra adotada para Campo Grande/MS em 20/10/2026; o painel não exibe esse campo. O documento-fonte não foi alterado."
+    },
+    {
+      "data": "2026-10-20",
+      "decisao": "Por decisão da coordenação, o painel não exibe a ressalva das notas metodológicas sobre a confirmação de dados obtidos de reportagens e sistematizações de terceiros. A ressalva permanece no documento-fonte e nas notas metodológicas registradas no arquivo de dados."
     }
   ],
   "metodologia": {
