@@ -8,10 +8,10 @@ instalador, servidor ou banco de dados. Tudo acontece em uma única tela:
 mostra os 6 Eixos Estratégicos como uma roda clicável (arte vetorial em
 SVG, nítida em qualquer resolução/zoom); ao clicar em um eixo, a roda
 encolhe e desloca para a esquerda e a lista de fatores e ODS daquele eixo
-aparece do lado direito, sem trocar de página. Ao clicar em um fator, abre
-uma janela com a descrição em linguagem simples daquele fator e os 3
-ícones de classificação de risco relacionados — verde (Resiliência),
-amarelo (Vulnerabilidade) e vermelho (Ameaça) — sem sair da tela e sem
+aparece do lado direito, sem trocar de página. No cabeçalho, um seletor
+indica o território cujo diagnóstico está sendo exibido. Ao clicar em um
+fator, abre uma janela com o nome e a definição do fator e o diagnóstico
+situacional daquele fator no território selecionado, sem sair da tela e sem
 redirecionar para lugar nenhum. O link "← Ver todos os eixos" fecha a
 lista e devolve a roda ao tamanho normal. Passar o mouse (ou navegar por
 teclado) sobre um eixo já dá uma prévia do mesmo efeito de zoom usado ao
@@ -72,8 +72,9 @@ CONTEÚDO
                  metodologia.js (cadastro usado pelo painel, gerado a partir
                  da planilha) e ferramentas/ (gerador do cadastro)
 - territorios/ → diagnósticos de cada território, separados da metodologia:
-                 indice.js (lista dos territórios disponíveis e território
-                 padrão), campo-grande-ms.js (dados gerados), fontes/ (documento de
+                 indice.js (cadastro dos territórios do seletor e território
+                 padrão), campo-grande-ms.js (dados gerados), modelos/
+                 (modelos para cadastrar outra localidade), fontes/ (documento de
                  diagnóstico original, .docx), correspondencias/ (metadados
                  do território e lista de fontes citadas, editáveis) e
                  ferramentas/gerar_territorio.py (gera o arquivo do território
@@ -88,14 +89,71 @@ CONTEÚDO
 
 TERRITÓRIO EXIBIDO
 ------------------
-Ao clicar em um fator, o painel mostra o diagnóstico situacional do
-território ativo, lido do arquivo de dados do território (por exemplo,
-territorios/campo-grande-ms.js). O território ativo é o "padrao" de
-territorios/indice.js, ou o indicado no endereço:
+O seletor Território, no cabeçalho, lista as localidades do cadastro
+territorios/indice.js, com os nomes registrados ali. Ao escolher uma
+localidade, o painel carrega o arquivo de dados dela e passa a mostrar os
+seus diagnósticos; os eixos e os fatores não mudam, porque vêm da
+metodologia, que é a mesma para todos os territórios. Abaixo do seletor
+aparecem o nome do território ativo e, quando for o caso, os selos
+território de exemplo ou sem diagnóstico cadastrado.
+
+O painel abre no território "padrao" do cadastro. Também é possível abrir
+um território diretamente pelo endereço, o que permite compartilhar o link
+de uma localidade:
     index.html?territorio=campo-grande-ms
-Se o território indicado não estiver cadastrado, se o arquivo não puder ser
-carregado ou se um fator não tiver diagnóstico, o painel informa isso na
-tela e não mostra dados de outro território nem de outro fator.
+Se o território não estiver cadastrado, se ainda não tiver diagnóstico, se
+o arquivo não puder ser carregado ou se um fator não tiver diagnóstico, o
+painel informa isso na tela e não mostra dados de outro território nem de
+outro fator.
+
+CADASTRAR OUTRA LOCALIDADE
+--------------------------
+A localidade precisa usar a mesma metodologia (Matriz de Fatores, mesmos
+IDs de fatores). Não é preciso alterar index.html, app.js nem style.css.
+
+1. Escolha o identificador: minúsculas, números e hífens, sem acentos
+   (por exemplo, dourados-ms ou comunidade-x-dourados-ms). Ele não muda
+   depois de publicado, porque aparece nos links.
+
+2. Se a localidade ainda não tem diagnóstico, basta cadastrá-la em
+   territorios/indice.js com situacao "sem-diagnostico" e arquivo null:
+       { id: "dourados-ms", rotulo: "Dourados/MS", tipo: "município",
+         uf: "MS", situacao: "sem-diagnostico", arquivo: null }
+   O seletor passa a mostrá-la, e o painel informa que ainda não há
+   diagnóstico.
+
+3. Com o diagnóstico pronto (documento .docx no formato padrão, em que cada
+   fator é identificado por uma tabela com ID, nome e ODS, seguida da
+   definição de referência e do texto):
+   a) copie o .docx para territorios/fontes/;
+   b) copie territorios/modelos/modelo.meta.json para
+      territorios/correspondencias/<id>.meta.json e preencha;
+   c) copie territorios/modelos/modelo.fontes.json para
+      territorios/correspondencias/<id>.fontes.json;
+   d) gere o arquivo de dados:
+          python3 territorios/ferramentas/gerar_territorio.py <id>
+      O gerador interrompe se o ID, o nome, o ODS ou a definição de algum
+      fator no documento for diferente da metodologia; corrija o documento
+      e gere de novo. Os textos são copiados sem alteração;
+   e) no cadastro territorios/indice.js, inclua (ou atualize) a entrada com
+      situacao "diagnostico" e arquivo "territorios/<id>.js", usando o
+      mesmo rótulo do arquivo meta.json;
+   f) confira:
+          node testes/validar-cadastro-territorios.js
+          node testes/validar-territorio.js <id>
+          python3 testes/conferir_fidelidade_territorio.py <id>
+          node testes/testar-navegacao.js "index.html?territorio=<id>" saida.json
+      (os testes no navegador requerem o pacote playwright).
+
+4. Publique enviando ao repositório os arquivos novos ou alterados:
+   territorios/indice.js, territorios/<id>.js, territorios/fontes/ e
+   territorios/correspondencias/. Os nomes de arquivo devem ter exatamente
+   as mesmas maiúsculas e minúsculas usadas no cadastro, porque o GitHub
+   Pages as distingue.
+
+Dados simulados (testes/dados-simulados/) servem apenas para testar o
+painel e nunca devem ser cadastrados em territorios/indice.js; o validador
+do cadastro acusa erro se isso acontecer.
 
 ATUALIZANDO OS TEXTOS/FATORES DEPOIS
 --------------------------------------

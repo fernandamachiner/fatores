@@ -55,9 +55,9 @@ fs.writeFileSync(path.join(tmp, "territorios/teste-parcial.js"),
 fs.copyFileSync(path.join(raiz, "territorios/campo-grande-ms.js"), path.join(tmp, "territorios/teste-id-errado.js"));
 const indice = carregar(path.join(raiz, "territorios/indice.js")).TERRITORIOS_INDICE;
 indice.territorios.push(
-  { id: "teste-parcial", rotulo: "Território de teste", arquivo: "territorios/teste-parcial.js" },
-  { id: "teste-id-errado", rotulo: "Território com arquivo errado", arquivo: "territorios/teste-id-errado.js" },
-  { id: "teste-arquivo-ausente", rotulo: "Território sem arquivo", arquivo: "territorios/nao-existe.js" }
+  { id: "teste-parcial", rotulo: "Território de teste", tipo: "teste", uf: "", situacao: "simulado", arquivo: "territorios/teste-parcial.js" },
+  { id: "teste-id-errado", rotulo: "Território com arquivo errado", tipo: "teste", uf: "", situacao: "diagnostico", arquivo: "territorios/teste-id-errado.js" },
+  { id: "teste-arquivo-ausente", rotulo: "Território sem arquivo", tipo: "teste", uf: "", situacao: "diagnostico", arquivo: "territorios/nao-existe.js" }
 );
 fs.writeFileSync(path.join(tmp, "territorios/indice.js"), "window.TERRITORIOS_INDICE = " + JSON.stringify(indice, null, 2) + ";\n");
 

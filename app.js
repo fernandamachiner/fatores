@@ -42,49 +42,130 @@
 
   // ---------- Território ativo ----------
   //
-  // Os diagnósticos não ficam na interface: vêm do arquivo de dados do
-  // território (territorios/<id>.js), listado em territorios/indice.js e
-  // carregado aqui por uma tag <script> inserida dinamicamente, o que
-  // funciona tanto em servidor (GitHub Pages) quanto abrindo o index.html
-  // direto do computador. O estado só passa a "pronto" se o arquivo
-  // carregado registrar exatamente o território solicitado; em nenhum caso
-  // os dados de um território são usados no lugar de outro.
+  // Os diagnósticos não ficam na interface: vêm do arquivo de dados de cada
+  // território (territorios/<id>.js), listado no cadastro de territórios
+  // (territorios/indice.js). O arquivo é carregado por uma tag <script>
+  // inserida dinamicamente, o que funciona tanto em servidor (GitHub Pages)
+  // quanto abrindo o index.html direto do computador, onde a leitura de
+  // arquivos por fetch/XHR é bloqueada pelo navegador.
+  //
+  // Regras contra a mistura de dados entre localidades:
+  //   - ao trocar de território, os dados anteriores deixam de ser usados
+  //     imediatamente, antes do novo carregamento;
+  //   - cada carregamento começa com window.TERRITORIOS vazio, de modo que
+  //     um arquivo só pode fornecer o território que foi solicitado;
+  //   - o território só passa a "pronto" se o arquivo registrar exatamente
+  //     o id solicitado;
+  //   - respostas de carregamentos anteriores (troca rápida de seleção) são
+  //     descartadas;
+  //   - nunca há substituição automática por outro território.
+
+  var seletorTerritorio = document.getElementById("seletor-territorio");
+  var SITUACOES = { "diagnostico": true, "sem-diagnostico": true, "simulado": true };
 
   var territorio = {
-    estado: "carregando", // carregando | pronto | erro
+    estado: "carregando", // carregando | pronto | sem-dados | erro
     id: null,
     rotulo: null,
+    simulado: false,
     dados: null,
     mensagem: ""
   };
+  var cacheTerritorios = {}; // dados já carregados e validados, por id
+  var carregamentoAtual = 0; // descarta respostas de seleções anteriores
 
-  function territorioSolicitado() {
+  // confere o cadastro de territórios e devolve { itens, porId, erros }
+  function lerCadastro() {
     var indice = window.TERRITORIOS_INDICE;
-    var param = null;
-    try {
-      param = new URLSearchParams(window.location.search).get("territorio");
-    } catch (e) {
-      param = null;
-    }
+    var r = { itens: [], porId: {}, erros: [], padrao: null };
     if (!indice || !indice.territorios || !indice.territorios.length) {
-      return { erro: "O índice de territórios (territorios/indice.js) não foi carregado." };
+      r.erros.push("O cadastro de territórios (territorios/indice.js) não foi carregado.");
+      return r;
     }
-    var id = param || indice.padrao;
-    var item = null;
     indice.territorios.forEach(function (t) {
-      if (t.id === id) item = t;
+      if (!t || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(t.id || "")) {
+        r.erros.push("Território com identificador inválido no cadastro: " + (t && t.id));
+        return;
+      }
+      if (r.porId[t.id]) {
+        r.erros.push("Identificador repetido no cadastro de territórios: " + t.id);
+        return;
+      }
+      if (!t.rotulo || !SITUACOES[t.situacao] ||
+          (t.situacao === "sem-diagnostico" ? t.arquivo : !t.arquivo)) {
+        r.erros.push("Cadastro incompleto do território " + t.id + ".");
+        return;
+      }
+      r.porId[t.id] = t;
+      r.itens.push(t);
     });
-    if (!item) {
-      return { erro: "O território solicitado (" + id + ") não está cadastrado na plataforma.", id: id };
+    r.padrao = r.porId[indice.padrao] ? indice.padrao : null;
+    if (!r.padrao) r.erros.push("O território padrão do cadastro (" + indice.padrao + ") não está disponível.");
+    return r;
+  }
+  var cadastro = lerCadastro();
+  if (cadastro.erros.length && window.console) {
+    cadastro.erros.forEach(function (m) { console.warn("[territórios] " + m); });
+  }
+
+  function rotuloOpcao(t) {
+    if (t.situacao === "simulado") return t.rotulo + " (dados simulados)";
+    if (t.situacao === "sem-diagnostico") return t.rotulo + " (sem diagnóstico)";
+    return t.rotulo;
+  }
+
+  function montarSeletor() {
+    seletorTerritorio.innerHTML = "";
+    cadastro.itens.forEach(function (t) {
+      var op = document.createElement("option");
+      op.value = t.id;
+      op.textContent = rotuloOpcao(t);
+      seletorTerritorio.appendChild(op);
+    });
+    seletorTerritorio.disabled = !cadastro.itens.length;
+    seletorTerritorio.addEventListener("change", function () {
+      selecionarTerritorio(seletorTerritorio.value, true);
+    });
+  }
+
+  // mantém o seletor coerente com o território ativo; se o território
+  // pedido pelo endereço não existir, mostra uma opção provisória
+  function sincronizarSeletor(id) {
+    var provisoria = seletorTerritorio.querySelector("option[data-provisoria]");
+    if (provisoria) provisoria.parentNode.removeChild(provisoria);
+    if (id && cadastro.porId[id]) {
+      seletorTerritorio.value = id;
+      return;
     }
-    return { item: item };
+    var op = document.createElement("option");
+    op.value = "";
+    op.disabled = true;
+    op.setAttribute("data-provisoria", "");
+    op.textContent = "Selecione um território";
+    seletorTerritorio.insertBefore(op, seletorTerritorio.firstChild);
+    seletorTerritorio.value = "";
+  }
+
+  function atualizarEndereco(id) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("territorio", id);
+      window.history.replaceState(null, "", url.href);
+    } catch (e) {
+      // alguns navegadores não permitem alterar o endereço em file://; a
+      // troca de território funciona do mesmo modo
+    }
   }
 
   function atualizarStatusTerritorio() {
     territorioStatus.className = "territorio-status territorio-" + territorio.estado;
     territorioStatus.innerHTML = "";
+    territorioStatus.removeAttribute("title");
+    document.body.setAttribute("data-territorio", territorio.id || "");
+    document.body.setAttribute("data-territorio-estado", territorio.estado);
+
     if (territorio.estado === "carregando") {
-      territorioStatus.textContent = "Carregando dados do território…";
+      territorioStatus.textContent = "Carregando dados de " + (territorio.rotulo || "território") + "…";
       return;
     }
     if (territorio.estado === "erro") {
@@ -92,10 +173,24 @@
       return;
     }
     var rotulo = document.createElement("strong");
+    rotulo.className = "territorio-nome";
     rotulo.textContent = "Território: " + territorio.rotulo;
     territorioStatus.appendChild(rotulo);
+
+    if (territorio.estado === "sem-dados") {
+      var sd = document.createElement("span");
+      sd.className = "territorio-selo territorio-selo-sem-dados";
+      sd.textContent = "sem diagnóstico cadastrado";
+      territorioStatus.appendChild(sd);
+      return;
+    }
     var sit = territorio.dados.situacao || {};
-    if (sit.territorio_de_exemplo) {
+    if (territorio.simulado) {
+      var si = document.createElement("span");
+      si.className = "territorio-selo territorio-selo-simulado";
+      si.textContent = "dados simulados, não é diagnóstico real";
+      territorioStatus.appendChild(si);
+    } else if (sit.territorio_de_exemplo) {
       var ex = document.createElement("span");
       ex.className = "territorio-selo";
       ex.textContent = "território de exemplo";
@@ -111,50 +206,97 @@
     }
   }
 
-  function falhaTerritorio(msg) {
-    territorio.estado = "erro";
-    territorio.dados = null;
-    territorio.mensagem = msg;
-    atualizarStatusTerritorio();
+  // redesenha o popup aberto com os dados do território ativo
+  function atualizarPopupAberto() {
+    if (!overlay.hidden && fatorAberto) mostrarFator(fatorAberto, false);
   }
 
-  function carregarTerritorio() {
-    var sol = territorioSolicitado();
-    if (sol.erro) {
-      territorio.id = sol.id || null;
-      falhaTerritorio(sol.erro + " Nenhum diagnóstico será exibido.");
+  function definirEstado(estado, extra) {
+    territorio.estado = estado;
+    territorio.dados = (extra && extra.dados) || null;
+    territorio.mensagem = (extra && extra.mensagem) || "";
+    if (extra && extra.rotulo) territorio.rotulo = extra.rotulo;
+    atualizarStatusTerritorio();
+    atualizarPopupAberto();
+  }
+
+  function falhaTerritorio(msg) {
+    definirEstado("erro", { mensagem: msg + " Nenhum diagnóstico será exibido." });
+  }
+
+  function aceitarDados(item, t) {
+    var simulado = item.situacao === "simulado" || !!(t.situacao && t.situacao.simulado);
+    territorio.simulado = simulado;
+    definirEstado("pronto", { dados: t, rotulo: item.rotulo });
+  }
+
+  function selecionarTerritorio(id, alterarEndereco) {
+    var token = ++carregamentoAtual;
+    // os dados do território anterior deixam de ser usados imediatamente
+    territorio.id = id || null;
+    territorio.simulado = false;
+    var item = id ? cadastro.porId[id] : null;
+    sincronizarSeletor(item ? id : null);
+
+    if (cadastro.erros.length && !cadastro.itens.length) {
+      territorio.rotulo = null;
+      falhaTerritorio(cadastro.erros[0]);
       return;
     }
-    var item = sol.item;
-    territorio.id = item.id;
+    if (!item) {
+      territorio.rotulo = null;
+      falhaTerritorio("O território solicitado (" + id + ") não está cadastrado na plataforma.");
+      return;
+    }
+    if (alterarEndereco) atualizarEndereco(id);
     territorio.rotulo = item.rotulo;
-    territorio.estado = "carregando";
-    atualizarStatusTerritorio();
 
+    if (item.situacao === "sem-diagnostico") {
+      definirEstado("sem-dados", { rotulo: item.rotulo });
+      return;
+    }
+    if (cacheTerritorios[id]) {
+      aceitarDados(item, cacheTerritorios[id]);
+      return;
+    }
+
+    definirEstado("carregando", { rotulo: item.rotulo });
+    window.TERRITORIOS = {};
     var concluido = false;
     var script = document.createElement("script");
     script.src = item.arquivo;
     script.onload = function () {
       concluido = true;
-      var t = window.TERRITORIOS && window.TERRITORIOS[item.id];
-      if (!t || !t.territorio || t.territorio.id !== item.id) {
-        falhaTerritorio("O arquivo de dados de " + item.rotulo + " não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.");
+      if (token !== carregamentoAtual) return;
+      var t = window.TERRITORIOS && window.TERRITORIOS[id];
+      if (!t || !t.territorio || t.territorio.id !== id || !t.diagnosticos) {
+        falhaTerritorio("O arquivo de dados de " + item.rotulo + " não contém os diagnósticos deste território.");
         return;
       }
-      territorio.dados = t;
-      territorio.rotulo = t.territorio.rotulo || item.rotulo;
-      territorio.estado = "pronto";
-      atualizarStatusTerritorio();
-      if (!overlay.hidden && fatorAberto) mostrarFator(fatorAberto, false);
+      cacheTerritorios[id] = t;
+      aceitarDados(item, t);
     };
     script.onerror = function () {
       concluido = true;
-      falhaTerritorio("Não foi possível carregar os dados de " + item.rotulo + " (" + item.arquivo + "). Nenhum diagnóstico será exibido.");
+      if (token !== carregamentoAtual) return;
+      falhaTerritorio("Não foi possível carregar os dados de " + item.rotulo + " (" + item.arquivo + ").");
     };
     setTimeout(function () {
-      if (!concluido) falhaTerritorio("O carregamento dos dados de " + item.rotulo + " excedeu o tempo limite. Nenhum diagnóstico será exibido.");
+      if (!concluido && token === carregamentoAtual) {
+        falhaTerritorio("O carregamento dos dados de " + item.rotulo + " excedeu o tempo limite.");
+      }
     }, 15000);
     document.head.appendChild(script);
+  }
+
+  function territorioInicial() {
+    var param = null;
+    try {
+      param = new URLSearchParams(window.location.search).get("territorio");
+    } catch (e) {
+      param = null;
+    }
+    return param || cadastro.padrao;
   }
 
   function caminhoIcone(codigo) {
@@ -391,7 +533,14 @@
       return;
     }
 
-    popupTerritorio.textContent = "Diagnóstico situacional · " + territorio.rotulo;
+    if (territorio.estado === "sem-dados") {
+      popupTerritorio.textContent = "Diagnóstico situacional · " + territorio.rotulo;
+      popupTexto.appendChild(aviso(territorio.rotulo + " ainda não possui diagnóstico situacional cadastrado na plataforma.", "aviso-sem-dados"));
+      return;
+    }
+
+    popupTerritorio.textContent = "Diagnóstico situacional · " + territorio.rotulo +
+      (territorio.simulado ? " · dados simulados, não é diagnóstico real" : "");
     var diag = (territorio.dados.diagnosticos || {})[fid];
     if (!diag || !diag.texto) {
       popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + ".", "aviso-ausente"));
@@ -519,5 +668,6 @@
   // ---------- Inicialização ----------
 
   montarRoda();
-  carregarTerritorio();
+  montarSeletor();
+  selecionarTerritorio(territorioInicial(), false);
 })();

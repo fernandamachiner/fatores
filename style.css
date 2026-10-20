@@ -571,6 +571,40 @@ html, body {
 .popup-voltar[hidden] { display: none; }
 .popup-voltar:hover { text-decoration: underline; }
 
+/* seletor de território, no cabeçalho */
+.territorio-barra {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px 10px;
+  max-width: 100%;
+}
+.territorio-seletor-rotulo {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #3c4a56;
+}
+.territorio-seletor {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #23303d;
+  background: #fff;
+  border: 1px solid #b8c3cc;
+  border-radius: 10px;
+  padding: 7px 12px;
+  min-width: 220px;
+  max-width: 100%;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+}
+.territorio-seletor:focus-visible { outline: 3px solid #2f6fb0; outline-offset: 2px; }
+.territorio-seletor:disabled { cursor: not-allowed; opacity: 0.6; }
+
 /* faixa de identificação do território ativo, no cabeçalho */
 .territorio-status {
   margin-top: 6px;
@@ -600,6 +634,8 @@ html, body {
   border-radius: 20px;
   padding: 2px 9px;
 }
+.territorio-selo-simulado { background: #8a4b00; }
+.territorio-selo-sem-dados { background: #5b6b78; }
 .territorio-alerta {
   font-size: 12px;
   color: #7a4b00;
@@ -767,3 +803,8 @@ html, body {
 .popup.popup-modo-territorio .popup-icones-trio,
 .popup.popup-modo-territorio .popup-ods { display: none; }
 .popup.popup-modo-territorio h3 { margin: 6px 0 12px; padding: 0 32px; }
+
+@media (max-width: 480px) {
+  .territorio-seletor { min-width: 0; width: 100%; }
+  .territorio-barra { width: 100%; padding: 0 12px; box-sizing: border-box; }
+}

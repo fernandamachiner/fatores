@@ -1,0 +1,100 @@
+== Cadastro de territórios
+CADASTRO DE TERRITÓRIOS: 1 território(s)
+  OK     território campo-grande-ms: arquivo presente, registra o id correto, rótulo coerente, 150 diagnósticos
+  OK     território padrão: Campo Grande/MS
+
+ERROS (0)
+
+== Seletor de territórios (file:// e http /fatores/)
+OK    [file://] seletor lista os territórios do cadastro com os nomes registrados: Campo Grande/MS ; Território simulado (teste) (dados simulados) ; Localidade sem diagnóstico (teste) (sem diagnóstico) ; Localidade sem arqu
+OK    [file://] estrutura metodológica completa (6 eixos, 150 fatores)
+OK    [file://] Campo Grande/MS inicial: nome e diagnóstico: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] simulado: nome atualizado e identificado como simulado: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [file://] simulado: diagnóstico do território selecionado: Diagnóstico situacional · Território simulado (teste) · dados simulados, não é diagnóstico real
+OK    [file://] simulado: fator sem diagnóstico avisa e não usa Campo Grande: Não há diagnóstico situacional cadastrado para este fator em Território simulado (teste).
+OK    [file://] simulado: eixos e fatores idênticos aos de Campo Grande
+OK    [file://] simulado: endereço atualizado: file:///tmp/painel-seletor-9ZJTuW/fatores/index.html?territorio=simulado-teste
+OK    [file://] sem diagnóstico: informa a ausência em todos os fatores: Território: Localidade sem diagnóstico (teste)sem diagnóstico cadastrado / Localidade sem diagnóstico (teste) ainda não possui diagnóstico s
+OK    [file://] sem diagnóstico: eixos e fatores preservados
+OK    [file://] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Não foi possível carregar os dados de Localidade sem arquivo (teste) (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [file://] falha de carregamento (teste-id-errado) sem dados de outra localidade: O arquivo de dados de Localidade com arquivo errado (teste) não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [file://] volta a Campo Grande/MS: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] sem erros de script na sequência de trocas
+OK    [file://] troca rápida de seleção sem mistura de dados: Território: Campo Grande/MSterritório de exemplo / Diagnóstico situacional · Campo Grande/MS
+OK    [file://] abertura pelo endereço seleciona o território: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [file://] território inexistente no endereço, seguido de seleção válida: O território solicitado (nao-cadastrado) não está cadastrado na plataforma. Nenhum diagnóstico será exibido. -> Território: Campo Grande/MSt
+OK    [file://] celular (390 px): seletor visível, sem rolagem horizontal, troca funciona: {"esq":24,"dir":366,"larg":390,"pagina":390}
+OK    [http] seletor lista os territórios do cadastro com os nomes registrados: Campo Grande/MS ; Território simulado (teste) (dados simulados) ; Localidade sem diagnóstico (teste) (sem diagnóstico) ; Localidade sem arqu
+OK    [http] estrutura metodológica completa (6 eixos, 150 fatores)
+OK    [http] Campo Grande/MS inicial: nome e diagnóstico: Território: Campo Grande/MSterritório de exemplo
+OK    [http] simulado: nome atualizado e identificado como simulado: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [http] simulado: diagnóstico do território selecionado: Diagnóstico situacional · Território simulado (teste) · dados simulados, não é diagnóstico real
+OK    [http] simulado: fator sem diagnóstico avisa e não usa Campo Grande: Não há diagnóstico situacional cadastrado para este fator em Território simulado (teste).
+OK    [http] simulado: eixos e fatores idênticos aos de Campo Grande
+OK    [http] simulado: endereço atualizado: http://127.0.0.1:33273/fatores/?territorio=simulado-teste
+OK    [http] sem diagnóstico: informa a ausência em todos os fatores: Território: Localidade sem diagnóstico (teste)sem diagnóstico cadastrado / Localidade sem diagnóstico (teste) ainda não possui diagnóstico s
+OK    [http] sem diagnóstico: eixos e fatores preservados
+OK    [http] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Não foi possível carregar os dados de Localidade sem arquivo (teste) (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [http] falha de carregamento (teste-id-errado) sem dados de outra localidade: O arquivo de dados de Localidade com arquivo errado (teste) não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [http] volta a Campo Grande/MS: Território: Campo Grande/MSterritório de exemplo
+OK    [http] sem erros de script na sequência de trocas
+OK    [http] troca rápida de seleção sem mistura de dados: Território: Campo Grande/MSterritório de exemplo / Diagnóstico situacional · Campo Grande/MS
+OK    [http] abertura pelo endereço seleciona o território: Território: Território simulado (teste)dados simulados, não é diagnóstico real
+OK    [http] território inexistente no endereço, seguido de seleção válida: O território solicitado (nao-cadastrado) não está cadastrado na plataforma. Nenhum diagnóstico será exibido. -> Território: Campo Grande/MSt
+OK    [http] celular (390 px): seletor visível, sem rolagem horizontal, troca funciona: {"esq":24,"dir":366,"larg":390,"pagina":390}
+
+36 de 36 verificações aprovadas
+
+== Controles por mutação
+FALHA [file://] troca rápida de seleção sem mistura de dados: Território: Território simulado (teste)dados simulados, não é diagnóstico real / Diagnóstico situacional · Território simulado (teste) · dad
+FALHA [http] troca rápida de seleção sem mistura de dados: Território: Território simulado (teste)dados simulados, não é diagnóstico real / Diagnóstico situacional · Território simulado (teste) · dad
+34 de 36 verificações aprovadas (mutação: corrida)
+FALHA [file://] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Território: Campo Grande/MSterritório de exemplo
+FALHA [http] falha de carregamento (teste-arquivo-ausente) sem dados de outra localidade: Território: Campo Grande/MSterritório de exemplo
+34 de 36 verificações aprovadas (mutação: substituicao)
+
+== Navegação completa (file://)
+file:///home/claude/painel/index.html
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+
+== Navegação completa (http /fatores/)
+http://127.0.0.1:8771/fatores/
+  Território: Campo Grande/MSterritório de exemplo
+  eixos: 6 | fatores: 150 | popups abertos e fechados: 150 | diagnósticos exibidos idênticos aos dados: 150
+  falhas: 0 | erros de console: 0 | falhas de rede: 0
+
+== Cenários de falha
+OK    [file://] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [file://] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [file://] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [file://] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [file://] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [file://] alerta de versão de matriz divergente: Território: Território de testedados simulados, não é diagnóstico realDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [file://] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [file://] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+OK    [http] território não cadastrado (popup mantém ícones e ODS): O território solicitado (inexistente) não está cadastrado na plataforma. Nenhum diagnóstico será exibido.
+OK    [http] arquivo de dados ausente: Não foi possível carregar os dados de Território sem arquivo (territorios/nao-existe.js). Nenhum diagnóstico será exibido.
+OK    [http] arquivo com dados de outro território: O arquivo de dados de Território com arquivo errado não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.
+OK    [http] fator com diagnóstico em território parcial: Texto fictício de teste do fator E1-F01.
+OK    [http] fator sem diagnóstico (sem texto substituto): Não há diagnóstico situacional cadastrado para este fator em Território de teste.
+OK    [http] alerta de versão de matriz divergente: Território: Território de testedados simulados, não é diagnóstico realDiagnóstico organizado pela Matriz v0.9; painel usa a v1.0.2.
+OK    [http] território padrão carregado: Território: Campo Grande/MSterritório de exemplo
+OK    [http] navegação por fator relacionado e retorno: E1-F27 -> Economia circular -> Dengue
+
+16 de 16 verificações aprovadas
+
+== Metodologia
+CADASTRO: 6 eixos, 150 fatores
+ERROS (0)
+Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+
+== Território Campo Grande/MS
+ERROS (0)
+Diagnósticos conferidos literalmente contra o .docx: 150 de 150 no arquivo
+Conteúdos excluídos por decisão registrada (ODS mobilizados): 5
+Conteúdos do documento não representados no arquivo: 0
+
+== Textos de diagnóstico embutidos na interface
+trechos de diagnóstico encontrados na interface: 0
