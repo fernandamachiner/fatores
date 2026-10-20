@@ -1,0 +1,33 @@
+== Metodologia 2.0.0
+CADASTRO: 6 eixos, 150 fatores
+  E1  29 fatores  O Suor que não nos Sustenta
+  E2  38 fatores  A Vida em Risco
+  E3  18 fatores  Nossos Corpos Silenciados
+  E4  24 fatores  A Terra de Quem?
+  E5  29 fatores  A Cidade Negada
+  E6  12 fatores  A Voz na Mesa
+
+VERIFICAÇÕES APROVADAS (10)
+  OK     window.METODOLOGIA carregado
+  OK     6 eixos cadastrados
+  OK     ordem dos eixos 1 a 6
+  OK     150 fatores com id único
+  OK     nomes de fatores sem repetição
+  OK     todas as 4 variantes de ícone presentes para cada fator
+  OK     rótulos ODS coerentes com o número do ODS
+  OK     cores e títulos dos eixos conferidos contra a roda SVG
+  OK     index.html carrega metodologia.js antes de app.js
+  OK     9 ids desativados registrados e não reaproveitados
+
+AVISOS (2)
+  AVISO  código de ícone 03.09 compartilhado por E2-F11, E5-F02
+  AVISO  código de ícone 03.11 compartilhado por E2-F13, E2-F14
+
+ERROS (0)
+
+Planilha: 150 fatores | cadastro: 150 fatores | células conferidas: 1200 | divergências: 0
+
+== Navegação (Playwright/Chromium)
+file://painel/index.html | eixos 6 | fatores 150 | popups 150 | falhas 0 | erros de console 0 | falhas de rede 0
+http://127.0.0.1:8767/ | eixos 6 | fatores 150 | popups 150 | falhas 0 | erros de console 0 | falhas de rede 0
+Interface x cadastro 2.0.0: 0 divergências em nomes, ícones e definições

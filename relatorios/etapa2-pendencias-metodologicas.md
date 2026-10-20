@@ -1,5 +1,7 @@
 # Etapa 2. Pendências metodológicas
 
+> Atualização de 19/10/2026: a metodologia passou para a versão 2.0.0, com 150 fatores, definida pela coordenação como versão final. As versões anteriores (data.js original, planilhas e cadastro 1.0.x) foram eliminadas, e a planilha metodologia/planilha/Fatores_organizacao.xlsx passou a ser a fonte oficial, com o cadastro gerado a partir dela. Este relatório descreve a construção da versão 1.0 e permanece como registro do processo. A situação vigente está em relatorios/revisao-metodologia-2.0.0.md.
+
 Situação em 19/10/2026, versão 1.0.2 do cadastro. P1 e P2 foram decididas, P3, P6 e P6a foram corrigidas e P7 foi encerrada por autorização da coordenação metodológica. P4 e P5 permanecem em aberto por decisão da coordenação. As decisões e as alterações estão registradas nos campos decisoes e alteracoes de metodologia/metodologia.js. Os identificadores citados seguem o formato estável E<eixo>-F<posição>, definido nesta etapa.
 
 ## P1. Matriz de referência (decidida)

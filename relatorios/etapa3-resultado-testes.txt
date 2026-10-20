@@ -1,34 +1,20 @@
-== node testes/validar-territorio.js campo-grande-ms
-TERRITÓRIO Campo Grande/MS: 100 validados, 26 pendentes, 59 fatores sem diagnóstico
+== Território com metodologia 2.0.0
+TERRITÓRIO Campo Grande/MS: 99 validados, 27 pendentes, 51 fatores sem diagnóstico
 
 VERIFICAÇÕES APROVADAS (7)
   OK     id do território coincide com o nome do arquivo
   OK     situação do diagnóstico declarada (proposta de estrutura)
   OK     documento-fonte presente: territorios/fontes/DOC-20261008-WA0072.docx
-  OK     território gerado com a versão vigente da metodologia (1.0.2)
-  OK     100 diagnósticos ligados a ids existentes no cadastro
-  OK     26 diagnósticos pendentes de validação, com motivo registrado e sem ligação a fator
+  OK     território gerado com a versão vigente da metodologia (2.0.0)
+  OK     99 diagnósticos ligados a ids existentes no cadastro
+  OK     27 diagnósticos pendentes de validação, com motivo registrado e sem ligação a fator
   OK     todos os 126 fatores do documento estão no arquivo (validados ou pendentes), sem repetição
 
 AVISOS (1)
-  AVISO  59 fatores do cadastro sem diagnóstico validado neste território
+  AVISO  51 fatores do cadastro sem diagnóstico validado neste território
 
 ERROS (0)
 
-== python3 testes/conferir_fidelidade_territorio.py campo-grande-ms
 Documento: 147 parágrafos com conteúdo
 Diagnósticos conferidos literalmente contra o .docx: 126 de 126
 Parágrafos do documento não representados no arquivo: 0
-
-== Teste de controle (cópia com 3 erros introduzidos: número alterado no texto de E1-F03, fonte IBGE inexistente em E1-F02, id E6-F99)
-ERROS (4)
-  ERRO   E1-F02: "IBGE" (fontes_citadas) não aparece literalmente no texto
-  ERRO   diagnóstico ligado a id inexistente no cadastro: E6-F99
-  ERRO   diagnósticos com id inexistente
-  ERRO   fatores do documento: 126; no arquivo: 125
-Parágrafos do documento não representados no arquivo: 0
-ERRO  E1-F03: texto difere do parágrafo 11 do documento
-
-== node testes/validar-metodologia.js (metodologia inalterada nesta etapa)
-  OK     comparação com o original: 794 campos idênticos, 31 campos alterados por 32 registros autorizados, mesma ordem
-ERROS (0)

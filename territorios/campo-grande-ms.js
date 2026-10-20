@@ -27,7 +27,7 @@ window.TERRITORIOS["campo-grande-ms"] = {
   },
   "metodologia": {
     "arquivo": "metodologia/metodologia.js",
-    "versao": "1.0.2"
+    "versao": "2.0.0"
   },
   "documento_fonte": {
     "arquivo": "territorios/fontes/DOC-20261008-WA0072.docx",
@@ -791,23 +791,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "observacao": "O documento acrescenta uso e escassez; a descrição do fator trata do uso e de evitar a falta de água."
       }
     },
-    "E2-F24": {
-      "texto": "A pandemia de COVID-19 evidenciou fragilidades na gestão de emergências de saúde pública em Campo Grande: insuficiência de leitos de UTI no pico da crise, déficit de pessoal especializado e fragmentação da gestão de dados entre níveis de governo. A sala de situação da SESAU, estruturada durante a pandemia, precisa ser mantida como instrumento permanente de monitoramento e não apenas ativada em crises. Os surtos endêmicos anuais de dengue e leishmaniose são emergências programadas, previsíveis nos seus ciclos sazonais, que demandam prontidão operacional permanente e protocolos de resposta integrada entre vigilância epidemiológica, APS e rede hospitalar.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E2-21",
-        "nome_no_documento": "Gestão de riscos e emergências",
-        "eixo_documento": 2,
-        "paragrafo_docx": 96
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
     "E2-F25": {
       "texto": "A qualidade do ar em Campo Grande não dispõe de rede de monitoramento municipal contínua. Os episódios de fumaça provenientes de queimadas no Cerrado e no Pantanal, que afetam o estado entre julho e setembro, no período de estiagem, produzem deterioração expressiva da qualidade do ar com impacto comprovado sobre o agravamento de doenças respiratórias, especialmente em crianças e idosos. O VIGIAR (Vigilância em Saúde Ambiental relacionada à Qualidade do Ar) é o instrumento federal de monitoramento, mas sua operacionalização local é ainda incipiente.",
       "fontes_citadas": [],
@@ -1104,23 +1087,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "observacao": ""
       }
     },
-    "E3-F15": {
-      "texto": "A ausência de documentação civil, registro de nascimento e RG, é uma barreira de acesso a direitos que afeta principalmente populações indígenas urbanas, pessoas em situação de rua e filhos de mulheres migrantes em situação irregular. Em Campo Grande, o Cartório de Registro Civil atende em parceria com unidades de saúde e assistência social para registro de recém-nascidos, mas a cobertura para populações adultas indígenas sem documentação é insuficiente. Sem RG, não há acesso ao CadÚnico, ao SUS com prontuário nominado, ou à Previdência Social.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E3-13",
-        "nome_no_documento": "Acesso a direitos fundamentais, Registro de Nascimento e RG",
-        "eixo_documento": 3,
-        "paragrafo_docx": 135
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "O documento acrescenta Registro de Nascimento e RG; a descrição do fator menciona documentos."
-      }
-    },
     "E3-F16": {
       "texto": "A discriminação racial em Campo Grande manifesta-se em múltiplas dimensões: no mercado de trabalho, com negros e indígenas concentrados nas faixas salariais mais baixas e nos empregos de maior precariedade; no acesso diferenciado a serviços de saúde e educação; na sobre representação no sistema prisional; e na invisibilidade nos processos de tomada de decisão institucional. Os dados do Censo 2022 para Campo Grande ainda não estão plenamente desagregados por raça e etnia em indicadores de saúde e educação ao nível intraurbano, lacuna que o sistema de informação da APS (e-SUS) pode preencher.",
       "fontes_citadas": [
@@ -1180,6 +1146,23 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "situacao": "validada",
         "tipo": "variacao_nominal",
         "observacao": "Direitos à terra no documento; direitos à propriedade e controle da terra no cadastro."
+      }
+    },
+    "E4-F01": {
+      "texto": "O financiamento da gestão ambiental municipal em Campo Grande é insuficiente frente ao passivo ambiental acumulado. O Fundo Municipal de Meio Ambiente, previsto em lei, opera com dotação orçamentária abaixo das necessidades identificadas pela SEMADUR. Os recursos de compensação ambiental de empreendimentos licenciados são a fonte principal de financiamento de projetos de conservação, mas sem planejamento estratégico que garanta continuidade e escala dos projetos.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E4-24",
+        "nome_no_documento": "Recursos financeiros para gestão da biodiversidade",
+        "eixo_documento": 4,
+        "paragrafo_docx": 198
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "variacao_nominal",
+        "observacao": "O nome no documento reúne recursos financeiros, gestão e biodiversidade, presentes em E4-F01 Acesso a recursos financeiros para gestão, conservação sustentável da biodiversidade (investimentos públicos e privados). Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
       }
     },
     "E4-F02": {
@@ -1708,6 +1691,23 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "observacao": ""
       }
     },
+    "E5-F21": {
+      "texto": "O acesso à internet em Campo Grande tem cobertura expressiva na área urbana consolidada, mas com digitalização desigual entre estratos sociais. As famílias de menor renda nas periferias acessam a internet predominantemente pelo celular em planos de dados limitados, sem acesso a computadores ou conexões fixas de alta qualidade. Essa brecha digital limita o acesso a serviços governamentais digitalizados, à telemedicina e a plataformas de educação à distância, exacerbando desigualdades existentes. As aldeias indígenas urbanas apresentam conectividade especialmente precária.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E5-8",
+        "nome_no_documento": "Acesso a tecnologias de informação e comunicação",
+        "eixo_documento": 5,
+        "paragrafo_docx": 220
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "variacao_nominal",
+        "observacao": "O documento acrescenta Acesso a; o fator E5-F21 passou a ser Tecnologias de informação e comunicação na versão 2.0.0. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
+      }
+    },
     "E5-F22": {
       "texto": "O déficit habitacional em Campo Grande concentra-se nas periferias Sul e Leste, onde famílias de baixa renda habitam domicílios precários em loteamentos irregulares, sem documentação fundiária e sem infraestrutura básica. O Programa Minha Casa Minha Vida entregou unidades habitacionais em Campo Grande nas últimas décadas, mas sem integração com serviços de saúde, educação e transporte que garantam habitabilidade plena. As aldeias indígenas urbanas apresentam as condições habitacionais mais precárias do município: construções improvisadas, superlotação e ausência de saneamento diferenciado.",
       "fontes_citadas": [],
@@ -1837,6 +1837,23 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "observacao": "Experiências das comunidades, saberes e práticas locais no documento; valorização dos saberes e práticas locais no cadastro."
       }
     },
+    "E6-F02": {
+      "texto": "As redes de mobilização comunitária em Campo Grande incluem associações de moradores, grupos de mulheres, movimentos indígenas urbanos, organizações de catadores e coletivos de juventude nas periferias. Os pesquisadores populares PICAPS são o elo operacional entre essas redes e o ciclo de planejamento participativo: são eles que conduzem os Círculos de Cultura, coletam as inscrições da cartografia social e garantem que a voz das comunidades entre no processo técnico sem perder sua autoria.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E6-2",
+        "nome_no_documento": "Estratégias de mobilização, redes e grupos organizados",
+        "eixo_documento": 6,
+        "paragrafo_docx": 253
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "variacao_nominal",
+        "observacao": "Estratégias de mobilização, redes e grupos organizados no documento; Mobilização de redes e grupos organizados no cadastro. O fator de nome idêntico (E6-F14) foi retirado na versão 2.0.0. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
+      }
+    },
     "E6-F06": {
       "texto": "O crime organizado em Campo Grande, com expressão no tráfico de drogas, no tráfico de armas e na exploração sexual, é um determinante de saúde que condiciona a segurança das periferias, a vulnerabilidade de jovens e a capacidade das equipes de saúde de operar nos territórios de maior risco. A SESAU e as equipes de APS que atuam em bairros com alta incidência de violência armada desenvolvem estratégias de segurança operacional, visitas em duplas, articulação com a Defesa Social, que não estão protocoladas formalmente, mas são práticas cotidianas de gestão de risco.",
       "fontes_citadas": [],
@@ -1852,6 +1869,23 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "situacao": "validada",
         "tipo": "variacao_nominal",
         "observacao": "O documento acrescenta e armas ilegais."
+      }
+    },
+    "E6-F07": {
+      "texto": "O controle social do SUS em Campo Grande é exercido pelo Conselho Municipal de Saúde (CMS), com representação de usuários, trabalhadores e gestores, e pelas Conferências Municipais de Saúde. A efetividade desse controle, entendida como capacidade real de influenciar decisões orçamentárias e programáticas, é o indicador qualitativo central do Eixo 6. A PICAPS, ao capacitar pesquisadores populares e produzir diagnósticos com base em evidências territoriais, amplia a capacidade técnica da participação social, tornando-a mais qualificada para disputar a agenda do planejamento em saúde.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E6-1",
+        "nome_no_documento": "Tomada de decisão responsiva, inclusiva e participativa",
+        "eixo_documento": 6,
+        "paragrafo_docx": 251
+      },
+      "correspondencia": {
+        "situacao": "validada",
+        "tipo": "variacao_nominal",
+        "observacao": "O nome no documento está contido em E6-F07 Participação social na tomada de decisão responsiva, inclusiva e participativa. Associação resultante da versão 2.0.0 da metodologia, que eliminou a sobreposição entre candidatos."
       }
     },
     "E6-F08": {
@@ -1886,57 +1920,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "situacao": "validada",
         "tipo": "variacao_nominal",
         "observacao": "Transparência ativa das instituições no documento; instituições públicas e privadas em todos os níveis (transparência ativa) no cadastro."
-      }
-    },
-    "E6-F12": {
-      "texto": "A intersetorialidade entre saúde, educação, assistência social, meio ambiente e habitação é condição metodológica para enfrentar os nós críticos identificados no diagnóstico. Em Campo Grande, as parcerias multissetoriais existem pontualmente, nos programas de saúde escolar, nos NASF, nos CREAS, mas sem uma arquitetura de governança intersetorial que garanta continuidade, financiamento compartilhado e avaliação integrada. A implantação de Grupos de Trabalho Intersetorial por território vulnerável, articulando CRAS, ESF, escola e agentes comunitários, é uma inovação organizacional de baixo custo e alto impacto.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-4",
-        "nome_no_documento": "Parcerias multissetoriais",
-        "eixo_documento": 6,
-        "paragrafo_docx": 257
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
-      }
-    },
-    "E6-F13": {
-      "texto": "A parceria entre SESAU Campo Grande e Fiocruz Brasília, operacionalizada pelo CoLaboratório CTIS e pela plataforma PICAPS, é o exemplo mais robusto de parceria sociotécnica no campo da saúde do município. O programa de residência multiprofissional em saúde da família, o maior do Centro-Oeste, foi o vetor que triplicou a cobertura de APS em seis anos. A sustentabilidade dessa parceria, que combina formação, pesquisa e inovação em um único arranjo institucional, é um ativo estratégico que precisa ser protegido e ampliado no próximo ciclo de planejamento.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-3",
-        "nome_no_documento": "Apoio a instituições públicas, privadas e sociedade civil, parcerias sociotécnicas",
-        "eixo_documento": 6,
-        "paragrafo_docx": 255
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "variacao_nominal",
-        "observacao": "Diferença apenas de preposição e pontuação."
-      }
-    },
-    "E6-F14": {
-      "texto": "As redes de mobilização comunitária em Campo Grande incluem associações de moradores, grupos de mulheres, movimentos indígenas urbanos, organizações de catadores e coletivos de juventude nas periferias. Os pesquisadores populares PICAPS são o elo operacional entre essas redes e o ciclo de planejamento participativo: são eles que conduzem os Círculos de Cultura, coletam as inscrições da cartografia social e garantem que a voz das comunidades entre no processo técnico sem perder sua autoria.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E6-2",
-        "nome_no_documento": "Estratégias de mobilização, redes e grupos organizados",
-        "eixo_documento": 6,
-        "paragrafo_docx": 253
-      },
-      "correspondencia": {
-        "situacao": "validada",
-        "tipo": "nome_identico",
-        "observacao": ""
       }
     }
   },
@@ -2045,6 +2028,26 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     {
+      "texto": "A pandemia de COVID-19 evidenciou fragilidades na gestão de emergências de saúde pública em Campo Grande: insuficiência de leitos de UTI no pico da crise, déficit de pessoal especializado e fragmentação da gestão de dados entre níveis de governo. A sala de situação da SESAU, estruturada durante a pandemia, precisa ser mantida como instrumento permanente de monitoramento e não apenas ativada em crises. Os surtos endêmicos anuais de dengue e leishmaniose são emergências programadas, previsíveis nos seus ciclos sazonais, que demandam prontidão operacional permanente e protocolos de resposta integrada entre vigilância epidemiológica, APS e rede hospitalar.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E2-21",
+        "nome_no_documento": "Gestão de riscos e emergências",
+        "eixo_documento": 2,
+        "paragrafo_docx": 96
+      },
+      "correspondencia": {
+        "situacao": "pendente de validação",
+        "categoria": "fator retirado na versão 2.0.0",
+        "candidatos": [
+          "E2-F32"
+        ],
+        "motivo": "O fator de nome idêntico, E2-F24 Gestão de riscos e emergências, foi retirado na versão 2.0.0. O fator remanescente, E2-F32 Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos), já tem diagnóstico do E2-22. Opções: complementar o diagnóstico do E2-F32 com este texto ou manter fora do painel."
+      }
+    },
+    {
       "texto": "A desigualdade de oportunidades em Campo Grande é estruturada territorialmente: moradores das periferias Sul e Leste têm acesso a escolas com piores indicadores do IDEB, menor cobertura de equipamentos culturais e esportivos, maior distância dos centros de formação técnica e profissional e menor acesso ao emprego formal de qualidade. O fator E3-04 articula a dimensão racial e de gênero à dimensão territorial: não ser branco, não ser homem e morar na periferia é uma combinação de desvantagens que se multiplicam ao longo das trajetórias de vida.",
       "fontes_citadas": [
         "IDEB"
@@ -2085,9 +2088,29 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "categoria": "sem correspondente nominal",
         "candidatos": [
           "E3-F04",
-          "E5-F07"
+          "E5-F21"
         ],
-        "motivo": "Não há fator de tecnologias de informação para empoderamento das mulheres no cadastro."
+        "motivo": "Não há fator de tecnologias de informação para empoderamento das mulheres no cadastro. Fatores relacionados: E3-F04 Igualdade de oportunidades para promover o empoderamento das mulheres (já com diagnóstico do E3-5) e E5-F21 Tecnologias de informação e comunicação (já com diagnóstico do E5-8)."
+      }
+    },
+    {
+      "texto": "A ausência de documentação civil, registro de nascimento e RG, é uma barreira de acesso a direitos que afeta principalmente populações indígenas urbanas, pessoas em situação de rua e filhos de mulheres migrantes em situação irregular. Em Campo Grande, o Cartório de Registro Civil atende em parceria com unidades de saúde e assistência social para registro de recém-nascidos, mas a cobertura para populações adultas indígenas sem documentação é insuficiente. Sem RG, não há acesso ao CadÚnico, ao SUS com prontuário nominado, ou à Previdência Social.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E3-13",
+        "nome_no_documento": "Acesso a direitos fundamentais, Registro de Nascimento e RG",
+        "eixo_documento": 3,
+        "paragrafo_docx": 135
+      },
+      "correspondencia": {
+        "situacao": "pendente de validação",
+        "categoria": "fator retirado na versão 2.0.0",
+        "candidatos": [
+          "E3-F08"
+        ],
+        "motivo": "O fator correspondente, E3-F15 Acesso a direitos fundamentais, foi retirado na versão 2.0.0, e sua definição passou para E3-F08 Direitos fundamentais, que já tem diagnóstico do E3-14. Opções: complementar o diagnóstico do E3-F08 com este texto ou manter fora do painel."
       }
     },
     {
@@ -2253,49 +2276,6 @@ window.TERRITORIOS["campo-grande-ms"] = {
       }
     },
     {
-      "texto": "O financiamento da gestão ambiental municipal em Campo Grande é insuficiente frente ao passivo ambiental acumulado. O Fundo Municipal de Meio Ambiente, previsto em lei, opera com dotação orçamentária abaixo das necessidades identificadas pela SEMADUR. Os recursos de compensação ambiental de empreendimentos licenciados são a fonte principal de financiamento de projetos de conservação, mas sem planejamento estratégico que garanta continuidade e escala dos projetos.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E4-24",
-        "nome_no_documento": "Recursos financeiros para gestão da biodiversidade",
-        "eixo_documento": 4,
-        "paragrafo_docx": 198
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "dois candidatos",
-        "candidatos": [
-          "E4-F01",
-          "E4-F23"
-        ],
-        "motivo": "Recursos financeiros para gestão da biodiversidade corresponde a dois fatores do cadastro: E4-F01 Acesso a recursos financeiros para gestão, conservação sustentável da biodiversidade (investimentos públicos e privados) e E4-F23 Recursos financeiros para conservação sustentável da biodiversidade (pendência P4 da Etapa 2)."
-      }
-    },
-    {
-      "texto": "O acesso à internet em Campo Grande tem cobertura expressiva na área urbana consolidada, mas com digitalização desigual entre estratos sociais. As famílias de menor renda nas periferias acessam a internet predominantemente pelo celular em planos de dados limitados, sem acesso a computadores ou conexões fixas de alta qualidade. Essa brecha digital limita o acesso a serviços governamentais digitalizados, à telemedicina e a plataformas de educação à distância, exacerbando desigualdades existentes. As aldeias indígenas urbanas apresentam conectividade especialmente precária.",
-      "fontes_citadas": [],
-      "referencias_normativas": [],
-      "periodos_citados": [],
-      "origem": {
-        "codigo_documento": "E5-8",
-        "nome_no_documento": "Acesso a tecnologias de informação e comunicação",
-        "eixo_documento": 5,
-        "paragrafo_docx": 220
-      },
-      "correspondencia": {
-        "situacao": "pendente de validação",
-        "categoria": "mais de um candidato",
-        "candidatos": [
-          "E5-F07",
-          "E5-F21",
-          "E5-F31"
-        ],
-        "motivo": "Acesso a tecnologias de informação e comunicação; o texto trata sobretudo de acesso à internet. Candidatos: E5-F07 Tecnologias de informação e comunicação, E5-F21 Acesso a tecnologias de informação e comunicação para a inovação e infraestrutura e E5-F31 Acesso a comunicação (internet e telefonia) (pendência P4 da Etapa 2)."
-      }
-    },
-    {
       "texto": "A inclusão digital de jovens e adultos em Campo Grande é operada por telecentros comunitários, laboratórios de informática em escolas municipais e por programas estaduais de qualificação digital. A digitalização dos serviços públicos, CADSUS, e-SUS, plataformas de agendamento de consultas, exige letramento digital dos usuários do SUS, especialmente nas populações mais velhas e de menor escolaridade das periferias.",
       "fontes_citadas": [],
       "referencias_normativas": [],
@@ -2308,33 +2288,51 @@ window.TERRITORIOS["campo-grande-ms"] = {
       },
       "correspondencia": {
         "situacao": "pendente de validação",
-        "categoria": "mais de um candidato",
+        "categoria": "fator já diagnosticado",
         "candidatos": [
-          "E5-F07",
           "E5-F21"
         ],
-        "motivo": "Tecnologias de informação para jovens e adultos; o texto trata de inclusão e letramento digital. Não há fator específico; candidatos do mesmo grupo de tecnologias de informação."
+        "motivo": "Tecnologias de informação para jovens e adultos; o texto trata de inclusão e letramento digital. Não há fator específico. O fator mais próximo, E5-F21 Tecnologias de informação e comunicação, já tem diagnóstico do E5-8. Opções: complementar o diagnóstico do E5-F21 com este texto ou manter fora do painel."
       }
     },
     {
-      "texto": "O controle social do SUS em Campo Grande é exercido pelo Conselho Municipal de Saúde (CMS), com representação de usuários, trabalhadores e gestores, e pelas Conferências Municipais de Saúde. A efetividade desse controle, entendida como capacidade real de influenciar decisões orçamentárias e programáticas, é o indicador qualitativo central do Eixo 6. A PICAPS, ao capacitar pesquisadores populares e produzir diagnósticos com base em evidências territoriais, amplia a capacidade técnica da participação social, tornando-a mais qualificada para disputar a agenda do planejamento em saúde.",
+      "texto": "A parceria entre SESAU Campo Grande e Fiocruz Brasília, operacionalizada pelo CoLaboratório CTIS e pela plataforma PICAPS, é o exemplo mais robusto de parceria sociotécnica no campo da saúde do município. O programa de residência multiprofissional em saúde da família, o maior do Centro-Oeste, foi o vetor que triplicou a cobertura de APS em seis anos. A sustentabilidade dessa parceria, que combina formação, pesquisa e inovação em um único arranjo institucional, é um ativo estratégico que precisa ser protegido e ampliado no próximo ciclo de planejamento.",
       "fontes_citadas": [],
       "referencias_normativas": [],
       "periodos_citados": [],
       "origem": {
-        "codigo_documento": "E6-1",
-        "nome_no_documento": "Tomada de decisão responsiva, inclusiva e participativa",
+        "codigo_documento": "E6-3",
+        "nome_no_documento": "Apoio a instituições públicas, privadas e sociedade civil, parcerias sociotécnicas",
         "eixo_documento": 6,
-        "paragrafo_docx": 251
+        "paragrafo_docx": 255
       },
       "correspondencia": {
         "situacao": "pendente de validação",
-        "categoria": "dois candidatos",
+        "categoria": "fator retirado na versão 2.0.0",
         "candidatos": [
-          "E6-F07",
-          "E6-F10"
+          "E6-F04"
         ],
-        "motivo": "Tomada de decisão responsiva, inclusiva e participativa corresponde a E6-F10 Tomada de decisão responsiva, inclusiva e participativa (participação social) e a E6-F07 Participação social na tomada de decisão responsiva, inclusiva e participativa (pendência P4 da Etapa 2)."
+        "motivo": "O fator correspondente, E6-F13 Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas), foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-4 e do E6-5. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
+      }
+    },
+    {
+      "texto": "A intersetorialidade entre saúde, educação, assistência social, meio ambiente e habitação é condição metodológica para enfrentar os nós críticos identificados no diagnóstico. Em Campo Grande, as parcerias multissetoriais existem pontualmente, nos programas de saúde escolar, nos NASF, nos CREAS, mas sem uma arquitetura de governança intersetorial que garanta continuidade, financiamento compartilhado e avaliação integrada. A implantação de Grupos de Trabalho Intersetorial por território vulnerável, articulando CRAS, ESF, escola e agentes comunitários, é uma inovação organizacional de baixo custo e alto impacto.",
+      "fontes_citadas": [],
+      "referencias_normativas": [],
+      "periodos_citados": [],
+      "origem": {
+        "codigo_documento": "E6-4",
+        "nome_no_documento": "Parcerias multissetoriais",
+        "eixo_documento": 6,
+        "paragrafo_docx": 257
+      },
+      "correspondencia": {
+        "situacao": "pendente de validação",
+        "categoria": "fator retirado na versão 2.0.0",
+        "candidatos": [
+          "E6-F04"
+        ],
+        "motivo": "O fator de nome idêntico, E6-F12 Parcerias multissetoriais, foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-3 e do E6-5. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
       }
     },
     {
@@ -2350,12 +2348,11 @@ window.TERRITORIOS["campo-grande-ms"] = {
       },
       "correspondencia": {
         "situacao": "pendente de validação",
-        "categoria": "fator já diagnosticado",
+        "categoria": "fator retirado na versão 2.0.0",
         "candidatos": [
-          "E6-F12",
           "E6-F04"
         ],
-        "motivo": "Parcerias multissetoriais para os ODS. E6-F12 Parcerias multissetoriais já tem diagnóstico do E6-4, de nome idêntico. Alternativa: E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil (sem diagnóstico)."
+        "motivo": "Parcerias multissetoriais para os ODS. O fator E6-F12 Parcerias multissetoriais foi retirado na versão 2.0.0. O fator de parcerias remanescente é E6-F04 Parcerias entre instituições públicas, privadas e com a sociedade civil, que também é candidato do E6-3 e do E6-4. Opções: associar um dos três textos ao E6-F04, combinar textos no E6-F04 ou manter fora do painel."
       }
     },
     {
@@ -2453,10 +2450,9 @@ window.TERRITORIOS["campo-grande-ms"] = {
         "situacao": "pendente de validação",
         "categoria": "fator de outro eixo já diagnosticado",
         "candidatos": [
-          "E2-F24",
           "E2-F32"
         ],
-        "motivo": "Leitura de governança de um fator do Eixo 2. E2-F24 já tem diagnóstico do E2-21 e E2-F32 do E2-22. Opções: complementar um deles com este texto ou mantê-lo fora do painel."
+        "motivo": "Leitura de governança de um fator do Eixo 2. E2-F32 Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos) já tem diagnóstico do E2-22. Opções: complementar o diagnóstico do E2-F32 com este texto ou mantê-lo fora do painel."
       }
     },
     {
@@ -2472,12 +2468,11 @@ window.TERRITORIOS["campo-grande-ms"] = {
       },
       "correspondencia": {
         "situacao": "pendente de validação",
-        "categoria": "fator de outro eixo e dois candidatos",
+        "categoria": "fator de outro eixo já diagnosticado",
         "candidatos": [
-          "E4-F01",
-          "E4-F23"
+          "E4-F01"
         ],
-        "motivo": "Leitura de governança de fator do Eixo 4 com dois candidatos (E4-F01 e E4-F23), ligada à pendência do E4-24."
+        "motivo": "Leitura de governança de um fator do Eixo 4. E4-F01 já tem diagnóstico do E4-24. Opções: complementar o diagnóstico do E4-F01 com este texto ou mantê-lo fora do painel."
       }
     }
   ]

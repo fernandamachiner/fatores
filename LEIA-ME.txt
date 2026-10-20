@@ -51,7 +51,7 @@ COMO USAR EM QUALQUER COMPUTADOR
    macOS/Linux: dê duplo clique em "ABRIR.command" (no Mac, na primeira vez
    pode ser preciso permitir em Preferências > Segurança) ou abra o
    "index.html" direto no navegador.
-3. Funciona 100% offline: todos os textos e os 157 ícones usados já estão
+3. Funciona 100% offline: todos os textos e os 148 ícones usados já estão
    dentro da pasta "assets/icons".
 
 IMPORTANTE: mantenha a estrutura de pastas
@@ -65,14 +65,12 @@ CONTEÚDO
 - index.html   → a página principal (abra este arquivo)
 - style.css    → aparência/visual
 - app.js       → toda a lógica de clique/navegação interna
-- metodologia/metodologia.js → cadastro central dos 6 eixos e 159 fatores,
-                 com identificador estável de cada fator, ícone, ODS e
-                 descrição em linguagem simples (vem da planilha
-                 "Fatores_organização_Fernanda.xlsx"; substitui o antigo
-                 data.js). É compartilhado por todos os territórios.
-- metodologia/planilha/ → planilha da metodologia gerada a partir do
-                 cadastro (versão atualizada, com ID e histórico de alterações)
-                 e a planilha original recebida, arquivada sem alterações
+- metodologia/  → a metodologia, compartilhada por todos os territórios:
+                 planilha/Fatores_organizacao.xlsx (fonte oficial dos 6 eixos
+                 e 150 fatores, com ID, ícone, ODS e definição), registro.json
+                 (decisões vigentes e IDs de fatores retirados),
+                 metodologia.js (cadastro usado pelo painel, gerado a partir
+                 da planilha) e ferramentas/ (gerador do cadastro)
 - territorios/ → diagnósticos de cada território, separados da metodologia:
                  campo-grande-ms.js (dados gerados), fontes/ (documento
                  original), correspondencias/ (tabela de correspondência,
@@ -80,24 +78,32 @@ CONTEÚDO
                  (extração do .docx e geração do arquivo do território)
 - testes/      → verificações automáticas da metodologia e da navegação
 - relatorios/  → relatórios das etapas de adaptação do painel
-- assets/icons → os 157 ícones de fatores usados (recortados do pacote
+- assets/icons → os 148 ícones de fatores usados (recortados do pacote
                  oficial "ICONOGRAFIA_2026", variante em contorno)
 - ABRIR.bat / ABRIR.command → atalhos para abrir sem precisar procurar o
   index.html
 
 ATUALIZANDO OS TEXTOS/FATORES DEPOIS
 --------------------------------------
-Todo o conteúdo metodológico (eixos, fatores, definições e ODS) está em
-"metodologia/metodologia.js". Para atualizar uma descrição ou um nome de
-fator, basta editar esse arquivo com um editor de texto comum (Bloco de
-Notas, Notepad++, VS Code etc.) e salvar. Regras:
-- nunca altere o campo "id" de um fator: é ele que liga o fator aos
+A fonte oficial da metodologia é a planilha
+"metodologia/planilha/Fatores_organizacao.xlsx" (aba Consolidado). Para
+alterar um nome, uma definição, um ícone ou o ODS de um fator, edite a
+planilha e gere o cadastro de novo:
+    python3 metodologia/ferramentas/gerar_metodologia.py
+Depois, confira:
+    node testes/validar-metodologia.js
+    python3 testes/conferir_metodologia_planilha.py
+Regras:
+- nunca altere a coluna ID de um fator existente: é ela que liga o fator aos
   diagnósticos dos territórios;
 - um fator novo recebe o próximo número livre do seu eixo (por exemplo,
   depois de E1-F29 vem E1-F30), mesmo que fique em outra posição na lista;
+- ao retirar um fator, registre o ID em "desativados" no arquivo
+  metodologia/registro.json; um ID retirado nunca é reaproveitado;
+- a ordem das linhas na planilha é a ordem de exibição no painel;
 - títulos e cores dos eixos também estão desenhados na roda dentro do
   "index.html"; se mudar um, mude o outro.
-Depois de editar, rode "node testes/validar-metodologia.js" para conferir.
+Não edite metodologia/metodologia.js à mão: ele é refeito pelo gerador.
 
 COMPATIBILIDADE
 ----------------

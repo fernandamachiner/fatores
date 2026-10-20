@@ -1,5 +1,7 @@
 # Etapa 2. Estrutura metodológica dos fatores territoriais
 
+> Atualização de 19/10/2026: a metodologia passou para a versão 2.0.0, com 150 fatores, definida pela coordenação como versão final. As versões anteriores (data.js original, planilhas e cadastro 1.0.x) foram eliminadas, e a planilha metodologia/planilha/Fatores_organizacao.xlsx passou a ser a fonte oficial, com o cadastro gerado a partir dela. Este relatório descreve a construção da versão 1.0 e permanece como registro do processo. A situação vigente está em relatorios/revisao-metodologia-2.0.0.md.
+
 ## Entradas utilizadas
 
 A etapa partiu do relatório da Etapa 1 (relatorios/etapa1-auditoria-tecnica.md), do código-fonte de eixo-fatores-diagnostico-main.zip, versão confirmada como idêntica à publicada, e do data.js como referência metodológica. A planilha Fatores_organização_Fernanda.xlsx, citada no LEIA-ME original como fonte do data.js, não estava disponível (pendência P7). O estado original foi registrado em um repositório git local antes de qualquer alteração, o que garante a rastreabilidade de cada mudança.

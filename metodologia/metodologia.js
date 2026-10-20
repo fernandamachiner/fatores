@@ -2,39 +2,29 @@
  * CADASTRO METODOLÓGICO CENTRAL
  * Matriz de Fatores Territoriais - 6 Eixos Estratégicos
  *
- * Este arquivo é a única fonte dos eixos e fatores do painel e é
- * compartilhado por todos os territórios. Ele não contém diagnósticos
- * territoriais: esses ficam em arquivos próprios de cada território e se
- * ligam aos fatores pelo campo "id".
+ * Arquivo gerado por metodologia/ferramentas/gerar_metodologia.py a partir da
+ * planilha oficial (metodologia/planilha/Fatores_organizacao.xlsx) e de
+ * metodologia/registro.json. Não edite à mão: altere a planilha ou o registro
+ * e gere novamente.
  *
- * Campos do eixo: id (E1 a E6), id_original (rótulo do data.js original),
- * ordem, titulo, foco, cor.
- * Campos do fator: id (estável, ver regra abaixo), ordem (posição no eixo),
- * fator (nome oficial), icone (código do arquivo em assets/icons),
- * ods, nome_ods, definicao (descrição em linguagem simples).
+ * Compartilhado por todos os territórios. Não contém diagnósticos: estes
+ * ficam nos arquivos de cada território e se ligam aos fatores pelo "id".
+ * Um id nunca muda e nunca é reaproveitado; fatores retirados ficam em
+ * "desativados". O código do ícone não identifica o fator.
  *
- * Regra dos identificadores: o id de um fator nunca muda e nunca é
- * reaproveitado. Um fator novo recebe o próximo número livre do seu eixo.
- * Se um fator mudar de nome, o id permanece. O código do ícone NÃO serve
- * como identificador, porque há ícones compartilhados por dois fatores.
- *
- * Toda alteração de nome, código, ODS ou descrição deve ser registrada em
- * "alteracoes" (valor anterior, valor novo, data e autorização). Decisões
- * metodológicas que não alteram valores ficam em "decisoes".
- *
- * Atenção: títulos e cores dos eixos também estão desenhados na roda SVG
- * do index.html. Alterações aqui devem ser replicadas lá (o teste
- * testes/validar-metodologia.js acusa divergências).
+ * Títulos e cores dos eixos também estão desenhados na roda SVG do
+ * index.html (o teste testes/validar-metodologia.js acusa divergências).
  */
 window.METODOLOGIA = {
   "nome": "Matriz de Fatores Territoriais - 6 Eixos Estratégicos",
-  "versao": "1.0.2",
-  "origem": "data.js do painel publicado (eixo-fatores-diagnostico-main), derivado da planilha Fatores_organização_Fernanda.xlsx",
-  "formato_id_fator": "E<ordem do eixo>-F<posição do fator no eixo, dois dígitos>",
+  "versao": "2.0.0",
+  "data_versao": "2026-10-19",
+  "fonte": "metodologia/planilha/Fatores_organizacao.xlsx",
+  "formato_id_fator": "E<ordem do eixo>-F<número do fator, dois dígitos>; o número não muda e não é reaproveitado",
   "decisoes": [
     {
       "data": "2026-10-19",
-      "decisao": "A matriz de 159 fatores do painel é a estrutura metodológica oficial. A matriz de 126 fatores do documento de diagnóstico de Campo Grande/MS não substitui esta estrutura."
+      "decisao": "A planilha metodologia/planilha/Fatores_organizacao.xlsx é a fonte oficial da metodologia. O cadastro metodologia/metodologia.js é gerado a partir dela e não deve ser editado à mão. A versão 2.0.0, com 150 fatores, é a versão final definida pela coordenação após a revisão das semelhanças entre fatores; as versões anteriores foram eliminadas."
     },
     {
       "data": "2026-10-19",
@@ -50,329 +40,56 @@ window.METODOLOGIA = {
     },
     {
       "data": "2026-10-19",
-      "decisao": "A planilha Fatores_organização_Fernanda.xlsx foi conferida contra o data.js publicado: mesmos 159 fatores, com nomes, ícones, ODS e descrições idênticos, salvo espaços sobrando e ordem das linhas. A partir da versão 1.0.2, este cadastro é a fonte oficial da metodologia. A planilha passa a ser uma cópia derivada, regenerada a partir do cadastro (metodologia/planilha/)."
+      "decisao": "A classificação ODS dos fatores cujo código de ícone tem numeração diferente do ODS permanece como está, sem definição por ora."
     }
   ],
-  "alteracoes": [
+  "desativados": [
     {
-      "versao": "1.0.1",
-      "data": "2026-10-19",
-      "id": "E2-F37",
-      "campo": "definicao",
-      "anterior": "O bom estado das ruas, calçadas e estradas para que as pessoas e carros possam circular com facilidade.",
-      "novo": "Sinais sonoros ou visuais para avisar que há um perigo iminente por perto e que você precisa se proteger rápido.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "A descrição anterior tratava de vias de circulação e não correspondia ao fator."
+      "id": "E2-F24",
+      "fator": "Gestão de riscos e emergências",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F17",
-      "campo": "definicao",
-      "anterior": "Valorizarização política e comunitária das manifestações culturais como música, arte e tradição.",
-      "novo": "Valorização política e comunitária das manifestações culturais como música, arte e tradição.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Erro de digitação."
+      "id": "E3-F15",
+      "fator": "Acesso a direitos fundamentais",
+      "versao": "2.0.0",
+      "observacao": "A definição deste fator passou a ser a definição de E3-F08 Direitos fundamentais."
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F27",
-      "campo": "definicao",
-      "anterior": "Acesso à livros e com eles conseguir acesso à leitura, cultura e conhecimento. Contribui para a educação e inclusão cultural.",
-      "novo": "Acesso a livros e, por meio deles, à leitura, à cultura e ao conhecimento. Contribui para a educação e inclusão cultural.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Crase indevida antes de palavra masculina e ajuste de redação."
+      "id": "E4-F23",
+      "fator": "Recursos financeiros para conservação sustentável da biodiversidade",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E2-F06",
-      "campo": "definicao",
-      "anterior": "Doenças causadas pela poluição, como problemas respiratórios, diarréias, vermes e outras intoxicações.",
-      "novo": "Doenças causadas pela poluição, como problemas respiratórios, diarreias, vermes e outras intoxicações.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Grafia conforme o Acordo Ortográfico vigente."
+      "id": "E5-F07",
+      "fator": "Tecnologias de informação e comunicação",
+      "versao": "2.0.0",
+      "observacao": "O nome, o ícone e a definição deste fator passaram para E5-F21."
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E3-F06",
-      "campo": "definicao",
-      "anterior": "Quando o governo cria e faz cumprir políticas que fazem as mulheres tenham as mesmas chances que os homens tem na vida, no trabalho, na comunidade e na política",
-      "novo": "Quando o governo cria e faz cumprir políticas que fazem com que as mulheres tenham as mesmas chances que os homens têm na vida, no trabalho, na comunidade e na política.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Concordância, acento de têm e ponto final."
+      "id": "E5-F31",
+      "fator": "Acesso a comunicação (internet e telefonia)",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E4-F16",
-      "campo": "definicao",
-      "anterior": "É a remoção da vegetação nativa e da perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos.",
-      "novo": "É a remoção da vegetação nativa e a perda de qualidade dos solos. Compromete a produção agrícola, a biodiversidade e os recursos hídricos.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Paralelismo da enumeração."
+      "id": "E6-F10",
+      "fator": "Tomada de decisão responsiva, inclusiva e participativa (participação social)",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E4-F21",
-      "campo": "definicao",
-      "anterior": "Animais ou plantas introduzidas em novos ambientes que se proliferam descontroladamente.",
-      "novo": "Animais ou plantas introduzidos em novos ambientes que se proliferam descontroladamente.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Concordância com sujeito de gêneros diferentes."
+      "id": "E6-F12",
+      "fator": "Parcerias multissetoriais",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F04",
-      "campo": "definicao",
-      "anterior": "É o caminho de estudo que vai desde o aprendizado de ler, escrever, fazer contas e compreender o mundo.",
-      "novo": "É o caminho de estudo que começa com o aprendizado de ler, escrever e fazer contas e ajuda a compreender o mundo.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Construção desde sem complemento."
+      "id": "E6-F13",
+      "fator": "Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas)",
+      "versao": "2.0.0"
     },
     {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F14",
-      "campo": "definicao",
-      "anterior": "É quando obrigam as crianças para trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
-      "novo": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Regência do verbo obrigar."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F14",
-      "campo": "definicao",
-      "anterior": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza.",
-      "novo": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo-as na pobreza.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Pronome oblíquo."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F28",
-      "campo": "definicao",
-      "anterior": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13°, FGTS e INSS",
-      "novo": "Trabalho sem vínculo empregatício, sem carteira de trabalho e sem direitos como férias, 13º, FGTS e INSS.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Indicador ordinal no lugar do símbolo de grau e ponto final."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F02",
-      "campo": "definicao",
-      "anterior": "Ter comida que não faz mal à saúde e em quantidade que mate a fome  todos os dias.",
-      "novo": "Ter comida que não faz mal à saúde e em quantidade que mate a fome todos os dias.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Espaço duplo."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E2-F02",
-      "campo": "definicao",
-      "anterior": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes que o corpo precisa para crescer e se manter saudável.",
-      "novo": "É quando uma pessoa não consegue se alimentar bem, não consome os nutrientes de que o corpo precisa para crescer e se manter saudável.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Regência do verbo precisar."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E4-F01",
-      "campo": "definicao",
-      "anterior": "Dinheiro de governos e empresas para ajudar a cuidar e proteger a natureza e a variedade de vida que existe nela.",
-      "novo": "Dinheiro de governos e empresas para ajudar a cuidar da natureza e da variedade de vida que existe nela e protegê-las.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Regência do verbo cuidar."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F11",
-      "campo": "definicao",
-      "anterior": "São formas de trabalho em grupo na produção de alimentos, onde as pessoas se ajudam, produzem juntas e dividem os lucros de forma justa.",
-      "novo": "Formas de trabalho e produção em que as pessoas se unem para gerar renda de maneira coletiva, justa e igualitária.",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "A descrição anterior restringia a economia solidária à produção de alimentos."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E2-F38",
-      "campo": "fator",
-      "anterior": "Queimada/ Incêndio",
-      "novo": "Queimada/Incêndio",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Espaço após a barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E6-F08",
-      "campo": "fator",
-      "anterior": "Corrupção e o suborno (em todos os níveis)",
-      "novo": "Corrupção e suborno (em todos os níveis)",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Artigo usado só no segundo termo."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F04",
-      "campo": "fator",
-      "anterior": "Produção de alimentos - hortas, hortos, quintais e outros que produzem alimentos",
-      "novo": "Produção de alimentos – hortas, hortos, quintais e outros que produzem alimentos",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização do separador (travessão curto)."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E6-F11",
-      "campo": "fator",
-      "anterior": "Comunicação comunitária - grupos de mensagens",
-      "novo": "Comunicação comunitária – grupos de mensagens",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização do separador (travessão curto)."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F03",
-      "campo": "fator",
-      "anterior": "Agricultura Familiar",
-      "novo": "Agricultura familiar",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F05",
-      "campo": "fator",
-      "anterior": "Produção Orgânica",
-      "novo": "Produção orgânica",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E1-F11",
-      "campo": "fator",
-      "anterior": "Iniciativas de Economia Solidária",
-      "novo": "Iniciativas de economia solidária",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E2-F08",
-      "campo": "fator",
-      "anterior": "Doenças Transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
-      "novo": "Doenças transmissíveis (AIDS, tuberculose, hanseníase, negligenciadas)",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E2-F19",
-      "campo": "fator",
-      "anterior": "Saúde do Idoso",
-      "novo": "Saúde do idoso",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E3-F17",
-      "campo": "fator",
-      "anterior": "Racismo Ambiental",
-      "novo": "Racismo ambiental",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E4-F05",
-      "campo": "fator",
-      "anterior": "Tecnologias Sociais",
-      "novo": "Tecnologias sociais",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F05",
-      "campo": "fator",
-      "anterior": "Educação Técnica e profissional",
-      "novo": "Educação técnica e profissional",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F06",
-      "campo": "fator",
-      "anterior": "Educação Superior",
-      "novo": "Educação superior",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F10",
-      "campo": "fator",
-      "anterior": "Formação em Tecnologias Sociais",
-      "novo": "Formação em tecnologias sociais",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F13",
-      "campo": "fator",
-      "anterior": "Acesso aos serviços de Energia",
-      "novo": "Acesso aos serviços de energia",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F14",
-      "campo": "fator",
-      "anterior": "Serviços de Energia modernos e sustentáveis",
-      "novo": "Serviços de energia modernos e sustentáveis",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
-    },
-    {
-      "versao": "1.0.2",
-      "data": "2026-10-19",
-      "id": "E5-F30",
-      "campo": "fator",
-      "anterior": "Acesso a Iluminação pública",
-      "novo": "Acesso a iluminação pública",
-      "autorizacao": "Fernanda Machiner, coordenação metodológica",
-      "motivo": "Padronização: maiúscula só na primeira palavra, em siglas, nomes institucionais e pares separados por barra."
+      "id": "E6-F14",
+      "fator": "Estratégias de mobilização (redes e grupos organizados)",
+      "versao": "2.0.0"
     }
   ],
   "eixos": [
@@ -508,7 +225,7 @@ window.METODOLOGIA = {
           "icone": "08.11",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo-as na pobreza."
+          "definicao": "É quando obrigam as crianças a trabalhar, o que é proibido, e tira delas o tempo de brincar e estudar, mantendo elas na pobreza."
         },
         {
           "id": "E1-F15",
@@ -863,17 +580,8 @@ window.METODOLOGIA = {
           "definicao": "Controlar como a água é usada em casas, indústrias, plantações e evitar a falta. Garante água para todos, mesmo em tempos de seca."
         },
         {
-          "id": "E2-F24",
-          "ordem": 24,
-          "fator": "Gestão de riscos e emergências",
-          "icone": "11.05",
-          "ods": 11,
-          "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
-          "definicao": "Ações organizadas pelo poder público e pela comunidade para lidar com desastres naturais e eventos extremos."
-        },
-        {
           "id": "E2-F25",
-          "ordem": 25,
+          "ordem": 24,
           "fator": "Qualidade do ar",
           "icone": "11.06",
           "ods": 11,
@@ -882,7 +590,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F26",
-          "ordem": 26,
+          "ordem": 25,
           "fator": "Rota de fuga",
           "icone": "11.08",
           "ods": 13,
@@ -891,7 +599,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F27",
-          "ordem": 27,
+          "ordem": 26,
           "fator": "Segurança",
           "icone": "11.10",
           "ods": 11,
@@ -900,7 +608,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F28",
-          "ordem": 28,
+          "ordem": 27,
           "fator": "Violência",
           "icone": "11.13",
           "ods": 11,
@@ -909,7 +617,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F29",
-          "ordem": 29,
+          "ordem": 28,
           "fator": "Comunicação e gestão pós-desastre",
           "icone": "11.14",
           "ods": 11,
@@ -918,7 +626,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F30",
-          "ordem": 30,
+          "ordem": 29,
           "fator": "Seca/Estiagem",
           "icone": "12.04",
           "ods": 13,
@@ -927,7 +635,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F31",
-          "ordem": 31,
+          "ordem": 30,
           "fator": "Acesso a serviços essenciais de energia, abastecimento de água, coleta de lixo etc.",
           "icone": "12.08",
           "ods": 6,
@@ -936,7 +644,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F32",
-          "ordem": 32,
+          "ordem": 31,
           "fator": "Gestão de riscos e emergências (defesa civil, bombeiros, brigadas e outros coletivos)",
           "icone": "13.01",
           "ods": 13,
@@ -945,7 +653,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F33",
-          "ordem": 33,
+          "ordem": 32,
           "fator": "Pontos de riscos e desastres no território",
           "icone": "13.02",
           "ods": 13,
@@ -954,7 +662,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F34",
-          "ordem": 34,
+          "ordem": 33,
           "fator": "Enchentes e alagamentos",
           "icone": "14.01",
           "ods": 13,
@@ -963,7 +671,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F35",
-          "ordem": 35,
+          "ordem": 34,
           "fator": "Infestações e pragas (mosquito, carrapato, escorpião, animais peçonhentos etc.)",
           "icone": "14.06",
           "ods": 3,
@@ -972,7 +680,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F36",
-          "ordem": 36,
+          "ordem": 35,
           "fator": "Pontos de deslizamento de terra",
           "icone": "15.04",
           "ods": 13,
@@ -981,7 +689,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F37",
-          "ordem": 37,
+          "ordem": 36,
           "fator": "Sirenes e alertas de emergências",
           "icone": "16.11",
           "ods": 13,
@@ -990,7 +698,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F38",
-          "ordem": 38,
+          "ordem": 37,
           "fator": "Queimada/Incêndio",
           "icone": "16.13",
           "ods": 13,
@@ -999,7 +707,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E2-F39",
-          "ordem": 39,
+          "ordem": 38,
           "fator": "Ponto de encontro em emergências",
           "icone": "18.02",
           "ods": 13,
@@ -1086,7 +794,7 @@ window.METODOLOGIA = {
           "icone": "08.15",
           "ods": 8,
           "nome_ods": "ODS 08 – TRABALHO DECENTE E CRESCIMENTO ECONÔMICO",
-          "definicao": "São as garantias na lei que servem para acabar de vez com a falta de condições básicas e proteger o cidadão."
+          "definicao": "Garantir que todos tenham o básico previsto em lei, como saúde, educação, moradia e documentos."
         },
         {
           "id": "E3-F09",
@@ -1143,17 +851,8 @@ window.METODOLOGIA = {
           "definicao": "Oferecer abrigo, comida e cuidado para quem vive na rua ou está em situação de fragilidade."
         },
         {
-          "id": "E3-F15",
-          "ordem": 15,
-          "fator": "Acesso a direitos fundamentais",
-          "icone": "16.14",
-          "ods": 16,
-          "nome_ods": "ODS 16 – PAZ, JUSTIÇA E INSTITUIÇÕES EFICAZES",
-          "definicao": "Garantir que todos tenham o básico previsto em lei, como saúde, educação, moradia e documentos."
-        },
-        {
           "id": "E3-F16",
-          "ordem": 16,
+          "ordem": 15,
           "fator": "Discriminação racial",
           "icone": "18.01",
           "ods": 18,
@@ -1162,7 +861,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E3-F17",
-          "ordem": 17,
+          "ordem": 16,
           "fator": "Racismo ambiental",
           "icone": "18.06",
           "ods": 18,
@@ -1171,7 +870,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E3-F18",
-          "ordem": 18,
+          "ordem": 17,
           "fator": "Igualdade racial",
           "icone": "18.07",
           "ods": 18,
@@ -1180,7 +879,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E3-F19",
-          "ordem": 19,
+          "ordem": 18,
           "fator": "Igualdade de direitos à propriedade e controle da terra (comunidades tradicionais e quilombolas)",
           "icone": "18.11",
           "ods": 18,
@@ -1396,17 +1095,8 @@ window.METODOLOGIA = {
           "definicao": "Integração da conservação da natureza com o desenvolvimento econômico e social. Ajuda comunidades a gerarem renda de forma sustentável, promovendo bem-estar."
         },
         {
-          "id": "E4-F23",
-          "ordem": 23,
-          "fator": "Recursos financeiros para conservação sustentável da biodiversidade",
-          "icone": "15.13",
-          "ods": 15,
-          "nome_ods": "ODS 15 – VIDA TERRESTRE",
-          "definicao": "É o investimento público e privado em ações de preservação ambiental."
-        },
-        {
           "id": "E4-F24",
-          "ordem": 24,
+          "ordem": 23,
           "fator": "Transferência de tecnologias ambientalmente corretas (acesso)",
           "icone": "17.03",
           "ods": 17,
@@ -1415,7 +1105,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E4-F25",
-          "ordem": 25,
+          "ordem": 24,
           "fator": "Reflorestamento",
           "icone": "18.12",
           "ods": 15,
@@ -1487,17 +1177,8 @@ window.METODOLOGIA = {
           "definicao": "É a faculdade ou universidade, onde a pessoa se especializa em uma área do conhecimento."
         },
         {
-          "id": "E5-F07",
-          "ordem": 7,
-          "fator": "Tecnologias de informação e comunicação",
-          "icone": "04.06",
-          "ods": 4,
-          "nome_ods": "ODS 04 – EDUCAÇÃO DE QUALIDADE",
-          "definicao": "São as ferramentas que usamos para nos conectar, como computadores, internet e celulares."
-        },
-        {
           "id": "E5-F08",
-          "ordem": 8,
+          "ordem": 7,
           "fator": "Educação pública",
           "icone": "04.07",
           "ods": 4,
@@ -1506,7 +1187,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F09",
-          "ordem": 9,
+          "ordem": 8,
           "fator": "Alfabetização – EJA",
           "icone": "04.08",
           "ods": 4,
@@ -1515,7 +1196,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F10",
-          "ordem": 10,
+          "ordem": 9,
           "fator": "Formação em tecnologias sociais",
           "icone": "04.09",
           "ods": 4,
@@ -1524,7 +1205,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F11",
-          "ordem": 11,
+          "ordem": 10,
           "fator": "Bolsas de estudo",
           "icone": "04.10",
           "ods": 4,
@@ -1533,7 +1214,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F12",
-          "ordem": 12,
+          "ordem": 11,
           "fator": "Professores qualificados",
           "icone": "04.11",
           "ods": 4,
@@ -1542,7 +1223,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F13",
-          "ordem": 13,
+          "ordem": 12,
           "fator": "Acesso aos serviços de energia",
           "icone": "07.01",
           "ods": 7,
@@ -1551,7 +1232,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F14",
-          "ordem": 14,
+          "ordem": 13,
           "fator": "Serviços de energia modernos e sustentáveis",
           "icone": "07.03",
           "ods": 7,
@@ -1560,7 +1241,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F15",
-          "ordem": 15,
+          "ordem": 14,
           "fator": "Empreendimento com elevado risco de desastres",
           "icone": "08.07",
           "ods": 8,
@@ -1569,7 +1250,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F16",
-          "ordem": 16,
+          "ordem": 15,
           "fator": "Educação para trabalho",
           "icone": "08.10",
           "ods": 8,
@@ -1578,7 +1259,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F17",
-          "ordem": 17,
+          "ordem": 16,
           "fator": "Promoção de cultura",
           "icone": "08.19",
           "ods": 8,
@@ -1587,7 +1268,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F18",
-          "ordem": 18,
+          "ordem": 17,
           "fator": "Acesso à cultura",
           "icone": "08.20",
           "ods": 8,
@@ -1596,7 +1277,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F19",
-          "ordem": 19,
+          "ordem": 18,
           "fator": "Sistema viário – vias municipais, estaduais e federais",
           "icone": "09.01",
           "ods": 9,
@@ -1605,7 +1286,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F20",
-          "ordem": 20,
+          "ordem": 19,
           "fator": "Infraestrutura sustentável e resiliente",
           "icone": "09.08",
           "ods": 9,
@@ -1614,16 +1295,16 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F21",
-          "ordem": 21,
-          "fator": "Acesso a tecnologias de informação e comunicação para a inovação e infraestrutura",
-          "icone": "09.10",
+          "ordem": 20,
+          "fator": "Tecnologias de informação e comunicação",
+          "icone": "04.06",
           "ods": 9,
           "nome_ods": "ODS 09 – INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA",
-          "definicao": "Disponibilidade de internet e ferramentas digitais para todos. Facilita a inclusão digital e o desenvolvimento de soluções inovadoras."
+          "definicao": "São as ferramentas que usamos para nos conectar, como computadores, internet e celulares."
         },
         {
           "id": "E5-F22",
-          "ordem": 22,
+          "ordem": 21,
           "fator": "Habitação",
           "icone": "11.01",
           "ods": 11,
@@ -1632,7 +1313,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F23",
-          "ordem": 23,
+          "ordem": 22,
           "fator": "Transportes seguros",
           "icone": "11.02",
           "ods": 11,
@@ -1641,7 +1322,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F24",
-          "ordem": 24,
+          "ordem": 23,
           "fator": "Urbanização e infraestrutura",
           "icone": "11.03",
           "ods": 11,
@@ -1650,7 +1331,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F25",
-          "ordem": 25,
+          "ordem": 24,
           "fator": "Equipamentos públicos de lazer e cultura seguros",
           "icone": "11.04",
           "ods": 11,
@@ -1659,7 +1340,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F26",
-          "ordem": 26,
+          "ordem": 25,
           "fator": "Esportes",
           "icone": "11.09",
           "ods": 11,
@@ -1668,7 +1349,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F27",
-          "ordem": 27,
+          "ordem": 26,
           "fator": "Biblioteca",
           "icone": "11.11",
           "ods": 11,
@@ -1677,7 +1358,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F28",
-          "ordem": 28,
+          "ordem": 27,
           "fator": "Lazer",
           "icone": "11.12",
           "ods": 11,
@@ -1686,7 +1367,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F29",
-          "ordem": 29,
+          "ordem": 28,
           "fator": "Valorização dos saberes e práticas locais",
           "icone": "12.03",
           "ods": 12,
@@ -1695,21 +1376,12 @@ window.METODOLOGIA = {
         },
         {
           "id": "E5-F30",
-          "ordem": 30,
+          "ordem": 29,
           "fator": "Acesso a iluminação pública",
           "icone": "12.13",
           "ods": 11,
           "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
           "definicao": "Ter postes de luz funcionando nas ruas, deixando os caminhos mais seguros à noite."
-        },
-        {
-          "id": "E5-F31",
-          "ordem": 31,
-          "fator": "Acesso a comunicação (internet e telefonia)",
-          "icone": "17.01",
-          "ods": 11,
-          "nome_ods": "ODS 11 – CIDADES E COMUNIDADES SUSTENTÁVEIS",
-          "definicao": "Poder usar telefone e internet para falar com as pessoas, estudar, trabalhar e pedir ajuda."
         }
       ]
     },
@@ -1803,17 +1475,8 @@ window.METODOLOGIA = {
           "definicao": "Órgãos do governo e empresas que mostram com clareza o que fazem e como usam o dinheiro."
         },
         {
-          "id": "E6-F10",
-          "ordem": 10,
-          "fator": "Tomada de decisão responsiva, inclusiva e participativa (participação social)",
-          "icone": "16.08",
-          "ods": 16,
-          "nome_ods": "ODS 16 – PAZ, JUSTIÇA E INSTITUIÇÕES EFICAZES",
-          "definicao": "Decisões do governo tomadas ouvindo a população e incluindo todos os grupos, sem deixar ninguém de fora."
-        },
-        {
           "id": "E6-F11",
-          "ordem": 11,
+          "ordem": 10,
           "fator": "Comunicação comunitária – grupos de mensagens",
           "icone": "16.10",
           "ods": 11,
@@ -1821,35 +1484,8 @@ window.METODOLOGIA = {
           "definicao": "Grupos de celular, como os de WhatsApp, usados pelos moradores para avisar, informar e se ajudar."
         },
         {
-          "id": "E6-F12",
-          "ordem": 12,
-          "fator": "Parcerias multissetoriais",
-          "icone": "17.06",
-          "ods": 17,
-          "nome_ods": "ODS 17 – PARCERIA E MEIOS DE IMPLEMENTAÇÃO",
-          "definicao": "Colaboração entre governo, sociedade civil e setor privado. Potencializa recursos e soluções inovadoras."
-        },
-        {
-          "id": "E6-F13",
-          "ordem": 13,
-          "fator": "Apoio a instituições públicas, privadas e com a sociedade civil (parcerias sociotécnicas)",
-          "icone": "17.07",
-          "ods": 17,
-          "nome_ods": "ODS 17 – PARCERIA E MEIOS DE IMPLEMENTAÇÃO",
-          "definicao": "Ajuda e trabalho conjunto entre governo, empresas, universidades e comunidade para criar soluções."
-        },
-        {
-          "id": "E6-F14",
-          "ordem": 14,
-          "fator": "Estratégias de mobilização (redes e grupos organizados)",
-          "icone": "17.09",
-          "ods": 17,
-          "nome_ods": "ODS 17 – PARCERIA E MEIOS DE IMPLEMENTAÇÃO",
-          "definicao": "Formas de reunir e animar as pessoas para participarem de ações da comunidade."
-        },
-        {
           "id": "E6-F15",
-          "ordem": 15,
+          "ordem": 11,
           "fator": "Grupos de escuta diários",
           "icone": "18.05",
           "ods": 17,
@@ -1858,7 +1494,7 @@ window.METODOLOGIA = {
         },
         {
           "id": "E6-F16",
-          "ordem": 16,
+          "ordem": 12,
           "fator": "Igrejas, grupos religiosos e outros coletivos que apoiam as situações de emergência",
           "icone": "18.10",
           "ods": 17,

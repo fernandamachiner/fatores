@@ -2,18 +2,15 @@
 //
 // Uso, a partir da pasta do painel:
 //   node testes/validar-metodologia.js
-//   node testes/validar-metodologia.js --original caminho/do/data.js
 //
-// Com --original, compara campo a campo com o data.js anterior à separação.
+// A conferência célula a célula com a planilha oficial é feita por
+// testes/conferir_metodologia_planilha.py.
 // Termina com código 1 se houver ERRO. AVISOS não interrompem.
 "use strict";
 const fs = require("fs");
 const path = require("path");
 
 const raiz = path.resolve(__dirname, "..");
-const args = process.argv.slice(2);
-const iOrig = args.indexOf("--original");
-const caminhoOriginal = iOrig >= 0 ? args[iOrig + 1] : null;
 
 const erros = [];
 const avisos = [];
@@ -112,54 +109,18 @@ ok.push("cores e títulos dos eixos conferidos contra a roda SVG");
 confere(/<script src="metodologia\/metodologia\.js"><\/script>\s*<script src="app\.js"><\/script>/.test(html),
   "index.html carrega metodologia.js antes de app.js", "index.html não carrega metodologia.js antes de app.js");
 
-// 8. Comparação com o data.js original
-if (caminhoOriginal) {
-  const original = new Function(fs.readFileSync(caminhoOriginal, "utf8") + ";return EIXOS_DATA;")();
-  // Alterações autorizadas, registradas no próprio cadastro (campo "alteracoes").
-  // Para cada campo, as alterações são reaplicadas sobre o valor original na
-  // ordem do histórico. Cada uma precisa partir exatamente do valor deixado
-  // pela anterior, e o resultado final precisa ser igual ao valor do cadastro.
-  const alteracoes = M.alteracoes || [];
-  let campos = 0, divergencias = 0, alterados = 0, registrosAplicados = 0;
-  const porCampo = new Map();
-  alteracoes.forEach((x) => {
-    const k = x.id + "." + x.campo;
-    porCampo.set(k, (porCampo.get(k) || []).concat(x));
-  });
-  const verificados = new Set();
-  const cmp = (a, b, onde) => {
-    campos++;
-    const cadeia = porCampo.get(onde) || [];
-    if (cadeia.length) verificados.add(onde);
-    let valor = b;
-    for (const x of cadeia) {
-      if (x.anterior !== valor) { divergencias++; return erro(`histórico inconsistente em ${onde}: alteração da versão ${x.versao} não parte do valor vigente ("${valor}")`); }
-      valor = x.novo;
-    }
-    if (valor !== a) { divergencias++; return erro(`divergência não registrada em ${onde}: "${valor}" (esperado pelo histórico) / "${a}" (cadastro)`); }
-    if (cadeia.length) { alterados++; registrosAplicados += cadeia.length; }
-  };
-  if (original.length !== eixos.length) erro("número de eixos difere do original");
-  original.forEach((eo, i) => {
-    const e = eixos[i];
-    cmp(e.id_original, eo.id, `eixo ${i + 1}.id`);
-    ["titulo", "foco", "cor", "ordem"].forEach((c) => cmp(e[c], eo[c], `eixo ${i + 1}.${c}`));
-    if (eo.fatores.length !== e.fatores.length) erro(`eixo ${e.id}: ${e.fatores.length} fatores no cadastro, ${eo.fatores.length} no original`);
-    eo.fatores.forEach((fo, j) => {
-      const f = e.fatores[j];
-      if (!f) return erro(`fator ausente: ${fo.fator}`);
-      ["fator", "icone", "ods", "nome_ods", "definicao"].forEach((c) => cmp(f[c], fo[c], `${f.id}.${c}`));
-      Object.keys(fo).forEach((c) => { if (!(c in f)) erro(`${f.id}: campo original "${c}" perdido`); });
-    });
-  });
-  porCampo.forEach((_, k) => { if (!verificados.has(k)) erro(`alteração registrada para campo inexistente: ${k}`); });
-  confere(divergencias === 0,
-    `comparação com o original: ${campos - alterados} campos idênticos, ${alterados} campos alterados por ${registrosAplicados} registros autorizados, mesma ordem`,
-    `comparação com o original: ${divergencias} divergências não registradas ou histórico inconsistente`);
-  const versoes = {};
-  alteracoes.forEach((x) => { versoes[x.versao] = (versoes[x.versao] || 0) + 1; });
-  Object.keys(versoes).forEach((v) => ok.push(`histórico: ${versoes[v]} alteração(ões) autorizada(s) na versão ${v}`));
-}
+// 8. Identificadores desativados (fatores retirados): nunca reaproveitados
+const desat = M.desativados || [];
+desat.forEach((d) => {
+  if (!/^E[1-6]-F\d{2,}$/.test(d.id)) erro("id desativado fora do formato: " + d.id);
+  if (vistosId.has(d.id)) erro("id desativado em uso por fator ativo: " + d.id);
+});
+ok.push(`${desat.length} ids desativados registrados e não reaproveitados`);
+
+// 9. Ícones sem uso na pasta assets/icons (informativo)
+const usados = new Set(todos.map(({ f }) => f.icone));
+const orfaos = [...new Set([...arquivosIcones].map((a) => a.replace(/(_verde|_amarelo|_vermelho)?\.png$/, "")))].filter((c) => !usados.has(c));
+if (orfaos.length) aviso(`ícones sem fator na pasta assets/icons: ${orfaos.join(", ")}`);
 
 // Resumo
 console.log("CADASTRO: " + eixos.length + " eixos, " + todos.length + " fatores");
