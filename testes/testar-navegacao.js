@@ -1,7 +1,8 @@
 // Teste de navegação no navegador (Playwright + Chromium).
 //
 // Percorre os 6 eixos, abre o popup de todos os fatores e registra o que a
-// interface exibe. Gera um JSON com esse registro, que pode ser comparado
+// interface exibe, conferindo que o diagnóstico, as fontes e os fatores
+// relacionados exibidos são idênticos aos do arquivo do território ativo. Gera um JSON com esse registro, que pode ser comparado
 // entre versões do painel para provar que a navegação foi preservada.
 //
 // Uso:
@@ -28,9 +29,18 @@ const { chromium } = require("playwright");
   page.on("pageerror", (e) => errosConsole.push(String(e)));
   const falhasRede = [];
   page.on("requestfailed", (r) => falhasRede.push(r.url()));
+  // respostas com erro (por exemplo, 404 por caminho ou maiúscula/minúscula errada)
+  page.on("response", (r) => { if (r.status() >= 400) falhasRede.push(r.status() + " " + r.url()); });
 
   await page.goto(url);
   const registro = { url, eixos: [], falhas: [] };
+  // aguarda o carregamento do território ativo (pronto ou erro)
+  await page.waitForSelector(".territorio-pronto, .territorio-erro", { timeout: 20000 });
+  registro.territorio = await page.evaluate(() => ({
+    status: document.getElementById("territorio-status").className,
+    texto: document.getElementById("territorio-status").textContent,
+  }));
+  if (!/territorio-pronto/.test(registro.territorio.status)) registro.falhas.push("território não carregou: " + registro.territorio.texto);
   const falha = (m) => registro.falhas.push(m);
 
   const nBotoes = await page.locator(".eixo-botao").count();
@@ -59,6 +69,7 @@ const { chromium } = require("playwright");
     for (let j = 0; j < nCards; j++) {
       const card = page.locator(".fator-botao").nth(j);
       const dadosCard = await card.evaluate((el) => ({
+        id: el.getAttribute("data-fator-id"),
         nome: el.querySelector(".fator-nome").textContent,
         selo: el.querySelector(".fator-ods-selo").textContent,
         icone: el.querySelector("img").getAttribute("src"),
@@ -73,19 +84,39 @@ const { chromium } = require("playwright");
       );
       const pop = await page.evaluate(() => {
         const im = (id) => { const e = document.getElementById(id); return { src: e.getAttribute("src"), ok: e.naturalWidth > 0, alt: e.alt }; };
+        const ativo = (window.TERRITORIOS_INDICE || {}).padrao;
         return {
           titulo: document.getElementById("popup-titulo").textContent,
           ods: document.getElementById("popup-ods").textContent,
-          descricao: document.getElementById("popup-descricao").textContent,
+          definicao: document.getElementById("popup-definicao").textContent,
+          territorio: document.getElementById("popup-territorio").textContent,
+          diagnostico: [...document.querySelectorAll("#popup-texto > p")].map((p) => p.textContent).join("\n\n"),
+          aviso: (document.querySelector("#popup-texto .popup-aviso") || {}).textContent || "",
+          fontes: [...document.querySelectorAll("#popup-referencias li")].map((li) => li.textContent),
+          relacionados: [...document.querySelectorAll("#popup-relacionados .popup-chip")].map((b) => b.getAttribute("data-fator-id")),
           resiliencia: im("popup-icone-resiliencia"),
           vulnerabilidade: im("popup-icone-vulnerabilidade"),
           ameaca: im("popup-icone-ameaca"),
           focoNoFechar: document.activeElement && document.activeElement.id === "popup-fechar",
         };
       });
+      // o texto exibido deve ser idêntico ao diagnóstico do arquivo do território
+      const esperado = await page.evaluate((fid) => {
+        const ids = Object.keys(window.TERRITORIOS || {});
+        const t = ids.length === 1 ? window.TERRITORIOS[ids[0]] : null;
+        const d = t && t.diagnosticos[fid];
+        return d ? { texto: d.texto, fontes: d.fontes_citadas.concat(d.referencias_normativas), rel: d.fatores_relacionados } : null;
+      }, dadosCard.id);
+      if (esperado) {
+        if (pop.diagnostico !== esperado.texto) falha(`diagnóstico exibido difere dos dados: ${dadosCard.id}`);
+        if (JSON.stringify(pop.fontes) !== JSON.stringify(esperado.fontes)) falha(`fontes exibidas diferem dos dados: ${dadosCard.id}`);
+        if (JSON.stringify(pop.relacionados) !== JSON.stringify(esperado.rel)) falha(`fatores relacionados diferem dos dados: ${dadosCard.id}`);
+      } else if (!pop.aviso) {
+        falha(`fator sem diagnóstico não exibiu aviso: ${dadosCard.id}`);
+      }
       ["resiliencia", "vulnerabilidade", "ameaca"].forEach((k) => { if (!pop[k].ok) falha(`imagem não carregou: ${pop[k].src}`); });
       if (pop.titulo !== dadosCard.nome) falha(`popup com título diferente do card: ${dadosCard.nome}`);
-      if (!pop.descricao.trim()) falha(`popup sem descrição: ${dadosCard.nome}`);
+      if (!pop.definicao.trim()) falha(`popup sem definição de referência: ${dadosCard.nome}`);
 
       // alterna as três formas de fechar
       const modo = modosFechar[contadorPopup++ % 3];
@@ -94,7 +125,7 @@ const { chromium } = require("playwright");
       else await page.mouse.click(5, 5);
       if (!(await page.locator("#overlay-popup[hidden]").count())) falha(`popup não fechou (${modo}): ${dadosCard.nome}`);
 
-      eixo.fatores.push({ ...dadosCard, popup: { titulo: pop.titulo, ods: pop.ods, descricao: pop.descricao, icones: [pop.resiliencia.src, pop.vulnerabilidade.src, pop.ameaca.src], alts: [pop.resiliencia.alt, pop.vulnerabilidade.alt, pop.ameaca.alt], focoNoFechar: pop.focoNoFechar } });
+      eixo.fatores.push({ ...dadosCard, popup: { titulo: pop.titulo, ods: pop.ods, definicao: pop.definicao, territorio: pop.territorio, diagnostico: pop.diagnostico, aviso: pop.aviso, fontes: pop.fontes, relacionados: pop.relacionados, icones: [pop.resiliencia.src, pop.vulnerabilidade.src, pop.ameaca.src], alts: [pop.resiliencia.alt, pop.vulnerabilidade.alt, pop.ameaca.alt], focoNoFechar: pop.focoNoFechar } });
     }
     registro.eixos.push(eixo);
 
@@ -120,11 +151,12 @@ const { chromium } = require("playwright");
     registro.avisos.push(`layout de celular: rolagem horizontal (${celular.larguraPagina}px em tela de ${celular.larguraTela}px), elementos: ${celular.transbordam.join(", ")}`);
   }
 
-  registro.totais = { eixos: registro.eixos.length, fatores: registro.eixos.reduce((s, e) => s + e.fatores.length, 0), popupsAbertos: contadorPopup };
+  registro.totais = { eixos: registro.eixos.length, fatores: registro.eixos.reduce((s, e) => s + e.fatores.length, 0), popupsAbertos: contadorPopup,
+    comDiagnostico: registro.eixos.reduce((s, e) => s + e.fatores.filter((f) => f.popup.diagnostico).length, 0) };
   registro.errosConsole = errosConsole;
   registro.falhasRede = falhasRede;
   fs.writeFileSync(saida, JSON.stringify(registro, null, 2));
-  console.log(`${url}\n  eixos: ${registro.totais.eixos} | fatores: ${registro.totais.fatores} | popups abertos e fechados: ${contadorPopup}`);
+  console.log(`${url}\n  ${registro.territorio.texto}\n  eixos: ${registro.totais.eixos} | fatores: ${registro.totais.fatores} | popups abertos e fechados: ${contadorPopup} | diagnósticos exibidos idênticos aos dados: ${registro.totais.comDiagnostico}`);
   console.log(`  falhas: ${registro.falhas.length} | erros de console: ${errosConsole.length} | falhas de rede: ${falhasRede.length}`);
   registro.falhas.concat(errosConsole, falhasRede).forEach((m) => console.log("   - " + m));
   registro.avisos.forEach((m) => console.log("  AVISO " + m));

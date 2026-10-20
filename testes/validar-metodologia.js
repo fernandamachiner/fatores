@@ -106,8 +106,8 @@ eixos.forEach((e) => {
 ok.push("cores e títulos dos eixos conferidos contra a roda SVG");
 
 // 7. Script carregado pelo index.html
-confere(/<script src="metodologia\/metodologia\.js"><\/script>\s*<script src="app\.js"><\/script>/.test(html),
-  "index.html carrega metodologia.js antes de app.js", "index.html não carrega metodologia.js antes de app.js");
+confere(/<script src="metodologia\/metodologia\.js"><\/script>\s*<script src="territorios\/indice\.js"><\/script>\s*<script src="app\.js"><\/script>/.test(html),
+  "index.html carrega metodologia.js e territorios/indice.js antes de app.js", "index.html não carrega metodologia.js e territorios/indice.js antes de app.js");
 
 // 8. Identificadores desativados (fatores retirados): nunca reaproveitados
 const desat = M.desativados || [];

@@ -80,7 +80,14 @@ const declarados = (T.eixos_documento || []).reduce((s, e) => s + (e.fatores_no_
 confere(codigos.size === declarados, `todos os ${declarados} fatores do documento estão no arquivo (validados ou pendentes), sem repetição`,
   `fatores do documento: ${declarados}; no arquivo: ${codigos.size}`);
 
-// 5. Fatores do cadastro sem diagnóstico (informativo)
+// 5. Presença no índice de territórios, apontando para este arquivo
+const wi = {};
+new Function("window", fs.readFileSync(path.join(raiz, "territorios/indice.js"), "utf8"))(wi);
+const item = ((wi.TERRITORIOS_INDICE || {}).territorios || []).find((x) => x.id === tid);
+confere(item && item.arquivo === "territorios/" + tid + ".js", "território listado em territorios/indice.js com o arquivo correto",
+  "território ausente de territorios/indice.js ou com caminho de arquivo diferente");
+
+// 6. Fatores do cadastro sem diagnóstico (informativo)
 const sem = [...fatores.keys()].filter((id) => !D[id]);
 avisos.push(`${sem.length} fatores do cadastro sem diagnóstico validado neste território`);
 

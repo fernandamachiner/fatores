@@ -72,7 +72,8 @@ CONTEÚDO
                  metodologia.js (cadastro usado pelo painel, gerado a partir
                  da planilha) e ferramentas/ (gerador do cadastro)
 - territorios/ → diagnósticos de cada território, separados da metodologia:
-                 campo-grande-ms.js (dados gerados), fontes/ (documento de
+                 indice.js (lista dos territórios disponíveis e território
+                 padrão), campo-grande-ms.js (dados gerados), fontes/ (documento de
                  diagnóstico original, .docx), correspondencias/ (metadados
                  do território e lista de fontes citadas, editáveis) e
                  ferramentas/gerar_territorio.py (gera o arquivo do território
@@ -84,6 +85,17 @@ CONTEÚDO
                  oficial "ICONOGRAFIA_2026", variante em contorno)
 - ABRIR.bat / ABRIR.command → atalhos para abrir sem precisar procurar o
   index.html
+
+TERRITÓRIO EXIBIDO
+------------------
+Ao clicar em um fator, o painel mostra o diagnóstico situacional do
+território ativo, lido do arquivo de dados do território (por exemplo,
+territorios/campo-grande-ms.js). O território ativo é o "padrao" de
+territorios/indice.js, ou o indicado no endereço:
+    index.html?territorio=campo-grande-ms
+Se o território indicado não estiver cadastrado, se o arquivo não puder ser
+carregado ou se um fator não tiver diagnóstico, o painel informa isso na
+tela e não mostra dados de outro território nem de outro fator.
 
 ATUALIZANDO OS TEXTOS/FATORES DEPOIS
 --------------------------------------

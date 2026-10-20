@@ -23,7 +23,139 @@
   var popupIconeAmeaca = document.getElementById("popup-icone-ameaca");
   var popupOds = document.getElementById("popup-ods");
   var popupTitulo = document.getElementById("popup-titulo");
-  var popupDescricao = document.getElementById("popup-descricao");
+  var popupDefinicao = document.getElementById("popup-definicao");
+  var popupTerritorio = document.getElementById("popup-territorio");
+  var popupTexto = document.getElementById("popup-texto");
+  var popupReferencias = document.getElementById("popup-referencias");
+  var popupRelacionados = document.getElementById("popup-relacionados");
+  var popupVoltar = document.getElementById("popup-voltar");
+  var territorioStatus = document.getElementById("territorio-status");
+
+  // índice id do fator -> { fator, eixo }, para localizar fatores
+  // relacionados citados nos diagnósticos
+  var FATORES = {};
+  dados.forEach(function (eixo) {
+    eixo.fatores.forEach(function (fator) {
+      FATORES[fator.id] = { fator: fator, eixo: eixo };
+    });
+  });
+
+  // ---------- Território ativo ----------
+  //
+  // Os diagnósticos não ficam na interface: vêm do arquivo de dados do
+  // território (territorios/<id>.js), listado em territorios/indice.js e
+  // carregado aqui por uma tag <script> inserida dinamicamente, o que
+  // funciona tanto em servidor (GitHub Pages) quanto abrindo o index.html
+  // direto do computador. O estado só passa a "pronto" se o arquivo
+  // carregado registrar exatamente o território solicitado; em nenhum caso
+  // os dados de um território são usados no lugar de outro.
+
+  var territorio = {
+    estado: "carregando", // carregando | pronto | erro
+    id: null,
+    rotulo: null,
+    dados: null,
+    mensagem: ""
+  };
+
+  function territorioSolicitado() {
+    var indice = window.TERRITORIOS_INDICE;
+    var param = null;
+    try {
+      param = new URLSearchParams(window.location.search).get("territorio");
+    } catch (e) {
+      param = null;
+    }
+    if (!indice || !indice.territorios || !indice.territorios.length) {
+      return { erro: "O índice de territórios (territorios/indice.js) não foi carregado." };
+    }
+    var id = param || indice.padrao;
+    var item = null;
+    indice.territorios.forEach(function (t) {
+      if (t.id === id) item = t;
+    });
+    if (!item) {
+      return { erro: "O território solicitado (" + id + ") não está cadastrado na plataforma.", id: id };
+    }
+    return { item: item };
+  }
+
+  function atualizarStatusTerritorio() {
+    territorioStatus.className = "territorio-status territorio-" + territorio.estado;
+    territorioStatus.innerHTML = "";
+    if (territorio.estado === "carregando") {
+      territorioStatus.textContent = "Carregando dados do território…";
+      return;
+    }
+    if (territorio.estado === "erro") {
+      territorioStatus.textContent = territorio.mensagem;
+      return;
+    }
+    var rotulo = document.createElement("strong");
+    rotulo.textContent = "Território: " + territorio.rotulo;
+    territorioStatus.appendChild(rotulo);
+    var sit = territorio.dados.situacao || {};
+    if (sit.territorio_de_exemplo) {
+      var ex = document.createElement("span");
+      ex.className = "territorio-selo";
+      ex.textContent = "território de exemplo";
+      territorioStatus.appendChild(ex);
+    }
+    if (sit.aviso) territorioStatus.title = sit.aviso;
+    var versaoT = territorio.dados.metodologia && territorio.dados.metodologia.versao;
+    if (versaoT && versaoT !== METODOLOGIA.versao) {
+      var av = document.createElement("span");
+      av.className = "territorio-alerta";
+      av.textContent = "Diagnóstico organizado pela Matriz v" + versaoT + "; painel usa a v" + METODOLOGIA.versao + ".";
+      territorioStatus.appendChild(av);
+    }
+  }
+
+  function falhaTerritorio(msg) {
+    territorio.estado = "erro";
+    territorio.dados = null;
+    territorio.mensagem = msg;
+    atualizarStatusTerritorio();
+  }
+
+  function carregarTerritorio() {
+    var sol = territorioSolicitado();
+    if (sol.erro) {
+      territorio.id = sol.id || null;
+      falhaTerritorio(sol.erro + " Nenhum diagnóstico será exibido.");
+      return;
+    }
+    var item = sol.item;
+    territorio.id = item.id;
+    territorio.rotulo = item.rotulo;
+    territorio.estado = "carregando";
+    atualizarStatusTerritorio();
+
+    var concluido = false;
+    var script = document.createElement("script");
+    script.src = item.arquivo;
+    script.onload = function () {
+      concluido = true;
+      var t = window.TERRITORIOS && window.TERRITORIOS[item.id];
+      if (!t || !t.territorio || t.territorio.id !== item.id) {
+        falhaTerritorio("O arquivo de dados de " + item.rotulo + " não contém os diagnósticos deste território. Nenhum diagnóstico será exibido.");
+        return;
+      }
+      territorio.dados = t;
+      territorio.rotulo = t.territorio.rotulo || item.rotulo;
+      territorio.estado = "pronto";
+      atualizarStatusTerritorio();
+      if (!overlay.hidden && fatorAberto) mostrarFator(fatorAberto, false);
+    };
+    script.onerror = function () {
+      concluido = true;
+      falhaTerritorio("Não foi possível carregar os dados de " + item.rotulo + " (" + item.arquivo + "). Nenhum diagnóstico será exibido.");
+    };
+    setTimeout(function () {
+      if (!concluido) falhaTerritorio("O carregamento dos dados de " + item.rotulo + " excedeu o tempo limite. Nenhum diagnóstico será exibido.");
+    }, 15000);
+    document.head.appendChild(script);
+  }
 
   function caminhoIcone(codigo) {
     return "assets/icons/" + codigo + ".png";
@@ -175,7 +307,7 @@
       card.appendChild(selo);
 
       card.addEventListener("click", function () {
-        abrirPopup(fator, eixo);
+        abrirPopup(fator);
       });
 
       gradeFatores.appendChild(card);
@@ -210,31 +342,153 @@
     };
   }
 
-  // ---------- Nível 3: popup do fator (sem navegação) ----------
+  // ---------- Nível 3: popup do fator ----------
+  //
+  // Mostra os dados metodológicos do fator (ícones, ODS, nome, definição de
+  // referência) e o diagnóstico situacional do território ativo, localizado
+  // pelo id do fator. Os fatores relacionados citados no diagnóstico podem
+  // ser abertos no próprio popup; o botão de retorno volta ao fator anterior.
 
-  function abrirPopup(fator, eixo) {
+  var fatorAberto = null; // id do fator exibido no popup
+  var historicoPopup = []; // ids dos fatores visitados antes, dentro do popup
+
+  function aviso(texto, classe) {
+    var div = document.createElement("div");
+    div.className = "popup-aviso " + (classe || "");
+    div.textContent = texto;
+    return div;
+  }
+
+  function listaReferencias(titulo, itens) {
+    var bloco = document.createElement("div");
+    bloco.className = "popup-ref-bloco";
+    var h = document.createElement("h4");
+    h.textContent = titulo;
+    bloco.appendChild(h);
+    var ul = document.createElement("ul");
+    itens.forEach(function (x) {
+      var li = document.createElement("li");
+      li.textContent = x;
+      ul.appendChild(li);
+    });
+    bloco.appendChild(ul);
+    return bloco;
+  }
+
+  function preencherDiagnostico(fid) {
+    popupTexto.innerHTML = "";
+    popupReferencias.innerHTML = "";
+    popupRelacionados.innerHTML = "";
+
+    if (territorio.estado === "carregando") {
+      popupTerritorio.textContent = "Diagnóstico situacional";
+      popupTexto.appendChild(aviso("Carregando os dados do território…", "aviso-carregando"));
+      return;
+    }
+    if (territorio.estado === "erro") {
+      popupTerritorio.textContent = "Diagnóstico situacional";
+      popupTexto.appendChild(aviso(territorio.mensagem, "aviso-erro"));
+      return;
+    }
+
+    popupTerritorio.textContent = "Diagnóstico situacional · " + territorio.rotulo;
+    var diag = (territorio.dados.diagnosticos || {})[fid];
+    if (!diag || !diag.texto) {
+      popupTexto.appendChild(aviso("Não há diagnóstico situacional cadastrado para este fator em " + territorio.rotulo + ".", "aviso-ausente"));
+      return;
+    }
+
+    // texto integral; parágrafos separados por linha em branco
+    diag.texto.split(/\n\s*\n/).forEach(function (par) {
+      var p = document.createElement("p");
+      p.textContent = par;
+      popupTexto.appendChild(p);
+    });
+
+    if (diag.fontes_citadas && diag.fontes_citadas.length) {
+      popupReferencias.appendChild(listaReferencias("Fontes citadas no texto", diag.fontes_citadas));
+    }
+    if (diag.referencias_normativas && diag.referencias_normativas.length) {
+      popupReferencias.appendChild(listaReferencias("Referências normativas", diag.referencias_normativas));
+    }
+
+    var rel = (diag.fatores_relacionados || []).filter(function (r) { return FATORES[r]; });
+    if (rel.length) {
+      var h = document.createElement("h4");
+      h.textContent = "Fatores relacionados";
+      popupRelacionados.appendChild(h);
+      var lista = document.createElement("div");
+      lista.className = "popup-chips";
+      rel.forEach(function (r) {
+        var info = FATORES[r];
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "popup-chip";
+        b.setAttribute("data-fator-id", r);
+        b.style.borderColor = info.eixo.cor;
+        var cod = document.createElement("span");
+        cod.className = "popup-chip-id";
+        cod.style.background = info.eixo.cor;
+        cod.textContent = r;
+        b.appendChild(cod);
+        b.appendChild(document.createTextNode(" " + info.fator.fator));
+        b.addEventListener("click", function () {
+          historicoPopup.push(fatorAberto);
+          mostrarFator(r, true);
+        });
+        lista.appendChild(b);
+      });
+      popupRelacionados.appendChild(lista);
+    }
+  }
+
+  function mostrarFator(fid, rolarParaTopo) {
+    var info = FATORES[fid];
+    if (!info) return;
+    var fator = info.fator, eixo = info.eixo;
+    fatorAberto = fid;
+
     popupIconeResiliencia.src = caminhoIconeVariante(fator.icone, "verde");
     popupIconeResiliencia.alt = fator.fator + " – Resiliência";
-
     popupIconeVulnerabilidade.src = caminhoIconeVariante(fator.icone, "amarelo");
     popupIconeVulnerabilidade.alt = fator.fator + " – Vulnerabilidade";
-
     popupIconeAmeaca.src = caminhoIconeVariante(fator.icone, "vermelho");
     popupIconeAmeaca.alt = fator.fator + " – Ameaça";
 
     popupOds.textContent = fator.nome_ods || ("ODS " + pad2(fator.ods));
     popupOds.style.background = eixo.cor;
     popupTitulo.textContent = fator.fator;
-    popupDescricao.textContent = fator.definicao || "";
+    popupDefinicao.textContent = fator.definicao ? "Definição de referência: " + fator.definicao : "";
+    preencherDiagnostico(fid);
 
+    if (historicoPopup.length) {
+      var anterior = FATORES[historicoPopup[historicoPopup.length - 1]];
+      popupVoltar.textContent = "← Voltar a " + anterior.fator.fator;
+      popupVoltar.hidden = false;
+    } else {
+      popupVoltar.hidden = true;
+    }
+    if (rolarParaTopo) overlay.querySelector(".popup").scrollTop = 0;
+  }
+
+  function abrirPopup(fator) {
+    historicoPopup = [];
+    mostrarFator(fator.id, true);
     overlay.hidden = false;
     document.body.style.overflow = "hidden";
     popupFechar.focus();
   }
 
+  popupVoltar.addEventListener("click", function () {
+    var anterior = historicoPopup.pop();
+    if (anterior) mostrarFator(anterior, true);
+  });
+
   function fecharPopup() {
     overlay.hidden = true;
     document.body.style.overflow = "";
+    fatorAberto = null;
+    historicoPopup = [];
   }
 
   popupFechar.addEventListener("click", fecharPopup);
@@ -261,4 +515,5 @@
   // ---------- Inicialização ----------
 
   montarRoda();
+  carregarTerritorio();
 })();
