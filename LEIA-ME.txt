@@ -51,7 +51,7 @@ COMO USAR EM QUALQUER COMPUTADOR
    macOS/Linux: dê duplo clique em "ABRIR.command" (no Mac, na primeira vez
    pode ser preciso permitir em Preferências > Segurança) ou abra o
    "index.html" direto no navegador.
-3. Funciona 100% offline: todos os textos e os 157 ícones usados já estão
+3. Funciona 100% offline: todos os textos e os ícones usados já estão
    dentro da pasta "assets/icons".
 
 IMPORTANTE: mantenha a estrutura de pastas
@@ -65,9 +65,9 @@ CONTEÚDO
 - index.html   → a página principal (abra este arquivo)
 - style.css    → aparência/visual
 - app.js       → toda a lógica de clique/navegação interna
-- data.js      → os 6 eixos, 159 fatores, ODS e descrições (vem da planilha
-                 "Fatores_organização_Fernanda.xlsx")
-- assets/icons → os 157 ícones de fatores usados (recortados do pacote
+- data.js      → os 6 eixos, 150 fatores, ODS e descrições (vem da planilha
+                 "Fatores_organizacao_v1.0.2.xlsx")
+- assets/icons → os ícones de fatores usados (recortados do pacote
                  oficial "ICONOGRAFIA_2026", variante em contorno)
 - ABRIR.bat / ABRIR.command → atalhos para abrir sem precisar procurar o
   index.html
