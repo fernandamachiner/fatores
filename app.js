@@ -23,8 +23,11 @@
   var popupTitulo = document.getElementById("popup-titulo");
   var popupDescricao = document.getElementById("popup-descricao");
 
+  // ícones sem numeração, compartilhados com o Diagnóstico Situacional
+  var BASE_ICONES = "https://fernandamachiner.github.io/diagnostico_fatores/assets/icons/";
+
   function caminhoIcone(codigo) {
-    return "assets/icons/" + codigo + ".png";
+    return BASE_ICONES + codigo + ".png";
   }
 
   // as 3 variantes coloridas de cada ícone (classificação de risco),
@@ -33,7 +36,7 @@
   //   _amarelo   = vulnerabilidade
   //   _vermelho  = ameaça
   function caminhoIconeVariante(codigo, variante) {
-    return "assets/icons/" + codigo + "_" + variante + ".png";
+    return BASE_ICONES + codigo + "_" + variante + ".png";
   }
 
   // ---------- Nível 1: monta a roda com os 6 eixos ----------
@@ -149,6 +152,9 @@
       badge.style.background = corClara(eixo.cor);
 
       var img = document.createElement("img");
+      // o pino é desenhado em preto e branco; o filtro troca o preto pela
+      // cor do eixo e mantém o branco (ver criarFiltrosCorEixo)
+      img.style.filter = "url(#tinta-eixo-" + eixo.ordem + ")";
       img.src = caminhoIcone(fator.icone);
       img.alt = fator.fator;
       img.loading = "lazy";
@@ -250,7 +256,56 @@
 
   btnVoltar.addEventListener("click", fecharColunaFatores);
 
+  // cor do eixo escurecida apenas o necessário para atingir contraste de
+  // 4,5:1 com o branco (WCAG 2.1 AA); usada para tingir os ícones dos fatores
+  function luminancia(hex) {
+    var c = [1, 3, 5].map(function (i) {
+      var v = parseInt(hex.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function corFundoComTextoBranco(hex) {
+    var rgb = [1, 3, 5].map(function (i) { return parseInt(hex.substr(i, 2), 16); });
+    var cor = hex;
+    for (var k = 0; k < 40 && 1.05 / (luminancia(cor) + 0.05) < 4.5; k++) {
+      rgb = rgb.map(function (v) { return Math.round(v * 0.94); });
+      cor = "#" + rgb.map(function (v) { return ("0" + v.toString(16)).slice(-2); }).join("");
+    }
+    return cor;
+  }
+
+  // ---------- Filtros de cor dos ícones dos fatores ----------
+  // um filtro SVG por eixo: preto -> cor do eixo (escurecida até ter
+  // contraste com o branco), branco -> branco
+  function criarFiltrosCorEixo() {
+    var ns = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("width", "0");
+    svg.setAttribute("height", "0");
+    svg.setAttribute("aria-hidden", "true");
+    svg.style.position = "absolute";
+    dados.forEach(function (eixo) {
+      var rgb = hexParaRgb(corFundoComTextoBranco(eixo.cor));
+      if (!rgb) return;
+      var f = document.createElementNS(ns, "filter");
+      f.setAttribute("id", "tinta-eixo-" + eixo.ordem);
+      f.setAttribute("color-interpolation-filters", "sRGB");
+      var t = document.createElementNS(ns, "feComponentTransfer");
+      [["feFuncR", rgb.r], ["feFuncG", rgb.g], ["feFuncB", rgb.b]].forEach(function (c) {
+        var fn = document.createElementNS(ns, c[0]);
+        fn.setAttribute("type", "table");
+        fn.setAttribute("tableValues", (c[1] / 255).toFixed(3) + " 1");
+        t.appendChild(fn);
+      });
+      f.appendChild(t);
+      svg.appendChild(f);
+    });
+    document.body.appendChild(svg);
+  }
+
   // ---------- Inicialização ----------
 
+  criarFiltrosCorEixo();
   montarRoda();
 })();
